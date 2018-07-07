@@ -1,0 +1,61 @@
+{
+  "Editors-in-Chief":[
+    {
+      "name": "Francis Bach",
+      "affiliation": "INRIA",
+      "url": "http://www.di.ens.fr/~fbach/"
+    },
+    {
+      "name": "David Blei",
+      "affiliation": "Columbia University",
+      "url": "http://www.cs.columbia.edu/~blei/"
+    },
+    {
+      "name": "Bernhard Sch&ouml;lkopf",
+      "affiliation": "MPI for Intelligent Systems",
+      "url": "http://is.tuebingen.mpg.de/person/bs"
+    }
+  ],
+  "Managing Editor":
+  [
+    {
+      "name": "Aron Culotta",
+      "affiliation": "Illinois Institute of Technology, USA",
+      "url": "http://cs.iit.edu/~culotta"
+    }
+  ],
+  "Production Editor":
+  [
+    {
+      "name": "Alp Kucukelbir",
+      "affiliation": "Fero Labs and Columbia University",
+      "url": "http://www.proditus.com"
+    }
+  ],
+  "Production Staff":
+  [
+    {
+      "name": "Trevor Campbell",
+      "affiliation": "Massachusetts Institute of Technology",
+      "url": "http://acl.mit.edu/members/tcampbell.htm"
+    },
+    {
+      "name": "Hoon Cho",
+      "affiliation": "Massachusetts Institute of Technology",
+      "url": "http://hhcho.com"
+    },
+    {
+      "name": "Behzad Tabibian",
+      "affiliation": "MPI for Intelligent Systems",
+      "url": "http://ei.is.tuebingen.mpg.de/person/btabibian"
+    }
+  ],
+  "Webmaster":
+  [
+    {
+      "name": "Fabian Pedregosa",
+      "affiliation": "UC Berkeley and ETH Zurich",
+      "url": "http://fa.bianp.net"
+    }
+  ]
+}

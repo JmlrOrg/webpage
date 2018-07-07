@@ -1,0 +1,495 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+ <!--#include virtual="/css-scroll.txt"-->
+
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <META HTTP-EQUIV="Expires" CONTENT="Mon, 20 Aug 2001 21:29:02
+      GMT">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache, no-store,
+must-revalidate">
+
+   <title>JMLR Editorial Board</title>
+
+<link rel="stylesheet" type="text/css"
+      href="http://www.jmlr.org/style.css">
+<style>
+.editors li {
+    margin-bottom: 8px;
+}
+.editors .name {
+    font-weight: bold;
+}
+.editors a {
+    text-decoration: none;
+}
+.editors .research {
+    display: block;
+    font-size: 88%;
+    color: #555;
+    max-width: 500px;
+}
+#board a {
+  font-weight: bold;
+}
+#board li{
+  list-style-type: none;
+  margin-left: 2em;
+  margin-bottom: 0.5em;
+}
+</style>
+
+<script type='text/javascript'>
+function loadJSON(callback) {   
+
+   var xobj = new XMLHttpRequest();
+   xobj.overrideMimeType("application/json");
+   xobj.open('GET', 'editorial-board.json', true);
+   xobj.onreadystatechange = function () {
+         if (xobj.readyState == 4 && xobj.status == "200") {
+           // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+           callback(xobj.responseText);
+         }
+   };
+   xobj.send(null);  
+}
+
+function addSection(json, name) {
+  var data = json[name];
+  var div = document.getElementById('board');
+  div.innerHTML = div.innerHTML + "<h3>" + name + "</h3>"
+  div.innerHTMK = div.innerHTML + "<ul>"
+  for(var i = 0;i < data.length; i++)
+  {
+    name = "<a href='" + data[i].url + "'>" + data[i].name + "</a>"
+    affiliation = data[i].affiliation
+    div.innerHTML = div.innerHTML + "<li>" + name + ", " + affiliation + ".</li>"
+  }
+  div.innerHTMK = div.innerHTML + "</ul>"
+}
+
+
+loadJSON(function(response) {
+// Parse JSON string into object
+var board = JSON.parse(response);
+addSection(board, "Editors-in-Chief")
+addSection(board, "Managing Editor")
+addSection(board, "Production Editor")
+addSection(board, "Production Staff")
+addSection(board, "Webmaster")
+});
+
+</script>
+
+</head>
+<body>
+ <div id="content">
+
+<h1>JMLR Editorial Board</h1>
+
+<div id="board"></div>
+
+
+<h3>
+JMLR Action Editors</h3>
+
+<ul class='editors'>
+  <li><a href='http://www.cs.princeton.edu/~rpa/'><span class='name'>Ryan Adams</span></a>, <span class='affliliation'>Princeton University, USA</span>. <span class='research'>Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization.</span></li>
+  <li><a href='http://www.fas.harvard.edu/~airoldi/'><span class='name'>Edoardo M. Airoldi</span></a>, <span class='affliliation'>Harvard University, USA</span>. <span class='research'>Statistics, Approximate inference, Causal inference, Network data analysis, Computational biology</span></li>
+  <li><a href='https://newport.eecs.uci.edu/anandkumar/'><span class='name'>Anima Anandkumar</span></a>, <span class='affliliation'>University of California Irvine, USA</span>. <span class='research'>tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning</span></li>
+  <li><a href='http://personal.unileoben.ac.at/auer/'><span class='name'>Peter Auer</span></a>, <span class='affliliation'>Montanuniversitaet Leoben, Austria</span>. <span class='research'>Bandit problems, reinforcement learning, online learning</span></li>
+  <li><a href='http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php'><span class='name'>David Barber</span></a>, <span class='affliliation'>University College London, UK</span>. <span class='research'>Graphical models, deep learning, approximate inference</span></li>
+  <li><a href='http://bengio.abracadoudou.com'><span class='name'>Samy Bengio</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>Deep learning, multi-class, ranking, sequences, speech and vision</span></li>
+  <li><a href='http://www.iro.umontreal.ca/~bengioy'><span class='name'>Yoshua Bengio</span></a>, <span class='affliliation'>Université de Montréal, Canada</span>. <span class='research'>Deep learning</span></li>
+  <li><a href='http://melodi.ee.washington.edu/~bilmes/'><span class='name'>Jeff Bilmes</span></a>, <span class='affliliation'>University of Washington, USA</span>. </li>
+  <li><a href='https://www.bsse.ethz.ch/mlcb/karsten.html'><span class='name'>Karsten Borgwardt</span></a>, <span class='affliliation'>ETH Zurich, Switzerland</span>. <span class='research'>Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics</span></li>
+  <li><a href='http://leon.bottou.org'><span class='name'>Léon Bottou</span></a>, <span class='affliliation'>Facebook AI Research</span>. </li>
+  <li><a href='http://www.stats.ox.ac.uk/~caron'><span class='name'>François Caron</span></a>, <span class='affliliation'>University of Oxford, United Kingdom</span>. <span class='research'>Bayesian methods, Bayesian nonparametrics, Statistical network analysis, Monte Carlo methods, Probabilistic modeling</span></li>
+  <li><a href='http://faculty.ucmerced.edu/mcarreira-perpinan/'><span class='name'>Miguel A. Carreira-Perpinan</span></a>, <span class='affliliation'>University of California, Merced, USA</span>. <span class='research'> optimization (nonconvex in particular), dimensionality reduction,
+    mean-shift algorithms, unsupervised learning</span></li>
+  <li><a href='http://www.cs.rhul.ac.uk/home/alexc/'><span class='name'>Alexander Clark</span></a>, <span class='affliliation'>King's College London, UK</span>. <span class='research'>Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics. </span></li>
+  <li><a href='http://research.google.com/pubs/author121.html'><span class='name'>Corinna Cortes</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>Kernel methods, boosting, feature selection</span></li>
+  <li><a href='http://webee.technion.ac.il/people/koby/'><span class='name'>Koby Crammer</span></a>, <span class='affliliation'>Technion, Israel</span>. </li>
+  <li><a href='http://cseweb.ucsd.edu/~dasgupta/'><span class='name'>Sanjoy Dasgupta</span></a>, <span class='affliliation'>University of California, San Diego, USA</span>. <span class='research'>Unsupervised learning, semisupervised learning, active learning</span></li>
+  <li><a href='http://www.cs.utexas.edu/users/inderjit/'><span class='name'>Inderjit S. Dhillon</span></a>, <span class='affliliation'>University of Texas, Austin, USA</span>. </li>
+  <li><a href='http://www.ece.neu.edu/fac-ece/jdy/'><span class='name'>Jennifer Dy</span></a>, <span class='affliliation'>Northeastern University, USA</span>. <span class='research'>clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics</span></li>
+  <li><a href='http://pluto.huji.ac.il/~galelidan/'><span class='name'>Gal Elidan</span></a>, <span class='affliliation'>Hebrew University, Israel</span>. </li>
+  <li><a href='http://cseweb.ucsd.edu/~elkan/'><span class='name'>Charles Elkan</span></a>, <span class='affliliation'>University of California at San Diego, USA</span>. </li>
+  <li><a href='http://beehive.cs.princeton.edu/'><span class='name'>Barbara Engelhardt</span></a>, <span class='affliliation'>Princeton University, USA</span>. <span class='research'>Latent factor models, computational biology, statistical inference, hierarchical models</span></li>
+  <li><a href='http://cs.nyu.edu/~fergus/pmwiki/pmwiki.php'><span class='name'>Rob Fergus</span></a>, <span class='affliliation'>New York University, USA</span>. </li>
+  <li><a href='http://www.ism.ac.jp/~fukumizu/'><span class='name'>Kenji Fukumizu</span></a>, <span class='affliliation'>The Institute of Statistical Mathematics, Japan</span>. <span class='research'>kernel methods, dimension reduction</span></li>
+  <li><a href='http://stat.ethz.ch/~vsara/'><span class='name'>Sara van de Geer</span></a>, <span class='affliliation'>ETH Zürich, Switzerland</span>. <span class='research'>theory of high-dimensional statistics, regularization</span></li>
+  <li><a href='http://www.cs.tau.ac.il/~gamir/'><span class='name'>Amir Globerson</span></a>, <span class='affliliation'>Tel Aviv University, Israel</span>. <span class='research'>graphical models, approximate inference, structured prediction, natural language processing</span></li>
+  <li><a href='http://www.goldszmidt.org/'><span class='name'>Moises Goldszmidt</span></a>, <span class='affliliation'>Microsoft Research, USA</span>. </li>
+  <li><a href='https://webdocs.cs.ualberta.ca/~greiner/'><span class='name'>Russ Greiner</span></a>, <span class='affliliation'>University of Alberta, Canada</span>. <span class='research'>Medical informatics; Active/Budgeted Learning</span></li>
+  <li><a href='http://www.gatsby.ucl.ac.uk/~gretton/'><span class='name'>Arthur Gretton</span></a>, <span class='affliliation'>University College London, UK</span>. <span class='research'>hypothesis testing, kernel methods</span></li>
+  <li><a href='http://mayagupta.org/'><span class='name'>Maya Gupta</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>interpretable machine learning, clustering, regression, multi-task learning, constrained optimization, stochastic gradient descent, large-scale learning</span></li>
+  <li><a href='http://clopinet.com/isabelle'><span class='name'>Isabelle Guyon</span></a>, <span class='affliliation'>ClopiNet, USA</span>. <span class='research'>Feature selection, causaltity, model selection, automatic machine learning, computer vision, kernel method</span></li>
+  <li><a href='http://www.mrtz.org'><span class='name'>Moritz Hardt</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>Learning theory, algorithms, optimization, privacy</span></li>
+  <li><a href='http://www.da.inf.ethz.ch/people/ThomasHofmann/'><span class='name'>Thomas Hofmann</span></a>, <span class='affliliation'>ETH Zurich, Switzerland</span>. <span class='research'>Natural Language Learning, Text Mining, User Data Modeling, Large-scale learning</span></li>
+  <li><a href='http://berthuang.com'><span class='name'>Bert Huang</span></a>, <span class='affliliation'>Virginia Tech, USA</span>. <span class='research'>structured prediction, probabilistic graphical models, relational learning, networks</span></li>
+  <li><a href='http://www.cs.helsinki.fi/u/ahyvarin/'><span class='name'>Aapo Hyvärinen</span></a>, <span class='affliliation'>University of Helsinki, Finland</span>. <span class='research'>Unsupervised learning, natural image statistics, neuroimaging data analysis</span></li>
+  <li><a href='http://www.ics.uci.edu/~ihler/'><span class='name'>Alex Ihler</span></a>, <span class='affliliation'>University of California, Irvine, USA</span>. <span class='research'>graphical models, approximate inference, structured prediction</span></li>
+  <li><a href='http://people.csail.mit.edu/tommi/tommi.html'><span class='name'>Tommi Jaakkola</span></a>, <span class='affliliation'>Massachusetts Institute of Technology, USA</span>. <span class='research'>Approximate inference, structured prediction, deep learning</span></li>
+  <li><a href='https://users.ics.aalto.fi/sami/'><span class='name'>Samuel Kaski</span></a>, <span class='affliliation'>Aalto University, Finland</span>. <span class='research'>Probabilistic modelling, multiple data sources (multi-view, multi-task, multimodal, retrieval); applications in bioinformatics, user interaction, brain signal analysis</span></li>
+  <li><a href='http://www.keerthis.com/'><span class='name'>Sathiya Keerthi</span></a>, <span class='affliliation'>Microsoft Research, USA</span>. <span class='research'>optimization, large margin methods, structured prediction, large scale learning, distributed training</span></li>
+  <li><a href='http://icapeople.epfl.ch/mekhan/'><span class='name'>Emtiyaz Khan</span></a>, <span class='affliliation'>RIKEN Center for Advanced Intelligence, Japan</span>. <span class='research'>Variational Inference, Approximate Bayesian inference, Bayesian Deep Learning</span></li>
+  <li><a href='http://www.cs.duke.edu/~gdk'><span class='name'>George Konidaris</span></a>, <span class='affliliation'>Duke University, USA</span>. <span class='research'>Reinforcement Learning, artificial intelligence, robotics</span></li>
+  <li><a href='https://las.inf.ethz.ch/krausea'><span class='name'>Andreas Krause</span></a>, <span class='affliliation'>ETH Zurich, Switzerland</span>. <span class='research'>Active learning, Bayesian optimization, submodularity, sequential decision making</span></li>
+  <li><a href='http://www.sanjivk.com'><span class='name'>Sanjiv Kumar</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>large-scale learning, hashing, matrix factorization, nearest neighbor search, clustering</span></li>
+  <li><a href='http://www.ist.ac.at/~chl'><span class='name'>Christoph Lampert</span></a>, <span class='affliliation'>Institute of Science and Technology, Austria</span>. <span class='research'>transfer learning, structured prediction, computer vision</span></li>
+  <li><a href='http://www.seas.upenn.edu/~ddlee/'><span class='name'>Daniel Lee</span></a>, <span class='affliliation'>University of Pennsylvania, USA</span>. <span class='research'>Unsupervised learning, reinforcement learning, robotics, computational neuroscience</span></li>
+  <li><a href='http://www.cs.dartmouth.edu/~qliu/'><span class='name'>Qiang Liu</span></a>, <span class='affliliation'>Dartmouth College, USA</span>. <span class='research'>Probablistic graphical models, inference and learning, computational models for crowdsourcing</span></li>
+  <li><a href='http://www.econ.upf.edu/~lugosi/'><span class='name'>Gábor Lugosi</span></a>, <span class='affliliation'>Pompeu Fabra University, Spain</span>. <span class='research'>learning theory, online prediction</span></li>
+  <li><a href='http://www.stat.berkeley.edu/~mmahoney/'><span class='name'>Michael Mahoney</span></a>, <span class='affliliation'>University of California at Berkeley, USA</span>. </li>
+  <li><a href='http://shie.webee.eedev.technion.ac.il'><span class='name'>Shie Mannor</span></a>, <span class='affliliation'>Technion, Israel</span>. <span class='research'>Reinforcement learning, bandit problems, learning theory, learning in games</span></li>
+  <li><a href='http://www.stat.berkeley.edu/~jon'><span class='name'>Jon McAuliffe</span></a>, <span class='affliliation'>University of California at Berkeley, USA</span>. <span class='research'>approximate inference, supervised learning, causal inference, sequential analysis, reinforcement learning</span></li>
+  <li><a href='http://www.chicagobooth.edu/faculty/directory/m/robert-e-mcculloch'><span class='name'>Robert E. McCulloch</span></a>, <span class='affliliation'>University of Chicago, USA</span>. </li>
+  <li><a href='http://research.microsoft.com/~meek'><span class='name'>Chris Meek</span></a>, <span class='affliliation'>Microsoft Research, USA</span>. <span class='research'>Graphical Models, recommendation systems, point processes.</span></li>
+  <li><a href='http://www-personal.umich.edu/~qmei/'><span class='name'>Qiaozhu Mei</span></a>, <span class='affliliation'>University of Michigan, USA</span>. <span class='research'>Learning from text, network, and behavioral data, representation learning, interactive learning.</span></li>
+  <li><a href='http://research.google.com/pubs/mirrokni.html'><span class='name'>Vahab Mirrokni</span></a>, <span class='affliliation'>Google Research, USA</span>. <span class='research'>Mechanism Desgin and Internet Economics, Algorithmic Game Thoery, Distributed Optimization, Submodular Optimization, Large-scale Graph Mining</span></li>
+  <li><a href='http://cs.nyu.edu/cs/faculty/mohri/'><span class='name'>Mehryar Mohri</span></a>, <span class='affliliation'>New York University, USA</span>. <span class='research'>Learning theory [all aspects, including auctioning,
+ensemble methods, structured prediction, time series, on-line
+learning, games, adaptation, learning kernels, spectral learning,
+ranking, low-rank approximation].</span></li>
+  <li><a href='https://staff.fnwi.uva.nl/j.m.mooij/'><span class='name'>Joris Mooij</span></a>, <span class='affliliation'>University of Amsterdam, Netherlands</span>. <span class='research'>Causality.</span></li>
+  <li><a href='http://dept.stat.lsa.umich.edu/~xuanlong/'><span class='name'>Long Nguyen</span></a>, <span class='affliliation'>University of Michigan, USA</span>. <span class='research'>Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference.</span></li>
+  <li><a href='http://research.microsoft.com/en-us/people/senowozi/'><span class='name'>Sebastian Nowozin</span></a>, <span class='affliliation'>Microsoft Research, Cambridge, UK</span>. <span class='research'>structured prediction, computer vision, deep learning</span></li>
+  <li><a href='http://groups.csail.mit.edu/ALFA/groupWebSite/'><span class='name'>Una-May O'Reilly</span></a>, <span class='affliliation'>Massachusetts Institute of Technology, USA</span>. <span class='research'>evolutionary algorithms, genetic programming, </span></li>
+  <li><a href='http://www.ki.tu-berlin.de/menue/team/manfred_opper'><span class='name'>Manfred Opper</span></a>, <span class='affliliation'>Technical University of Berlin, Germany</span>. <span class='research'>Bayesian methods, approximate inference, statistical mechanics, Gaussian processes</span></li>
+  <li><a href='https://www6.inra.fr/mia-paris/Equipes/LInK/Les-anciens-de-LInK/Laurent-Orseau'><span class='name'>Laurent Orseau</span></a>, <span class='affliliation'>Google Deepmind, USA</span>. <span class='research'>Reinforcement Learning, Artificial General Intelligence</span></li>
+  <li><a href='http://www-personal.umd.umich.edu/~leortiz/'><span class='name'>Luis Ortiz</span></a>, <span class='affliliation'>University of Michigan - Dearborn, USA</span>. <span class='research'>machine learning; computational game theory and economics; graphical models; artificial intelligence; applications to complex systems</span></li>
+  <li><a href='http://www.stat.ucdavis.edu/~jie/'><span class='name'>Jie Peng</span></a>, <span class='affliliation'>University of California, Davis, USA</span>. <span class='research'>High dimensional statistical inference, graphical models, functional data analysis</span></li>
+  <li><a href='http://www.jan-peters.net'><span class='name'>Jan Peters</span></a>, <span class='affliliation'>Technische Universitaet Darmstadt, Germany</span>. <span class='research'>reinforcement learning, robot learning, policy search</span></li>
+  <li><a href='http://www.gelberpfeffer.net/avi'><span class='name'>Avi Pfeffer</span></a>, <span class='affliliation'>Charles River Analytics, USA</span>. <span class='research'>Probabilistic programming, probabilistic reasoning, cyber security</span></li>
+  <li><a href='http://cs.mcgill.ca/~jpineau/'><span class='name'>Joelle Pineau</span></a>, <span class='affliliation'>McGill University, Canada</span>. <span class='research'>reinforcement learning, deep learning, robotics</span></li>
+  <li><a href='http://www0.cs.ucl.ac.uk/staff/M.Pontil/'><span class='name'>Massimiliano Pontil</span></a>, <span class='affliliation'>Istituto Italiano di Tecnologia (Italy), University College London (UK)</span>. <span class='research'>multitask and transfer learning, convex optimization, kernel methods, sparsity regularization</span></li>
+  <li><a href='http://people.cs.kuleuven.be/~luc.deraedt/'><span class='name'>Luc de Raedt</span></a>, <span class='affliliation'>Katholieke Universiteit Leuven, Belgium</span>. <span class='research'>(statistical) relational learning, inductive logic programming, symbolic machine learning, probabilistic programming, learning from structured data, pattern mining</span></li>
+  <li><a href='http://www-stat.wharton.upenn.edu/~rakhlin/'><span class='name'>Alexander Rakhlin</span></a>, <span class='affliliation'>University of Pennsylvania, USA</span>. <span class='research'>learning theory, online learning, statistical learning theory</span></li>
+  <li><a href='http://www.eecs.berkeley.edu/~brecht/index.html'><span class='name'>Ben Recht</span></a>, <span class='affliliation'>University of California, Berkeley, USA</span>. </li>
+  <li><a href='http://web.mit.edu/lrosasco/www/'><span class='name'>Lorenzo Rosasco</span></a>, <span class='affliliation'>Massachusetts Institute of Technology, USA</span>. <span class='research'>Statistical learning theory, Optimization, Regularization, Inverse problems.</span></li>
+  <li><a href='http://www.tau.ac.il/~saharon/'><span class='name'>Saharon Rosset</span></a>, <span class='affliliation'>Tel Aviv University, Israel</span>. <span class='research'>Bioinformatics and statistical genetics, statistical learning/predictive modeling, data mining/big data</span></li>
+  <li><a href='http://www.cs.toronto.edu/~rsalakhu/'><span class='name'>Ruslan Salakhutdinov</span></a>, <span class='affliliation'>University of Toronto, Canada</span>. </li>
+  <li><a href='http://users.ece.utexas.edu/~sanghavi/'><span class='name'>Sujay Sanghavi</span></a>, <span class='affliliation'>University of Texas, Austin, USA</span>. </li>
+  <li><a href='http://www.cs.ubc.ca/~schmidtm'><span class='name'>Mark Schmidt</span></a>, <span class='affliliation'>University of British Columbia, Canada</span>. <span class='research'>Convex Optimization, Probabilistic Graphical Models</span></li>
+  <li><a href='https://www.lri.fr/~marc/'><span class='name'>Marc Schoenauer</span></a>, <span class='affliliation'>INRIA Saclay, France</span>. <span class='research'>Stochastic Optimization, Derivative-free Optimization, Evolutionary Algorithms, Algorithm configuration/selection</span></li>
+  <li><a href='http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/'><span class='name'>John Shawe-Taylor</span></a>, <span class='affliliation'>University College London, UK</span>. <span class='research'>statistical learning theory, kernel methods, reinforcement learning</span></li>
+  <li><a href='http://users.stat.umn.edu/~xshen/'><span class='name'>Xiaotong Shen</span></a>, <span class='affliliation'>University of Minnesota, USA</span>. <span class='research'>Learning, Graphical models, Recommenders</span></li>
+  <li><a href='http://cs.nyu.edu/~dsontag/'><span class='name'>David Sontag</span></a>, <span class='affliliation'>New York University, USA</span>. <span class='research'>Graphical models, approximate inference, structured prediction, unsupervised learning, applications to health care</span></li>
+  <li><a href='http://www.cmu.edu/dietrich/philosophy/people/faculty/core-faculty/spirtes.html'><span class='name'>Peter Spirtes</span></a>, <span class='affliliation'>Carnegie Mellon University, USA</span>. <span class='research'>Bayesian networks, Causal models, Model search, Causal inference</span></li>
+  <li><a href='http://ttic.uchicago.edu/~nati/'><span class='name'>Nathan Srebro</span></a>, <span class='affliliation'>Toyota Technical Institute at Chicago, USA</span>. </li>
+  <li><a href='http://www.isa.uni-stuttgart.de/Steinwart/index.t?lang=en&/Steinwart/='><span class='name'>Ingo Steinwart</span></a>, <span class='affliliation'>University of Stuttgart, Germany</span>. <span class='research'>Statistical learning theory, Kernel-based learning methods (support vector machines), Cluster Analysis, Loss functions   </span></li>
+  <li><a href='http://homepages.inf.ed.ac.uk/amos/index.html'><span class='name'>Amos Storkey</span></a>, <span class='affliliation'>University of Edinburgh, UK</span>. <span class='research'>Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets</span></li>
+  <li><a href='http://www.ualberta.ca/~szepesva/'><span class='name'>Csaba Szepesvari</span></a>, <span class='affliliation'>University of Alberta, Canada</span>. <span class='research'>Reinforcement learning, learning theory, online learning, learning interactively</span></li>
+  <li><a href='https://www.lri.fr/~teytaud/'><span class='name'>Olivier Teytaud</span></a>, <span class='affliliation'>INRIA Saclay, France</span>. </li>
+  <li><a href='ivan-titov.org'><span class='name'>Ivan Titov</span></a>, <span class='affliliation'>University of Amsterdam, Netherlands</span>. <span class='research'>Natural language processing, representation learning, structured prediction, graphical models</span></li>
+  <li><a href='http://stat.cmu.edu/~ryantibs/'><span class='name'>Ryan Tibshirani</span></a>, <span class='affliliation'>Carnegie Mellon University</span>. <span class='research'>High-dimensional statistics, nonparametric estimation,
+selective inference, convex optimization</span></li>
+  <li><a href='http://tomioka.dk'><span class='name'>Ryota Tomioka</span></a>, <span class='affliliation'>Microsoft Research Cambridge, UK</span>. <span class='research'>Optmization, tensor decomposition, neural networks</span></li>
+  <li><a href='http://tsudalab.org/en/member/koji_tsuda/'><span class='name'>Koji Tsuda</span></a>, <span class='affliliation'>National Institute of Advanced Industrial Science and Technology, Japan</span>. </li>
+  <li><a href='http://pages.ucsd.edu/~ztu/'><span class='name'>Zhuowen Tu</span></a>, <span class='affliliation'>University of California at San Diego, USA</span>. <span class='research'>computer vision, deep learning, weakly-supervised learning</span></li>
+  <li><a href='http://nvayatis.perso.math.cnrs.fr/'><span class='name'>Nicolas Vayatis</span></a>, <span class='affliliation'>ENS Cachan, France</span>. <span class='research'>Statistical learning theory</span></li>
+  <li><a href='https://users.soe.ucsc.edu/~vishy/'><span class='name'>S V N Vishwanathan</span></a>, <span class='affliliation'>Purdue University, USA</span>. <span class='research'>Kernels, Optimization, Distributed computing, Applications</span></li>
+  <li><a href='https://users.soe.ucsc.edu/~manfred/'><span class='name'>Manfred Warmuth</span></a>, <span class='affliliation'>University of California at Santa Cruz, USA</span>. </li>
+  <li><a href='http://kilian.cs.cornell.edu'><span class='name'>Kilian Weinberger</span></a>, <span class='affliliation'>Cornell University, USA</span>. <span class='research'>Deep Learning, Representation Learning, Ranking, Computer Vision</span></li>
+  <li><a href='http://research.microsoft.com/en-us/people/davidwip/'><span class='name'>David Wipf</span></a>, <span class='affliliation'>Microsoft Research Asia, China</span>. <span class='research'>Bayesian learning, sparse estimation, computer vision</span></li>
+  <li><a href='http://www.iais.fraunhofer.de/stefanwrobel.html?L=1'><span class='name'>Stefan Wrobel</span></a>, <span class='affliliation'>Fraunhofer IAIS and University of Bonn, Germany</span>. <span class='research'>relational learning, graph mining, inductive logic programming, privacy-preserving learning, visual analytics, learning from spatial data, applications and big data</span></li>
+  <li><a href='http://www.cs.cmu.edu/~epxing/'><span class='name'>Eric Xing</span></a>, <span class='affliliation'>Carnegie Mellon University, USA</span>. </li>
+  <li><a href='http://www.stat.rutgers.edu/home/tzhang/'><span class='name'>Tong Zhang</span></a>, <span class='affliliation'>Baidu Inc, China</span>. <span class='research'>learning theory, optimization, large scale learning</span></li>
+  <li><a href='http://www.math.pku.edu.cn/teachers/zhzhang/'><span class='name'>Zhihua Zhang</span></a>, <span class='affliliation'>Peking University, China</span>. <span class='research'>Bayesian Analysis and Computations, Numerical Algebra and Optimization</span></li>
+  <li><a href='http://users.stat.umn.edu/~zouxx019/'><span class='name'>Hui Zou</span></a>, <span class='affliliation'>University of Minnesota, USA</span>. </li>
+</ul>
+
+<h3>
+JMLR-<a href="/mloss">MLOSS</a> Editors</h3>
+
+<ul class='editors'>
+  <li><a href='http://alexandre.gramfort.net/'><span class='name'>Alexandre Gramfort</span></a>, <span class='affliliation'>INRIA, Université Paris-Saclay, France</span>. <span class='research'>supervised learning, convex optimization, sparse methods, machine learning software, applications in neuroscience</span></li>
+  <li><a href='http://www.hiit.fi/u/ahonkela/'><span class='name'>Antti Honkela</span></a>, <span class='affliliation'>University of Helsinki, Finland</span>. <span class='research'>Probabilistic modelling, approximate inference, bioinformatics</span></li>
+  <li><a href='https://users.lal.in2p3.fr/kegl/'><span class='name'>Balázs Kégl</span></a>, <span class='affliliation'>CNRS / Université Paris-Saclay, France</span>. <span class='research'>Ensemble methods, hyperparameter optimization, applications in particle and astrophysics</span></li>
+  <li><a href='http://www.ong-home.my'><span class='name'>Cheng Soon Ong</span></a>, <span class='affliliation'>Australian National University, Australia</span>. <span class='research'>Experimental design, feature learning, ranking, bioinformatics</span></li>
+</ul>
+
+<h3>
+JMLR Editorial Board</h3>
+
+<ul>
+<li>
+<b>Naoki Abe</b>, IBM TJ Watson Research Center, USA</li>
+
+<li>
+<b>Yasemin Altun</b>, Google Inc, Switzerland</li>
+
+<li>
+<b>Jean-Yves Audibert</b>, CERTIS, France</li>
+
+<li>
+<b>Jonathan Baxter</b>, Australia National University, Australia</li>
+
+<li>
+<b>Richard K. Belew</b>, University of California at San Diego, USA</li>
+
+<li>
+<b>Kristin Bennett</b>, Rensselaer Polytechnic Institute, USA</li>
+
+<li>
+<b>Christopher M. Bishop</b>, Microsoft Research, Cambridge, UK</li>
+
+<li>
+<b>Lashon Booker</b>, The Mitre Corporation, USA</li>
+
+<li>
+<b>Henrik Boström</b>, Stockholm University/KTH, Sweden</li>
+
+<li>
+<b>Craig Boutilier</b>, Google Research, USA</li>
+
+<li>
+<b>John Patrick Cunningham</b>, Columbia University, USA</li>
+
+<li>
+<b>Nello Cristianini</b>, University of Bristol, UK</li>
+
+<li>
+<b>Peter Dayan</b>, University College, London, UK</li>
+
+<li>
+<b>Dennis DeCoste</b>, eBay Research, USA</li>
+
+<li>
+<b>Thomas Dietterich</b>, Oregon State University, USA</li>
+
+<li>
+<b>Saso Dzeroski</b>, Jozef Stefan Institute, Slovenia</li>
+
+<li>
+<b>Ran El-Yaniv</b>, Technion, Israel</li>
+
+<li>
+<b>Peter Flach</b>, Bristol University, UK</li>
+
+<li>
+<b>Dan Geiger</b>, Technion, Israel</li>
+
+<li>
+<b>Claudio Gentile</b>, Università degli Studi dell'Insubria, Italy</li>
+
+<li>
+<b>Sally Goldman</b>, Google Research, USA</li>
+
+<li>
+<b>Thore Graepel</b>, Google DeepMind and University College London, UK</li>
+
+<li>
+<b>Tom Griffiths</b>, University of California at Berkeley, USA</li>
+
+<li>
+<b>Carlos Guestrin</b>, University of Washington, USA</li>
+
+<li>
+<b>Stefan Harmeling</b>, University of Düsseldorf, Germany</li>
+
+<li>
+<b>David Heckerman</b>, Microsoft Research, USA</li>
+
+<li>
+<b>Katherine Heller</b>, Duke University, USA</li>
+
+<li>
+<b>Philipp Hennig</b>, MPI for Intelligent Systems, Germany</li>
+
+<li>
+<b>Larry Hunter</b>, University of Colorado, USA</li>
+
+<li>
+<b>Jens Kober</b>, Delft University of Technology, Netherlands</li>
+
+<li>
+<b>Risi Kondor</b>, University of Chicago, USA</li>
+
+<li>
+<b>Aryeh Kontorovich</b>, Ben-Gurion University of the Negev, Israel</li>
+
+<li>
+<b>Samory Kpotufe</b>, Princeton University, USA</li>
+
+<li>
+<b>John Lafferty</b>, University of Chicago, USA</li>
+
+<li>
+<b>Erik Learned-Miller</b>, University of Massachusetts, Amherst, USA</li>
+
+<li>
+<b>Fei Fei Li</b>, Stanford University, USA</li>
+
+<li>
+<b>Yi Lin</b>, University of Wisconsin, USA</li>
+
+<li>
+<b>Wei-Yin Loh</b>, University of Wisconsin, USA</li>
+
+<li>
+<b>Richard Maclin</b>, University of Minnesota, USA</li>
+
+<li>
+<b>Sridhar Mahadevan</b>, University of Massachusetts, Amherst, USA</li>
+
+<li>
+<b>Vikash Mansingkha</b>, Massachusetts Institute of Technology, USA</li>
+
+<li>
+<b>Yishay Mansour</b>, Tel-Aviv University, Israel</li>
+
+<li>
+<b>Jon McAuliffe</b>, University of California, Berkeley, USA</li>
+
+<li>
+<b>Andrew McCallum</b>, University of Massachusetts, Amherst, USA</li>
+
+<li>
+<b>Raymond J. Mooney</b>, University of Texas, Austin, USA</li>
+
+<li>
+<b>Klaus-Robert Muller</b>, Technical University of Berlin, Germany</li>
+
+<li>
+<b>Kevin Murphy</b>, Google, USA</li>
+
+<li>
+<b>Guillaume Obozinski</b>, Ecole des Ponts - ParisTech, France</li>
+
+<li>
+<b>Pascal Poupart</b>, University of Waterloo, Canada</li>
+
+<li>
+<b>Konrad Rieck</b>, University of Göttingen, Germany</li>
+
+<li>
+<b>Cynthia Rudin</b>, Massachusetts Institute of Technology, USA</li>
+
+<li>
+<b>Suchi Saria</b>, Johns Hopkins University, USA</li>
+
+<li>
+<b>Robert Schapire</b>, Princeton University, USA</li>
+
+<li>
+<b>Fei Sha</b>, University of Southern California, USA</li>
+
+<li>
+<b>Shai Shalev-Shwartz</b>, Hebrew University of Jerusalem, Israel</li>
+
+<li>
+<b>Padhraic Smyth</b>, University of California, Irvine, USA</li>
+
+<li>
+<b>Bharath Sriperumbudur</b>, Pennsylvania State University, USA</li>
+
+<li>
+<b>Alexander Statnikov</b>, New York University, USA</li>
+
+<li>
+<b>Jean-Philippe Vert</b>, Mines ParisTech, France</li>
+
+<li>
+<b>Martin J. Wainwright</b>, University of California at Berkeley, USA</li>
+
+<li>
+<b>Chris Watkins</b>, Royal Holloway, University of London, UK</li>
+
+<li>
+<b>Max Welling</b>, University of Amsterdam, Netherlands</li>
+
+<li>
+<b>Chris Williams</b>, University of Edinburgh, UK</li>
+
+<li>
+<b>Alice Zheng</b>, GraphLab, USA</li>
+
+</ul>
+
+<h3>
+JMLR Advisory Board</h3>
+
+<ul>
+<li>
+<b>Shun-Ichi Amari</b>, RIKEN Brain Science Institute, Japan</li>
+
+<li>
+<b>Andrew Barto</b>, University of Massachusetts at Amherst, USA</li>
+
+<li>
+<b>Thomas Dietterich</b>, Oregon State University, USA</li>
+
+<li>
+<b>Jerome Friedman</b>, Stanford University, USA</li>
+
+<li>
+<b>Stuart Geman</b>, Brown University, USA</li>
+
+<li>
+<b>Geoffrey Hinton</b>, University of Toronto, Canada</li>
+
+<li>
+<b>Michael Jordan</b>, University of California at Berkeley at USA</li>
+
+<li>
+<b>Leslie Pack Kaelbling</b>, Massachusetts Institute of Technology, USA</li>
+
+<li>
+<b>Michael Kearns</b>, University of Pennsylvania, USA</li>
+
+<li>
+<b>Steven Minton</b>, InferLink, USA</li>
+
+<li>
+<b>Tom Mitchell</b>, Carnegie Mellon University, USA</li>
+
+<li>
+<b>Stephen Muggleton</b>, Imperial College London, UK</li>
+
+<li>
+<b>Kevin Murphy</b>, Google, USA</li>
+
+<li>
+<b>Nils Nilsson</b>, Stanford University, USA</li>
+
+<li>
+<b>Tomaso Poggio</b>, Massachusetts Institute of Technology, USA</li>
+
+<li>
+<b>Ross Quinlan</b>, Rulequest Research Pty Ltd, Australia</li>
+
+<li>
+<b>Stuart Russell</b>, University of California at Berkeley, USA</li>
+
+<li>
+<b>Lawrence Saul</b>, University of California at San Diego, USA</li>
+
+<li>
+<b>Terrence Sejnowski</b>, Salk Institute for Biological Studies, USA</li>
+
+<li>
+<b>Richard Sutton</b>, University of Alberta, Canada</li>
+
+<li>
+<b>Leslie Valiant</b>, Harvard University, USA</li>
+
+</ul>
+
+
+<p>
+<table width="100%">
+<tr>
+<td align="right"><font size="-1">Copyright &copy <a target="_top"
+href="http://www.jmlr.org">JMLR</a> 2000.  All
+rights reserved.</font></td>
+</tr>
+</table>
+</div>
+ <!--#include virtual="/nav-bar.txt"-->
+  </body>
+
+</html>

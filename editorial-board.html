@@ -60,25 +60,42 @@ function addSection(json, name) {
   var data = json[name];
   var div = document.getElementById('board');
   div.innerHTML = div.innerHTML + "<h3>" + name + "</h3>"
-  div.innerHTMK = div.innerHTML + "<ul>"
+  div.innerHTML = div.innerHTML + "<ul>"
   for(var i = 0;i < data.length; i++)
   {
     name = "<a href='" + data[i].url + "'>" + data[i].name + "</a>"
     affiliation = data[i].affiliation
     div.innerHTML = div.innerHTML + "<li>" + name + ", " + affiliation + ".</li>"
   }
-  div.innerHTMK = div.innerHTML + "</ul>"
+  div.innerHTML = div.innerHTML + "</ul>"
+}
+
+function actionEditors(json) {
+  var data = json["JMLR Action Editors"];
+  var div = document.getElementById('action_editors');
+  var innerdiv = "";
+  for(var i = 0;i < data.length; i++)
+  {
+    name = "<a href='" + data[i].url + "'><span class='name'>" + data[i].name + "</span></a>"
+    affiliation = "<span class='affiliation'>" + data[i].affiliation + "</span>"
+    research = "<span class='research'>" + data[i].research + "</span>"
+    innerdiv = innerdiv + "<li>" + name + ", " + affiliation + research + "</li>"
+  }
+  div.innerHTML = "<ul class='editors'>" + innerdiv + "</ul>"
+  
 }
 
 
 loadJSON(function(response) {
 // Parse JSON string into object
 var board = JSON.parse(response);
-addSection(board, "Editors-in-Chief")
-addSection(board, "Managing Editor")
-addSection(board, "Production Editor")
-addSection(board, "Production Staff")
-addSection(board, "Webmaster")
+addSection(board, "Editors-in-Chief");
+addSection(board, "Managing Editor");
+addSection(board, "Production Editor");
+addSection(board, "Production Staff");
+addSection(board, "Webmaster");
+
+actionEditors(board);
 });
 
 </script>
@@ -92,12 +109,11 @@ addSection(board, "Webmaster")
 <div id="board"></div>
 
 
-<h3>
-JMLR Action Editors</h3>
+<h3>JMLR Action Editors</h3>
+<div id="action_editors">
+</div>
 
 <ul class='editors'>
-  <li><a href='http://www.cs.princeton.edu/~rpa/'><span class='name'>Ryan Adams</span></a>, <span class='affliliation'>Princeton University, USA</span>. <span class='research'>Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization.</span></li>
-  <li><a href='http://www.fas.harvard.edu/~airoldi/'><span class='name'>Edoardo M. Airoldi</span></a>, <span class='affliliation'>Harvard University, USA</span>. <span class='research'>Statistics, Approximate inference, Causal inference, Network data analysis, Computational biology</span></li>
   <li><a href='https://newport.eecs.uci.edu/anandkumar/'><span class='name'>Anima Anandkumar</span></a>, <span class='affliliation'>University of California Irvine, USA</span>. <span class='research'>tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning</span></li>
   <li><a href='http://personal.unileoben.ac.at/auer/'><span class='name'>Peter Auer</span></a>, <span class='affliliation'>Montanuniversitaet Leoben, Austria</span>. <span class='research'>Bandit problems, reinforcement learning, online learning</span></li>
   <li><a href='http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php'><span class='name'>David Barber</span></a>, <span class='affliliation'>University College London, UK</span>. <span class='research'>Graphical models, deep learning, approximate inference</span></li>
@@ -120,7 +136,6 @@ JMLR Action Editors</h3>
   <li><a href='http://beehive.cs.princeton.edu/'><span class='name'>Barbara Engelhardt</span></a>, <span class='affliliation'>Princeton University, USA</span>. <span class='research'>Latent factor models, computational biology, statistical inference, hierarchical models</span></li>
   <li><a href='http://cs.nyu.edu/~fergus/pmwiki/pmwiki.php'><span class='name'>Rob Fergus</span></a>, <span class='affliliation'>New York University, USA</span>. </li>
   <li><a href='http://www.ism.ac.jp/~fukumizu/'><span class='name'>Kenji Fukumizu</span></a>, <span class='affliliation'>The Institute of Statistical Mathematics, Japan</span>. <span class='research'>kernel methods, dimension reduction</span></li>
-  <li><a href='http://stat.ethz.ch/~vsara/'><span class='name'>Sara van de Geer</span></a>, <span class='affliliation'>ETH Zürich, Switzerland</span>. <span class='research'>theory of high-dimensional statistics, regularization</span></li>
   <li><a href='http://www.cs.tau.ac.il/~gamir/'><span class='name'>Amir Globerson</span></a>, <span class='affliliation'>Tel Aviv University, Israel</span>. <span class='research'>graphical models, approximate inference, structured prediction, natural language processing</span></li>
   <li><a href='http://www.goldszmidt.org/'><span class='name'>Moises Goldszmidt</span></a>, <span class='affliliation'>Microsoft Research, USA</span>. </li>
   <li><a href='https://webdocs.cs.ualberta.ca/~greiner/'><span class='name'>Russ Greiner</span></a>, <span class='affliliation'>University of Alberta, Canada</span>. <span class='research'>Medical informatics; Active/Budgeted Learning</span></li>

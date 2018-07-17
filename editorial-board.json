@@ -67,6 +67,12 @@
       "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization."
     },
     {
+      "name": "Shivani Agarwal",
+      "affiliation": "University of Pennsylvania, USA.",
+      "url": "http://www.shivani-agarwal.net",
+      "research": "Ranking and preference learning, choice modeling, supervised learning, multiclass learning, performance measures, loss functions."
+    },
+    {
       "name": "Edoardo M. Airoldi",
       "affiliation": "Harvard University, USA.",
       "url": "https://sites.fas.harvard.edu/~airoldi/",
@@ -78,6 +84,12 @@
       "url": "http://tensorlab.cms.caltech.edu/users/anima/",
       "research": "Tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning."
     },
+    {
+      "name": "Peter Auer",
+      "affiliation": "University of Leoben, Austria.",
+      "url": "http://personal.unileoben.ac.at/auer/",
+      "research": "Bandit problems, reinforcement learning, online learning."
+    }
 
   ]
 }

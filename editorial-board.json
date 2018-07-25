@@ -89,7 +89,78 @@
       "affiliation": "University of Leoben, Austria.",
       "url": "http://personal.unileoben.ac.at/auer/",
       "research": "Bandit problems, reinforcement learning, online learning."
+    },
+    {
+      "name": "David Barber",
+      "affiliation": "University College London, UK.",
+      "url": "http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php",
+      "research": "Graphical models, deep learning, approximate inference."
+    },
+    {
+      "name": "Samy Bengio",
+      "affiliation": "Google Research, USA.",
+      "url": "http://bengio.abracadoudou.com",
+      "research": "Deep learning, multi-class, ranking, sequences, speech and vision."
+    },
+    {
+      "name": "Yoshua Bengio",
+      "affiliation": "Université de Montréal, Canada.",
+      "url": "http://www.iro.umontreal.ca/~bengioy",
+      "research": "Deep learning."
+    },
+    {
+      "name": "Jeff Bilmes",
+      "affiliation": "University of Washington, USA.",
+      "url": "http://melodi.ee.washington.edu/~bilmes/",
+      "research": ""
+    },
+    {
+      "name": "Karsten Borgwardt",
+      "affiliation": "ETH Zurich, Switzerland.",
+      "url": "https://www.bsse.ethz.ch/mlcb/karsten.html",
+      "research": "Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics."
+    },
+    {
+      "name": "Léon Bottou",
+      "affiliation": "Facebook AI Research.",
+      "url": "http://leon.bottou.org",
+      "research": ""
+    },
+    {
+      "name": "François Caron",
+      "affiliation": "University of Oxford, United Kingdom.",
+      "url": "http://www.stats.ox.ac.uk/~caron",
+      "research": "Bayesian methods, Bayesian nonparametrics, Statistical network analysis, Monte Carlo methods, Probabilistic modeling."
+    },
+    {
+      "name": "Miguel A. Carreira-Perpinan",
+      "affiliation": "University of California, Merced, USA.",
+      "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
+      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+    },
+    {
+      "name": "Alexander Clark",
+      "affiliation": "King's College London, UK.",
+      "url": "http://www.cs.rhul.ac.uk/home/alexc/",
+      "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics."
+    },
+    {
+      "name": "Corinna Cortes",
+      "affiliation": "Google Research, USA.",
+      "url": "http://research.google.com/pubs/author121.html",
+      "research": "Kernel methods, boosting, feature selection."
+    },
+    {
+      "name": "Koby Crammer",
+      "affiliation": "Technion, Israel.",
+      "url": "http://webee.technion.ac.il/people/koby/",
+      "research": ""
+    },
+    {
+      "name": "Daniela Witten",
+      "affiliation": "University of Washington.",
+      "url": "http://faculty.washington.edu/dwitten/",
+      "research": "high-dimensional, statistics, sparsity, genomics, neuroscience."
     }
-
   ]
 }

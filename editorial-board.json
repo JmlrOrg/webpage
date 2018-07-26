@@ -157,6 +157,36 @@
       "research": ""
     },
     {
+      "name": "Sanjoy Dasgupta",
+      "affiliation": "University of California, San Diego, USA.",
+      "url": "http://cseweb.ucsd.edu/~dasgupta/",
+      "research": "Unsupervised learning, semisupervised learning, active learning."
+    },
+    {
+      "name": "Inderjit S. Dhillon",
+      "affiliation": "University of Texas, Austin, USA.",
+      "url": "http://www.cs.utexas.edu/users/inderjit/",
+      "research": ""
+    },
+    {
+      "name": "Jennifer Dy",
+      "affiliation": "Northeastern University, USA.",
+      "url": "http://www.ece.neu.edu/fac-ece/jdy/",
+      "research": "clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics."
+    },
+    {
+      "name": "Gal Elidan",
+      "affiliation": "Hebrew University, Israel.",
+      "url": "http://pluto.huji.ac.il/~galelidan/",
+      "research": ""
+    },
+    {
+      "name": "Charles Elkan",
+      "affiliation": "University of California at San Diego, USA.",
+      "url": "http://cseweb.ucsd.edu/~elkan/",
+      "research": ""
+    },
+    {
       "name": "Daniela Witten",
       "affiliation": "University of Washington.",
       "url": "http://faculty.washington.edu/dwitten/",

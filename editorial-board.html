@@ -1,112 +1,22 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-<head>
- <!--#include virtual="/css-scroll.txt"-->
+{% extends "base.html" %}
 
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-    <META HTTP-EQUIV="Expires" CONTENT="Mon, 20 Aug 2001 21:29:02
-      GMT">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache, no-store,
-must-revalidate">
+{% block content %}
+<h1>{{ title }}</h1>
+<div id="board">
+<h3>Editors-in-Chief</h3>
+<ul>
+  {% for e in editors_in_chief %}
+  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
+  {% endfor %}
+</ul>
 
-   <title>JMLR Editorial Board</title>
-
-<link rel="stylesheet" type="text/css"
-      href="http://www.jmlr.org/style.css">
-<style>
-.editors li {
-    margin-bottom: 8px;
-}
-.editors .name {
-    font-weight: bold;
-}
-.editors a {
-    text-decoration: none;
-}
-.editors .research {
-    display: block;
-    font-size: 88%;
-    color: #555;
-    max-width: 500px;
-}
-#board a {
-  font-weight: bold;
-}
-#board li{
-  list-style-type: none;
-  margin-left: 2em;
-  margin-bottom: 0.5em;
-}
-</style>
-
-<script type='text/javascript'>
-function loadJSON(callback) {   
-
-   var xobj = new XMLHttpRequest();
-   xobj.overrideMimeType("application/json");
-   xobj.open('GET', 'editorial-board.json', true);
-   xobj.onreadystatechange = function () {
-         if (xobj.readyState == 4 && xobj.status == "200") {
-           // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-           callback(xobj.responseText);
-         }
-   };
-   xobj.send(null);  
-}
-
-function addSection(json, name) {
-  var data = json[name];
-  var div = document.getElementById('board');
-  div.innerHTML = div.innerHTML + "<h3>" + name + "</h3>"
-  div.innerHTML = div.innerHTML + "<ul>"
-  for(var i = 0;i < data.length; i++)
-  {
-    name = "<a href='" + data[i].url + "'>" + data[i].name + "</a>"
-    affiliation = data[i].affiliation
-    div.innerHTML = div.innerHTML + "<li>" + name + ", " + affiliation + "</li>"
-  }
-  div.innerHTML = div.innerHTML + "</ul>"
-}
-
-function actionEditors(json) {
-  var data = json["JMLR Action Editors"];
-  var div = document.getElementById('action_editors');
-  var innerdiv = "";
-  for(var i = 0;i < data.length; i++)
-  {
-    name = "<a href='" + data[i].url + "'><span class='name'>" + data[i].name + "</span></a>"
-    affiliation = "<span class='affiliation'>" + data[i].affiliation + "</span>"
-    research = "<span class='research'>" + data[i].research + "</span>"
-    innerdiv = innerdiv + "<li>" + name + ", " + affiliation + research + "</li>"
-  }
-  div.innerHTML = "<ul class='editors'>" + innerdiv + "</ul>"
-  
-}
-
-
-loadJSON(function(response) {
-// Parse JSON string into object
-var board = JSON.parse(response);
-addSection(board, "Editors-in-Chief");
-addSection(board, "Managing Editor");
-addSection(board, "Production Editor");
-addSection(board, "Production Staff");
-addSection(board, "Webmaster");
-
-actionEditors(board);
-});
-
-</script>
-
-</head>
-<body>
- <div id="content">
-
-<h1>JMLR Editorial Board</h1>
-
-<div id="board"></div>
+<h3>Managing Editor</h3>
+<ul>
+  {% for e in managing_editors %}
+  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
+  {% endfor %}
+</ul>
+</div>
 
 
 <h3>JMLR Action Editors</h3>
@@ -389,18 +299,4 @@ JMLR Advisory Board</h3>
 <b>Leslie Valiant</b>, Harvard University, USA</li>
 
 </ul>
-
-
-<p>
-<table width="100%">
-<tr>
-<td align="right"><font size="-1">Copyright &copy <a target="_top"
-href="http://www.jmlr.org">JMLR</a> 2018.  All
-rights reserved.</font></td>
-</tr>
-</table>
-</div>
- <!--#include virtual="/nav-bar.txt"-->
-  </body>
-
-</html>
+{% endblock %}

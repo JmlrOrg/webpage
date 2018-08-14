@@ -1,26 +1,26 @@
 {
-  "Editors-in-Chief":[
+  "editors_in_chief":[
     {
       "name": "Francis Bach",
-      "affiliation": "INRIA.",
+      "affiliation": "INRIA",
       "url": "http://www.di.ens.fr/~fbach/"
     },
     {
       "name": "David Blei",
-      "affiliation": "Columbia University.",
+      "affiliation": "Columbia University",
       "url": "http://www.cs.columbia.edu/~blei/"
     },
     {
-      "name": "Bernhard Sch&ouml;lkopf",
-      "affiliation": "MPI for Intelligent Systems.",
+      "name": "Bernhard Schölkopf",
+      "affiliation": "MPI for Intelligent Systems",
       "url": "http://is.tuebingen.mpg.de/person/bs"
     }
   ],
-  "Managing Editor":
+  "managing_editors":
   [
     {
       "name": "Aron Culotta",
-      "affiliation": "Illinois Institute of Technology, USA.",
+      "affiliation": "Illinois Institute of Technology, USA",
       "url": "http://cs.iit.edu/~culotta"
     }
   ],
@@ -28,7 +28,7 @@
   [
     {
       "name": "Alp Kucukelbir",
-      "affiliation": "Fero Labs and Columbia University.",
+      "affiliation": "Fero Labs and Columbia University",
       "url": "http://www.proditus.com"
     }
   ],
@@ -36,17 +36,17 @@
   [
     {
       "name": "Trevor Campbell",
-      "affiliation": "Massachusetts Institute of Technology.",
+      "affiliation": "Massachusetts Institute of Technology",
       "url": "http://acl.mit.edu/members/tcampbell.htm"
     },
     {
       "name": "Hoon Cho",
-      "affiliation": "Massachusetts Institute of Technology.",
+      "affiliation": "Massachusetts Institute of Technology",
       "url": "http://hhcho.com"
     },
     {
       "name": "Behzad Tabibian",
-      "affiliation": "MPI for Intelligent Systems.",
+      "affiliation": "MPI for Intelligent Systems",
       "url": "http://ei.is.tuebingen.mpg.de/person/btabibian"
     }
   ],
@@ -62,139 +62,139 @@
   [
     {
       "name": "Ryan Adams",
-      "affiliation": "Princeton University, USA.",
+      "affiliation": "Princeton University, USA",
       "url": "http://www.cs.princeton.edu/~rpa/",
-      "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization."
+      "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization"
     },
     {
       "name": "Shivani Agarwal",
-      "affiliation": "University of Pennsylvania, USA.",
+      "affiliation": "University of Pennsylvania, USA",
       "url": "http://www.shivani-agarwal.net",
-      "research": "Ranking and preference learning, choice modeling, supervised learning, multiclass learning, performance measures, loss functions."
+      "research": "Ranking and preference learning, choice modeling, supervised learning, multiclass learning, performance measures, loss functions"
     },
     {
       "name": "Edoardo M. Airoldi",
-      "affiliation": "Harvard University, USA.",
+      "affiliation": "Harvard University, USA",
       "url": "https://sites.fas.harvard.edu/~airoldi/",
-      "research": "Statistics, Approximate inference, Causal inference, Network data analysis, Computational biology."
+      "research": "Statistics, Approximate inference, Causal inference, Network data analysis, Computational biology"
     },
     {
       "name": "Anima Anandkumar",
-      "affiliation": "California Institute of Technology, USA.",
+      "affiliation": "California Institute of Technology, USA",
       "url": "http://tensorlab.cms.caltech.edu/users/anima/",
-      "research": "Tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning."
+      "research": "Tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning"
     },
     {
       "name": "Peter Auer",
-      "affiliation": "University of Leoben, Austria.",
+      "affiliation": "University of Leoben, Austria",
       "url": "http://personal.unileoben.ac.at/auer/",
-      "research": "Bandit problems, reinforcement learning, online learning."
+      "research": "Bandit problems, reinforcement learning, online learning"
     },
     {
       "name": "David Barber",
-      "affiliation": "University College London, UK.",
+      "affiliation": "University College London, UK",
       "url": "http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php",
-      "research": "Graphical models, deep learning, approximate inference."
+      "research": "Graphical models, deep learning, approximate inference"
     },
     {
       "name": "Samy Bengio",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://bengio.abracadoudou.com",
-      "research": "Deep learning, multi-class, ranking, sequences, speech and vision."
+      "research": "Deep learning, multi-class, ranking, sequences, speech and vision"
     },
     {
       "name": "Yoshua Bengio",
-      "affiliation": "Université de Montréal, Canada.",
+      "affiliation": "Université de Montréal, Canada",
       "url": "http://www.iro.umontreal.ca/~bengioy",
-      "research": "Deep learning."
+      "research": "Deep learning"
     },
     {
       "name": "Jeff Bilmes",
-      "affiliation": "University of Washington, USA.",
+      "affiliation": "University of Washington, USA",
       "url": "http://melodi.ee.washington.edu/~bilmes/",
       "research": ""
     },
     {
       "name": "Karsten Borgwardt",
-      "affiliation": "ETH Zurich, Switzerland.",
+      "affiliation": "ETH Zurich, Switzerland",
       "url": "https://www.bsse.ethz.ch/mlcb/karsten.html",
-      "research": "Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics."
+      "research": "Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics"
     },
     {
       "name": "Léon Bottou",
-      "affiliation": "Facebook AI Research.",
+      "affiliation": "Facebook AI Research",
       "url": "http://leon.bottou.org",
       "research": ""
     },
     {
       "name": "François Caron",
-      "affiliation": "University of Oxford, United Kingdom.",
+      "affiliation": "University of Oxford, United Kingdom",
       "url": "http://www.stats.ox.ac.uk/~caron",
-      "research": "Bayesian methods, Bayesian nonparametrics, Statistical network analysis, Monte Carlo methods, Probabilistic modeling."
+      "research": "Bayesian methods, Bayesian nonparametrics, Statistical network analysis, Monte Carlo methods, Probabilistic modeling"
     },
     {
       "name": "Miguel A. Carreira-Perpinan",
-      "affiliation": "University of California, Merced, USA.",
+      "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
-      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning"
     },
     {
       "name": "Alexander Clark",
-      "affiliation": "King's College London, UK.",
+      "affiliation": "King's College London, UK",
       "url": "http://www.cs.rhul.ac.uk/home/alexc/",
-      "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics."
+      "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics"
     },
     {
       "name": "Corinna Cortes",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://research.google.com/pubs/author121.html",
-      "research": "Kernel methods, boosting, feature selection."
+      "research": "Kernel methods, boosting, feature selection"
     },
     {
       "name": "Koby Crammer",
-      "affiliation": "Technion, Israel.",
+      "affiliation": "Technion, Israel",
       "url": "http://webee.technion.ac.il/people/koby/",
       "research": ""
     },
     {
       "name": "Sanjoy Dasgupta",
-      "affiliation": "University of California, San Diego, USA.",
+      "affiliation": "University of California, San Diego, USA",
       "url": "http://cseweb.ucsd.edu/~dasgupta/",
-      "research": "Unsupervised learning, semisupervised learning, active learning."
+      "research": "Unsupervised learning, semisupervised learning, active learning"
     },
     {
       "name": "Inderjit S. Dhillon",
-      "affiliation": "University of Texas, Austin, USA.",
+      "affiliation": "University of Texas, Austin, USA",
       "url": "http://www.cs.utexas.edu/users/inderjit/",
       "research": ""
     },
     {
       "name": "Jennifer Dy",
-      "affiliation": "Northeastern University, USA.",
+      "affiliation": "Northeastern University, USA",
       "url": "http://www.ece.neu.edu/fac-ece/jdy/",
-      "research": "clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics."
+      "research": "clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics"
     },
     {
       "name": "Gal Elidan",
-      "affiliation": "Hebrew University, Israel.",
+      "affiliation": "Hebrew University, Israel",
       "url": "http://pluto.huji.ac.il/~galelidan/",
       "research": ""
     },
     {
       "name": "Charles Elkan",
-      "affiliation": "University of California at San Diego, USA.",
+      "affiliation": "University of California at San Diego, USA",
       "url": "http://cseweb.ucsd.edu/~elkan/",
       "research": ""
     },
     {
       "name": "Barbara Engelhardt",
-      "affiliation": "Princeton University, USA.",
+      "affiliation": "Princeton University, USA",
       "url": "http://beehive.cs.princeton.edu/",
-      "research": "Latent factor models, computational biology, statistical inference, hierarchical models."
+      "research": "Latent factor models, computational biology, statistical inference, hierarchical models"
     },
     {
       "name": "Rob Fergus",
-      "affiliation": "New York University, USA.",
+      "affiliation": "New York University, USA",
       "url": "http://cs.nyu.edu/~fergus/pmwiki/pmwiki.php",
       "research": ""
     },
@@ -202,7 +202,7 @@
       "name": "Kenji Fukumizu",
       "affiliation": "The Institute of Statistical Mathematics, Japan",
       "url": "http://www.ism.ac.jp/~fukumizu/",
-      "research": "Kernel methods, dimension reduction."
+      "research": "Kernel methods, dimension reduction"
     },
     {
       "name": "Amir Globerson",
@@ -212,133 +212,133 @@
     },
     {
       "name": "Moises Goldszmidt",
-      "affiliation": "Microsoft Research, USA.",
+      "affiliation": "Microsoft Research, USA",
       "url": "http://www.goldszmidt.org",
       "research": ""
     },
     {
       "name": "Russ Greiner",
-      "affiliation": "University of Alberta, Canada.",
+      "affiliation": "University of Alberta, Canada",
       "url": "https://webdocs.cs.ualberta.ca/~greiner/",
       "research": "Medical informatics, active/budgeted Learning"
     },
     {
       "name": "Arthur Gretton",
-      "affiliation": "University College London, UK.",
+      "affiliation": "University College London, UK",
       "url": "http://www.gatsby.ucl.ac.uk/~gretton/",
-      "research": "Hypothesis testing, kernel methods."
+      "research": "Hypothesis testing, kernel methods"
     },
     {
       "name": "Maya Gupta",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://mayagupta.org",
-      "research": "Interpretable machine learning, clustering, regression, multi-task learning, constrained optimization, stochastic gradient descent, large-scale learning."
+      "research": "Interpretable machine learning, clustering, regression, multi-task learning, constrained optimization, stochastic gradient descent, large-scale learning"
     },
     {
       "name": "Isabelle Guyon",
-      "affiliation": "ClopiNet, USA.",
+      "affiliation": "ClopiNet, USA",
       "url": "http://clopinet.com/isabelle",
-      "research": "Feature selection, causaltity, model selection, automatic machine learning, computer vision, kernel method." 
+      "research": "Feature selection, causaltity, model selection, automatic machine learning, computer vision, kernel method" 
     },
     {
       "name": "Moritz Hardt",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://www.mrtz.org",
-      "research": "Learning theory, algorithms, optimization, privacy." 
+      "research": "Learning theory, algorithms, optimization, privacy" 
     },
     {
       "name": "Thomas Hofmann",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "http://www.da.inf.ethz.ch/people/ThomasHofmann/",
-      "research": "Natural Language Learning, Text Mining, User Data Modeling, Large-scale learning." 
+      "research": "Natural Language Learning, Text Mining, User Data Modeling, Large-scale learning" 
     },
     {
       "name": "Bert Huang",
-      "affiliation": "Virginia Tech, USA.",
+      "affiliation": "Virginia Tech, USA",
       "url": "http://berthuang.com",
-      "research": "structured prediction, probabilistic graphical models, relational learning, networks." 
+      "research": "structured prediction, probabilistic graphical models, relational learning, networks" 
     },
     {
       "name": "Aapo Hyvärinen",
       "affiliation": "University of Helsinki, Finland",
       "url": "http://www.cs.helsinki.fi/u/ahyvarin/",
-      "research": "Unsupervised learning, natural image statistics, neuroimaging data analysis." 
+      "research": "Unsupervised learning, natural image statistics, neuroimaging data analysis" 
     },
     {
       "name": "Alex Ihler",
-      "affiliation": "University of California, Irvine, USA.",
+      "affiliation": "University of California, Irvine, USA",
       "url": "http://www.ics.uci.edu/~ihler/",
-      "research": "graphical models, approximate inference, structured prediction." 
+      "research": "graphical models, approximate inference, structured prediction" 
     },
     {
       "name": "Tommi Jaakkola",
-      "affiliation": "Massachusetts Institute of Technology, USA.",
+      "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://people.csail.mit.edu/tommi/tommi.html",
-      "research": "Approximate inference, structured prediction, deep learning." 
+      "research": "Approximate inference, structured prediction, deep learning" 
     },
     {
       "name": "Samuel Kaski",
       "affiliation": "Aalto University, Finland",
       "url": "https://users.ics.aalto.fi/sami/",
-      "research": "Probabilistic modelling, multiple data sources (multi-view, multi-task, multimodal, retrieval); applications in bioinformatics, user interaction, brain signal analysis." 
+      "research": "Probabilistic modelling, multiple data sources (multi-view, multi-task, multimodal, retrieval); applications in bioinformatics, user interaction, brain signal analysis" 
     },
     {
       "name": "Sathiya Keerthi",
-      "affiliation": "Microsoft Research, USA.",
+      "affiliation": "Microsoft Research, USA",
       "url": "http://www.keerthis.com/",
-      "research": "optimization, large margin methods, structured prediction, large scale learning, distributed training." 
+      "research": "optimization, large margin methods, structured prediction, large scale learning, distributed training" 
     },
     {
       "name": "Emtiyaz Khan",
       "affiliation": "RIKEN Center for Advanced Intelligence, Japan",
       "url": "http://icapeople.epfl.ch/mekhan/",
-      "research": "Variational Inference, Approximate Bayesian inference, Bayesian Deep Learning." 
+      "research": "Variational Inference, Approximate Bayesian inference, Bayesian Deep Learning" 
     },
     {
       "name": "George Konidaris",
-      "affiliation": "Duke University, USA.",
+      "affiliation": "Duke University, USA",
       "url": "http://www.cs.duke.edu/~gdk",
-      "research": "Reinforcement Learning, artificial intelligence, robotics." 
+      "research": "Reinforcement Learning, artificial intelligence, robotics" 
     },
     {
       "name": "Andreas Krause",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "https://las.inf.ethz.ch/krausea",
-      "research": "Active learning, Bayesian optimization, submodularity, sequential decision making." 
+      "research": "Active learning, Bayesian optimization, submodularity, sequential decision making" 
     },
     {
       "name": "Sanjiv Kumar",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://www.sanjivk.com",
-      "research": "large-scale learning, hashing, matrix factorization, nearest neighbor search, clustering." 
+      "research": "large-scale learning, hashing, matrix factorization, nearest neighbor search, clustering" 
     },
     {
       "name": "Christoph Lampert",
       "affiliation": "Institute of Science and Technology, Austria",
       "url": "http://www.ist.ac.at/~chl",
-      "research": "transfer learning, structured prediction, computer vision." 
+      "research": "transfer learning, structured prediction, computer vision" 
     },
     {
       "name": "Daniel Lee",
-      "affiliation": "University of Pennsylvania, USA.",
+      "affiliation": "University of Pennsylvania, USA",
       "url": "http://www.seas.upenn.edu/~ddlee/",
-      "research": "Unsupervised learning, reinforcement learning, robotics, computational neuroscience." 
+      "research": "Unsupervised learning, reinforcement learning, robotics, computational neuroscience" 
     },
     {
       "name": "Qiang Liu",
-      "affiliation": "Dartmouth College, USA.",
+      "affiliation": "Dartmouth College, USA",
       "url": "http://www.cs.dartmouth.edu/~qliu/",
-      "research": "Probablistic graphical models, inference and learning, computational models for crowdsourcing." 
+      "research": "Probablistic graphical models, inference and learning, computational models for crowdsourcing" 
     },
     {
       "name": "Gábor Lugosi",
       "affiliation": "Pompeu Fabra University, Spain",
       "url": "http://www.econ.upf.edu/~lugosi/",
-      "research": "learning theory, online prediction." 
+      "research": "learning theory, online prediction" 
     },
     {
       "name": "Michael Mahoney",
-      "affiliation": "University of California at Berkeley, USA.",
+      "affiliation": "University of California at Berkeley, USA",
       "url": "http://www.stat.berkeley.edu/~mmahoney/",
       "research": "" 
     },
@@ -346,203 +346,203 @@
       "name": "Shie Mannor",
       "affiliation": "Technion, Israel",
       "url": "http://shie.webee.eedev.technion.ac.il",
-      "research": "Reinforcement learning, bandit problems, learning theory, learning in games." 
+      "research": "Reinforcement learning, bandit problems, learning theory, learning in games" 
     },
     {
       "name": "Jon McAuliffe",
-      "affiliation": "University of California at Berkeley, USA.",
+      "affiliation": "University of California at Berkeley, USA",
       "url": "http://www.stat.berkeley.edu/~jon",
-      "research": "approximate inference, supervised learning, causal inference, sequential analysis, reinforcement learning." 
+      "research": "approximate inference, supervised learning, causal inference, sequential analysis, reinforcement learning" 
     },
     {
       "name": "Robert E. McCulloch",
-      "affiliation": "University of Chicago, USA.",
+      "affiliation": "University of Chicago, USA",
       "url": "http://www.chicagobooth.edu/faculty/directory/m/robert-e-mcculloch",
       "research": "" 
     },
     {
       "name": "Chris Meek",
-      "affiliation": "Microsoft Research, USA.",
+      "affiliation": "Microsoft Research, USA",
       "url": "http://research.microsoft.com/~meek",
-      "research": "Graphical Models, recommendation systems, point processes." 
+      "research": "Graphical Models, recommendation systems, point processes" 
     },
     {
       "name": "Qiaozhu Mei",
-      "affiliation": "University of Michigan, USA.",
+      "affiliation": "University of Michigan, USA",
       "url": "http://www-personal.umich.edu/~qmei/",
-      "research": "Learning from text, network, and behavioral data, representation learning, interactive learning." 
+      "research": "Learning from text, network, and behavioral data, representation learning, interactive learning" 
     },
     {
       "name": "Vahab Mirrokni",
-      "affiliation": "Google Research, USA.",
+      "affiliation": "Google Research, USA",
       "url": "http://research.google.com/pubs/mirrokni.html",
-      "research": "Mechanism Desgin and Internet Economics, Algorithmic Game Thoery, Distributed Optimization, Submodular Optimization, Large-scale Graph Mining." 
+      "research": "Mechanism Desgin and Internet Economics, Algorithmic Game Thoery, Distributed Optimization, Submodular Optimization, Large-scale Graph Mining" 
     },
     {
       "name": "Mehryar Mohri",
-      "affiliation": "New York University, USA.",
+      "affiliation": "New York University, USA",
       "url": "http://cs.nyu.edu/cs/faculty/mohri/",
-      "research": "Learning theory (all aspects, including auctioning, ensemble methods, structured prediction, time series, on-line learning, games, adaptation, learning kernels, spectral learning, ranking, low-rank approximation)." 
+      "research": "Learning theory (all aspects, including auctioning, ensemble methods, structured prediction, time series, on-line learning, games, adaptation, learning kernels, spectral learning, ranking, low-rank approximation)" 
     },
     {
       "name": "Joris Mooij",
       "affiliation": "University of Amsterdam, Netherlands",
       "url": "https://staff.fnwi.uva.nl/j.m.mooij/",
-      "research": "Causality." 
+      "research": "Causality" 
     },
     {
       "name": "Boaz Nadler",
-      "affiliation": "Weizmann Institute of Science, Israel.",
+      "affiliation": "Weizmann Institute of Science, Israel",
       "url": "http://www.weizmann.ac.il/math/Nadler/",
-      "research": "High dimensional statistics, sparsity, latent variable models, ensemble learning."
+      "research": "High dimensional statistics, sparsity, latent variable models, ensemble learning"
     },
     {
       "name": "Long Nguyen",
-      "affiliation": "University of Michigan, USA.",
+      "affiliation": "University of Michigan, USA",
       "url": "http://dept.stat.lsa.umich.edu/~xuanlong/",
-      "research": "Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference." 
+      "research": "Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference" 
     },
     {
       "name": "Sebastian Nowozin",
       "affiliation": "Microsoft Research, Cambridge, UK",
       "url": "http://research.microsoft.com/en-us/people/senowozi/",
-      "research": "structured prediction, computer vision, deep learning." 
+      "research": "structured prediction, computer vision, deep learning" 
     },
     {
       "name": "Una-May O'Reilly",
-      "affiliation": "Massachusetts Institute of Technology, USA.",
+      "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://groups.csail.mit.edu/ALFA/groupWebSite/",
-      "research": "evolutionary algorithms, genetic programming, ." 
+      "research": "evolutionary algorithms, genetic programming, " 
     },
     {
       "name": "Manfred Opper",
       "affiliation": "Technical University of Berlin, Germany",
       "url": "http://www.ki.tu-berlin.de/menue/team/manfred_opper",
-      "research": "Bayesian methods, approximate inference, statistical mechanics, Gaussian processes." 
+      "research": "Bayesian methods, approximate inference, statistical mechanics, Gaussian processes" 
     },
     {
       "name": "Laurent Orseau",
-      "affiliation": "Google Deepmind, USA.",
+      "affiliation": "Google Deepmind, USA",
       "url": "https://www6.inra.fr/mia-paris/Equipes/LInK/Les-anciens-de-LInK/Laurent-Orseau",
-      "research": "Reinforcement Learning, Artificial General Intelligence." 
+      "research": "Reinforcement Learning, Artificial General Intelligence" 
     },
     {
       "name": "Luis Ortiz",
-      "affiliation": "University of Michigan - Dearborn, USA.",
+      "affiliation": "University of Michigan - Dearborn, USA",
       "url": "http://www-personal.umd.umich.edu/~leortiz/",
-      "research": "machine learning; computational game theory and economics; graphical models; artificial intelligence; applications to complex systems." 
+      "research": "machine learning; computational game theory and economics; graphical models; artificial intelligence; applications to complex systems" 
     },
     {
       "name": "Jie Peng",
-      "affiliation": "University of California, Davis, USA.",
+      "affiliation": "University of California, Davis, USA",
       "url": "http://www.stat.ucdavis.edu/~jie/",
-      "research": "High dimensional statistical inference, graphical models, functional data analysis." 
+      "research": "High dimensional statistical inference, graphical models, functional data analysis" 
     },
     {
       "name": "Jan Peters",
       "affiliation": "Technische Universitaet Darmstadt, Germany",
       "url": "http://www.jan-peters.net",
-      "research": "reinforcement learning, robot learning, policy search." 
+      "research": "reinforcement learning, robot learning, policy search" 
     },
     {
       "name": "Avi Pfeffer",
-      "affiliation": "Charles River Analytics, USA.",
+      "affiliation": "Charles River Analytics, USA",
       "url": "http://www.gelberpfeffer.net/avi",
-      "research": "Probabilistic programming, probabilistic reasoning, cyber security." 
+      "research": "Probabilistic programming, probabilistic reasoning, cyber security" 
     },
     {
       "name": "Joelle Pineau",
-      "affiliation": "McGill University, Canada.",
+      "affiliation": "McGill University, Canada",
       "url": "http://cs.mcgill.ca/~jpineau/",
-      "research": "reinforcement learning, deep learning, robotics." 
+      "research": "reinforcement learning, deep learning, robotics" 
     },
     {
       "name": "Massimiliano Pontil",
       "affiliation": "Istituto Italiano di Tecnologia (Italy), University College London (UK)",
       "url": "http://www0.cs.ucl.ac.uk/staff/M.Pontil/",
-      "research": "multitask and transfer learning, convex optimization, kernel methods, sparsity regularization." 
+      "research": "multitask and transfer learning, convex optimization, kernel methods, sparsity regularization" 
     },
     {
       "name": "Luc de Raedt",
       "affiliation": "Katholieke Universiteit Leuven, Belgium",
       "url": "http://people.cs.kuleuven.be/~luc.deraedt/",
-      "research": "(statistical) relational learning, inductive logic programming, symbolic machine learning, probabilistic programming, learning from structured data, pattern mining." 
+      "research": "(statistical) relational learning, inductive logic programming, symbolic machine learning, probabilistic programming, learning from structured data, pattern mining" 
     },
     {
       "name": "Alexander Rakhlin",
-      "affiliation": "University of Pennsylvania, USA.",
+      "affiliation": "University of Pennsylvania, USA",
       "url": "http://www-stat.wharton.upenn.edu/~rakhlin/",
-      "research": "learning theory, online learning, statistical learning theory." 
+      "research": "learning theory, online learning, statistical learning theory" 
     },
     {
       "name": "Ben Recht",
-      "affiliation": "University of California, Berkeley, USA.",
+      "affiliation": "University of California, Berkeley, USA",
       "url": "http://www.eecs.berkeley.edu/~brecht/index.html",
       "research": "" 
     },
     {
       "name": "Lorenzo Rosasco",
-      "affiliation": "Massachusetts Institute of Technology, USA.",
+      "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://web.mit.edu/lrosasco/www/",
-      "research": "Statistical learning theory, Optimization, Regularization, Inverse problems." 
+      "research": "Statistical learning theory, Optimization, Regularization, Inverse problems" 
     },
     {
       "name": "Saharon Rosset",
       "affiliation": "Tel Aviv University, Israel",
       "url": "http://www.tau.ac.il/~saharon/",
-      "research": "Bioinformatics and statistical genetics, statistical learning/predictive modeling, data mining/big data." 
+      "research": "Bioinformatics and statistical genetics, statistical learning/predictive modeling, data mining/big data" 
     },
     {
       "name": "Ruslan Salakhutdinov",
-      "affiliation": "University of Toronto, Canada.",
+      "affiliation": "University of Toronto, Canada",
       "url": "http://www.cs.toronto.edu/~rsalakhu/",
       "research": "" 
     },
     {
       "name": "Sujay Sanghavi",
-      "affiliation": "University of Texas, Austin, USA.",
+      "affiliation": "University of Texas, Austin, USA",
       "url": "http://users.ece.utexas.edu/~sanghavi/",
       "research": "" 
     },
     {
       "name": "Mark Schmidt",
-      "affiliation": "University of British Columbia, Canada.",
+      "affiliation": "University of British Columbia, Canada",
       "url": "http://www.cs.ubc.ca/~schmidtm",
-      "research": "Convex Optimization, Probabilistic Graphical Models." 
+      "research": "Convex Optimization, Probabilistic Graphical Models" 
     },
     {
       "name": "Marc Schoenauer",
       "affiliation": "INRIA Saclay, France",
       "url": "https://www.lri.fr/~marc/",
-      "research": "Stochastic Optimization, Derivative-free Optimization, Evolutionary Algorithms, Algorithm configuration/selection." 
+      "research": "Stochastic Optimization, Derivative-free Optimization, Evolutionary Algorithms, Algorithm configuration/selection" 
     },
     {
       "name": "John Shawe-Taylor",
       "affiliation": "University College London, UK",
       "url": "http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/",
-      "research": "statistical learning theory, kernel methods, reinforcement learning." 
+      "research": "statistical learning theory, kernel methods, reinforcement learning" 
     },
     {
       "name": "Xiaotong Shen",
-      "affiliation": "University of Minnesota, USA.",
+      "affiliation": "University of Minnesota, USA",
       "url": "http://users.stat.umn.edu/~xshen/",
-      "research": "Learning, Graphical models, Recommenders." 
+      "research": "Learning, Graphical models, Recommenders" 
     },
     {
       "name": "David Sontag",
-      "affiliation": "New York University, USA.",
+      "affiliation": "New York University, USA",
       "url": "http://cs.nyu.edu/~dsontag/",
-      "research": "Graphical models, approximate inference, structured prediction, unsupervised learning, applications to health care." 
+      "research": "Graphical models, approximate inference, structured prediction, unsupervised learning, applications to health care" 
     },
     {
       "name": "Peter Spirtes",
-      "affiliation": "Carnegie Mellon University, USA.",
+      "affiliation": "Carnegie Mellon University, USA",
       "url": "http://www.cmu.edu/dietrich/philosophy/people/faculty/core-faculty/spirtes.html",
-      "research": "Bayesian networks, Causal models, Model search, Causal inference." 
+      "research": "Bayesian networks, Causal models, Model search, Causal inference" 
     },
     {
       "name": "Nathan Srebro",
-      "affiliation": "Toyota Technical Institute at Chicago, USA.",
+      "affiliation": "Toyota Technical Institute at Chicago, USA",
       "url": "http://ttic.uchicago.edu/~nati/",
       "research": "" 
     },
@@ -550,19 +550,19 @@
       "name": "Ingo Steinwart",
       "affiliation": "University of Stuttgart, Germany",
       "url": "http://www.isa.uni-stuttgart.de/Steinwart/index.t?lang=en&/Steinwart/=",
-      "research": "Statistical learning theory, Kernel-based learning methods (support vector machines), Cluster Analysis, Loss functions   ." 
+      "research": "Statistical learning theory, Kernel-based learning methods (support vector machines), Cluster Analysis, Loss functions   " 
     },
     {
       "name": "Amos Storkey",
       "affiliation": "University of Edinburgh, UK",
       "url": "http://homepages.inf.ed.ac.uk/amos/index.html",
-      "research": "Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets." 
+      "research": "Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets" 
     },
     {
       "name": "Csaba Szepesvari",
-      "affiliation": "University of Alberta, Canada.",
+      "affiliation": "University of Alberta, Canada",
       "url": "http://www.ualberta.ca/~szepesva/",
-      "research": "Reinforcement learning, learning theory, online learning, learning interactively." 
+      "research": "Reinforcement learning, learning theory, online learning, learning interactively" 
     },
     {
       "name": "Olivier Teytaud",
@@ -574,19 +574,19 @@
       "name": "Ivan Titov",
       "affiliation": "University of Amsterdam, Netherlands",
       "url": "ivan-titov.org",
-      "research": "Natural language processing, representation learning, structured prediction, graphical models." 
+      "research": "Natural language processing, representation learning, structured prediction, graphical models" 
     },
     {
       "name": "Ryan Tibshirani",
       "affiliation": "Carnegie Mellon University",
       "url": "http://stat.cmu.edu/~ryantibs/",
-      "research": "High-dimensional statistics, nonparametric estimation, selective inference, convex optimization." 
+      "research": "High-dimensional statistics, nonparametric estimation, selective inference, convex optimization" 
     },
     {
       "name": "Ryota Tomioka",
       "affiliation": "Microsoft Research Cambridge, UK",
       "url": "http://tomioka.dk",
-      "research": "Optmization, tensor decomposition, neural networks." 
+      "research": "Optmization, tensor decomposition, neural networks" 
     },
     {
       "name": "Koji Tsuda",
@@ -596,55 +596,55 @@
     },
     {
       "name": "Zhuowen Tu",
-      "affiliation": "University of California at San Diego, USA.",
+      "affiliation": "University of California at San Diego, USA",
       "url": "http://pages.ucsd.edu/~ztu/",
-      "research": "computer vision, deep learning, weakly-supervised learning." 
+      "research": "computer vision, deep learning, weakly-supervised learning" 
     },
     {
       "name": "Nicolas Vayatis",
       "affiliation": "ENS Cachan, France",
       "url": "http://nvayatis.perso.math.cnrs.fr/",
-      "research": "Statistical learning theory." 
+      "research": "Statistical learning theory" 
     },
     {
       "name": "S V N Vishwanathan",
-      "affiliation": "Purdue University, USA.",
+      "affiliation": "Purdue University, USA",
       "url": "https://users.soe.ucsc.edu/~vishy/",
-      "research": "Kernels, Optimization, Distributed computing, Applications." 
+      "research": "Kernels, Optimization, Distributed computing, Applications" 
     },
     {
       "name": "Manfred Warmuth",
-      "affiliation": "University of California at Santa Cruz, USA.",
+      "affiliation": "University of California at Santa Cruz, USA",
       "url": "https://users.soe.ucsc.edu/~manfred/",
       "research": "" 
     },
     {
       "name": "Kilian Weinberger",
-      "affiliation": "Cornell University, USA.",
+      "affiliation": "Cornell University, USA",
       "url": "http://kilian.cs.cornell.edu",
-      "research": "Deep Learning, Representation Learning, Ranking, Computer Vision." 
+      "research": "Deep Learning, Representation Learning, Ranking, Computer Vision" 
     },
     {
       "name": "David Wipf",
       "affiliation": "Microsoft Research Asia, China",
       "url": "http://research.microsoft.com/en-us/people/davidwip/",
-      "research": "Bayesian learning, sparse estimation, computer vision." 
+      "research": "Bayesian learning, sparse estimation, computer vision" 
     },
     {
       "name": "Daniela Witten",
-      "affiliation": "University of Washington.",
+      "affiliation": "University of Washington",
       "url": "http://faculty.washington.edu/dwitten/",
-      "research": "high-dimensional, statistics, sparsity, genomics, neuroscience."
+      "research": "high-dimensional, statistics, sparsity, genomics, neuroscience"
     },
     {
       "name": "Stefan Wrobel",
       "affiliation": "Fraunhofer IAIS and University of Bonn, Germany",
       "url": "http://www.iais.fraunhofer.de/stefanwrobel.html?L=1",
-      "research": "relational learning, graph mining, inductive logic programming, privacy-preserving learning, visual analytics, learning from spatial data, applications and big data." 
+      "research": "relational learning, graph mining, inductive logic programming, privacy-preserving learning, visual analytics, learning from spatial data, applications and big data" 
     },
     {
       "name": "Eric Xing",
-      "affiliation": "Carnegie Mellon University, USA.",
+      "affiliation": "Carnegie Mellon University, USA",
       "url": "http://www.cs.cmu.edu/~epxing/",
       "research": "" 
     },
@@ -652,17 +652,17 @@
       "name": "Tong Zhang",
       "affiliation": "Baidu Inc, China",
       "url": "http://www.stat.rutgers.edu/home/tzhang/",
-      "research": "learning theory, optimization, large scale learning." 
+      "research": "learning theory, optimization, large scale learning" 
     },
     {
       "name": "Zhihua Zhang",
       "affiliation": "Peking University, China",
       "url": "http://www.math.pku.edu.cn/teachers/zhzhang/",
-      "research": "Bayesian Analysis and Computations, Numerical Algebra and Optimization." 
+      "research": "Bayesian Analysis and Computations, Numerical Algebra and Optimization" 
     },
     {
       "name": "Hui Zou",
-      "affiliation": "University of Minnesota, USA.",
+      "affiliation": "University of Minnesota, USA",
       "url": "http://users.stat.umn.edu/~zouxx019/",
       "research": "" 
     }

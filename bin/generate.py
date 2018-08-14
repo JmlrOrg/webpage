@@ -26,4 +26,3 @@ with open('output/editorial-board.html', 'w') as f:
         year=YEAR
         )
     f.write(out)
-print(out)

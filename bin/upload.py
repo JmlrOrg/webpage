@@ -12,11 +12,11 @@ print(command)
 
 ssh_newkey = 'Are you sure you want to continue connecting'
 child = pexpect.spawn(command)
-i = p.expect([ssh_newkey,'password:',pexpect.EOF])
+i = child.expect([ssh_newkey,'password:',pexpect.EOF])
 if i==0:
     print('I say yes')
-    p.sendline('yes')
-    i = p.expect([ssh_newkey,'password:',pexpect.EOF])
+    child.sendline('yes')
+    i = child.expect([ssh_newkey,'password:',pexpect.EOF])
 if i==1:
     child.sendline(passwd)
 child.interact()

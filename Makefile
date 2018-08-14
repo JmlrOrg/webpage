@@ -8,6 +8,9 @@ all:
 	cp -r img/ output/
 	cp -r css/ output/
 
+test:
+	html_lint.py output/*.html
+
 develop:
 	python -m http.server 8001 --directory output
 

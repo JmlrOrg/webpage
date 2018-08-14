@@ -1,8 +1,6 @@
 all:
 	rm -rf ouput/*
-	npm install bootstrap
-	npm install jquery
-	ls
+	npm install
 	cp -r node_modules/bootstrap output/
 	cp -r node_modules/jquery output/
 	python bin/generate.py

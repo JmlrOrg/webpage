@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-   <title>{{ title }}</title>
-            
-   <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>{{ title }}</title>
 
-   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body  id="page-top">
+<body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-default fixed-top navbar-light bg-light" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -47,13 +47,12 @@
       </ul>
     </div>
   </nav>
-    
-  <!-- Page Content -->
-  <div id="content" class="container-fluid">
-        {% block content %}
-        {% endblock %}
-  </div>
-  
+
+<!-- Page Content -->
+<div id="content" class="container-fluid">
+{% block content %}{% endblock %}
+</div>
+
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="jquery/dist/jquery.min.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>

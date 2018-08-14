@@ -9,7 +9,7 @@ all:
 	cp -r css/ output/
 
 test:
-	html_lint.py output/*.html
+	! html_lint.py --disable=names output/*.html | grep Error
 
 develop:
 	python -m http.server 8001 --directory output

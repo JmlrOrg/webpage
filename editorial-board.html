@@ -4,18 +4,14 @@
 <h1>{{ title }}</h1>
 <div id="board">
 <h3>Editors-in-Chief</h3>
-<ul>
-  {% for e in editors_in_chief %}
+<ul>{% for e in editors_in_chief %}
   <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
-  {% endfor %}
-</ul>
+{% endfor %}</ul>
 
 <h3>Managing Editor</h3>
-<ul>
-  {% for e in managing_editors %}
+<ul>{% for e in managing_editors %}
   <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
-  {% endfor %}
-</ul>
+{% endfor %}</ul>
 </div>
 
 
@@ -26,11 +22,11 @@
 <h3>
 JMLR-<a href="/mloss">MLOSS</a> Editors</h3>
 
-<ul class='editors'>
-  <li><a href='http://alexandre.gramfort.net/'><span class='name'>Alexandre Gramfort</span></a>, <span class='affliliation'>INRIA, Université Paris-Saclay, France</span>. <span class='research'>supervised learning, convex optimization, sparse methods, machine learning software, applications in neuroscience</span></li>
-  <li><a href='http://www.hiit.fi/u/ahonkela/'><span class='name'>Antti Honkela</span></a>, <span class='affliliation'>University of Helsinki, Finland</span>. <span class='research'>Probabilistic modelling, approximate inference, bioinformatics</span></li>
-  <li><a href='https://users.lal.in2p3.fr/kegl/'><span class='name'>Balázs Kégl</span></a>, <span class='affliliation'>CNRS / Université Paris-Saclay, France</span>. <span class='research'>Ensemble methods, hyperparameter optimization, applications in particle and astrophysics</span></li>
-  <li><a href='http://www.ong-home.my'><span class='name'>Cheng Soon Ong</span></a>, <span class='affliliation'>Australian National University, Australia</span>. <span class='research'>Experimental design, feature learning, ranking, bioinformatics</span></li>
+<ul class="editors">
+  <li><a href="http://alexandre.gramfort.net/"><span class="name">Alexandre Gramfort</span></a>, <span class="affliliation">INRIA, Université Paris-Saclay, France</span>. <span class="research">supervised learning, convex optimization, sparse methods, machine learning software, applications in neuroscience</span></li>
+  <li><a href="http://www.hiit.fi/u/ahonkela/"><span class="name">Antti Honkela</span></a>, <span class="affliliation">University of Helsinki, Finland</span>. <span class="research">Probabilistic modelling, approximate inference, bioinformatics</span></li>
+  <li><a href="https://users.lal.in2p3.fr/kegl/"><span class="name">Balázs Kégl</span></a>, <span class="affliliation">CNRS / Université Paris-Saclay, France</span>. <span class="research">Ensemble methods, hyperparameter optimization, applications in particle and astrophysics</span></li>
+  <li><a href="http://www.ong-home.my"><span class="name">Cheng Soon Ong</span></a>, <span class="affliliation">Australian National University, Australia</span>. <span class="research">Experimental design, feature learning, ranking, bioinformatics</span></li>
 </ul>
 
 <h3>

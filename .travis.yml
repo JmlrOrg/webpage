@@ -9,6 +9,7 @@ before_install:
 
 script:
   - make
+  - make test
 
 after_success:
   - make upload

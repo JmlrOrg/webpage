@@ -1,8 +1,12 @@
 all:
-	rm -rf ouput/*
+	rm -rf output
 	npm install
-	cp -r node_modules/bootstrap output/
-	cp -r node_modules/jquery output/
+	mkdir -p output
+	mkdir -p output/js
+	mkdir -p output/css
+	cp node_modules/bootstrap/dist/js/bootstrap.min.js output/js/
+	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/css/
+	cp node_modules/jquery/dist/jquery.min.js output/js/
 	python bin/generate.py
 	cp -r img/ output/
 	cp -r css/ output/

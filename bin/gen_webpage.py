@@ -22,6 +22,7 @@ with open('output/editorial-board.html', 'w') as f:
     out = editorial_board_template.render(
         editors_in_chief=editorial_board['editors_in_chief'],
         managing_editors=editorial_board['managing_editors'],
+        action_editors=editorial_board['action_editors'],
         title='JMLR editorial board',
         year=YEAR
         )

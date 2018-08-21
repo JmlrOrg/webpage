@@ -50,7 +50,7 @@
       "url": "http://ei.is.tuebingen.mpg.de/person/btabibian"
     }
   ],
-  "Webmaster":
+  "webmaster":
   [
     {
       "name": "Fabian Pedregosa",
@@ -58,7 +58,7 @@
       "url": "http://fa.bianp.net"
     }
   ],
-  "JMLR Action Editors":
+  "action_editors":
   [
     {
       "name": "Ryan Adams",

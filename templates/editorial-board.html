@@ -5,21 +5,21 @@
 <div id="board">
 <h3>Editors-in-Chief</h3>
 <ul>{% for e in editors_in_chief %}
-  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
-{% endfor %}</ul>
+  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
+</ul>
 
 <h3>Managing Editor</h3>
 <ul>{% for e in managing_editors %}
-  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>
-{% endfor %}</ul>
+  <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
+</ul>
 </div>
 
 
 <h3>JMLR Action Editors</h3>
-<div id="action_editors">
+<div>
   <ul>{% for e in action_editors %}
-    <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}. <br/>{{e.research}}</li>
-  {% endfor %}</ul>
+    <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}. <br>{{e.research}}</li>{% endfor %}
+  </ul>
 </div>
 
 <h3>

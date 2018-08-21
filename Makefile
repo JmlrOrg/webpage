@@ -7,7 +7,7 @@ all:
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js output/js/
 	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/css/
 	cp node_modules/jquery/dist/jquery.min.js output/js/
-	python bin/generate.py
+	python bin/gen_webpage.py
 	cp -r img/ output/
 	cp -r css/ output/
 

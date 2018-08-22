@@ -8,6 +8,7 @@ all:
 	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/css/
 	cp node_modules/jquery/dist/jquery.min.js output/js/
 	python bin/gen_webpage.py
+	python bin/gen_volume.py 19
 	cp -r img/ output/
 	cp -r css/ output/
 

@@ -17,6 +17,7 @@ before_install:
 
 script:
   - make
+  - python bin/gen_volume.py 19
   - make test
 
 after_success:

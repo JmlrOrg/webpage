@@ -1,0 +1,50 @@
+<html>
+<head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <!--#include virtual="/css-scroll.txt"-->
+
+ <!-- MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+ <!-- Google Scholar Meta -->
+ <meta name="citation_title" content="{{title}}">
+
+{% for author in authors %}
+ <meta name="citation_author" content="{{author}}">
+{% endfor %}
+        
+ <meta name="citation_journal_title" content="Journal of Machine Learning Research">
+ <meta name="citation_volume" content="{{volume}}">
+ <meta name="citation_issue" content="{{issue}}">
+ <meta name="citation_firstpage" content="{{firstpage}}">
+ <meta name="citation_lastpage" content="{{lastpage}}">
+ <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
+ <meta name="citation_publication_date" content="{{date}}">
+    <title>{{title}}</title>
+<style>
+. {font-family:verdana,helvetica,sans-serif}
+a {text-decoration:none;color:#3030a0}
+</style>
+</head>
+<body>
+ <div id="content">
+
+<h2> {{title}} </h2>
+
+<p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
+
+<h3>Abstract</h3>
+
+{{abstract}}
+
+<font color="gray"><p>[abs]</font>[<a target="_blank" href="/papers/volume{{volume}}/16-119/16-119.pdf">pdf</a>][<a href="/papers/v18/16-119.bib">bib</a>]
+
+</div>
+ <!--#include virtual="/nav-bar.txt"-->
+  </body>
+
+</html>

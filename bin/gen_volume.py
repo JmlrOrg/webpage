@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     env = Environment(
         loader=FileSystemLoader('templates'),
-        autoescape=None
+        autoescape=select_autoescape(['html', 'xml'])
     )
     
 

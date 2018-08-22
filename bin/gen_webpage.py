@@ -28,3 +28,4 @@ for page in ['editorial-board.html', 'contact.html']:
         out = template.render(**info, year=YEAR)
         f.write(out)
     
+# TODO: current webpage

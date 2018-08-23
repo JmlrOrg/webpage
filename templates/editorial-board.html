@@ -55,15 +55,12 @@ must-revalidate">
 <ul>{% for e in managing_editors %}
   <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
 </ul>
-</div>
 
 
 <h3>JMLR Action Editors</h3>
-<div>
   <ul class="editors">{% for e in action_editors %}
     <li><a href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}. <span class="research">{{e.research}}</span>{% endfor %}
   </ul>
-</div>
 
 <h3>
 JMLR-<a href="/mloss">MLOSS</a> Editors</h3>

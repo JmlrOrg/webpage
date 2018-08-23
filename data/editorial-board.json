@@ -637,6 +637,12 @@
       "research": "high-dimensional, statistics, sparsity, genomics, neuroscience"
     },
     {
+      "name": "Frank Wood",
+      "affiliation": "University of British Columbia",
+      "url": "https://www.cs.ubc.ca/~fwood",
+      "research": "probabilist programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
+    },    
+    {
       "name": "Stefan Wrobel",
       "affiliation": "Fraunhofer IAIS and University of Bonn, Germany",
       "url": "http://www.iais.fraunhofer.de/stefanwrobel.html?L=1",

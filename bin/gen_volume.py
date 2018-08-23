@@ -52,7 +52,7 @@ def process(info):
     vol = info['volume']
     id = info['id']
     with open('output/papers/v%s/%s.html' % (vol, id), 'w') as f:
-        editorial_board_template = env.get_template('old/paper.html')
+        editorial_board_template = env.get_template('paper.html')
         out = editorial_board_template.render(**info)
         f.write(out)
     with open('output/papers/v%s/%s.bib' % (vol, id), 'w') as f:
@@ -86,6 +86,6 @@ if __name__ == '__main__':
 
     # render volume html file
     with open('output/papers/v%s/index.html' % vol, 'w') as f:
-        editorial_board_template = env.get_template('old/volume.html')
+        editorial_board_template = env.get_template('volume.html')
         out = editorial_board_template.render(info_list=info_list, volume=vol)
         f.write(out)

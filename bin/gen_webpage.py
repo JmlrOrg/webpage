@@ -22,10 +22,23 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
-for page in ['editorial-board.html', 'contact.html', 'index.html']:
+for page in ['editorial-board.html', 'contact.html']:
     with open(os.path.join('output', prefix, page), 'w') as f:
         template = env.get_template('%s' % page)
         out = template.render(**info, year=YEAR)
         f.write(out)
     
-# TODO: current webpage
+# current webpage
+prefix = ''
+if not os.path.exists(os.path.join('output', prefix)):
+    os.mkdir(os.path.join('output', prefix))
+env = Environment(
+    loader=FileSystemLoader(os.path.join('templates', prefix)),
+    autoescape=select_autoescape(['html', 'xml'])
+)
+
+for page in ['index.html']:
+    with open(os.path.join('output', prefix, page), 'w') as f:
+        template = env.get_template('%s' % page)
+        out = template.render(**info, year=YEAR)
+        f.write(out)

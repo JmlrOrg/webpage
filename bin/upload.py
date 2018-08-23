@@ -5,7 +5,7 @@ user = os.environ['JMLR_USER']
 path = os.environ['JMLR_PATH']
 passwd = os.environ['JMLR_PASSWORD']
 
-path = os.path.join(path, 'git')
+path = os.path.join(path, '')
 command = 'rsync -arvz output/ %s@%s' % (user, path)
 
 ssh_newkey = 'Are you sure you want to continue connecting'

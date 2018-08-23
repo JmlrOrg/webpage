@@ -21,6 +21,6 @@ script:
 
 deploy:
   provider: script
-  script: make upload
+  script: python bin/upload.py
   on:
     branch: master

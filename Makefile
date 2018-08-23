@@ -16,6 +16,3 @@ test:
 
 develop:
 	python -m http.server 8001 --directory output
-
-upload:
-	python bin/upload.py

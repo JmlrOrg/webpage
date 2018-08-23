@@ -37,7 +37,7 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
-for page in ['index.html']:
+for page in ['index.html', 'editorial-board.html']:
     with open(os.path.join('output', prefix, page), 'w') as f:
         template = env.get_template('%s' % page)
         out = template.render(**info, year=YEAR)

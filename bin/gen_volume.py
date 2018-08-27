@@ -73,8 +73,8 @@ if __name__ == '__main__':
 
     vol = sys.argv[1]
 
-    if not os.path.exists('output/papers/v%s' % vol):
-        os.makedirs('output/papers/v%s' % vol, exist_ok=True)
+    os.makedirs('output/papers/v%s' % vol, exist_ok=True)
+    os.makedirs('output/mloss/', exist_ok=True)        
 
     env = Environment(
         loader=FileSystemLoader('templates'),
@@ -94,3 +94,11 @@ if __name__ == '__main__':
     #     editorial_board_template = env.get_template('papers/index.html')
     #     out = editorial_board_template.render(info_list=info_list, volume=vol)
     #     f.write(out)
+
+    # mloss webpage
+    with open('output/mloss/index.html', 'w') as f:
+        info_mloss = filter(
+        lambda x: x.get('special_issue', '') == 'MLOSS', info_list)
+        editorial_board_template = env.get_template('mloss/index.html')
+        out = editorial_board_template.render(info_list=info_mloss, volume=vol)
+        f.write(out)

@@ -14,7 +14,8 @@ accents = [
    ["'u", "ú"], ['"u', "ü"], ["^u", "û"], ["`u", "ù"],
    ["cc", "ç"], ['ug', 'ğ'], ['"U', "Ü"], ['"u', "ü"],
    ["vZ", "Ž"], ['vc', 'č'], ['Ho', "ő"], ['O', "Ø"],
-   ['o', "ø"], ['l', 'ł'], ["'n", "ń"], ['v{s}', 'š']
+   ['o', "ø"], ['l', 'ł'], ["'n", "ń"], ['v{s}', 'š'],
+   ['L', 'Ł'], ['&', '&amp;']
 ]
 
 def xml_string(text):
@@ -24,7 +25,7 @@ def xml_string(text):
     for tex, utf8 in accents:
         # utf8 = utf8.decode('utf-8')
         text = text.replace('{\\%s}' % tex, utf8)          # {\"a}
-        text = text.replace('\\%s' % tex, utf8)            # \"a
+        # text = text.replace('\\%s' % tex, utf8)            # \"a
         try:
             text = text.replace('\\%s{%s}' % tuple(tex), utf8) # \"{a}
         except TypeError:
@@ -41,7 +42,7 @@ def get_info(vol):
             # some cleanup for the html display
             id_info = json.load(fp)
             id_info['authors_string'] = xml_string(', '.join(id_info['authors']))
-            id_info['abstract'] = id_info['abstract']
+            id_info['abstract'] = xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
         info.append(id_info)
     os.chdir('../..')
@@ -52,11 +53,11 @@ def process(info):
     vol = info['volume']
     id = info['id']
     with open('output/papers/v%s/%s.html' % (vol, id), 'w') as f:
-        editorial_board_template = env.get_template('paper.html')
+        editorial_board_template = env.get_template('papers/item.html')
         out = editorial_board_template.render(**info)
         f.write(out)
     with open('output/papers/v%s/%s.bib' % (vol, id), 'w') as f:
-        editorial_board_template = env.get_template('biblio.bib')
+        editorial_board_template = env.get_template('papers/biblio.bib')
         out = editorial_board_template.render(**info)
         f.write(out)
     papers_dir = 'output/papers/'
@@ -86,6 +87,10 @@ if __name__ == '__main__':
 
     # render volume html file
     with open('output/papers/v%s/index.html' % vol, 'w') as f:
-        editorial_board_template = env.get_template('volume.html')
+        editorial_board_template = env.get_template('papers/volume.html')
         out = editorial_board_template.render(info_list=info_list, volume=vol)
         f.write(out)
+    # with open('output/papers/index.html', 'w') as f:
+    #     editorial_board_template = env.get_template('papers/index.html')
+    #     out = editorial_board_template.render(info_list=info_list, volume=vol)
+    #     f.write(out)

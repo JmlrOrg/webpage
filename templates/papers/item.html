@@ -1,8 +1,6 @@
-<html>
-<head>
- <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
- <!--#include virtual="/css-scroll.txt"-->
+{% extends "base.html" %}
 
+{% block extraheader %}
  <!-- MathJax -->
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
@@ -25,14 +23,9 @@
  <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
  <meta name="citation_publication_date" content="{{date}}">
     <title>{{title}}</title>
-<style>
-. {font-family:verdana,helvetica,sans-serif}
-a {text-decoration:none;color:#3030a0}
-</style>
-</head>
-<body>
- <div id="content">
+{% endblock %}
 
+{% block content %}
 <h2> {{title}} </h2>
 
 <p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
@@ -41,10 +34,6 @@ a {text-decoration:none;color:#3030a0}
 {% autoescape false %}
 {{abstract}}
 {% endautoescape %}
-<font color="gray"><p>[abs]</font>[<a target="_blank" href="/papers/volume{{volume}}/{{id}}.pdf">pdf</a>][<a href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
+<font color="gray"><p>[abs]</font>[<a target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
 
-</div>
- <!--#include virtual="/nav-bar.txt"-->
-  </body>
-
-</html>
+{% endblock %}

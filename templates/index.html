@@ -1,22 +1,6 @@
-<html>
-<head>
-      <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+{% extends "base.html" %}
 
-<!--#include virtual="/css-scroll.txt"-->
-
-<title> Journal of Machine Learning Research Homepage</title>
-
-<script language="JavaScript"> 
-    function GoAddress(user,machine) { 
-        document.location = 'mailto:' + user + '@' + machine;
-    } 
-</script>
-</head>
-<body>
-
-<!--#include virtual="/nav-bar.txt"-->
-
-<div id="content">
+{% block content %}
 <table width="100%" cellspacing="0" cellpadding="0"> <tr> <td
 valign="top" align="left"> 
 
@@ -41,10 +25,10 @@ Paper volumes (ISSN 1532-4435) are now published and sold by
                                                                                       
 <h2>News</h2>
 <ul>
-    <li><a href="/news-archive/20180416-changes.html">Changes</a> in JMLR leadership team.</li>
-    <li><a href="papers/topic/2016-Learning-from-Electronic-Health-Data.html">Special topic on Learning from Electronic Health Data</a> (Dec 2016)</li>
-    <li><a href="papers/special/chervonenkis15.html">Special issue in Memory of Alexey Chervonenkis</a> (Sep 2015).</li>
-    <li><a href=papers/v17>Volume 17</a> completed; <a href=papers/v18>Volume 18</a> began. </li>
+    <li><i>2018.08.28</i>: <a href=papers/v18>Volume 18</a> completed; <a href=papers/v19>Volume 19</a> began. </li>
+    <li><i>2018.04.16</i>: <a href="/news-archive/20180416-changes.html">Changes</a> in JMLR leadership team.</li>
+    <li><i>2016.12.01</i>: <a href="papers/topic/2016-Learning-from-Electronic-Health-Data.html">Special topic on Learning from Electronic Health Data</a></li>
+    <li><i>2015.09.01</i>: <a href="papers/special/chervonenkis15.html">Special issue in Memory of Alexey Chervonenkis</a>.</li>
 </ul>
 </td> 
 <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
@@ -55,16 +39,4 @@ Paper volumes (ISSN 1532-4435) are now published and sold by
 <img src="images/Sparc7.gif" border="0" width=100></a> 
 
 </td> </tr> </table> 
-
-<p> 
-
-<table width="100%"> <tr>
-<td
-align="right"><font size="-1">Copyright &copy <a target="_top"
-href="http://www.jmlr.org">JMLR</a> {{year}}.  All rights
-reserved.</font></td> </tr> </table>
-               
-</div>
-
-</body>
-</html>
+{% endblock %}

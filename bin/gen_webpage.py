@@ -45,6 +45,6 @@ env = Environment(
 )
 
 
-for page in ['index.html', 'editorial-board.html']:
+for page in ['index.html', 'editorial-board.html', 'news.html']:
     render_webpage(prefix, page)
 render_webpage('mloss', 'index.html')

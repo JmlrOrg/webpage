@@ -90,10 +90,10 @@ if __name__ == '__main__':
         editorial_board_template = env.get_template('papers/volume.html')
         out = editorial_board_template.render(info_list=info_list, volume=vol)
         f.write(out)
-    # with open('output/papers/index.html', 'w') as f:
-    #     editorial_board_template = env.get_template('papers/index.html')
-    #     out = editorial_board_template.render(info_list=info_list, volume=vol)
-    #     f.write(out)
+    with open('output/papers/index.html', 'w') as f:
+        editorial_board_template = env.get_template('papers/index.html')
+        out = editorial_board_template.render(info_list=info_list, volume=vol)
+        f.write(out)
 
     # mloss webpage
     with open('output/mloss/index.html', 'w') as f:

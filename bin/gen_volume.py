@@ -88,7 +88,7 @@ if __name__ == '__main__':
     # render volume html file
     with open('output/papers/v%s/index.html' % vol, 'w') as f:
         editorial_board_template = env.get_template('papers/volume.html')
-        out = editorial_board_template.render(info_list=info_list, volume=vol)
+        out = editorial_board_template.render(info_list=info_list, vol=vol)
         f.write(out)
     with open('output/papers/index.html', 'w') as f:
         editorial_board_template = env.get_template('papers/index.html')

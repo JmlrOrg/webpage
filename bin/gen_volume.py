@@ -57,8 +57,11 @@ def process(info):
         out = editorial_board_template.render(**info)
         f.write(out)
     with open('output/papers/v%s/%s.bib' % (vol, id), 'w') as f:
+        info_bib = info.copy()
+        if 'title_bibtex' in info:
+            info_bib['title'] = info_bib['title_bibtex']
         editorial_board_template = env.get_template('papers/biblio.bib')
-        out = editorial_board_template.render(**info)
+        out = editorial_board_template.render(**info_bib)
         f.write(out)
     papers_dir = 'output/papers/'
     os.makedirs('output/papers/volume%s/%s' % (vol, id), exist_ok=True)        

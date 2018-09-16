@@ -98,6 +98,15 @@ if __name__ == '__main__':
         out = editorial_board_template.render(info_list=info_list, volume=vol)
         f.write(out)
 
+    # rss feed
+    with open('output/jmlr.xml', 'w') as f:
+        # sort by issue
+        info_by_issue = sorted(info_list, key=lambda k: k['issue'])[::-1]
+        editorial_board_template = env.get_template('jmlr.xml')
+        out = editorial_board_template.render(info_list=info_by_issue, vol=vol)
+        f.write(out)
+
+
     # mloss webpage
     with open('output/mloss/index.html', 'w') as f:
         info_mloss = filter(

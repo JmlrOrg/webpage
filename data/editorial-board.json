@@ -463,6 +463,12 @@
       "research": "multitask and transfer learning, convex optimization, kernel methods, sparsity regularization" 
     },
     {
+      "name": "Pushmeet Kohli",
+      "affiliation": "DeepMind",
+      "url": "https://sites.google.com/site/pushmeet/",
+      "research": "adversarial evaluation and robustness, program synthesis, graph neural networks" 
+    },
+    {
       "name": "Luc de Raedt",
       "affiliation": "Katholieke Universiteit Leuven, Belgium",
       "url": "http://people.cs.kuleuven.be/~luc.deraedt/",

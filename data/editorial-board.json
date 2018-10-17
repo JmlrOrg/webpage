@@ -442,7 +442,7 @@
       "name": "Jan Peters",
       "affiliation": "Technische Universitaet Darmstadt, Germany",
       "url": "http://www.jan-peters.net",
-      "research": "reinforcement learning, robot learning, policy search" 
+      "research": "Reinforcement learning, robot learning, policy search" 
     },
     {
       "name": "Avi Pfeffer",
@@ -454,19 +454,19 @@
       "name": "Joelle Pineau",
       "affiliation": "McGill University, Canada",
       "url": "http://cs.mcgill.ca/~jpineau/",
-      "research": "reinforcement learning, deep learning, robotics" 
+      "research": "Reinforcement learning, deep learning, robotics" 
     },
     {
       "name": "Massimiliano Pontil",
       "affiliation": "Istituto Italiano di Tecnologia (Italy), University College London (UK)",
       "url": "http://www0.cs.ucl.ac.uk/staff/M.Pontil/",
-      "research": "multitask and transfer learning, convex optimization, kernel methods, sparsity regularization" 
+      "research": "Multitask and transfer learning, convex optimization, kernel methods, sparsity regularization" 
     },
     {
       "name": "Pushmeet Kohli",
       "affiliation": "DeepMind",
       "url": "https://sites.google.com/site/pushmeet/",
-      "research": "adversarial evaluation and robustness, program synthesis, graph neural networks" 
+      "research": "Adversarial evaluation and robustness, program synthesis, graph neural networks" 
     },
     {
       "name": "Luc de Raedt",
@@ -478,7 +478,7 @@
       "name": "Alexander Rakhlin",
       "affiliation": "University of Pennsylvania, USA",
       "url": "http://www-stat.wharton.upenn.edu/~rakhlin/",
-      "research": "learning theory, online learning, statistical learning theory" 
+      "research": "Learning theory, online learning, statistical learning theory" 
     },
     {
       "name": "Ben Recht",
@@ -526,7 +526,7 @@
       "name": "John Shawe-Taylor",
       "affiliation": "University College London, UK",
       "url": "http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/",
-      "research": "statistical learning theory, kernel methods, reinforcement learning" 
+      "research": "Statistical learning theory, kernel methods, reinforcement learning" 
     },
     {
       "name": "Xiaotong Shen",

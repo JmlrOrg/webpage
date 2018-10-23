@@ -22,7 +22,7 @@ def render_webpage(prefix, page):
         f.write(out)
 
 
-# beta webpage
+# .. beta webpage ..
 prefix = 'beta'
 if not os.path.exists(os.path.join('output', prefix)):
     os.mkdir(os.path.join('output', prefix))
@@ -36,8 +36,9 @@ for page in ['editorial-board.html', 'contact.html']:
         template = env.get_template('%s' % page)
         out = template.render(**info, year=YEAR)
         f.write(out)
+# .. end beta webpage ..
 
-# current webpage
+# .. current webpage ..
 prefix = ''
 env = Environment(
     loader=FileSystemLoader(os.path.join('templates', prefix)),
@@ -45,6 +46,6 @@ env = Environment(
 )
 
 
-for page in ['index.html', 'editorial-board.html', 'news.html']:
+for page in ['index.html', 'editorial-board.html', 'news.html', 'author-info.html']:
     render_webpage(prefix, page)
 render_webpage('mloss', 'index.html')

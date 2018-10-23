@@ -56,6 +56,11 @@ must-revalidate">
   <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
 </ul>
 
+<h3>Production Editor</h3>
+<ul class="editors">{% for e in production_editors %}
+  <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation}}.</li>{% endfor %}
+</ul>
+
 <h3>Production Staff</h3>
 <ul class="editors">
   <li><a class="name" href="http://acl.mit.edu/members/tcampbell.htm">Trevor Campbell</a></b>, Massachusetts Institute of Technology.</li>

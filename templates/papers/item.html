@@ -9,12 +9,12 @@
 </script>
 
  <!-- Google Scholar Meta -->
- <meta name="citation_title" content="{{title}}">
+ <meta name="citation_title" content="{{title_html}}">
 
 {% for author in authors %}
  <meta name="citation_author" content="{{author}}">
 {% endfor %}
-        
+
  <meta name="citation_journal_title" content="Journal of Machine Learning Research">
  <meta name="citation_volume" content="{{volume}}">
  <meta name="citation_issue" content="{{issue}}">
@@ -22,11 +22,11 @@
  <meta name="citation_lastpage" content="{{lastpage}}">
  <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
  <meta name="citation_publication_date" content="{{date}}">
-    <title>{{title}}</title>
+    <title>{{title_html}}</title>
 {% endblock %}
 
 {% block content %}
-<h2> {{title}} </h2>
+<h2> {{title_html}} </h2>
 
 <p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
 
@@ -35,5 +35,9 @@
 {{abstract}}
 {% endautoescape %}
 <font color="gray"><p>[abs]</font>[<a target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
+   [<a href="{{link[1]}}">{{link[0]}}</a>]
+  {% endfor %}
+
 
 {% endblock %}

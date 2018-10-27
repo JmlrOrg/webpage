@@ -52,19 +52,20 @@ def get_info(vol):
 def process(info):
     vol = info['volume']
     id = info['id']
+    if 'title_html' not in info:
+        info['title_html'] = info['title']
+
+    if 'title_bibtex' not in info:
+        info['title_bibtex'] = info['title']
+
     with open('output/papers/v%s/%s.html' % (vol, id), 'w') as f:
-        info_html = info.copy()
-        if 'title_html' in info:
-            info_html['title'] = info_html['title_html']
+
         editorial_board_template = env.get_template('papers/item.html')
-        out = editorial_board_template.render(**info_html)
+        out = editorial_board_template.render(**info)
         f.write(out)
     with open('output/papers/v%s/%s.bib' % (vol, id), 'w') as f:
-        info_bib = info.copy()
-        if 'title_bibtex' in info:
-            info_bib['title'] = info_bib['title_bibtex']
         editorial_board_template = env.get_template('papers/biblio.bib')
-        out = editorial_board_template.render(**info_bib)
+        out = editorial_board_template.render(**info)
         f.write(out)
     papers_dir = 'output/papers/'
     os.makedirs('output/papers/volume%s/%s' % (vol, id), exist_ok=True)
@@ -93,8 +94,8 @@ if __name__ == '__main__':
 
     # render volume html file
     with open('output/papers/v%s/index.html' % vol, 'w') as f:
-        editorial_board_template = env.get_template('papers/volume.html')
-        out = editorial_board_template.render(info_list=info_list, vol=vol)
+        volume_template = env.get_template('papers/volume.html')
+        out = volume_template.render(info_list=info_list, vol=vol)
         f.write(out)
     with open('output/papers/index.html', 'w') as f:
         editorial_board_template = env.get_template('papers/index.html')

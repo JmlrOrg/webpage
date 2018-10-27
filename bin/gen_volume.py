@@ -53,8 +53,11 @@ def process(info):
     vol = info['volume']
     id = info['id']
     with open('output/papers/v%s/%s.html' % (vol, id), 'w') as f:
+        info_html = info.copy()
+        if 'title_html' in info:
+            info_html['title'] = info_html['title_html']
         editorial_board_template = env.get_template('papers/item.html')
-        out = editorial_board_template.render(**info)
+        out = editorial_board_template.render(**info_html)
         f.write(out)
     with open('output/papers/v%s/%s.bib' % (vol, id), 'w') as f:
         info_bib = info.copy()
@@ -64,7 +67,7 @@ def process(info):
         out = editorial_board_template.render(**info_bib)
         f.write(out)
     papers_dir = 'output/papers/'
-    os.makedirs('output/papers/volume%s/%s' % (vol, id), exist_ok=True)        
+    os.makedirs('output/papers/volume%s/%s' % (vol, id), exist_ok=True)
     shutil.copy(
         'data/v%s/%s/%s.pdf' % (vol, id, id),
         'output/papers/volume%s/%s/%s.pdf' % (vol, id, id))
@@ -77,13 +80,13 @@ if __name__ == '__main__':
     vol = sys.argv[1]
 
     os.makedirs('output/papers/v%s' % vol, exist_ok=True)
-    os.makedirs('output/mloss/', exist_ok=True)        
+    os.makedirs('output/mloss/', exist_ok=True)
 
     env = Environment(
         loader=FileSystemLoader('templates'),
         autoescape=select_autoescape(['html', 'xml'])
     )
-    
+
     info_list = get_info(vol)
     for info in info_list:
         process(info)

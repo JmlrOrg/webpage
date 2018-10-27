@@ -13,6 +13,7 @@ all:
 
 test:
 	! html_lint.py --disable=entities output/beta/*.html | grep Error
+	python tests/test.py
 
 develop:
 	cd output && python -m http.server 8001

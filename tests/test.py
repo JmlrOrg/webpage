@@ -42,11 +42,13 @@ def test_2(driver):
 all_tests = [test_1, test_2]
 
 if __name__ == '__main__':
+    print('Starting server')
     server = StoppableHTTPServer(("localhost", PORT),
                                  http.server.SimpleHTTPRequestHandler)
     # Start processing requests
     thread = threading.Thread(None, server.run)
     thread.start()
+    print('Server started')
 
     options = Options()
     options.add_argument('--headless')
@@ -55,7 +57,7 @@ if __name__ == '__main__':
     options.add_argument('--log-path=chromedriver.log')
     options.add_argument('--verbose')
 
-    driver = webdriver.Chrome(chrome_options=options)
+    driver = webdriver.Chrome(options=options)
 
     for t in all_tests:
         t(driver)

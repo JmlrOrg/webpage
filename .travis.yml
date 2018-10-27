@@ -15,7 +15,6 @@ before_install:
   - pip install -r requirements.txt
 
 script:
-  - phantomjs testrunner.js
   - make
   - python bin/gen_volume.py 19
   - make test

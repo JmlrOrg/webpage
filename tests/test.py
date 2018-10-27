@@ -50,14 +50,15 @@ if __name__ == '__main__':
     thread.start()
     print('Server started')
 
+    print('Launching headless Chrome')
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
     options.add_argument('--log-path=chromedriver.log')
     options.add_argument('--verbose')
-
     driver = webdriver.Chrome(options=options)
+    prin('headless Chrome launched')
 
     for t in all_tests:
         t(driver)

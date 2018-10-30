@@ -541,6 +541,12 @@
       "research": "Bayesian networks, Causal models, Model search, Causal inference"
     },
     {
+      "name": "Suvrit Sra",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://suvrit.de",
+      "research": "Optimization, Deep Learning Theory, Non-convex Optimization, non-Euclidean geometry and optimization, Negative Dependence, Optimal Transport, Matrix Theory, Determinantal point processes"
+    },
+    {
       "name": "Nathan Srebro",
       "affiliation": "Toyota Technical Institute at Chicago, USA",
       "url": "http://ttic.uchicago.edu/~nati/",

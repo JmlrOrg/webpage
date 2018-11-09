@@ -91,12 +91,6 @@
       "research": "Bandit problems, reinforcement learning, online learning"
     },
     {
-      "name": "David Barber",
-      "affiliation": "University College London, UK",
-      "url": "http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php",
-      "research": "Graphical models, deep learning, approximate inference"
-    },
-    {
       "name": "Samy Bengio",
       "affiliation": "Google Research, USA",
       "url": "http://bengio.abracadoudou.com",

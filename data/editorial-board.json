@@ -331,6 +331,12 @@
       "research": ""
     },
     {
+      "name": "Vikash K. Mansinghka",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://probcomp.csail.mit.edu/",
+      "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
+    },
+    {
       "name": "Shie Mannor",
       "affiliation": "Technion, Israel",
       "url": "http://shie.webee.eedev.technion.ac.il",
@@ -640,7 +646,7 @@
       "name": "Frank Wood",
       "affiliation": "University of British Columbia",
       "url": "https://www.cs.ubc.ca/~fwood",
-      "research": "probabilist programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
+      "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     },
     {
       "name": "Stefan Wrobel",

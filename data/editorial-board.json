@@ -331,6 +331,12 @@
       "research": ""
     },
     {
+      "name": "Vikash K. Mansinghka",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://probcomp.csail.mit.edu/",
+      "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
+    },
+    {
       "name": "Shie Mannor",
       "affiliation": "Technion, Israel",
       "url": "http://shie.webee.eedev.technion.ac.il",
@@ -377,6 +383,12 @@
       "affiliation": "University of Amsterdam, Netherlands",
       "url": "https://staff.fnwi.uva.nl/j.m.mooij/",
       "research": "Causality"
+    },
+    {
+      "name": "Sayan Mukherjee",
+      "affiliation": "Duke University, USA",
+      "url": "https://sayanmuk.github.io/",
+      "research": "Bayesian methodology, computational biology, inference in dynamical systems, geometry and topology in inference, stochastic geometry and topology"
     },
     {
       "name": "Boaz Nadler",
@@ -487,12 +499,6 @@
       "research": "Statistical learning theory, Optimization, Regularization, Inverse problems"
     },
     {
-      "name": "Saharon Rosset",
-      "affiliation": "Tel Aviv University, Israel",
-      "url": "http://www.tau.ac.il/~saharon/",
-      "research": "Bioinformatics and statistical genetics, statistical learning/predictive modeling, data mining/big data"
-    },
-    {
       "name": "Ruslan Salakhutdinov",
       "affiliation": "University of Toronto, Canada",
       "url": "http://www.cs.toronto.edu/~rsalakhu/",
@@ -545,12 +551,6 @@
       "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://suvrit.de",
       "research": "Optimization, Deep Learning Theory, Non-convex Optimization, non-Euclidean geometry and optimization, Negative Dependence, Optimal Transport, Matrix Theory, Determinantal point processes"
-    },
-    {
-      "name": "Nathan Srebro",
-      "affiliation": "Toyota Technical Institute at Chicago, USA",
-      "url": "http://ttic.uchicago.edu/~nati/",
-      "research": ""
     },
     {
       "name": "Ingo Steinwart",
@@ -640,7 +640,7 @@
       "name": "Frank Wood",
       "affiliation": "University of British Columbia",
       "url": "https://www.cs.ubc.ca/~fwood",
-      "research": "probabilist programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
+      "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     },
     {
       "name": "Stefan Wrobel",

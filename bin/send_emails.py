@@ -49,7 +49,7 @@ Fabian Pedregosa (JMLR Webmaster) on behalf of the JMLR editorial board.
         server.quit()
         print('Email sent', msg['To'])
         import time
-        time.sleep(15)
+        time.sleep(5)
 
 
 if __name__ == '__main__':

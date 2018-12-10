@@ -115,12 +115,6 @@
       "research": "Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics"
     },
     {
-      "name": "Léon Bottou",
-      "affiliation": "Facebook AI Research",
-      "url": "http://leon.bottou.org",
-      "research": ""
-    },
-    {
       "name": "François Caron",
       "affiliation": "University of Oxford, United Kingdom",
       "url": "http://www.stats.ox.ac.uk/~caron",
@@ -425,12 +419,6 @@
       "affiliation": "Google Deepmind, USA",
       "url": "https://www6.inra.fr/mia-paris/Equipes/LInK/Les-anciens-de-LInK/Laurent-Orseau",
       "research": "Reinforcement Learning, Artificial General Intelligence"
-    },
-    {
-      "name": "Luis Ortiz",
-      "affiliation": "University of Michigan - Dearborn, USA",
-      "url": "http://www-personal.umd.umich.edu/~leortiz/",
-      "research": "machine learning; computational game theory and economics; graphical models; artificial intelligence; applications to complex systems"
     },
     {
       "name": "Jie Peng",

@@ -19,9 +19,9 @@
   "managing_editors":
   [
     {
-      "name": "Aron Culotta",
-      "affiliation": "Illinois Institute of Technology, USA",
-      "url": "http://cs.iit.edu/~culotta"
+      "name": "Fabian Pedregosa",
+      "affiliation": "Google",
+      "url": "http://fa.bianp.net"
     }
   ],
   "production_editors":
@@ -53,9 +53,9 @@
   "webmaster":
   [
     {
-      "name": "Fabian Pedregosa",
-      "affiliation": "UC Berkeley and ETH Zurich",
-      "url": "http://fa.bianp.net"
+      "name": "Alp Kucukelbir",
+      "affiliation": "Fero Labs and Columbia University",
+      "url": "http://www.proditus.com"
     }
   ],
   "action_editors":

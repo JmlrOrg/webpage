@@ -8,8 +8,8 @@ all:
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python bin/gen_webpage.py
 	python bin/gen_volume.py 19
-	cp -r img/ output/
-	cp -r css/ output/beta/
+	cp -r static/img/ output/
+	cp -r static/css/ output/beta/
 
 test:
 	! html_lint.py --disable=entities output/beta/*.html | grep Error

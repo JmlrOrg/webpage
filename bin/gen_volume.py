@@ -34,7 +34,7 @@ def xml_string(text):
 
 
 def get_info(vol):
-    os.chdir('data/v%s' % vol)
+    os.chdir('v%s' % vol)
     ids = glob.glob('??-???')
     info = []
     for id in ids:
@@ -45,7 +45,7 @@ def get_info(vol):
             id_info['abstract'] = xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
         info.append(id_info)
-    os.chdir('../..')
+    os.chdir('..')
     # sort by issue
     return sorted(info, key=lambda k: k['issue'])
 
@@ -70,7 +70,7 @@ def process(info):
     papers_dir = 'output/papers/'
     os.makedirs('output/papers/volume%s/%s' % (vol, id), exist_ok=True)
     shutil.copy(
-        'data/v%s/%s/%s.pdf' % (vol, id, id),
+        'v%s/%s/%s.pdf' % (vol, id, id),
         'output/papers/volume%s/%s/%s.pdf' % (vol, id, id))
 
 

@@ -40,8 +40,8 @@ def clean_title(title):
 # - volume is the volume number
 # - paper id is something like 'alquier13a'
 def extract_information(volume, paper_id):
-    src_file = 'data/v%s/%s/source/%s.tex' % (volume, paper_id, paper_id)
-    pdf_file = 'data/v%s/%s/%s.pdf' % (volume, paper_id, paper_id)
+    src_file = 'v%s/%s/source/%s.tex' % (volume, paper_id, paper_id)
+    pdf_file = 'v%s/%s/%s.pdf' % (volume, paper_id, paper_id)
 
     print(src_file)
     with codecs.open(src_file, 'r', 'latin1') as ins:
@@ -86,7 +86,7 @@ def extract_information(volume, paper_id):
 def compute_issue(vol, id):
     # scan through all inf.json files and assign the first free slot
     issue = 0
-    ids_paths = glob.glob('data/v%s/??-???/info.json' % vol)
+    ids_paths = glob.glob('v%s/??-???/info.json' % vol)
     for id_path in ids_paths:
         with open(id_path, 'r') as fp:
             ids_info = json.load(fp)
@@ -104,7 +104,7 @@ if __name__ == '__main__':
         info['issue'] = compute_issue(vol, id)
         print('Issue: %s' % info['issue'])
 
-        json_path = 'data/v%s/%s/info.json' % (vol, id)
+        json_path = 'v%s/%s/info.json' % (vol, id)
         if os.path.exists(json_path):
             os.remove(json_path)
         with open(json_path, 'w') as outfile:
@@ -113,7 +113,7 @@ if __name__ == '__main__':
             print(outfile.read())
         print(emails)
         print()
-        with open('data/v%s/%s/.emails.txt' % (vol, id), 'w') as outfile:
+        with open('v%s/%s/.emails.txt' % (vol, id), 'w') as outfile:
             outfile.write("\n".join(emails))
             outfile.write("\n")
         print('Done %s' % id)

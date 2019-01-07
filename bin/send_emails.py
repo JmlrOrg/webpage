@@ -12,7 +12,7 @@ import json
 def send_emails(vol, id):
     print('Processing paper ID %s' % id)
 
-    with open('data/v%s/%s/info.json' % (vol, id), 'r') as fp:
+    with open('v%s/%s/info.json' % (vol, id), 'r') as fp:
         # some cleanup for the html display
         info = json.load(fp)
 
@@ -22,7 +22,7 @@ def send_emails(vol, id):
         recipients = []
         recipients.append('webmaster@jmlr.org')
     else:
-        with open('data/v%s/%s/.emails.txt' % (vol, id), 'r') as fp:
+        with open('v%s/%s/.emails.txt' % (vol, id), 'r') as fp:
             emails = fp.readlines()
         recipients = [e.strip('\n') for e in emails]
         recipients.append('webmaster@jmlr.org')

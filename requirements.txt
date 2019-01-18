@@ -1,4 +1,5 @@
 jinja2==2.10
 html-linter
 pexpect
-selenium
+pytest
+bs4

@@ -5,32 +5,7 @@ import glob
 import shutil
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-
-accents = [
-   ["'a", "á"], ['"a', "ä"], ["^a", "â"], ["`a", "à"],
-   ["'e", "é"], ['"e', "ë"], ["^e", "ê"], ["`e", "è"],
-   ["'i", "í"], ['"i', "ï"], ["^i", "î"], ["`i", "ì"],
-   ["'o", "ó"], ['"o', "ö"], ["^o", "ô"], ["`o", "ò"],
-   ["'u", "ú"], ['"u', "ü"], ["^u", "û"], ["`u", "ù"],
-   ["cc", "ç"], ['ug', 'ğ'], ['"U', "Ü"], ['"u', "ü"],
-   ["vZ", "Ž"], ['vc', 'č'], ['Ho', "ő"], ['O', "Ø"],
-   ['o', "ø"], ['l', 'ł'], ["'n", "ń"], ['v{s}', 'š'],
-   ['v{S}', 'Š'], ['L', 'Ł'], ['&', '&amp;'], ["'c", "ć"]
-]
-
-def xml_string(text):
-    text = text.replace("``", u"“")
-    text = text.replace("''", u"”")
-
-    for tex, utf8 in accents:
-        # utf8 = utf8.decode('utf-8')
-        text = text.replace('{\\%s}' % tex, utf8)          # {\"a}
-        # text = text.replace('\\%s' % tex, utf8)            # \"a
-        try:
-            text = text.replace('\\%s{%s}' % tuple(tex), utf8) # \"{a}
-        except TypeError:
-            pass
-    return text
+import utils
 
 
 def get_info(vol):
@@ -41,8 +16,8 @@ def get_info(vol):
         with open('%s/info.json' % id, 'r') as fp:
             # some cleanup for the html display
             id_info = json.load(fp)
-            id_info['authors_string'] = xml_string(', '.join(id_info['authors']))
-            id_info['abstract'] = xml_string(id_info['abstract'])
+            id_info['authors_string'] = utils.xml_string(', '.join(id_info['authors']))
+            id_info['abstract'] = utils.xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
         info.append(id_info)
     os.chdir('..')

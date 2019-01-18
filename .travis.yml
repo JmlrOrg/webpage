@@ -16,12 +16,12 @@ before_install:
 
 script:
   - make
-  - python bin/gen_volume.py 19
+  - python src/gen_volume.py 19
   - make test
 
 deploy:
   skip_cleanup: true
   provider: script
-  script: python bin/upload.py
+  script: python src/upload.py
   on:
     branch: master

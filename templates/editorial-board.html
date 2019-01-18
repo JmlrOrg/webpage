@@ -1,20 +1,5 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-<head>
- <!--#include virtual="/css-scroll.txt"-->
-
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
-    <META HTTP-EQUIV="Expires" CONTENT="Mon, 20 Aug 2001 21:29:02
-      GMT">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache, no-store,
-must-revalidate">
-
-   <title>JMLR Editorial Board</title>
-
-<link rel="stylesheet" type="text/css"
-      href="http://www.jmlr.org/style.css">
+{% extends "base.html" %}
+{% block extraheader %}
 <style>
 .editors li {
     margin-bottom: 8px;
@@ -40,10 +25,9 @@ must-revalidate">
   margin-bottom: 0.5em;
 }
 </style>
+{% endblock %}
 
-</head>
-<body>
- <div id="content">
+{% block content %}
 
 <h1>JMLR Editorial Board</h1>
 <h3>Editors-in-Chief</h3>
@@ -365,18 +349,4 @@ JMLR Advisory Board</h3>
 <b>Leslie Valiant</b>, Harvard University, USA</li>
 
 </ul>
-
-
-<p>
-<table width="100%">
-<tr>
-<td align="right"><font size="-1">Copyright &copy <a target="_top"
-href="http://www.jmlr.org">JMLR</a> 2018.  All
-rights reserved.</font></td>
-</tr>
-</table>
-</div>
- <!--#include virtual="/nav-bar.txt"-->
-  </body>
-
-</html>
+{% endblock %}

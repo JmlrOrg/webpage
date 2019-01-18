@@ -1,0 +1,4 @@
+output/
+node_modules/
+src/__pycache__/
+src/*/__pycache__/

@@ -9,6 +9,7 @@ all:
 	python src/gen_webpage.py
 	python src/gen_volume.py 19
 	cp -r static/img/ output/
+	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/
 
 test:
@@ -16,4 +17,4 @@ test:
 	py.test -vv src/tests/test.py
 
 develop:
-	cd output && python -m http.server 8001
+	livereload -p 8001 output/

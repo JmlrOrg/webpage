@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block extraheader %}
+ <!-- MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+ <!-- Google Scholar Meta -->
+ <meta name="citation_title" content="{{title_html}}">
+{% for author in authors %}
+ <meta name="citation_author" content="{{author}}">
+{% endfor %}
+ <meta name="citation_journal_title" content="Journal of Machine Learning Research">
+ <meta name="citation_volume" content="{{volume}}">
+ <meta name="citation_issue" content="{{issue}}">
+ <meta name="citation_firstpage" content="{{pages[0]}}">
+ <meta name="citation_lastpage" content="{{pages[1]}}">
+ <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
+ <meta name="citation_publication_date" content="{{year}}">
+
+{% endblock %}
+
+{% block content %}
+<h2> {{title_html}} </h2>
+
+<p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
+
+<h3>Abstract</h3>
+{% autoescape false %}
+{{abstract}}
+{% endautoescape %}
+<font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib">bib</a>]
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
+   [<a href="{{link[1]}}">{{link[0]}}</a>]
+  {% endfor %}
+
+
+{% endblock %}

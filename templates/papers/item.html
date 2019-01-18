@@ -34,7 +34,7 @@
 {% autoescape false %}
 {{abstract}}
 {% endautoescape %}
-<font color="gray"><p>[abs]</font>[<a target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
+<font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib">bib</a>]
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
    [<a href="{{link[1]}}">{{link[0]}}</a>]
   {% endfor %}

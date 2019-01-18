@@ -41,3 +41,17 @@ def test_paper_metadata(volume):
         citation_journal = soup.find_all(attrs={"name": "citation_journal_title"})
         assert len(citation_journal) == 1
         assert citation_journal[0]['content'] == "Journal of Machine Learning Research"
+
+
+@pytest.mark.parametrize("volume", all_volumes)
+def test_pdf_exists(volume):
+    for soup, info in paper_iterator(volume):
+        citation_pdf = soup.find_all(attrs={"name": "citation_pdf_url"})
+        assert len(citation_pdf) == 1
+        citation_pdf = citation_pdf[0]['content']
+
+        citation_pdf2 = soup.find_all(id='pdf')
+        assert len(citation_pdf2) == 1
+        citation_pdf2 = citation_pdf2[0]['href']
+
+        assert citation_pdf2 == citation_pdf

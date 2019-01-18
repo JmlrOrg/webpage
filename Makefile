@@ -13,7 +13,6 @@ all:
 	cp -r static/css/ output/beta/
 
 test:
-	! html_lint.py --disable=entities output/beta/*.html | grep Error
 	py.test -vv src/tests/test.py
 
 develop:

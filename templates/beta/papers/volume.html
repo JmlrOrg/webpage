@@ -1,18 +1,29 @@
 {% extends "base.html" %}
 
 {% block extraheader %}
- <!-- MathJax -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
+
+
+<style>
+    .paper-title {
+        font-weight: bold;
+    }
+    .list-group-flush li:first-child { border-top: none; }
+
+</style>
 {% endblock %}
 
 
 {% block content %}
 <h1>JMLR Volume {{vol}}</h1>
 
+
+<ul class="list-papers list-group list-group-flush">
+    {%for paper in info_list %}
+    <li class="list-group-item"><a class="paper-title" href="/papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a>, <i>{{paper.authors_string}}</i>; {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}.</li>
+    {% endfor %}
+</ul>
+
+<!-- 
 
 {%for paper in info_list %}
 <p>
@@ -28,6 +39,6 @@
 {% endif %}
 </dl>
 </p>
-{% endfor %}
+{% endfor %} -->
 
 {% endblock %}

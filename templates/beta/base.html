@@ -15,6 +15,11 @@
   <style>
       h1, h2 { 
           color: #303060;
+          margin-bottom: 0.5em;
+      }
+
+      .volume {
+          font-weight: bold;
       }
   </style>
   {% block extraheader %}
@@ -64,8 +69,8 @@
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{prefix}}js/jquery.min.js"></script>
+<script src="{{prefix}}js/bootstrap.min.js"></script>
 
 </body>
 </html>

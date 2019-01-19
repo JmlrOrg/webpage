@@ -36,8 +36,7 @@
 
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
-        <a class="btn btn-secondary btn-lg" href="#" role="button">BibTeX</a>
-        <a class="btn btn-light btn-lg" href="#" role="button">Edit</a>
+        <!-- <a class="btn btn-secondary btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a> -->
     </p>
 
     <p>Year: {{year}}, Volume: {{volume}}, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
@@ -61,8 +60,9 @@
    [<a href="{{link[1]}}">{{link[0]}}</a>]
   {% endfor %} -->
 
-
-{% endblock %}
+<p style="text-align: right">
+  <a class="btn btn-light btn-lg" href="#" role="button">Edit</a></p>
+  {% endblock %}
 
 
 {% block sidebar %}

@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="{{prefix}}css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <link rel="stylesheet" href="{{prefix}}css/style.css">
+
+  <style>
+      h1, h2 { 
+          color: #303060;
+      }
+  </style>
   {% block extraheader %}
   {% endblock %}
 </head>
@@ -19,10 +25,10 @@
 <body id="page-top">
 
   <nav class="navbar navbar-expand-lg navbar-default fixed-top navbar-light bg-white" id="sidenav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <a class="navbar-brand js-scroll-trigger" href="{{prefix}}">
       <span class="d-block d-lg-none">Journal of Machine Learning Research</span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile mx-auto mb-2" src="img/jmlr.jpg" alt="">
+        <img class="img-fluid img-profile mx-auto mb-2" src="{{prefix}}img/jmlr.jpg" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">

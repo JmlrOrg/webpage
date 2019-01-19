@@ -33,17 +33,20 @@
 
     <h4>Abstract</h4>
     <p>{% autoescape false %}{{abstract}}{% endautoescape %}</p>
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">PDF</a>
-    </p>
-</div>
 
-<ul>
-    <li>Volume: {{volume}}</li>
-    <li>Issue: {{issue}}</li>
-    <li>Pages: {{pages[0]}}&minus;{{pages[1]}}</li>
-    <li>Year: {{year}}</li>
-</ul>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
+        <a class="btn btn-secondary btn-lg" href="#" role="button">BibTeX</a>
+        <a class="btn btn-light btn-lg" href="#" role="button">Edit</a>
+    </p>
+
+    <p>Year: {{year}}, Volume: {{volume}}, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
+</div>
+<!-- <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" allowfullscreen></iframe>
+    </div> -->
+
+
 
 <!-- <h2> {{title_html}} </h2>
 
@@ -63,6 +66,4 @@
 
 
 {% block sidebar %}
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Font_Awesome_5_regular_file-pdf.svg/1024px-Font_Awesome_5_regular_file-pdf.svg.png" alt="" width="50px">
 {% endblock %}

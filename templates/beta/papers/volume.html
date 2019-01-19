@@ -24,7 +24,7 @@
 
 <ul class="list-papers list-group list-group-flush">
     {%for paper in info_list %}
-    <li class="list-group-item"><a class="paper-title" href="/papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a>, <i>{{paper.authors_string}}</i>; {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}.</li>
+    <li class="list-group-item"><a class="paper-title" href="{{prefix}}papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a>, <i>{{paper.authors_string}}</i>; {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}.</li>
     {% endfor %}
 </ul>
 

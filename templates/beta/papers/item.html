@@ -26,18 +26,43 @@
 {% endblock %}
 
 {% block content %}
-<h2> {{title_html}} </h2>
+<div class="jumbotron">
+    <h1 class="display-4">{{title_html}}</h1>
+    <p class="lead">{{authors_string}}.</p>
+    <hr class="my-4">
 
-<p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
+    <h4>Abstract</h4>
+    <p>{% autoescape false %}{{abstract}}{% endautoescape %}</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">PDF</a>
+    </p>
+</div>
 
-<h3>Abstract</h3>
+<ul>
+    <li>Volume: {{volume}}</li>
+    <li>Issue: {{issue}}</li>
+    <li>Pages: {{pages[0]}}&minus;{{pages[1]}}</li>
+    <li>Year: {{year}}</li>
+</ul>
+
+<!-- <h2> {{title_html}} </h2>
+
+<p><b><i>{{authors_string}}</i></b></p> -->
+
+<!-- <h3>Abstract</h3>
 {% autoescape false %}
 {{abstract}}
 {% endautoescape %}
 <font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib">bib</a>]
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
    [<a href="{{link[1]}}">{{link[0]}}</a>]
-  {% endfor %}
+  {% endfor %} -->
 
 
+{% endblock %}
+
+
+{% block sidebar %}
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Font_Awesome_5_regular_file-pdf.svg/1024px-Font_Awesome_5_regular_file-pdf.svg.png" alt="" width="50px">
 {% endblock %}

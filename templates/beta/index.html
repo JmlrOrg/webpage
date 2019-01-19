@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<table width="100%" cellspacing="0" cellpadding="0"> <tr> <td
-valign="top" align="left"> 
 
 <h1>Journal of Machine Learning Research</h1>
 
@@ -31,12 +29,16 @@ Paper volumes (ISSN 1532-4435) are now published and sold by
     <li><i>2015.09.01</i>: <a href="papers/special/chervonenkis15.html">Special issue in Memory of Alexey Chervonenkis</a>.</li>
 </ul>
 </td> 
-<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td valign="top" align="center"> 
-<a href="http://www.mtome.com/Publications/JMLR/jmlr.html">
-<img src="/images/jmlr-v5.png" width="140" border="0"></a> 
-<p> <a href="http://www.arl.org/sparc">
-<img src="/images/Sparc7.gif" border="0" width=100></a> 
 
-</td> </tr> </table> 
+
+{% endblock %}
+
+
+{% block sidebar %}
+
+<a href="http://www.mtome.com/Publications/JMLR/jmlr.html">
+<img src="http://jmlr.org/images/jmlr-v5.png" width="140" border="0"></a> 
+<p> <a href="http://www.arl.org/sparc">
+<img src="http://jmlr.org/images/Sparc7.gif" border="0" width=100></a> 
+                
 {% endblock %}

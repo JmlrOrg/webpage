@@ -21,6 +21,7 @@
       .volume {
           font-weight: bold;
       }
+
   </style>
   {% block extraheader %}
   {% endblock %}
@@ -65,7 +66,15 @@
 
 <!-- Page Content -->
 <div id="content" class="container-fluid">
-{% block content %}{% endblock %}
+    <div class="row">
+    <div class="col-xs-12 col-md-8">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="col-xs-6 col-md-4">
+            {% block sidebar %}{% endblock %}
+    </div>
+</div>
+
 </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

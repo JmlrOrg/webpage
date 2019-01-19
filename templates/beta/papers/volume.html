@@ -23,8 +23,7 @@
     {%for paper in info_list %}
     <li class="list-group-item">
         <h4><a class="paper-title" href="{{prefix}}papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a></h4>
-        <p><i>{{paper.authors_string}}</i></p>
-        <p>{{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}</p>
+        <p><i>{{paper.authors_string}}</i> {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}</p>
     </li>
     {% endfor %}
 </ul>

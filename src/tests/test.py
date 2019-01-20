@@ -9,7 +9,7 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [19,]
+all_volumes = [19, 20]
 
 def paper_iterator(volume):
     paper_dirs = glob.glob(f'v{volume}/??-???')

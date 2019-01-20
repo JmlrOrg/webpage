@@ -57,3 +57,17 @@ def test_pdf_exists(volume):
         citation_pdf2 = 'http://jmlr.org' + citation_pdf2[0]['href']
 
         assert citation_pdf2 == citation_pdf
+
+
+@pytest.mark.parametrize("volume", all_volumes)
+def test_issue_number(volume):
+    all_issues = []
+    for soup, info in paper_iterator(volume):
+        all_issues.append(info['issue'])
+    all_issues.sort()
+
+    # check that the volume has all consecutive issue
+    # numbers
+    for i in range(len(all_issues)):
+        assert all_issues[i] == i+1
+

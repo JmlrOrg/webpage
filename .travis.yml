@@ -17,8 +17,6 @@ before_install:
 
 script:
   - make
-  - python src/gen_volume.py 19
-  - python src/gen_volume.py 20
   - make test
 
 deploy:

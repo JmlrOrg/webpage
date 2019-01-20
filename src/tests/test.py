@@ -52,6 +52,6 @@ def test_pdf_exists(volume):
 
         citation_pdf2 = soup.find_all(id='pdf')
         assert len(citation_pdf2) == 1
-        citation_pdf2 = citation_pdf2[0]['href']
+        citation_pdf2 = 'http://jmlr.org' + citation_pdf2[0]['href']
 
         assert citation_pdf2 == citation_pdf

@@ -90,9 +90,11 @@ if __name__ == '__main__':
 
 
         # mloss webpage
-        with open('output' + prefix + 'mloss/index.html', 'w') as f:
-            info_mloss = filter(
-            lambda x: x.get('special_issue', '') == 'MLOSS', info_list)
-            editorial_board_template = env.get_template('mloss/index.html')
-            out = editorial_board_template.render(info_list=info_mloss, volume=vol)
-            f.write(out)
+        # XXX FIXME: vol 19 is hardcoded
+        if vol == '19':
+            with open('output' + prefix + 'mloss/index.html', 'w') as f:
+                info_mloss = filter(
+                lambda x: x.get('special_issue', '') == 'MLOSS', info_list)
+                editorial_board_template = env.get_template('mloss/index.html')
+                out = editorial_board_template.render(info_list=info_mloss, volume=vol)
+                f.write(out)

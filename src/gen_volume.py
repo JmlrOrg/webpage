@@ -31,6 +31,9 @@ def process(info, prefix, env):
     if 'title_html' not in info:
         info['title_html'] = info['title']
 
+    if 'authors_html' not in info:
+        info['authors_html'] = [utils.xml_string(a) for a in info['authors']]
+
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']
     

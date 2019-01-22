@@ -42,6 +42,19 @@ def test_paper_metadata(volume):
         assert len(citation_journal) == 1
         assert citation_journal[0]['content'] == "Journal of Machine Learning Research"
 
+        citation_issn = soup.find_all(attrs={"name": "citation_issn"})
+        assert len(citation_issn) == 1
+        assert citation_issn[0]['content'] == "1533-7928"
+
+        citation_authors = soup.find_all(attrs={"name": "citation_author"})
+        citation_authors = set([c['content'] for c in citation_authors])
+        set_authors = set([utils.xml_string(c) for c in info['authors']])
+
+        assert citation_authors == set_authors
+
+        
+
+
 
 @pytest.mark.parametrize("volume", all_volumes)
 def test_pdf_exists(volume):

@@ -84,6 +84,3 @@ def test_issue_number(volume):
     for i in range(len(all_issues)):
         assert all_issues[i] == i+1
 
-# def test_unique_id():
-#     paper_dirs = glob.glob(f'v??/??-???')
-#     1/0

@@ -10,19 +10,19 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
- <!-- Google Scholar Meta -->
- <meta name="citation_title" content="{{title_html}}">
-{% for author in authors %}
- <meta name="citation_author" content="{{author}}">
-{% endfor %}
- <meta name="citation_journal_title" content="Journal of Machine Learning Research">
- <meta name="citation_volume" content="{{volume}}">
- <meta name="citation_issue" content="{{issue}}">
- <meta name="citation_firstpage" content="{{pages[0]}}">
- <meta name="citation_lastpage" content="{{pages[1]}}">
- <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
- <meta name="citation_publication_date" content="{{year}}">
- <meta name="citation_issn" content="1533-7928">
+<!-- Google Scholar Meta -->
+<meta name="citation_title" content="{{title_html}}">
+{% for author in authors_html -%}
+<meta name="citation_author" content="{{author}}">
+{% endfor -%}
+<meta name="citation_journal_title" content="Journal of Machine Learning Research">
+<meta name="citation_volume" content="{{volume}}">
+<meta name="citation_issue" content="{{issue}}">
+<meta name="citation_firstpage" content="{{pages[0]}}">
+<meta name="citation_lastpage" content="{{pages[1]}}">
+<meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
+<meta name="citation_publication_date" content="{{year}}">
+<meta name="citation_issn" content="1533-7928">
 
 {% endblock %}
 

@@ -23,6 +23,9 @@
 <meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
 <meta name="citation_publication_date" content="{{year}}">
 <meta name="citation_issn" content="1533-7928">
+<meta name="citation_public_url" content="http://jmlr.org/papers/v{{volume}}/{{id}}.html">
+<meta name="citation_abstract_html_url" content="http://jmlr.org/papers/v{{volume}}/{{id}}.html">
+
 
 {% endblock %}
 
@@ -32,9 +35,11 @@
 <p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
 
 <h3>Abstract</h3>
+<p class="abstract">
 {% autoescape false %}
 {{abstract}}
 {% endautoescape %}
+</p>
 <font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
    [<a href="{{link[1]}}">{{link[0]}}</a>]

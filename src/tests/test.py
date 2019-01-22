@@ -4,12 +4,14 @@ import json
 from bs4 import BeautifulSoup
 
 # local imports
-import sys, os
+import sys
+import os
 curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [19,]
+all_volumes = [19, 20]
+
 
 def paper_iterator(volume):
     paper_dirs = glob.glob(f'v{volume}/??-???')
@@ -65,6 +67,23 @@ def test_pdf_exists(volume):
 
         citation_pdf2 = soup.find_all(id='pdf')
         assert len(citation_pdf2) == 1
-        citation_pdf2 = citation_pdf2[0]['href']
+        citation_pdf2 = 'http://jmlr.org' + citation_pdf2[0]['href']
 
         assert citation_pdf2 == citation_pdf
+
+
+@pytest.mark.parametrize("volume", all_volumes)
+def test_issue_number(volume):
+    all_issues = []
+    for soup, info in paper_iterator(volume):
+        all_issues.append(info['issue'])
+    all_issues.sort()
+
+    # check that the volume has all consecutive issue
+    # numbers
+    for i in range(len(all_issues)):
+        assert all_issues[i] == i+1
+
+# def test_unique_id():
+#     paper_dirs = glob.glob(f'v??/??-???')
+#     1/0

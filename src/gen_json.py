@@ -79,8 +79,9 @@ def extract_information(volume, paper_id):
             'abstract':  abstract,
             'id':        paper_id,
             'volume':    volume,
-            'year':      1999 + int(volume) #datetime.date.today().year
-        }, emails
+            'year':      1999 + int(volume),  # datetime.date.today().year
+            'emails':   emails
+        }
 
 
 def compute_issue(vol, id):
@@ -95,12 +96,11 @@ def compute_issue(vol, id):
         
 
 
-
 if __name__ == '__main__':
     vol = sys.argv[1]
     ids = sys.argv[2:]
     for id in ids:
-        info, emails = extract_information(int(vol), id)
+        info = extract_information(int(vol), id)
         info['issue'] = compute_issue(vol, id)
         print('Issue: %s' % info['issue'])
 
@@ -111,9 +111,9 @@ if __name__ == '__main__':
             out = json.dump(info, outfile, sort_keys=True, indent=4, separators=(',', ': '))
         with open(json_path, 'r') as outfile:
             print(outfile.read())
-        print(emails)
-        print()
-        with open('v%s/%s/.emails.txt' % (vol, id), 'w') as outfile:
-            outfile.write("\n".join(emails))
-            outfile.write("\n")
+        # print(emails)
+        # print()
+        # with open('v%s/%s/.emails.txt' % (vol, id), 'w') as outfile:
+        #     outfile.write("\n".join(emails))
+        #     outfile.write("\n")
         print('Done %s' % id)

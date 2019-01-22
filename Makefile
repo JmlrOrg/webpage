@@ -8,6 +8,7 @@ all:
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
 	python src/gen_volume.py 19
+	python src/gen_volume.py 20
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/

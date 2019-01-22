@@ -28,8 +28,9 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">{{title_html}}</h1>
+    <h1 class="display-4"><a href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" style="text-decoration: none; color: inherit">{{title_html}}</a></h1>
     <p class="lead">{{authors_string}}.</p>
+    <p style="font-weight: 300">Year: {{year}}, Volume: {{volume}}, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
     <hr class="my-4">
 
     <h4>Abstract</h4>
@@ -37,10 +38,9 @@
 
     <p class="lead">
         <a class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
-        <!-- <a class="btn btn-secondary btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a> -->
+        <a class="btn btn-secondary btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
     </p>
 
-    <p>Year: {{year}}, Volume: {{volume}}, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
 </div>
 <!-- <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" allowfullscreen></iframe>
@@ -62,7 +62,7 @@
   {% endfor %} -->
 
 <p style="text-align: right">
-  <a class="btn btn-light btn-lg" href="#" role="button">Edit</a></p>
+  <a class="btn btn-light btn-lg" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json" role="button" style="color: grey">Edit</a></p>
   {% endblock %}
 
 

@@ -9,21 +9,23 @@ import sys
 import os
 import json
 
+
 def send_emails(vol, id):
     print('Processing paper ID %s' % id)
 
     with open('v%s/%s/info.json' % (vol, id), 'r') as fp:
         # some cleanup for the html display
         info = json.load(fp)
-
+    
     from email.mime.text import MIMEText
     import smtplib
     if False:
         recipients = []
-        recipients.append('webmaster@jmlr.org')
+        recipients.append('pedregosa@google.com')
     else:
-        with open('v%s/%s/.emails.txt' % (vol, id), 'r') as fp:
-            emails = fp.readlines()
+        emails = info['emails']
+        # with open('v%s/%s/.emails.txt' % (vol, id), 'r') as fp:
+        #     emails = fp.readlines()
         recipients = [e.strip('\n') for e in emails]
         recipients.append('webmaster@jmlr.org')
         recipients.append('alp@jmlr.org')

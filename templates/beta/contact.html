@@ -1,17 +1,26 @@
-{% extends "base.html" %}
-
 {% block content %}
+<table width="100%" cellspacing="0" cellpadding="0"> <tr> <td
+valign="top" align="left"> 
+
 <h1><font face="verdana,helvetica,sans-serif" color="#303060">
 Contact Information</font></h1>
-<p>If you have any question regarding the JMLR paper submission system (e.g. you are an author or a reviewer and have some trouble accessing your account), please contact our managing editor (<a href="http://cs.iit.edu/~culotta">Aron Culotta</a>).</p>
 
-<p>If you have inquiries about publishing your paper (producing the pdf) after acceptance, please contact our production editor (<a href="http://www.proditus.com">Alp Kucukelbir</a>).</p>
+<p>If your paper is under review, please address any inquiries about its status to the Action Editor in charge of your paper. The name of your action editor will appear in the submission system once its assigned, which should happen no later than once month after submission.</p>
 
-<p>Any requests for modifications (e.g. fixing a typo or meta information error) to the web pages under the JMLR website (jmlr.org) can be directed to our web master (<a href="http://fa.bianp.net">Fabian Pedregosa</a>).</p>
+<p>If you forgot your password, you can reset it by entering your email <a href="http://jmlr.csail.mit.edu/manudb/resetpasswd">in this link</a>
 
-<p>If your paper is under review, please address any inquiries about its status to the Action Editor in charge of your paper.</p>
+<p>If you have any question regarding the JMLR paper submission system (e.g. you are an author or a reviewer and have some trouble accessing your account), please contact our managing editor ({% for e in managing_editors %}<a href="{{ e.url }}">{{e.name}}</a>{% endfor %}).</p>
+
+<p>If you have inquiries about publishing your paper (producing the pdf) after acceptance, please contact our production editor ({% for e in production_editors %}<a href="{{ e.url }}">{{e.name}}</a>{% endfor %}).</p>
+
+<p>Any requests for modifications (e.g. fixing a typo or meta information error) to the web pages under the JMLR website (jmlr.org) can be directed to our web master ({% for e in production_editors %}<a href="{{ e.url }}">{{e.name}}</a>{% endfor %}).</p>
+
 
 <p>The conference proceedings hosted under JMLR are managed separately. Inquiries or modifications related to the proceedings should primarily go to the corresponding organizer of that particular conference / workshop. Simple fixes of the webpages can also be directed to our proceeding series editors (<a href="http://staffwww.dcs.shef.ac.uk/people/N.Lawrence/">Neil Lawrence</a> and <a href="http://people.cecs.anu.edu.au/user/2675">Mark Reid</a>).</p>
 
-<p>For any other issues,  please contact our editors-in-chief (<a href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, <a href="http://www.cs.columbia.edu/~blei/">David Blei</a> and <a href="http://is.tuebingen.mpg.de/person/bs">Bernhard Schölkopf</a>).</p>
+<p>For any other issues,  please contact our editors-in-chief ({% for e in editors_in_chief %}<a href="{{ e.url }}">{{e.name}}</a>, {% endfor %}).</p>
+
+<p> 
+
+        
 {% endblock %}

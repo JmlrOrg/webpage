@@ -28,7 +28,7 @@ def paper_iterator(volume):
 @pytest.mark.parametrize("volume", all_volumes)
 def test_paper_title(volume):
     for soup, info in paper_iterator(volume):
-        assert soup.title.string == info['title']
+        assert soup.title.string == utils.xml_string(info['title'])
 
 @pytest.mark.parametrize("volume", all_volumes)
 def test_paper_metadata(volume):

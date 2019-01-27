@@ -12,18 +12,22 @@ PREFIXES = ('/', '/beta/')
 def get_info(vol):
     os.chdir('v%s' % vol)
     ids = glob.glob('??-???')
-    info = []
+    info_list = []
     for id in ids:
         with open('%s/info.json' % id, 'r') as fp:
             # some cleanup for the html display
             id_info = json.load(fp)
+            id_info['title'] = utils.xml_string(id_info['title'])
+            # some authors write {TeXt} to ensure that its capitalized correctly in latex
+            id_info['title'].replace('{', '').replace('}', '')
+
             id_info['authors_string'] = utils.xml_string(', '.join(id_info['authors']))
             id_info['abstract'] = utils.xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
-        info.append(id_info)
+        info_list.append(id_info)
     os.chdir('..')
     # sort by issue
-    return sorted(info, key=lambda k: k['issue'])
+    return sorted(info_list, key=lambda k: k['issue'])
 
 def process(info, prefix, env):
     vol = info['volume']

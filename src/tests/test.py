@@ -10,20 +10,34 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [19, 20]
+all_volumes = [18, 19, 20]
+
+PREFIX = "/beta/"
 
 
 def paper_iterator(volume):
     paper_dirs = glob.glob(f'v{volume}/??-???')
     for paper_dir in paper_dirs:
         paper_id = paper_dir[-6:]
-        with open(f'output/papers/v{volume}/{paper_id}.html') as html_file:
+        with open(f'output{PREFIX}papers/v{volume}/{paper_id}.html') as html_file:
             html = html_file.read()
         soup = BeautifulSoup(html, 'html.parser')
         with open(f'{paper_dir}/info.json', 'r') as json_file:
             info = json.load(json_file)
         yield soup, info
 
+
+@pytest.mark.parametrize("volume", all_volumes)
+def test_paper_json(volume):
+    # check that json info file has all necessary fields
+    for soup, info in paper_iterator(volume):
+        for attr in ['abstract', 'authors', 'id',  'issue', 'pages', 'title', 'volume', 'year']:
+            assert attr in info.keys()
+        if 'special_issue' in info.keys():
+            if info['special_issue'] == 'MLOSS':
+                fields = [u[0] for u in info['extra_links']]
+                # make sure that there's a code in the extra links
+                assert 'code' in fields
 
 @pytest.mark.parametrize("volume", all_volumes)
 def test_paper_title(volume):
@@ -67,7 +81,7 @@ def test_pdf_exists(volume):
 
         citation_pdf2 = soup.find_all(id='pdf')
         assert len(citation_pdf2) == 1
-        citation_pdf2 = 'http://jmlr.org' + citation_pdf2[0]['href']
+        citation_pdf2 = citation_pdf2[0]['href']
 
         assert citation_pdf2 == citation_pdf
 

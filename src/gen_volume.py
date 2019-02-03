@@ -7,7 +7,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 import utils
 
-PREFIXES = ('/', '/beta/')
+# only build the new website
+PREFIXES = ('/beta/', )
 
 def get_info(vol):
     os.chdir('v%s' % vol)

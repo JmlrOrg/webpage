@@ -30,7 +30,7 @@
 
 {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4"><a href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" style="text-decoration: none; color: inherit">{{title_html}}</a></h1>
+    <h1><a href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" style="text-decoration: none; color: inherit">{{title_html}}</a></h1>
     <p class="lead">{{authors_string}}.</p>
     <p style="font-weight: 300">Year: {{year}}, Volume: {{volume}}, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
     <hr class="my-4">
@@ -38,15 +38,21 @@
     <h4>Abstract</h4>
     <p class="abstract">{% autoescape false %}{{abstract}}{% endautoescape %}</p>
 
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
-        <a class="btn btn-secondary btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
+    <p class="lead" style="margin-top: 2em">
+        <a id="pdf" class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
+        <a class="btn btn-info btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
+        {% if extra_links %}
+            {% for link in extra_links %}
+            <a class="btn btn-secondary btn-lg" href="{{link[1]}}">{{link[0]}}</a>
+            {% endfor %}
+        {% endif %}
     </p>
 
 </div>
 
-<p style="text-align: right">
-  <a class="btn btn-light btn-lg" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json" role="button" style="color: grey">Edit</a></p>
+<!-- <p style="text-align: right">
+  <a class="btn btn-light btn-lg" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json" role="button" style="color: grey">Edit</a>
+</p> -->
   {% endblock %}
 
 

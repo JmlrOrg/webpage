@@ -8,6 +8,7 @@ accents = [
    ["vZ", "Ž"], ['vc', 'č'], ['Ho', "ő"], ['O', "Ø"],
    ['o', "ø"], ['l', 'ł'], ["'n", "ń"], ['v{s}', 'š'],
    ['v{S}', 'Š'], ['L', 'Ł'], ['&', '&amp;'], ["'c", "ć"],
+   ['v{c}', 'č'],
    ['~n', 'ñ']
 ]
 
@@ -23,4 +24,6 @@ def xml_string(text):
             text = text.replace('\\%s{%s}' % tuple(tex), utf8) # \"{a}
         except TypeError:
             pass
+        # sometimes words are but in brackets in bibtex to make it {CapiTaliZed} correctly
+    text = text.replace('{', '').replace('}', '')
     return text

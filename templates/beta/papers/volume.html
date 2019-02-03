@@ -22,7 +22,7 @@
 <ul class="list-papers list-group list-group-flush">
     {%for paper in info_list %}
     <li class="list-group-item">
-        <h4><a class="paper-title" href="{{prefix}}papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a></h4>
+        <h4><a class="paper-title darkblue" href="{{prefix}}papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a></h4>
         <p><i>{{paper.authors_string}}</i> {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}} <span style="float: right"><a class="btn btn-primary btn-sm" href="http://jmlr.org/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf" role="button">PDF</a>
             <a class="btn btn-info btn-sm" href="http://jmlr.org/papers/v{{paper.volume}}/{{paper.id}}.bib" role="button">BibTeX</a>
             {% if paper.extra_links %}

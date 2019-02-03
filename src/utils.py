@@ -25,5 +25,5 @@ def xml_string(text):
         except TypeError:
             pass
         # sometimes words are but in brackets in bibtex to make it {CapiTaliZed} correctly
-    text = text.replace('{', '').replace('}', '')
+    # text = text.replace('{', '').replace('}', '')
     return text

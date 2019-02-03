@@ -15,6 +15,10 @@ all_volumes = [18, 19, 20]
 PREFIX = "/beta/"
 
 
+def test_xml_string():
+    t = r"\mathcal{O}"
+    assert utils.xml_string(t) == t
+
 def paper_iterator(volume):
     paper_dirs = glob.glob(f'v{volume}/??-???')
     for paper_dir in paper_dirs:

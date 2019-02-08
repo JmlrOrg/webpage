@@ -41,7 +41,7 @@ def process(info, prefix, env):
 
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']
-    
+
 
     with open('output' + prefix + 'papers/v%s/%s.html' % (vol, id), 'w') as f:
 

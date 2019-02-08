@@ -6,4 +6,4 @@
 	url = https://github.com/JmlrOrg/v18.git
 [submodule "v20"]
 	path = v20
-	url = git@github.com/JmlrOrg/v20.git
+	url = https://github.com/JmlrOrg/v20.git

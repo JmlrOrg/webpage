@@ -12,7 +12,7 @@ import utils
 
 all_volumes = [18, 19, 20]
 
-PREFIXES = ['', '/beta/']
+PREFIXES = ['/', '/beta/']
 
 
 def test_xml_string():

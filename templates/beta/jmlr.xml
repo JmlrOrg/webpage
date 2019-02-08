@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<atom:link href="http://jmlr.org/jmlr.xml" rel="self" type="application/rss+xml" />
+<link>http://www.jmlr.org</link>
+<title>JMLR</title>
+<description>Journal of Machine Learning Research</description>
+
+
+
+
+{%for paper in info_list %}
+<item>
+<title>
+{{paper.title}}
+</title>
+<link>
+http://jmlr.org/papers/v{{paper.volume}}/{{paper.id}}.html
+</link>
+<pubDate>{{paper.year}}</pubDate>
+<description>
+{{paper.abstract}}
+</description>
+</item>
+{% endfor %}
+
+</channel>
+</rss>

@@ -19,9 +19,9 @@
   "managing_editors":
   [
     {
-      "name": "Aron Culotta",
-      "affiliation": "Illinois Institute of Technology, USA",
-      "url": "http://cs.iit.edu/~culotta"
+      "name": "Fabian Pedregosa",
+      "affiliation": "Google",
+      "url": "http://fa.bianp.net"
     }
   ],
   "production_editors":
@@ -30,6 +30,14 @@
       "name": "Alp Kucukelbir",
       "affiliation": "Fero Labs and Columbia University",
       "url": "http://www.proditus.com"
+    }
+  ],
+  "editorial_assistants":
+  [
+    {
+      "name": "Karin Bierig",
+      "affiliation": "MPI for Intelligent Systems",
+      "url": "https://ei.is.tuebingen.mpg.de/person/bierig"
     }
   ],
   "Production Staff":
@@ -53,9 +61,9 @@
   "webmaster":
   [
     {
-      "name": "Fabian Pedregosa",
-      "affiliation": "UC Berkeley and ETH Zurich",
-      "url": "http://fa.bianp.net"
+      "name": "Alp Kucukelbir",
+      "affiliation": "Fero Labs and Columbia University",
+      "url": "http://www.proditus.com"
     }
   ],
   "action_editors":
@@ -589,12 +597,6 @@
       "research": ""
     },
     {
-      "name": "Zhuowen Tu",
-      "affiliation": "University of California at San Diego, USA",
-      "url": "http://pages.ucsd.edu/~ztu/",
-      "research": "computer vision, deep learning, weakly-supervised learning"
-    },
-    {
       "name": "S V N Vishwanathan",
       "affiliation": "Purdue University, USA",
       "url": "https://users.soe.ucsc.edu/~vishy/",
@@ -629,12 +631,6 @@
       "affiliation": "University of British Columbia",
       "url": "https://www.cs.ubc.ca/~fwood",
       "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
-    },
-    {
-      "name": "Stefan Wrobel",
-      "affiliation": "Fraunhofer IAIS and University of Bonn, Germany",
-      "url": "http://www.iais.fraunhofer.de/stefanwrobel.html?L=1",
-      "research": "relational learning, graph mining, inductive logic programming, privacy-preserving learning, visual analytics, learning from spatial data, applications and big data"
     },
     {
       "name": "Eric Xing",

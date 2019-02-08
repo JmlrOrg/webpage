@@ -7,7 +7,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 YEAR = datetime.today().year
 # TODO detect if we are in the bin directory and go down one step
 
-info = json.load(open('data/editorial-board.json', 'r'))
+info = json.load(open('editorial-board.json', 'r'))
 
 if not os.path.exists('output'):
     os.mkdir('output')
@@ -31,10 +31,10 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
-for page in ['editorial-board.html', 'contact.html']:
+for page in ['index.html', 'editorial-board.html', 'news.html', 'author-info.html', 'contact.html']:
     with open(os.path.join('output', prefix, page), 'w') as f:
         template = env.get_template('%s' % page)
-        out = template.render(**info, year=YEAR)
+        out = template.render(**info, year=YEAR, prefix='/beta/')
         f.write(out)
 # .. end beta webpage ..
 
@@ -46,6 +46,6 @@ env = Environment(
 )
 
 
-for page in ['index.html', 'editorial-board.html', 'news.html', 'author-info.html']:
+for page in ['index.html', 'editorial-board.html', 'news.html', 'author-info.html', 'contact.html']:
     render_webpage(prefix, page)
 render_webpage('mloss', 'index.html')

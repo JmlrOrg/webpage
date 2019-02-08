@@ -4,9 +4,12 @@ import os
 user = os.environ['JMLR_USER']
 path = os.environ['JMLR_PATH']
 passwd = os.environ['JMLR_PASSWORD']
+backup_dir = os.environ['JMLR_BACKUP_DIR']
 
 path = os.path.join(path, '')
-command = 'rsync -arvz output/ %s@%s' % (user, path)
+command = 'rsync -arvz %s@%s %s --exclude=.snapshot --exclude=docroot/backup' % (user, path, backup_dir)
+print('Running command')
+print(command)
 
 ssh_newkey = 'Are you sure you want to continue connecting'
 child = pexpect.spawn(command)

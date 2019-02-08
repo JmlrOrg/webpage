@@ -1,23 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
-<html>
-  <head>
- <!--#include virtual="/css-scroll.txt"-->
+{% extends "base.html" %}
 
-    <META HTTP-EQUIV="Expires" CONTENT="Mon, 20 Aug 2001 21:29:02
-      GMT">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Cache-Control" content="no-cache, no-store,
-must-revalidate">
-
-    <title>News</title>
-
-  </head>
-
-  <body>
+{% block content %}
  <div id="content">
 <h1>JMLR News</h1>
 <ul>
-    <li><i>2019.01.20</i>: <a href=papers/v19>Volume 19</a> completed; <a href=papers/v20>Volume 20</a> began. </li>
   <li><a href=papers/v18>Volume 18</a> completed; <a href=papers/v19>Volume 19</a> began. </li>
   <li><a href="/news-archive/20180416-changes.html">Changes</a> in JMLR leadership team.</li>
 <li><a href=papers/v17>Volume 17</a> completed; <a href=papers/v18>Volume 18</a> began. </li>
@@ -110,17 +96,5 @@ href="http://www.ebsco.com/online" target="_blank">EBSCO</a>,
 	announces partnership with JMLR (<a href="sparc-pr.html">Press Release</a>).
 </ul>
 
-<p>
-<table width="100%">
-<tr>
-<td align="right"><font size="-1">Copyright &copy <a target="_top"
-href="http://www.jmlr.org">JMLR</a> 2000.  All
-rights reserved.</font></td>
-</tr>
-</table>
-
-  </div> 
- <!--#include virtual="/nav-bar.txt"--> 
-  </body>
-
-</html>
+</div> 
+{% endblock %}

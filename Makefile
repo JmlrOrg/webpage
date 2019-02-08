@@ -6,14 +6,16 @@ all:
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js output/beta/js/
 	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
-	python bin/gen_webpage.py
-	python bin/gen_volume.py 19
-	cp -r img/ output/
-	cp -r css/ output/beta/
+	python src/gen_webpage.py
+	python src/gen_volume.py 18
+	python src/gen_volume.py 19
+	python src/gen_volume.py 20
+	cp -r static/img/ output/
+	cp -r static/img/ output/beta/
+	cp -r static/css/ output/beta/
 
 test:
-	! html_lint.py --disable=entities output/beta/*.html | grep Error
-	python tests/test.py
+	py.test -vv src/tests/test.py
 
 develop:
-	cd output && python -m http.server 8001
+	livereload -p 8001 output/

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block extraheader %}
+ <!-- MathJax -->
+ <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<style>
+    .list-group-flush li:first-child { border-top: none; }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+<h1>JMLR Volume {{vol}}</h1>
+
+
+<ul class="list-papers list-group list-group-flush">
+    {%for paper in info_list %}
+    <li class="list-group-item">
+        <h4><a class="paper-title darkblue" href="{{prefix}}papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html}}</a></h4>
+        <p><i>{{paper.authors_string}}</i> {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}} <span style="float: right"><a class="btn btn-primary btn-sm" href="http://jmlr.org/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf" role="button">PDF</a>
+            <a class="btn btn-info btn-sm" href="http://jmlr.org/papers/v{{paper.volume}}/{{paper.id}}.bib" role="button">BibTeX</a>
+            {% if paper.extra_links %}
+            {% for link in paper.extra_links %}
+            <a class="btn btn-secondary btn-sm" href="{{link[1]}}">{{link[0]}}</a>
+            {% endfor %}
+        {% endif %}
+        </span>
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
+<!-- 
+
+{%for paper in info_list %}
+<p>
+<dl>
+<dt>{{paper.title_html}}</dt>
+<dd><b><i>{{paper.authors_string}}</i></b>; {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}.
+<br>[<a href='/papers/v{{paper.volume}}/{{paper.id}}.html'>abs</a>][<a target=_blank href='/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf'>pdf</a>][<a href="/papers/v{{paper.volume}}/{{paper.id}}.bib">bib</a>]
+{% if paper.extra_links %}
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    {% for link in paper.extra_links %}
+    [<a href="{{link[1]}}">{{link[0]}}</a>]
+    {% endfor %}
+{% endif %}
+</dl>
+</p>
+{% endfor %} -->
+
+{% endblock %}

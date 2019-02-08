@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{title_html}}{% endblock %}
+
+{% block extraheader %}
+ <!-- MathJax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<!-- Google Scholar Meta -->
+<meta name="citation_title" content="{{title_html}}">
+{% for author in authors_html -%}
+<meta name="citation_author" content="{{author}}">
+{% endfor -%}
+<meta name="citation_journal_title" content="Journal of Machine Learning Research">
+<meta name="citation_volume" content="{{volume}}">
+<meta name="citation_issue" content="{{issue}}">
+<meta name="citation_firstpage" content="{{pages[0]}}">
+<meta name="citation_lastpage" content="{{pages[1]}}">
+<meta name="citation_pdf_url" content="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf">
+<meta name="citation_publication_date" content="{{year}}">
+<meta name="citation_public_url" content="http://jmlr.org/papers/v{{volume}}/{{id}}.html">
+<meta name="citation_abstract_html_url" content="http://jmlr.org/papers/v{{volume}}/{{id}}.html">
+<meta name="citation_issn" content="1533-7928">
+
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1><a href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" style="text-decoration: none; color: inherit">{{title_html}}</a></h1>
+    <p class="lead">{{authors_string}}.</p>
+    <p style="font-weight: 300">Year: {{year}}, Volume: <a style="color: inherit" href="{{prefix}}papers/v{{volume}}/">{{volume}}</a>, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
+    <hr class="my-4">
+
+    <h4>Abstract</h4>
+    <p class="abstract">{% autoescape false %}{{abstract}}{% endautoescape %}</p>
+
+    <p class="lead" style="margin-top: 2em">
+        <a id="pdf" class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
+        <a class="btn btn-info btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
+        {% if extra_links %}
+            {% for link in extra_links %}
+            <a class="btn btn-secondary btn-lg" href="{{link[1]}}">{{link[0]}}</a>
+            {% endfor %}
+        {% endif %}
+    </p>
+
+</div>
+
+<!-- <p style="text-align: right">
+  <a class="btn btn-light btn-lg" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json" role="button" style="color: grey">Edit</a>
+</p> -->
+  {% endblock %}
+
+
+{% block sidebar %}
+{% endblock %}

@@ -44,11 +44,12 @@ def test_paper_json(volume, prefix):
                 # make sure that there's a code in the extra links
                 assert 'code' in fields
 
-# @pytest.mark.parametrize("volume", all_volumes)
-# @pytest.mark.parametrize("prefix", PREFIXES)
-# def test_paper_title(volume, prefix):
-#     for soup, info in paper_iterator(volume, prefix):
-#         assert soup.title.string == utils.xml_string(info['title'])
+
+@pytest.mark.parametrize("volume", all_volumes)
+def test_paper_title(volume, prefix='/beta/'):
+    for soup, info in paper_iterator(volume, prefix):
+        assert soup.title.string == utils.xml_string(info['title'])
+
 
 @pytest.mark.parametrize("volume", all_volumes)
 @pytest.mark.parametrize("prefix", PREFIXES)
@@ -79,19 +80,18 @@ def test_paper_metadata(volume, prefix):
 
 
 
-# @pytest.mark.parametrize("volume", all_volumes)
-# @pytest.mark.parametrize("prefix", PREFIXES)
-# def test_pdf_exists(volume, prefix):
-#     for soup, info in paper_iterator(volume, prefix):
-#         citation_pdf = soup.find_all(attrs={"name": "citation_pdf_url"})
-#         assert len(citation_pdf) == 1
-#         citation_pdf = citation_pdf[0]['content']
+@pytest.mark.parametrize("volume", all_volumes)
+def test_pdf_exists(volume, prefix='/beta/'):
+    for soup, info in paper_iterator(volume, prefix):
+        citation_pdf = soup.find_all(attrs={"name": "citation_pdf_url"})
+        assert len(citation_pdf) == 1
+        citation_pdf = citation_pdf[0]['content']
 
-#         citation_pdf2 = soup.find_all(id='pdf')
-#         assert len(citation_pdf2) == 1
-#         citation_pdf2 = citation_pdf2[0]['href']
+        citation_pdf2 = soup.find_all(id='pdf')
+        assert len(citation_pdf2) == 1
+        citation_pdf2 = citation_pdf2[0]['href']
 
-#         assert citation_pdf2 == citation_pdf
+        assert citation_pdf2 == citation_pdf
 
 
 @pytest.mark.parametrize("volume", all_volumes)

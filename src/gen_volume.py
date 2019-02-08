@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 import utils
 
 # only build the new website
-PREFIXES = ('/beta/', '')
+PREFIXES = ('/beta/', '/')
 
 def get_info(vol):
     os.chdir('v%s' % vol)
@@ -41,7 +41,7 @@ def process(info, prefix, env):
 
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']
-    
+
 
     with open('output' + prefix + 'papers/v%s/%s.html' % (vol, id), 'w') as f:
 

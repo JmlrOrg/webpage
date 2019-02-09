@@ -7,3 +7,6 @@
 [submodule "v20"]
 	path = v20
 	url = https://github.com/JmlrOrg/v20.git
+[submodule "v17"]
+	path = v17
+	url = https://github.com/JmlrOrg/v17.git

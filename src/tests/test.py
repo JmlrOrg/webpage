@@ -10,7 +10,7 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [18, 19, 20]
+all_volumes = [17, 18, 19, 20]
 
 PREFIXES = ['/', '/beta/']
 

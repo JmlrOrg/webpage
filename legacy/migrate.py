@@ -13,7 +13,7 @@ import re
 import os
 import requests
 
-VOL = 18
+VOL = 17
 vol_page = requests.get(f'http://www.jmlr.org/papers/v{VOL}/')
 soup = BeautifulSoup(vol_page.text, 'html.parser')
 
@@ -24,16 +24,16 @@ bib_url_list = []
 pdf_url_list = []
 abs_url_list = []
 
-for a in soup.find_all(href=re.compile(r'/papers/v18/\d+-\d+.bib')):
+for a in soup.find_all(href=re.compile(r'/papers/v%s/\d+-\d+.bib' % VOL)):
     tmp = a.attrs['href']
     print(tmp)
-    p = re.compile(r'/papers/v18/(\d+)-(\d+).bib')
+    p = re.compile(r'/papers/v%s/(\d+)-(\d+).bib' % VOL)
     id1, id2 = p.match(tmp).groups()
 
     bib_url_list.append(tmp)
     abs_url_list.append(tmp.replace('.bib', '.html'))
-    pdf_url_list.append(f'/papers/volume18/{id1}-{id2}/{id1}-{id2}.pdf')
-    dirname = "v18/%s-%s" % (id1, id2)
+    pdf_url_list.append(f'/papers/volume{VOL}/{id1}-{id2}/{id1}-{id2}.pdf')
+    dirname = "v%s/%s-%s" % (VOL, id1, id2)
     print(dirname)
     os.makedirs(dirname, exist_ok=True)
 
@@ -45,37 +45,36 @@ pdf_url_list
 abs_url_list
 
 #%%
-# import requests
-# chunk_size = 2000
+import requests
+chunk_size = 2000
 
-# for pdf_url in pdf_url_list:
+for pdf_url in pdf_url_list:
 
-#     url = 'http://jmlr.org' + pdf_url
-#     print(url)
-#     r = requests.get(url, stream=True)
+    url = 'http://jmlr.org' + pdf_url
+    print(url)
+    r = requests.get(url, stream=True)
 
-#     file_name = pdf_url.split('/')[-1]
-#     with open('v18/%s/%s' % (file_name[:-4], file_name), 'wb') as fd:
-#         for chunk in r.iter_content(chunk_size):
-#             fd.write(chunk)
+    file_name = pdf_url.split('/')[-1]
+    with open('v%s/%s/%s' % (VOL, file_name[:-4], file_name), 'wb') as fd:
+        for chunk in r.iter_content(chunk_size):
+            fd.write(chunk)
+
 
 #%%
+for bib_url in bib_url_list:
+    print(bib_url)
+    url = 'http://jmlr.org' + bib_url
+    r = requests.get(url, stream=True)
 
-#%%
-# for bib_url in bib_url_list:
-#     print(bib_url)
-#     url = 'http://jmlr.org' + bib_url
-#     r = requests.get(url, stream=True)
-
-#     file_name = bib_url.split('/')[-1]
-#     with open('data/v18/%s/%s' % (file_name[:-4], file_name), 'wb') as fd:
-#         for chunk in r.iter_content(chunk_size):
-#             fd.write(chunk)
+    file_name = bib_url.split('/')[-1]
+    with open('v%s/%s/%s' % (VOL, file_name[:-4], file_name), 'wb') as fd:
+        for chunk in r.iter_content(chunk_size):
+            fd.write(chunk)
 
 
 #%%
 for abs_url in abs_url_list:
-    print(t)
+    print(abs_url)
 
 #%%
 import bibtexparser
@@ -84,7 +83,7 @@ import json
 for (abs_url, bib_url) in zip(abs_url_list, bib_url_list):
 #     print(bib_url)
     file_name = bib_url.split('/')[-1]
-    f_path = '../v18/%s/%s' % (file_name[:-4], file_name)
+    f_path = 'v%s/%s/%s' % (VOL, file_name[:-4], file_name)
     with open(f_path) as bibtex_file:
         bib_database = bibtexparser.load(bibtex_file)
 
@@ -117,7 +116,7 @@ for (abs_url, bib_url) in zip(abs_url_list, bib_url_list):
     t = t[:m]
 
     info['abstract'] = t
-    json_path = '../v%s/%s/info.json' % (info['volume'], info['id'])
+    json_path = 'v%s/%s/info.json' % (info['volume'], info['id'])
     with open(json_path, 'w') as outfile:
         json.dump(info, outfile, sort_keys=True, indent=4, separators=(',', ': '))
     print(info)

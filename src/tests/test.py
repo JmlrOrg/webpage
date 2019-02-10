@@ -10,7 +10,7 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [17, 18, 19, 20]
+all_volumes = [18, 19, 20]
 
 PREFIXES = ['/', '/beta/']
 
@@ -18,6 +18,7 @@ PREFIXES = ['/', '/beta/']
 def test_xml_string():
     t = r"\mathcal{O}"
     assert utils.xml_string(t) == t
+
 
 def paper_iterator(volume, prefix):
     paper_dirs = glob.glob(f'v{volume}/??-???')

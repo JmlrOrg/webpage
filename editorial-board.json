@@ -171,6 +171,12 @@
       "research": "Clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics"
     },
     {
+      "name": "Tina Eliassi-Rad",
+      "affiliation": "Northeastern University",
+      "url": "http://eliassi.org",
+      "research": "Learning on complex networks, graph mining, network science"
+    },
+    {
       "name": "Gal Elidan",
       "affiliation": "Hebrew University, Israel",
       "url": "http://pluto.huji.ac.il/~galelidan/",

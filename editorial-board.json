@@ -243,6 +243,12 @@
       "research": "Feature selection, causaltity, model selection, automatic machine learning, computer vision, kernel method"
     },
     {
+      "name": "Zaid Harchaoui",
+      "affiliation": "University of Washington",
+      "url": "http://faculty.washington.edu/zaid/",
+      "research": "Convex optimization, high-dimensional statistics, kernel-based methods, non-convex optimization, representation learning"
+    },
+    {
       "name": "Moritz Hardt",
       "affiliation": "Google Research, USA",
       "url": "http://www.mrtz.org",

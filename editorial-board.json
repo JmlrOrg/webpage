@@ -64,7 +64,13 @@
       "name": "Alp Kucukelbir",
       "affiliation": "Fero Labs and Columbia University",
       "url": "http://www.proditus.com"
+    },
+    {
+      "name": "Fabian Pedregosa",
+      "affiliation": "Google",
+      "url": "http://fa.bianp.net"
     }
+
   ],
   "action_editors":
   [

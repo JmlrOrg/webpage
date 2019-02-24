@@ -12,10 +12,10 @@ PREFIXES = ('/beta/', '/')
 
 def get_info(vol):
     os.chdir('v%s' % vol)
-    ids = glob.glob('??-???')
+    ids = glob.glob('*/')
     info_list = []
-    for id in ids:
-        with open('%s/info.json' % id, 'r') as fp:
+    for paper_id in ids:
+        with open('%s/info.json' % paper_id, 'r') as fp:
             # some cleanup for the html display
             id_info = json.load(fp)
             id_info['title'] = utils.xml_string(id_info['title'])

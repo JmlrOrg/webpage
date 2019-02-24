@@ -13,17 +13,27 @@
   <link rel="stylesheet" href="{{prefix}}css/style.css">
 
   <style>
-      h1, h2 { 
-          color: #303060;
-          margin-bottom: 0.5em;
-      }
+    h1, h2 { 
+        color: #303060;
+        margin-bottom: 0.5em;
+    }
 
-      .darkblue {
-          color: #303060;
-      }
+    .darkblue {
+        color: #303060;
+    }
 
-      .volume {
+    .volume {
           font-weight: bold;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        color: #777;
+        text-align: center;
       }
 
   </style>
@@ -77,15 +87,20 @@
 <!-- Page Content -->
 <div id="content" class="container-fluid">
     <div class="row">
-    <div class="col-xs-12 col-md-8">
-        {% block content %}{% endblock %}
-    </div>
-    <div class="col-xs-6 col-md-4">
-            {% block sidebar %}{% endblock %}
+        <div class="col-xs-12 col-md-8">
+            {% block content %}{% endblock %}
+        </div>
+        <div class="col-xs-6 col-md-4">
+                {% block sidebar %}{% endblock %}
+        </div>
     </div>
 </div>
 
-</div>
+<footer class="footer">
+    <div class="container">
+        {% block footer %}{% endblock %}
+    </div>        
+</footer>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="{{prefix}}js/jquery.min.js"></script>

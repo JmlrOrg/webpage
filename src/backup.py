@@ -7,7 +7,7 @@ passwd = os.environ['JMLR_PASSWORD']
 backup_dir = os.environ['JMLR_BACKUP_DIR']
 
 path = os.path.join(path, '')
-command = 'rsync -arvz %s@%s %s --exclude=.snapshot --exclude=docroot/backup' % (user, path, backup_dir)
+command = 'rsync -arvz %s@%s %s --exclude=.snapshot --exclude=docroot/backup --exclude=docroot/.git' % (user, path, backup_dir)
 print('Running command')
 print(command)
 

@@ -64,7 +64,13 @@
       "name": "Alp Kucukelbir",
       "affiliation": "Fero Labs and Columbia University",
       "url": "http://www.proditus.com"
+    },
+    {
+      "name": "Fabian Pedregosa",
+      "affiliation": "Google",
+      "url": "http://fa.bianp.net"
     }
+
   ],
   "action_editors":
   [
@@ -171,6 +177,12 @@
       "research": "Clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics"
     },
     {
+      "name": "Tina Eliassi-Rad",
+      "affiliation": "Northeastern University",
+      "url": "http://eliassi.org",
+      "research": "Learning on complex networks, graph mining, network science"
+    },
+    {
       "name": "Gal Elidan",
       "affiliation": "Hebrew University, Israel",
       "url": "http://pluto.huji.ac.il/~galelidan/",
@@ -237,6 +249,12 @@
       "research": "Feature selection, causaltity, model selection, automatic machine learning, computer vision, kernel method"
     },
     {
+      "name": "Zaid Harchaoui",
+      "affiliation": "University of Washington",
+      "url": "http://faculty.washington.edu/zaid/",
+      "research": "Convex optimization, high-dimensional statistics, kernel-based methods, non-convex optimization, representation learning"
+    },
+    {
       "name": "Moritz Hardt",
       "affiliation": "Google Research, USA",
       "url": "http://www.mrtz.org",
@@ -253,12 +271,6 @@
       "affiliation": "University of Helsinki, Finland",
       "url": "http://www.cs.helsinki.fi/u/ahyvarin/",
       "research": "Unsupervised learning, natural image statistics, neuroimaging data analysis"
-    },
-    {
-      "name": "Alex Ihler",
-      "affiliation": "University of California, Irvine, USA",
-      "url": "http://www.ics.uci.edu/~ihler/",
-      "research": "graphical models, approximate inference, structured prediction"
     },
     {
       "name": "Tommi Jaakkola",
@@ -415,12 +427,6 @@
       "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://groups.csail.mit.edu/ALFA/groupWebSite/",
       "research": "evolutionary algorithms, genetic programming, "
-    },
-    {
-      "name": "Manfred Opper",
-      "affiliation": "Technical University of Berlin, Germany",
-      "url": "http://www.ki.tu-berlin.de/menue/team/manfred_opper",
-      "research": "Bayesian methods, approximate inference, statistical mechanics, Gaussian processes"
     },
     {
       "name": "Laurent Orseau",
@@ -595,6 +601,12 @@
       "affiliation": "National Institute of Advanced Industrial Science and Technology, Japan",
       "url": "http://tsudalab.org/en/member/koji_tsuda/",
       "research": ""
+    },
+    {
+      "name": "Nicolas Vayatis",
+      "affiliation": "ENS Cachan, France",
+      "url": "http://nvayatis.perso.math.cnrs.fr",
+      "research": "Statistical learning theory"
     },
     {
       "name": "S V N Vishwanathan",

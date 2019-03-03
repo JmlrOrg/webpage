@@ -19,6 +19,9 @@ def test_xml_string():
     t = r"\mathcal{O}"
     assert utils.xml_string(t) == t
 
+    t = r"Andr{{\'e}} R. Gon{\c{c}}alves"
+    assert utils.xml_string(t) == t    
+
 
 def paper_iterator(volume, prefix):
     paper_dirs = glob.glob(f'v{volume}/*/')

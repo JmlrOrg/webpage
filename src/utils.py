@@ -1,3 +1,7 @@
+import bibtexparser
+from bibtexparser.bparser import BibTexParser
+from bibtexparser.customization import convert_to_unicode
+
 accents = [
    ["'a", "á"], ['"a', "ä"], ["^a", "â"], ["`a", "à"],
    ["'e", "é"], ['"e', "ë"], ["^e", "ê"], ["`e", "è"],
@@ -27,3 +31,18 @@ def xml_string(text):
         # sometimes words are but in brackets in bibtex to make it {CapiTaliZed} correctly
     # text = text.replace('{', '').replace('}', '')
     return text
+
+
+def authors2string(auth_list):
+    template = """@article{JMLR:v17:15-215,
+  author  = {%s},
+  title   = {XXX},
+  journal = {Journal of Machine Learning Research},
+  year    = {2016}
+  }
+"""
+    parser = BibTexParser()
+    parser.customization = convert_to_unicode
+    tmp = template % ' and '.join(auth_list)
+    bib_database = bibtexparser.loads(tmp, parser=parser)
+    return bib_database.entries[0]['author'].replace(' and ', ', ')

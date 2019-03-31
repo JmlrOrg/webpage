@@ -22,7 +22,7 @@ def xml_string(text):
 
     for tex, utf8 in accents:
         # utf8 = utf8.decode('utf-8')
-        text = text.replace('{\\%s}' % tex, utf8)          # {\"a}
+        text = text.replace('{{\\%s}}' % tex, utf8)          # {{\"a}}
         # text = text.replace('\\%s' % tex, utf8)            # \"a
         try:
             text = text.replace('\\%s{%s}' % tuple(tex), utf8) # \"{a}
@@ -34,7 +34,8 @@ def xml_string(text):
 
 
 def authors2string(auth_list):
-    template = """@article{JMLR:v17:15-215,
+    """Return authors list as a string"""
+    template = """@article{JMLR:YYY,
   author  = {%s},
   title   = {XXX},
   journal = {Journal of Machine Learning Research},

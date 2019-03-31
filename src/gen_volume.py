@@ -36,9 +36,10 @@ def process(info, prefix, env):
     if 'title_html' not in info:
         info['title_html'] = info['title']
 
-    if 'authors_html' in info:
-        raise ValueError
-    info['authors_html'] = utils.authors2string(info['authors'])
+    info['authors_list'] = \
+        [u.strip() for u in 
+            utils.authors2string(info['authors']).split(',')
+        ]
 
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']

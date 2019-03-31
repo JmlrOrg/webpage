@@ -38,7 +38,7 @@ def authors2string(auth_list):
     auth = ""
     for a in auth_list:
         auth += xml_string(a) + ", "
-    return auth[:-3]
+    return auth[:-2]
     """Return authors list as a string"""
     template = """@article{JMLR:YYY,
   author  = {%s},

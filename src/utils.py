@@ -25,7 +25,7 @@ def xml_string(text):
         text = text.replace('{{\\%s}}' % tex, utf8)          # {{\"a}}
         # text = text.replace('\\%s' % tex, utf8)            # \"a
         try:
-            text = text.replace('\\%s{%s}' % tuple(tex), utf8) # \"{a}
+            text = text.replace('{\\%s{%s}}' % tuple(tex), utf8) # \"{a}
         except TypeError:
             pass
         # sometimes words are but in brackets in bibtex to make it {CapiTaliZed} correctly

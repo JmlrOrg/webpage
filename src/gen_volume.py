@@ -21,8 +21,8 @@ def get_info(vol):
             id_info['title'] = utils.xml_string(id_info['title'])
             # some authors write {TeXt} to ensure that its capitalized correctly in latex
             id_info['title'].replace('{', '').replace('}', '')
-
             id_info['authors_string'] = utils.authors2string(id_info['authors'])
+
             id_info['abstract'] = utils.xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
         info_list.append(id_info)
@@ -37,9 +37,7 @@ def process(info, prefix, env):
         info['title_html'] = info['title']
 
     info['authors_list'] = \
-        [u.strip() for u in 
-            utils.authors2string(info['authors']).split(',')
-        ]
+        [utils.xml_string(u.strip()) for u in info['authors']]
 
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']

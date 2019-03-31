@@ -4,16 +4,21 @@ from bibtexparser.customization import convert_to_unicode
 
 accents = [
    ["'a", "á"], ['"a', "ä"], ["^a", "â"], ["`a", "à"],
-   ["'e", "é"], ['"e', "ë"], ["^e", "ê"], ["`e", "è"],
+   ["'e", "é"], ["'E", "É"], ['"e', "ë"], ["^e", "ê"], ["`e", "è"],
    ["'i", "í"], ['"i', "ï"], ["^i", "î"], ["`i", "ì"],
    ["'o", "ó"], ['"o', "ö"], ["^o", "ô"], ["`o", "ò"],
    ["'u", "ú"], ['"u', "ü"], ["^u", "û"], ["`u", "ù"],
-   ["cc", "ç"], ['ug', 'ğ'], ['"U', "Ü"], ['"u', "ü"],
-   ["vZ", "Ž"], ['vc', 'č'], ['Ho', "ő"], ['O', "Ø"],
-   ['o', "ø"], ['l', 'ł'], ["'n", "ń"], ['vs', 'š'], 
-   ['vS', 'Š'], ['L', 'Ł'], ['&', '&amp;'], ["'c", "ć"],
-   ['vc', 'č'], ["cC", "Ç"], ['ua', 'ă'],
+   ['"U', "Ü"], ['"u', "ü"],
+   ['O', "Ø"],
+   ['o', "ø"], ['l', 'ł'], ["'n", "ń"], 
+   ['L', 'Ł'], ['&', '&amp;'], ["'c", "ć"],
    ['~n', 'ñ']
+]
+
+# this are combinations of the form {\a{b}}
+# where a is the first character and b the second one
+accents2 = [
+    ['vS', 'Š'], ['vs', 'š'], ['vc', 'č'], ["cC", "Ç"], ['ua', 'ă'],  ['Ho', "ő"], ["vZ", "Ž"],["cc", "ç"], ['ug', 'ğ'],
 ]
 
 def xml_string(text):
@@ -24,17 +29,8 @@ def xml_string(text):
         # utf8 = utf8.decode('utf-8')
         text = text.replace('{{\\%s}}' % tex, utf8)          # {{\"a}}
         # text = text.replace('\\%s' % tex, utf8)            # \"a
-        if len(tex) == 2:
-            try:
-                text = text.replace('{\\%s{%s}}' % tuple(tex), utf8) 
-            except TypeError:
-                pass
-            # try:
-            #     text = text.replace('{{\\\\%s%s}}' % tuple(tex), utf8) # {{\"a}}
-            # except TypeError:
-            #     pass
-        # sometimes words are but in brackets in bibtex to make it {CapiTaliZed} correctly
-    # text = text.replace('{', '').replace('}', '')
+    for tex, utf8 in accents2:
+        text = text.replace('{\\%s{%s}}' % tuple(tex), utf8) 
     return text
 
 

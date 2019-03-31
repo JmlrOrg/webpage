@@ -133,5 +133,7 @@ def test_issue_number(volume, prefix):
 
 
 
-def test_author_string():
-    raise ValueError # TODO
+def test_xmlstring():
+    assert utils.xml_string("Tak{{\\'a}}{\\v{c}}") == "Takáč"
+    assert utils.xml_string("Mar{{\\'i}}a del Carmen Rodr{{\\'i}}guez-Hern{{\\'a}}ndez") == \
+        "María del Carmen Rodríguez-Hernández"

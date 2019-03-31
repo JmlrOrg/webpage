@@ -12,17 +12,17 @@ PREFIXES = ('/beta/', '/')
 
 def get_info(vol):
     os.chdir('v%s' % vol)
-    ids = glob.glob('??-???')
+    ids = glob.glob('*/')
     info_list = []
-    for id in ids:
-        with open('%s/info.json' % id, 'r') as fp:
+    for paper_id in ids:
+        with open('%s/info.json' % paper_id, 'r') as fp:
             # some cleanup for the html display
             id_info = json.load(fp)
             id_info['title'] = utils.xml_string(id_info['title'])
             # some authors write {TeXt} to ensure that its capitalized correctly in latex
             id_info['title'].replace('{', '').replace('}', '')
 
-            id_info['authors_string'] = utils.xml_string(', '.join(id_info['authors']))
+            id_info['authors_string'] = utils.authors2string(id_info['authors'])
             id_info['abstract'] = utils.xml_string(id_info['abstract'])
             id_info['authors_bibtex'] = ' and '.join(id_info['authors'])
         info_list.append(id_info)
@@ -36,8 +36,9 @@ def process(info, prefix, env):
     if 'title_html' not in info:
         info['title_html'] = info['title']
 
-    if 'authors_html' not in info:
-        info['authors_html'] = [utils.xml_string(a) for a in info['authors']]
+    if 'authors_html' in info:
+        raise ValueError
+    info['authors_html'] = utils.authors2string(info['authors'])
 
     if 'title_bibtex' not in info:
         info['title_bibtex'] = info['title']

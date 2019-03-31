@@ -10,7 +10,7 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + '/../')
 import utils
 
-all_volumes = [18, 19, 20]
+all_volumes = [17, 18, 19, 20]
 
 PREFIXES = ['/', '/beta/']
 
@@ -21,9 +21,9 @@ def test_xml_string():
 
 
 def paper_iterator(volume, prefix):
-    paper_dirs = glob.glob(f'v{volume}/??-???')
+    paper_dirs = glob.glob(f'v{volume}/*/')
     for paper_dir in paper_dirs:
-        paper_id = paper_dir[-6:]
+        paper_id = paper_dir.split('/')[1]
         with open(f'output{prefix}papers/v{volume}/{paper_id}.html') as html_file:
             html = html_file.read()
         soup = BeautifulSoup(html, 'html.parser')
@@ -100,11 +100,15 @@ def test_pdf_exists(volume, prefix='/beta/'):
 def test_issue_number(volume, prefix):
     all_issues = []
     for soup, info in paper_iterator(volume, prefix):
-        all_issues.append(info['issue'])
-    all_issues.sort()
+        all_issues.append(info)
+    all_issues = sorted(all_issues, key=lambda k: k['issue'])
 
     # check that the volume has all consecutive issue
     # numbers
     for i in range(len(all_issues)):
-        assert all_issues[i] == i+1
+        assert all_issues[i]['issue'] == i+1
 
+
+
+def test_author_string():
+    raise ValueError # TODO

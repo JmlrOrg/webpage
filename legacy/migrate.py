@@ -24,16 +24,17 @@ bib_url_list = []
 pdf_url_list = []
 abs_url_list = []
 
-for a in soup.find_all(href=re.compile(r'/papers/v%s/\d+-\d+.bib' % VOL)):
+for a in soup.find_all(href=re.compile(r'/papers/v%s/([^\s]+).bib' % VOL)):
     tmp = a.attrs['href']
     print(tmp)
-    p = re.compile(r'/papers/v%s/(\d+)-(\d+).bib' % VOL)
-    id1, id2 = p.match(tmp).groups()
+    p = re.compile(r'/papers/v%s/([^\s]+).bib' % VOL)
+    print(p.match(tmp).groups())
+    id0, = p.match(tmp).groups()
 
     bib_url_list.append(tmp)
     abs_url_list.append(tmp.replace('.bib', '.html'))
-    pdf_url_list.append(f'/papers/volume{VOL}/{id1}-{id2}/{id1}-{id2}.pdf')
-    dirname = "v%s/%s-%s" % (VOL, id1, id2)
+    pdf_url_list.append(f'/papers/volume{VOL}/{id0}/{id0}.pdf')
+    dirname = "v%s/%s" % (VOL, id0)
     print(dirname)
     os.makedirs(dirname, exist_ok=True)
 

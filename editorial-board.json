@@ -531,6 +531,12 @@
       "research": "Stochastic Optimization, Derivative-free Optimization, Evolutionary Algorithms, Algorithm configuration/selection"
     },
     {
+      "name": "Ohad Shamir",
+      "affiliation": "Weizmann Institute of Science, Israel",
+      "url": "http://www.wisdom.weizmann.ac.il/~shamiro/index.html",
+      "research": "Learning theory, optimization, theory of deep learning"
+    },
+    {
       "name": "John Shawe-Taylor",
       "affiliation": "University College London, UK",
       "url": "http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/",

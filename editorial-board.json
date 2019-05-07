@@ -165,6 +165,12 @@
       "research": ""
     },
     {
+      "name": "Arnak Dalalyan",
+      "affiliation": "ENSAE / CREST, France",
+      "url": "http://www.arnak-dalalyan.fr",
+      "research": "robust estimation and learning, nonparametric inference, Langevin dynamics, PAC-Bayes learning, Sparse learning and estimation."
+    },
+    {
       "name": "Sanjoy Dasgupta",
       "affiliation": "University of California, San Diego, USA",
       "url": "http://cseweb.ucsd.edu/~dasgupta/",

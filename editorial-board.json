@@ -585,6 +585,12 @@
       "research": "Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets"
     },
     {
+      "name": "Erik Sudderth",
+      "affiliation": "University of California, Irvine, USA",
+      "url": "https://www.ics.uci.edu/~sudderth/",
+      "research": "Bayesian nonparametrics, graphical models, unsupervised learning, variational inference, Monte Carlo methods, computer vision, signal and image processing."
+    },
+    {
       "name": "Csaba Szepesvari",
       "affiliation": "University of Alberta, Canada",
       "url": "http://www.ualberta.ca/~szepesva/",

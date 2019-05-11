@@ -20,7 +20,7 @@
   [
     {
       "name": "Fabian Pedregosa",
-      "affiliation": "Google",
+      "affiliation": "Google Research",
       "url": "http://fa.bianp.net"
     }
   ],
@@ -67,7 +67,7 @@
     },
     {
       "name": "Fabian Pedregosa",
-      "affiliation": "Google",
+      "affiliation": "Google Research",
       "url": "http://fa.bianp.net"
     }
 
@@ -78,43 +78,49 @@
       "name": "Ryan Adams",
       "affiliation": "Princeton University, USA",
       "url": "http://www.cs.princeton.edu/~rpa/",
-      "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization"
+      "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization."
     },
     {
       "name": "Shivani Agarwal",
       "affiliation": "University of Pennsylvania, USA",
       "url": "http://www.shivani-agarwal.net",
-      "research": "Ranking and preference learning, choice modeling, supervised learning, multiclass learning, performance measures, loss functions"
+      "research": "Ranking and preference learning, choice modeling, supervised learning, multiclass learning, performance measures, loss functions."
     },
     {
       "name": "Edoardo M. Airoldi",
       "affiliation": "Harvard University, USA",
       "url": "https://sites.fas.harvard.edu/~airoldi/",
-      "research": "Statistics, Approximate inference, Causal inference, Network data analysis, Computational biology"
+      "research": "Statistics, approximate inference, causal inference, network data analysis, computational biology."
+    },
+    {
+      "name": "Genevera Allen",
+      "affiliation": "Rice University, USA",
+      "url": "http://www.stat.rice.edu/~gallen/",
+      "research": "Statistical machine learning, high-dimensional statistics, modern multivariate analysis, graphical models, data integration, tensor decompositions, optimization."
     },
     {
       "name": "Anima Anandkumar",
       "affiliation": "California Institute of Technology, USA",
       "url": "http://tensorlab.cms.caltech.edu/users/anima/",
-      "research": "Tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning"
+      "research": "Tensor decomposition, non-convex optimization, probabilistic models, reinforcement learning."
     },
     {
       "name": "Peter Auer",
       "affiliation": "University of Leoben, Austria",
       "url": "http://personal.unileoben.ac.at/auer/",
-      "research": "Bandit problems, reinforcement learning, online learning"
+      "research": "Bandit problems, reinforcement learning, online learning."
     },
     {
       "name": "Samy Bengio",
       "affiliation": "Google Research, USA",
       "url": "http://bengio.abracadoudou.com",
-      "research": "Deep learning, multi-class, ranking, sequences, speech and vision"
+      "research": "Deep learning, multi-class, ranking, sequences, speech and vision."
     },
     {
       "name": "Yoshua Bengio",
       "affiliation": "Université de Montréal, Canada",
       "url": "http://www.iro.umontreal.ca/~bengioy",
-      "research": "Deep learning"
+      "research": "Deep learning."
     },
     {
       "name": "Jeff Bilmes",
@@ -126,31 +132,31 @@
       "name": "Karsten Borgwardt",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "https://www.bsse.ethz.ch/mlcb/karsten.html",
-      "research": "Feature Selection, Pattern Mining, Graph Mining, Kernel Methods, Bioinformatics"
+      "research": "Feature Selection, pattern mining, graph mining, kernel methods, bioinformatics."
     },
     {
       "name": "François Caron",
       "affiliation": "University of Oxford, United Kingdom",
       "url": "http://www.stats.ox.ac.uk/~caron",
-      "research": "Bayesian methods, Bayesian nonparametrics, Statistical network analysis, Monte Carlo methods, Probabilistic modeling"
+      "research": "Bayesian methods, Bayesian nonparametrics, statistical network analysis, Monte Carlo methods, probabilistic modeling."
     },
     {
       "name": "Miguel A. Carreira-Perpinan",
       "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
-      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning"
+      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
     },
     {
       "name": "Alexander Clark",
       "affiliation": "King's College London, UK",
       "url": "http://www.cs.rhul.ac.uk/home/alexc/",
-      "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics"
+      "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics."
     },
     {
       "name": "Corinna Cortes",
       "affiliation": "Google Research, USA",
       "url": "http://research.google.com/pubs/author121.html",
-      "research": "Kernel methods, boosting, feature selection"
+      "research": "Kernel methods, boosting, feature selection."
     },
     {
       "name": "Koby Crammer",
@@ -159,10 +165,16 @@
       "research": ""
     },
     {
+      "name": "Arnak Dalalyan",
+      "affiliation": "ENSAE / CREST, France",
+      "url": "http://www.arnak-dalalyan.fr",
+      "research": "Robust estimation and learning, nonparametric inference, Langevin dynamics, PAC-Bayes learning, Sparse learning and estimation."
+    },
+    {
       "name": "Sanjoy Dasgupta",
       "affiliation": "University of California, San Diego, USA",
       "url": "http://cseweb.ucsd.edu/~dasgupta/",
-      "research": "Unsupervised learning, semisupervised learning, active learning"
+      "research": "Unsupervised learning, semisupervised learning, active learning."
     },
     {
       "name": "Inderjit S. Dhillon",
@@ -525,10 +537,16 @@
       "research": "Stochastic Optimization, Derivative-free Optimization, Evolutionary Algorithms, Algorithm configuration/selection"
     },
     {
+      "name": "Ohad Shamir",
+      "affiliation": "Weizmann Institute of Science, Israel",
+      "url": "http://www.wisdom.weizmann.ac.il/~shamiro/index.html",
+      "research": "Learning theory, optimization, theory of deep learning."
+    },
+    {
       "name": "John Shawe-Taylor",
       "affiliation": "University College London, UK",
       "url": "http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/",
-      "research": "Statistical learning theory, kernel methods, reinforcement learning"
+      "research": "Statistical learning theory, kernel methods, reinforcement learning."
     },
     {
       "name": "Xiaotong Shen",
@@ -565,6 +583,12 @@
       "affiliation": "University of Edinburgh, UK",
       "url": "http://homepages.inf.ed.ac.uk/amos/index.html",
       "research": "Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets"
+    },
+    {
+      "name": "Erik Sudderth",
+      "affiliation": "University of California, Irvine, USA",
+      "url": "https://www.ics.uci.edu/~sudderth/",
+      "research": "Bayesian nonparametrics, graphical models, unsupervised learning, variational inference, Monte Carlo methods, computer vision, signal and image processing."
     },
     {
       "name": "Csaba Szepesvari",

@@ -165,6 +165,12 @@
       "research": ""
     },
     {
+      "name": "John P. Cunningham",
+      "affiliation": "Columbia University, USA",
+      "url" : "http://stat.columbia.edu/~cunningham/",
+      "research" : "State space models, deep generative models, approximate inference, gaussian processes, computational neuroscience."
+    },
+    {
       "name": "Arnak Dalalyan",
       "affiliation": "ENSAE / CREST, France",
       "url": "http://www.arnak-dalalyan.fr",

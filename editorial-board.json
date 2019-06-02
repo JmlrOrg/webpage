@@ -144,7 +144,13 @@
       "name": "Miguel A. Carreira-Perpinan",
       "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
-      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+      "research": "Optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+    },
+    {
+      "name": "Andreas Christmann",
+      "affiliation": "Bayreuth University, Germany",
+      "url": "http://www.stoch.uni-bayreuth.de/de/CHRISTMANN/",
+      "research": "Statistical machine learning theory, Kernel-based methods, Efficient learning methods for large data sets, Robust statistics, Nonparametrical statistics, Bootstrapping, Pairwise learning, Reproducing kernel Hilbert spaces, Applications of machine learning."
     },
     {
       "name": "Alexander Clark",

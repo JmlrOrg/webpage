@@ -144,12 +144,18 @@
       "name": "Miguel A. Carreira-Perpinan",
       "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
-      "research": "optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+      "research": "Optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+    },
+    {
+      "name": "Andreas Christmann",
+      "affiliation": "Bayreuth University, Germany",
+      "url": "http://www.stoch.uni-bayreuth.de/de/CHRISTMANN/",
+      "research": "Statistical machine learning theory, Kernel-based methods, Robust statistics."
     },
     {
       "name": "Alexander Clark",
       "affiliation": "King's College London, UK",
-      "url": "http://www.cs.rhul.ac.uk/home/alexc/",
+      "url": "https://alexc17.github.io",
       "research": "Grammatical inference, unsupervised learning in NLP, natural language learning, mathematical linguistics."
     },
     {
@@ -163,6 +169,12 @@
       "affiliation": "Technion, Israel",
       "url": "http://webee.technion.ac.il/people/koby/",
       "research": ""
+    },
+    {
+      "name": "John P. Cunningham",
+      "affiliation": "Columbia University, USA",
+      "url" : "http://stat.columbia.edu/~cunningham/",
+      "research" : "State space models, deep generative models, approximate inference, gaussian processes, computational neuroscience."
     },
     {
       "name": "Arnak Dalalyan",

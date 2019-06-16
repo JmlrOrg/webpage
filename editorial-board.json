@@ -345,6 +345,12 @@
       "research": "transfer learning, structured prediction, computer vision"
     },
     {
+      "name": "Honglak Lee",
+      "affiliation": "Google and University of Michigan, Ann Arbor",
+      "url": "http://web.eecs.umich.edu/~honglak/",
+      "research": "Deep Learning, Deep Generative Models, Representation Learning, Reinforcement Learning, Unsupervised Learning"
+    },
+    {
       "name": "Daniel Lee",
       "affiliation": "University of Pennsylvania, USA",
       "url": "http://www.seas.upenn.edu/~ddlee/",

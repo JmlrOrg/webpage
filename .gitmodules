@@ -10,3 +10,7 @@
 [submodule "v17"]
 	path = v17
 	url = https://github.com/JmlrOrg/v17.git
+[submodule "v16"]
+	path = v16
+	url = https://github.com/JmlrOrg/v16.git
+	branch = master

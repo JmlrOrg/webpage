@@ -35,9 +35,13 @@ def send_emails(vol, id):
 
 your JMLR submission %s, "%s", in now online. It can be found at http://jmlr.org/papers/v%s/%s.html . Please take a moment to check the author order, abstract and bibtex. You can let us know of any desired changes by replying to this email.
 
+Furthermore, we would like to know about your experience publishing with JMLR. This feedback will allow us to improve and provide a better service. Please take a minute to fill the following survey:
+
+    https://docs.google.com/forms/d/e/1FAIpQLSftyqPSdmiiKyoCuFRNPjZRlYQrTXPEx8SU0CaQJ3XQS9LJCg/viewform
+
 We thank you for publishing your research with JMLR.
 
-Fabian Pedregosa (JMLR Webmaster) on behalf of the JMLR editorial board.
+Fabian Pedregosa and Alp Kucukelbir (JMLR Webmasters) on behalf of the JMLR editorial board.
         """ % (id, info['title'], vol, id))
         msg['Subject'] = "JMLR submission %s is now online" % id
         msg['From'] = 'JMLR Webmaster <f@bianp.net>'

@@ -12,7 +12,7 @@
 
 <!-- Google Scholar Meta -->
 <meta name="citation_title" content="{{title_html}}">
-{% for author in authors_html -%}
+{% for author in authors_list -%}
 <meta name="citation_author" content="{{author}}">
 {% endfor -%}
 <meta name="citation_journal_title" content="Journal of Machine Learning Research">
@@ -46,4 +46,9 @@
   {% endfor %}
 
 
+{% endblock %}
+
+
+{% block footer %}
+<a href="https://github.com/JmlrOrg/v{{volume}}/tree/master/{{id}}">(edit)</a>
 {% endblock %}

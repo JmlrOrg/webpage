@@ -13,7 +13,7 @@ import re
 import os
 import requests
 
-VOL = 17
+VOL = 16
 vol_page = requests.get(f'http://www.jmlr.org/papers/v{VOL}/')
 soup = BeautifulSoup(vol_page.text, 'html.parser')
 
@@ -24,16 +24,17 @@ bib_url_list = []
 pdf_url_list = []
 abs_url_list = []
 
-for a in soup.find_all(href=re.compile(r'/papers/v%s/\d+-\d+.bib' % VOL)):
+for a in soup.find_all(href=re.compile(r'/papers/v%s/([^\s]+).bib$' % VOL)):
     tmp = a.attrs['href']
     print(tmp)
-    p = re.compile(r'/papers/v%s/(\d+)-(\d+).bib' % VOL)
-    id1, id2 = p.match(tmp).groups()
+    p = re.compile(r'/papers/v%s/([^\s]+).bib' % VOL)
+    print(p.match(tmp).groups())
+    id0, = p.match(tmp).groups()
 
     bib_url_list.append(tmp)
     abs_url_list.append(tmp.replace('.bib', '.html'))
-    pdf_url_list.append(f'/papers/volume{VOL}/{id1}-{id2}/{id1}-{id2}.pdf')
-    dirname = "v%s/%s-%s" % (VOL, id1, id2)
+    pdf_url_list.append(f'/papers/volume{VOL}/{id0}/{id0}.pdf')
+    dirname = "v%s/%s" % (VOL, id0)
     print(dirname)
     os.makedirs(dirname, exist_ok=True)
 
@@ -67,6 +68,7 @@ for bib_url in bib_url_list:
     r = requests.get(url, stream=True)
 
     file_name = bib_url.split('/')[-1]
+    print(file_name)
     with open('v%s/%s/%s' % (VOL, file_name[:-4], file_name), 'wb') as fd:
         for chunk in r.iter_content(chunk_size):
             fd.write(chunk)
@@ -80,7 +82,7 @@ for abs_url in abs_url_list:
 import bibtexparser
 import json
 
-for (abs_url, bib_url) in zip(abs_url_list, bib_url_list):
+for number, (abs_url, bib_url) in enumerate(zip(abs_url_list, bib_url_list)):
 #     print(bib_url)
     file_name = bib_url.split('/')[-1]
     f_path = 'v%s/%s/%s' % (VOL, file_name[:-4], file_name)
@@ -93,7 +95,10 @@ for (abs_url, bib_url) in zip(abs_url_list, bib_url_list):
     info = {}
     info['id'] = bib_database.entries[0]['ID'].split(':')[-1]
     info['pages'] = [int(a) for a in bib_database.entries[0]['pages'].split('-')]
-    info['issue'] = int(bib_database.entries[0]['number'])
+    try:
+      info['issue'] = int(bib_database.entries[0]['number'])
+    except KeyError:
+      info['issue'] = number
     info['title'] = bib_database.entries[0]['title']
     info['volume'] = int(bib_database.entries[0]['volume'])
     info['year'] = int(bib_database.entries[0]['year'])

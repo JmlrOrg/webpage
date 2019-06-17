@@ -12,7 +12,7 @@
 
 <!-- Google Scholar Meta -->
 <meta name="citation_title" content="{{title_html}}">
-{% for author in authors_html -%}
+{% for author in authors_list -%}
 <meta name="citation_author" content="{{author}}">
 {% endfor -%}
 <meta name="citation_journal_title" content="Journal of Machine Learning Research">
@@ -49,12 +49,14 @@
     </p>
 
 </div>
-
-<!-- <p style="text-align: right">
-  <a class="btn btn-light btn-lg" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json" role="button" style="color: grey">Edit</a>
-</p> -->
-  {% endblock %}
+{% endblock %}
 
 
 {% block sidebar %}
+{% endblock %}
+
+{% block footer %}
+<p class="text-muted">
+    <a style="color: #777" href="https://github.com/JmlrOrg/v{{volume}}/blob/master/{{id}}/info.json">Edit</a>
+</p>
 {% endblock %}

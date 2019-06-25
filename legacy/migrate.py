@@ -98,7 +98,7 @@ for number, (abs_url, bib_url) in enumerate(zip(abs_url_list, bib_url_list)):
     try:
       info['issue'] = int(bib_database.entries[0]['number'])
     except KeyError:
-      info['issue'] = number
+      info['issue'] = number + 1
     info['title'] = bib_database.entries[0]['title']
     info['volume'] = int(bib_database.entries[0]['volume'])
     info['year'] = int(bib_database.entries[0]['year'])

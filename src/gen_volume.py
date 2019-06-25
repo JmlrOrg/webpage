@@ -54,9 +54,16 @@ def process(info, prefix, env):
         f.write(out)
     papers_dir = 'output' + prefix + 'papers/'
     os.makedirs('output' + prefix + 'papers/volume%s/%s' % (vol, id), exist_ok=True)
-    shutil.copy(
-        'v%s/%s/%s.pdf' % (vol, id, id),
-        'output' + prefix + 'papers/volume%s/%s/%s.pdf' % (vol, id, id))
+
+    # use wildcard to match also other PDFs like erratums
+    pdf_files = glob.glob('v%s/%s/*.pdf' % (vol, id))
+    # check that there's a file with name $id.pdf
+    assert ('%s.pdf' % id) in set([os.path.basename(file) for file in pdf_files])
+    for file in pdf_files:
+      bname = os.path.basename(file)
+      shutil.copy(
+          'v%s/%s/%s' % (vol, id, bname),
+          'output' + prefix + 'papers/volume%s/%s/%s' % (vol, id, bname))
 
 
 

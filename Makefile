@@ -7,6 +7,7 @@ all:
 	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
+	python src/gen_volume.py 16
 	python src/gen_volume.py 17
 	python src/gen_volume.py 18
 	python src/gen_volume.py 19

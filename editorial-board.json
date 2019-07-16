@@ -135,12 +135,6 @@
       "research": "Feature Selection, pattern mining, graph mining, kernel methods, bioinformatics."
     },
     {
-      "name": "François Caron",
-      "affiliation": "University of Oxford, United Kingdom",
-      "url": "http://www.stats.ox.ac.uk/~caron",
-      "research": "Bayesian methods, Bayesian nonparametrics, statistical network analysis, Monte Carlo methods, probabilistic modeling."
-    },
-    {
       "name": "Miguel A. Carreira-Perpinan",
       "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
@@ -343,6 +337,12 @@
       "affiliation": "Institute of Science and Technology, Austria",
       "url": "http://www.ist.ac.at/~chl",
       "research": "transfer learning, structured prediction, computer vision"
+    },
+    {
+      "name": "Honglak Lee",
+      "affiliation": "Google and University of Michigan, Ann Arbor",
+      "url": "http://web.eecs.umich.edu/~honglak/",
+      "research": "Deep Learning, Deep Generative Models, Representation Learning, Reinforcement Learning, Unsupervised Learning"
     },
     {
       "name": "Daniel Lee",

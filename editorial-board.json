@@ -375,6 +375,12 @@
       "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     },
     {
+      "name": "Julien Mairal",
+      "affiliation": "INRIA",
+      "url": "https://lear.inrialpes.fr/people/mairal/",
+      "research": "Convex optimization, sparse estimation, statistical signal and image processing, representation learning."
+    },
+    {
       "name": "Shie Mannor",
       "affiliation": "Technion, Israel",
       "url": "http://shie.webee.eedev.technion.ac.il",

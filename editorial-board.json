@@ -138,7 +138,7 @@
       "name": "Miguel A. Carreira-Perpinan",
       "affiliation": "University of California, Merced, USA",
       "url": "http://faculty.ucmerced.edu/mcarreira-perpinan/",
-      "research": "Optimization (nonconvex in particular), dimensionality reduction, mean-shift algorithms, unsupervised learning."
+      "research": "Optimization (in particular for deep learning and decision trees), dimensionality reduction, mean-shift algorithms, unsupervised learning."
     },
     {
       "name": "Andreas Christmann",
@@ -375,6 +375,12 @@
       "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     },
     {
+      "name": "Julien Mairal",
+      "affiliation": "INRIA",
+      "url": "https://lear.inrialpes.fr/people/mairal/",
+      "research": "Convex optimization, sparse estimation, statistical signal and image processing, representation learning."
+    },
+    {
       "name": "Shie Mannor",
       "affiliation": "Technion, Israel",
       "url": "http://shie.webee.eedev.technion.ac.il",
@@ -442,9 +448,9 @@
     },
     {
       "name": "Sebastian Nowozin",
-      "affiliation": "Microsoft Research, Cambridge, UK",
-      "url": "http://research.microsoft.com/en-us/people/senowozi/",
-      "research": "structured prediction, computer vision, deep learning"
+      "affiliation": "Google Research",
+      "url": "http://www.nowozin.net/sebastian/",
+      "research": "Structured prediction, computer vision, deep learning"
     },
     {
       "name": "Una-May O'Reilly",

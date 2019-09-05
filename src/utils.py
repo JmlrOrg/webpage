@@ -3,7 +3,7 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.customization import convert_to_unicode
 
 accents = [
-   ["'A", "Á"], ["'a", "á"], ['"a', "ä"], ["^a", "â"], ["`a", "à"], ["~a", "ã"],
+   ["'A", "Á"], ["'a", "á"], ['"a', "ä"], ["^a", "â"], ["`a", "à"], ["~a", "ã"], ["aa", "å"],
    ["'e", "é"], ["'E", "É"], ['"e', "ë"], ["^e", "ê"], ["`e", "è"],
    ["'i", "í"], ['"i', "ï"], ["^i", "î"], ["`i", "ì"],
    ["'o", "ó"], ['"o', "ö"], ["^o", "ô"], ["`o", "ò"],

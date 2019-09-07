@@ -17,6 +17,10 @@ Sources for the [JMLR webpage](http://jmlr.org)
 
 # Some useful commands
 
+* Fetch data for submodules:
+
+    $ git submodule update
+
 * Update all submodules to latest commit:
 
     $ git submodule foreach git pull origin master

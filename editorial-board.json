@@ -141,12 +141,6 @@
       "research": "Optimization (in particular for deep learning and decision trees), dimensionality reduction, mean-shift algorithms, unsupervised learning."
     },
     {
-      "name": "Andreas Christmann",
-      "affiliation": "Bayreuth University, Germany",
-      "url": "http://www.stoch.uni-bayreuth.de/de/CHRISTMANN/",
-      "research": "Statistical machine learning theory, Kernel-based methods, Robust statistics."
-    },
-    {
       "name": "Alexander Clark",
       "affiliation": "King's College London, UK",
       "url": "https://alexc17.github.io",
@@ -187,12 +181,6 @@
       "affiliation": "University of Texas, Austin, USA",
       "url": "http://www.cs.utexas.edu/users/inderjit/",
       "research": ""
-    },
-    {
-      "name": "Jennifer Dy",
-      "affiliation": "Northeastern University, USA",
-      "url": "http://www.ece.neu.edu/fac-ece/jdy/",
-      "research": "Clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics"
     },
     {
       "name": "Tina Eliassi-Rad",

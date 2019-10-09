@@ -267,6 +267,12 @@
       "research": "Learning theory, algorithms, optimization, privacy"
     },
     {
+      "name": "Philipp Hennig",
+      "affiliation": "University of Tübingen",
+      "url": "https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/methoden-des-maschinellen-lernens/start/",
+      "research": "Probabilistic Numerics (including Bayesian Optimization and Quadrature); Algorithms for Bayesian Inference; Algorithms for Deep Learning (Optimization, Sampling, etc.); Gaussian Processes; Sustainable ML and ML for Sustainability."
+    },
+    {
       "name": "Bert Huang",
       "affiliation": "Virginia Tech, USA",
       "url": "http://berthuang.com",
@@ -283,6 +289,12 @@
       "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://people.csail.mit.edu/tommi/tommi.html",
       "research": "Approximate inference, structured prediction, deep learning"
+    },
+    {
+      "name": "Stefanie Jegelka",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://people.csail.mit.edu/stefje/",
+      "research": "Submodularity, determinantal point processes, negative dependence, Bayesian optimization"
     },
     {
       "name": "Samuel Kaski",

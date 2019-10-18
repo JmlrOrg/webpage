@@ -1,7 +1,7 @@
-[submodule "data/v19"]
+[submodule "v19"]
 	path = v19
 	url = https://github.com/JmlrOrg/v19.git
-[submodule "data/v18"]
+[submodule "v18"]
 	path = v18
 	url = https://github.com/JmlrOrg/v18.git
 [submodule "v20"]
@@ -14,3 +14,6 @@
 	path = v16
 	url = https://github.com/JmlrOrg/v16.git
 	branch = master
+[submodule "v15"]
+	path = v15
+	url = https://github.com/JmlrOrg/v15.git

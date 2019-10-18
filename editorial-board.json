@@ -141,12 +141,6 @@
       "research": "Optimization (in particular for deep learning and decision trees), dimensionality reduction, mean-shift algorithms, unsupervised learning."
     },
     {
-      "name": "Andreas Christmann",
-      "affiliation": "Bayreuth University, Germany",
-      "url": "http://www.stoch.uni-bayreuth.de/de/CHRISTMANN/",
-      "research": "Statistical machine learning theory, Kernel-based methods, Robust statistics."
-    },
-    {
       "name": "Alexander Clark",
       "affiliation": "King's College London, UK",
       "url": "https://alexc17.github.io",
@@ -187,12 +181,6 @@
       "affiliation": "University of Texas, Austin, USA",
       "url": "http://www.cs.utexas.edu/users/inderjit/",
       "research": ""
-    },
-    {
-      "name": "Jennifer Dy",
-      "affiliation": "Northeastern University, USA",
-      "url": "http://www.ece.neu.edu/fac-ece/jdy/",
-      "research": "Clustering, feature selection, dimensionality reduction, graphical models, Bayesian methods, Bayesian Nonparametrics"
     },
     {
       "name": "Tina Eliassi-Rad",
@@ -279,6 +267,12 @@
       "research": "Learning theory, algorithms, optimization, privacy"
     },
     {
+      "name": "Philipp Hennig",
+      "affiliation": "University of Tübingen",
+      "url": "https://uni-tuebingen.de/en/faculties/faculty-of-science/departments/computer-science/lehrstuehle/methods-of-machine-learning/start/",
+      "research": "Probabilistic Numerics (including Bayesian Optimization and Quadrature); Algorithms for Bayesian Inference; Algorithms for Deep Learning (Optimization, Sampling, etc.); Gaussian Processes; Sustainable ML and ML for Sustainability."
+    },
+    {
       "name": "Bert Huang",
       "affiliation": "Virginia Tech, USA",
       "url": "http://berthuang.com",
@@ -295,6 +289,12 @@
       "affiliation": "Massachusetts Institute of Technology, USA",
       "url": "http://people.csail.mit.edu/tommi/tommi.html",
       "research": "Approximate inference, structured prediction, deep learning"
+    },
+    {
+      "name": "Stefanie Jegelka",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://people.csail.mit.edu/stefje/",
+      "research": "Submodularity, determinantal point processes, negative dependence, Bayesian optimization"
     },
     {
       "name": "Samuel Kaski",
@@ -507,12 +507,6 @@
       "research": "(statistical) relational learning, inductive logic programming, symbolic machine learning, probabilistic programming, learning from structured data, pattern mining"
     },
     {
-      "name": "Alexander Rakhlin",
-      "affiliation": "University of Pennsylvania, USA",
-      "url": "http://www-stat.wharton.upenn.edu/~rakhlin/",
-      "research": "Learning theory, online learning, statistical learning theory"
-    },
-    {
       "name": "Garvesh Raskutti",
       "affiliation": "University of Wisconsin-Madison, USA",
       "url": "http://pages.cs.wisc.edu/~raskutti/",
@@ -619,6 +613,12 @@
       "affiliation": "INRIA Saclay, France",
       "url": "https://www.lri.fr/~teytaud/",
       "research": ""
+    },
+    {
+      "name": "Ambuj Tewari",
+      "affiliation": "University of Michigan",
+      "url": "https://ambujtewari.github.io",
+      "research": "Statistical learning theory, online learning, bandit problems, reinforcement learning, high-dimensional statistics, optimization."
     },
     {
       "name": "Ivan Titov",

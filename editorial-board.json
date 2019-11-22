@@ -651,6 +651,12 @@
       "research": "Statistical learning theory"
     },
     {
+      "name": "Jean-Philippe Vert",
+      "affiliation": "Google Research, France",
+      "url": "http://members.cbio.mines-paristech.fr/~jvert/",
+      "research": "kernel methods, computational biology, statistical learning theory"
+    },
+    {
       "name": "S V N Vishwanathan",
       "affiliation": "Purdue University, USA",
       "url": "https://users.soe.ucsc.edu/~vishy/",

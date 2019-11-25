@@ -286,15 +286,15 @@
     },
     {
       "name": "Prateek Jain",
-      "affiliation": "Massachusetts Institute of Technology, USA",
-      "url": "http://people.csail.mit.edu/tommi/tommi.html",
-      "research": "Approximate inference, structured prediction, deep learning"
-    },
-    {
-      "name": "Stefanie Jegelka",
       "affiliation": "Microsoft Research, India",
       "url": "http://www.prateekjain.org/",
       "research": "Non-convex Optimization, Stochastic Optimization, Large-scale Optimization, Resource-constrained Machine Learning"
+    },
+    {
+      "name": "Stefanie Jegelka",
+      "affiliation": "Massachusetts Institute of Technology, USA",
+      "url": "http://people.csail.mit.edu/stefje/",
+      "research": "Submodularity, determinantal point processes, negative dependence, Bayesian optimization"
     },
     {
       "name": "Samuel Kaski",

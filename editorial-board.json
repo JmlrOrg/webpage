@@ -333,6 +333,12 @@
       "research": "large-scale learning, hashing, matrix factorization, nearest neighbor search, clustering"
     },
     {
+      "name": "Simon Lacoste-Julien",
+      "affiliation": "Quebec Institute of Artificial Intelligence, Canada",
+      "url": "https://www.iro.umontreal.ca/~slacoste/",
+      "research": "optimization, structured prediction, theory of deep learning"
+    },
+    {
       "name": "Christoph Lampert",
       "affiliation": "Institute of Science and Technology, Austria",
       "url": "http://www.ist.ac.at/~chl",

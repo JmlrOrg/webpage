@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+
+{% block extraheader %}
+<style>
+    .editors li {
+        margin-bottom: 8px;
+    }
+    .editors .name {
+        font-weight: bold;
+    }
+    .editors a {
+        text-decoration: none;
+    }
+    .editors .research {
+        display: block;
+        font-size: 88%;
+        color: #555;
+        max-width: 500px;
+    }
+    #board a {
+      font-weight: bold;
+    }
+    #board li{
+      list-style-type: none;
+      margin-left: 2em;
+      margin-bottom: 0.5em;
+    }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1>Editorial board reviewers</h1>
+    
+    <ul>
+    <li>
+    <b>Naoki Abe</b>, IBM TJ Watson Research Center, USA</li>
+    
+    <li>
+    <b>Yasemin Altun</b>, Google Inc, Switzerland</li>
+    
+    <li>
+    <b>Jean-Yves Audibert</b>, CERTIS, France</li>
+    
+    <li>
+    <b>Jonathan Baxter</b>, Australia National University, Australia</li>
+    
+    <li>
+    <b>Richard K. Belew</b>, University of California at San Diego, USA</li>
+    
+    <li>
+    <b>Kristin Bennett</b>, Rensselaer Polytechnic Institute, USA</li>
+    
+    <li>
+    <b>Christopher M. Bishop</b>, Microsoft Research, Cambridge, UK</li>
+    
+    <li>
+    <b>Lashon Booker</b>, The Mitre Corporation, USA</li>
+    
+    <li>
+    <b>Henrik Boström</b>, Stockholm University/KTH, Sweden</li>
+    
+    <li>
+    <b>Craig Boutilier</b>, Google Research, USA</li>
+    
+    <li>
+    <b>John Patrick Cunningham</b>, Columbia University, USA</li>
+    
+    <li>
+    <b>Nello Cristianini</b>, University of Bristol, UK</li>
+    
+    <li>
+    <b>Peter Dayan</b>, University College, London, UK</li>
+    
+    <li>
+    <b>Dennis DeCoste</b>, eBay Research, USA</li>
+    
+    <li>
+    <b>Thomas Dietterich</b>, Oregon State University, USA</li>
+    
+    <li>
+    <b>Saso Dzeroski</b>, Jozef Stefan Institute, Slovenia</li>
+    
+    <li>
+    <b>Ran El-Yaniv</b>, Technion, Israel</li>
+    
+    <li>
+    <b>Peter Flach</b>, Bristol University, UK</li>
+    
+    <li>
+    <b>Dan Geiger</b>, Technion, Israel</li>
+    
+    <li>
+    <b>Claudio Gentile</b>, Università degli Studi dell'Insubria, Italy</li>
+    
+    <li>
+    <b>Sally Goldman</b>, Google Research, USA</li>
+    
+    <li>
+    <b>Thore Graepel</b>, Google DeepMind and University College London, UK</li>
+    
+    <li>
+    <b>Tom Griffiths</b>, University of California at Berkeley, USA</li>
+    
+    <li>
+    <b>Carlos Guestrin</b>, University of Washington, USA</li>
+    
+    <li>
+    <b>Stefan Harmeling</b>, University of Düsseldorf, Germany</li>
+    
+    <li>
+    <b>David Heckerman</b>, Microsoft Research, USA</li>
+    
+    <li>
+    <b>Katherine Heller</b>, Duke University, USA</li>
+    
+    <li>
+    <b>Philipp Hennig</b>, MPI for Intelligent Systems, Germany</li>
+    
+    <li>
+    <b>Larry Hunter</b>, University of Colorado, USA</li>
+    
+    <li>
+    <b>Jens Kober</b>, Delft University of Technology, Netherlands</li>
+    
+    <li>
+    <b>Risi Kondor</b>, University of Chicago, USA</li>
+    
+    <li>
+    <b>Aryeh Kontorovich</b>, Ben-Gurion University of the Negev, Israel</li>
+    
+    <li>
+    <b>Samory Kpotufe</b>, Princeton University, USA</li>
+    
+    <li>
+    <b>John Lafferty</b>, University of Chicago, USA</li>
+    
+    <li>
+    <b>Erik Learned-Miller</b>, University of Massachusetts, Amherst, USA</li>
+    
+    <li>
+    <b>Fei Fei Li</b>, Stanford University, USA</li>
+    
+    <li>
+    <b>Yi Lin</b>, University of Wisconsin, USA</li>
+    
+    <li>
+    <b>Wei-Yin Loh</b>, University of Wisconsin, USA</li>
+    
+    <li>
+    <b>Richard Maclin</b>, University of Minnesota, USA</li>
+    
+    <li>
+    <b>Sridhar Mahadevan</b>, University of Massachusetts, Amherst, USA</li>
+    
+    <li>
+    <b>Vikash Mansingkha</b>, Massachusetts Institute of Technology, USA</li>
+    
+    <li>
+    <b>Yishay Mansour</b>, Tel-Aviv University, Israel</li>
+    
+    <li>
+    <b>Jon McAuliffe</b>, University of California, Berkeley, USA</li>
+    
+    <li>
+    <b>Andrew McCallum</b>, University of Massachusetts, Amherst, USA</li>
+    
+    <li>
+    <b>Raymond J. Mooney</b>, University of Texas, Austin, USA</li>
+    
+    <li>
+    <b>Klaus-Robert Muller</b>, Technical University of Berlin, Germany</li>
+    
+    <li>
+    <b>Kevin Murphy</b>, Google, USA</li>
+    
+    <li>
+    <b>Guillaume Obozinski</b>, Ecole des Ponts - ParisTech, France</li>
+    
+    <li>
+    <b>Pascal Poupart</b>, University of Waterloo, Canada</li>
+    
+    <li>
+    <b>Konrad Rieck</b>, University of Göttingen, Germany</li>
+    
+    <li>
+    <b>Cynthia Rudin</b>, Massachusetts Institute of Technology, USA</li>
+    
+    <li>
+    <b>Suchi Saria</b>, Johns Hopkins University, USA</li>
+    
+    <li>
+    <b>Robert Schapire</b>, Princeton University, USA</li>
+    
+    <li>
+    <b>Fei Sha</b>, University of Southern California, USA</li>
+    
+    <li>
+    <b>Shai Shalev-Shwartz</b>, Hebrew University of Jerusalem, Israel</li>
+    
+    <li>
+    <b>Padhraic Smyth</b>, University of California, Irvine, USA</li>
+    
+    <li>
+    <b>Bharath Sriperumbudur</b>, Pennsylvania State University, USA</li>
+    
+    <li>
+    <b>Alexander Statnikov</b>, New York University, USA</li>
+    
+    <li>
+    <b>Jean-Philippe Vert</b>, Mines ParisTech, France</li>
+    
+    <li>
+    <b>Martin J. Wainwright</b>, University of California at Berkeley, USA</li>
+    
+    <li>
+    <b>Chris Watkins</b>, Royal Holloway, University of London, UK</li>
+    
+    <li>
+    <b>Max Welling</b>, University of Amsterdam, Netherlands</li>
+
+    <li><b>Stefan Wrobel</b>, Fraunhofer IAIS and University of Bonn, Germany</li>
+    
+    <li>
+    <b>Chris Williams</b>, University of Edinburgh, UK</li>
+    
+    <li>
+    <b>Alice Zheng</b>, GraphLab, USA</li>
+    
+    </ul>
+{% endblock %}

@@ -901,6 +901,7 @@ To support the open source software movement, JMLR MLOSS publishes contributions
 <br>[<a href='/papers/v18/17-632.html'>abs</a>][<a target=_blank href='/papers/volume18/17-632/17-632.pdf'>pdf</a>][<a href="/papers/v18/17-632.bib">bib</a>]&#160;&#160;&#160;&#160;[<a href="https://github.com/hiroyuki-kasai/SGDLibrary">github.com</a>]</dl>
 </p>
 
+{%for info_list in list_info_mloss %}
 {%for paper in info_list %}
 <p>
 <dl>
@@ -915,6 +916,7 @@ To support the open source software movement, JMLR MLOSS publishes contributions
 {% endif %}
 </dl>
 </p>
+{% endfor %}
 {% endfor %}
 
 </div>

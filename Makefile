@@ -12,6 +12,7 @@ all:
 	python src/gen_volume.py 18
 	python src/gen_volume.py 19
 	python src/gen_volume.py 20
+	python src/gen_volume.py 21
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/

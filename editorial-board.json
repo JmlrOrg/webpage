@@ -21,12 +21,14 @@
     {
       "name": "Fabian Pedregosa",
       "affiliation": "Google",
-      "url": "http://fa.bianp.net"
+      "url": "http://fa.bianp.net",
+      "email": "fabian@jmlr.org"
     },
     {
       "name": "Federico Vaggi",
       "affiliation": "Amazon",
-      "url": "https://scholar.google.ca/citations?user=rgIbvJsAAAAJ&hl=en"
+      "url": "https://scholar.google.ca/citations?user=rgIbvJsAAAAJ&hl=en",
+      "email": "federico@jmlr.org"
     }
 
   ],
@@ -35,7 +37,8 @@
     {
       "name": "Alp Kucukelbir",
       "affiliation": "Fero Labs and Columbia University",
-      "url": "http://www.proditus.com"
+      "url": "http://www.proditus.com",
+      "email": "alph@jmlr.org"
     }
   ],
   "editorial_assistants":

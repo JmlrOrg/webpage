@@ -132,12 +132,6 @@
       "research": "Deep learning."
     },
     {
-      "name": "Jeff Bilmes",
-      "affiliation": "University of Washington, USA",
-      "url": "http://melodi.ee.washington.edu/~bilmes/",
-      "research": ""
-    },
-    {
       "name": "Karsten Borgwardt",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "https://www.bsse.ethz.ch/mlcb/karsten.html",
@@ -546,12 +540,6 @@
       "research": ""
     },
     {
-      "name": "Sujay Sanghavi",
-      "affiliation": "University of Texas, Austin, USA",
-      "url": "http://users.ece.utexas.edu/~sanghavi/",
-      "research": "Sparsity, Convex and Non-Convex Optimization, Statistical Learning, Graphical Models, Matrix Factorization"
-    },
-    {
       "name": "Marc Schoenauer",
       "affiliation": "INRIA Saclay, France",
       "url": "https://www.lri.fr/~marc/",
@@ -664,12 +652,6 @@
       "affiliation": "Google Research, France",
       "url": "http://members.cbio.mines-paristech.fr/~jvert/",
       "research": "kernel methods, computational biology, statistical learning theory"
-    },
-    {
-      "name": "S V N Vishwanathan",
-      "affiliation": "Purdue University, USA",
-      "url": "https://users.soe.ucsc.edu/~vishy/",
-      "research": "Kernels, Optimization, Distributed computing, Applications"
     },
     {
       "name": "Manfred Warmuth",

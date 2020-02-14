@@ -6,7 +6,7 @@ import json
 import glob
 import shutil
 
-
+# this are combinations of the form example: {{\\'o}}
 accents = [
     ["'A", "Á"],
     ["'a", "á"],
@@ -45,7 +45,7 @@ accents = [
     ["'n", "ń"],
 ]
 
-# this are combinations of the form {\a{b}}
+# this are combinations of the form {\\a{b}}
 # where a is the first character and b the second one
 accents2 = [
     ["vS", "Š"],

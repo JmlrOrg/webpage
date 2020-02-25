@@ -61,7 +61,8 @@ for page in [
     "news.html",
     "author-info.html",
     "contact.html",
-    "editorial-board-reviewers.html"
+    "editorial-board-reviewers.html",
+    "stats.html"
 ]:
     render_webpage(prefix, page)
 

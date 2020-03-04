@@ -56,12 +56,13 @@ env = Environment(
 
 
 for page in [
-    "index.html",
-    "editorial-board.html",
-    "news.html",
     "author-info.html",
     "contact.html",
+    "editorial-board.html",
     "editorial-board-reviewers.html",
+    "news.html",
+    "index.html",
+    "reviewer-guide.html",
     "stats.html"
 ]:
     render_webpage(prefix, page)
@@ -70,6 +71,7 @@ for page in [
 if not os.path.exists("output/mloss/"):
     os.mkdir("output/mloss/")
 
+render_webpage("", "mloss/mloss-info.html")
 with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
     vol = 18
     list_info_mloss = []

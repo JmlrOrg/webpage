@@ -43,7 +43,6 @@ Fabian Pedregosa and Alp Kucukelbir (JMLR Webmasters)\non behalf of the JMLR edi
     message = create_message(
         sender='Alp Kucukelbir <alp@jmlr.org>',
         to=",".join(recipients),
-        cc=",".join(['Alp Kucukelbir <alp@jmlr.org>', 'JMLR Webmaster <webmaster@jmlr.org>']),
         subject=f"JMLR submission {id} is now online",
         message_text=msg)
 

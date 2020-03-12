@@ -102,7 +102,7 @@ for number, (abs_url, bib_url) in enumerate(zip(abs_url_list, bib_url_list)):
     info['title'] = bib_database.entries[0]['title']
     info['volume'] = int(bib_database.entries[0]['volume'])
     info['year'] = int(bib_database.entries[0]['year'])
-    info['authors'] = [a.strip() for a in bib_database.entries[0]['author'].split('and')]
+    info['authors'] = [a.strip() for a in bib_database.entries[0]['author'].split(' and ')]
 
 
     vol_page = requests.get('http://www.jmlr.org' + abs_url)

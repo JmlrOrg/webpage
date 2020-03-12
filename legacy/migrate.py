@@ -5,7 +5,7 @@ try:
 	print(os.getcwd())
 except:
 	pass
-
+print("Ready")
 
 #%%
 from bs4 import BeautifulSoup
@@ -13,7 +13,7 @@ import re
 import os
 import requests
 
-VOL = 16
+VOL = 13
 vol_page = requests.get(f'http://www.jmlr.org/papers/v{VOL}/')
 soup = BeautifulSoup(vol_page.text, 'html.parser')
 
@@ -24,10 +24,10 @@ bib_url_list = []
 pdf_url_list = []
 abs_url_list = []
 
-for a in soup.find_all(href=re.compile(r'/papers/v%s/([^\s]+).bib$' % VOL)):
-    tmp = a.attrs['href']
-    print(tmp)
-    p = re.compile(r'/papers/v%s/([^\s]+).bib' % VOL)
+for a in soup.find_all(href=re.compile(r'/papers/v%s/([^\s]+).html$' % VOL)):
+    # tmp = a.attrs['href']
+    print("tmp", tmp)
+    p = re.compile(r'http://www.jmlr.org/papers/v%s/([^\s]+).html' % VOL)
     print(p.match(tmp).groups())
     id0, = p.match(tmp).groups()
 
@@ -137,3 +137,9 @@ bib_database.entries[0]
 
 
 
+
+
+# %%
+
+
+# %%

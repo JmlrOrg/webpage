@@ -661,9 +661,9 @@
     },
     {
       "name": "David Wipf",
-      "affiliation": "Microsoft Research Asia, China",
-      "url": "http://research.microsoft.com/en-us/people/davidwip/",
-      "research": "Bayesian learning, sparse estimation, computer vision"
+      "affiliation": "Amazon",
+      "url": "http://www.davidwipf.com",
+      "research": "Deep generative models, Bayesian inference, sparse estimation, representation learning."
     },
     {
       "name": "Daniela Witten",

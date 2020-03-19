@@ -25,8 +25,7 @@ pdf_url_list = []
 abs_url_list = []
 
 for a in soup.find_all(href=re.compile(r'/papers/v%s/([^\s]+).html$' % VOL)):
-    # tmp = a.attrs['href']
-    print("tmp", tmp)
+    tmp = a.attrs['href']
     p = re.compile(r'http://www.jmlr.org/papers/v%s/([^\s]+).html' % VOL)
     print(p.match(tmp).groups())
     id0, = p.match(tmp).groups()

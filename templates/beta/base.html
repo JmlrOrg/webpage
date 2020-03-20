@@ -55,10 +55,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item {%if home_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {%if papers_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/papers/">Papers</a>
       </li>
       <li class="nav-item">

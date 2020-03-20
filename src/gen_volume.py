@@ -36,7 +36,7 @@ for prefix in PREFIXES:
     with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
         editorial_board_template = env.get_template("papers/index.html")
         out = editorial_board_template.render(
-            info_list=info_list, volume=vol, base_url=base_url
+            info_list=info_list, volume=vol, base_url=base_url, papers_active=True,
         )
         f.write(out)
 

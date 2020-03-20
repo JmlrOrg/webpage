@@ -5,6 +5,7 @@ all:
 	mkdir -p output/beta/css
 	cp node_modules/mdbootstrap/js/bootstrap.min.js output/beta/js/
 	cp node_modules/mdbootstrap/css/bootstrap.min.css output/beta/css/
+	cp node_modules/mdbootstrap/css/mdb.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
 	# python src/gen_volume.py 13

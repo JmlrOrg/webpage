@@ -44,7 +44,13 @@ for page in [
     base_url = "/" + prefix
     with open(os.path.join("output", prefix, page), "w") as f:
         template = env.get_template("%s" % page)
-        out = template.render(**info, year=YEAR, base_url=base_url, home_active=(page == "index.html"))
+        out = template.render(
+            **info,
+            year=YEAR,
+            base_url=base_url,
+            home_active=(page == "index.html"),
+            editorial_board_active=(page == "editorial-board.html")
+        )
         f.write(out)
 # .. end beta webpage ..
 

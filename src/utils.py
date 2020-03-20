@@ -114,7 +114,9 @@ def get_info(vol):
             if "title_html" not in id_info:
                 id_info["title_html"] = id_info["title"]
 
-            id_info["authors_list"] = [xml_string(u.strip()) for u in id_info["authors"]]
+            id_info["authors_list"] = [
+                xml_string(u.strip()) for u in id_info["authors"]
+            ]
 
             if "title_bibtex" not in id_info:
                 id_info["title_bibtex"] = id_info["title"]
@@ -124,7 +126,7 @@ def get_info(vol):
     return sorted(info_list, key=lambda k: k["issue"])
 
 
-def process(info, prefix, env):
+def process(info, env, prefix, base_url):
     """TODO: description"""
     vol = info["volume"]
     id = info["id"]
@@ -132,12 +134,12 @@ def process(info, prefix, env):
     papers_dir = os.path.join("output", prefix, "papers")
     with open(os.path.join(papers_dir, "v%s/%s.html" % (vol, id)), "w") as f:
 
-        editorial_board_template = env.get_template("papers/item.html")
-        out = editorial_board_template.render(**info, prefix=prefix)
+        template = env.get_template("papers/item.html")
+        out = template.render(**info, base_url=base_url)
         f.write(out)
     with open(os.path.join(papers_dir, "v%s/%s.bib" % (vol, id)), "w") as f:
-        editorial_board_template = env.get_template("papers/biblio.bib")
-        out = editorial_board_template.render(**info, prefix=prefix)
+        bib_template = env.get_template("papers/biblio.bib")
+        out = bib_template.render(**info)
         f.write(out)
     os.makedirs(os.path.join(papers_dir, "volume%s/%s" % (vol, id)), exist_ok=True)
 

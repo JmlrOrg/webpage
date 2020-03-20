@@ -7,3 +7,6 @@ src/*/__pycache__/
 credentials.json
 token.pickle
 .DS_Store
+.pytest_cache
+.vscode
+.ipynb_checkpoints

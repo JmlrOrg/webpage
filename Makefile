@@ -3,10 +3,11 @@ all:
 	npm install
 	mkdir -p output/beta/js
 	mkdir -p output/beta/css
-	cp node_modules/bootstrap/dist/js/bootstrap.min.js output/beta/js/
-	cp node_modules/bootstrap/dist/css/bootstrap.min.css output/beta/css/
+	cp node_modules/mdbootstrap/js/bootstrap.min.js output/beta/js/
+	cp node_modules/mdbootstrap/css/bootstrap.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
+	# python src/gen_volume.py 13
 	python src/gen_volume.py 14
 	python src/gen_volume.py 15
 	python src/gen_volume.py 16
@@ -18,6 +19,7 @@ all:
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/
+	cp -r static/img/ output/beta/
 
 test:
 	py.test -vv src/tests/test.py

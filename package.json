@@ -6,7 +6,8 @@
   "dependencies": {
     "bootstrap": ">=4.3.1",
     "jquery": ">=3.4.0",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.14.7",
+    "mdbootstrap": "^4.14.1"
   },
   "devDependencies": {},
   "scripts": {

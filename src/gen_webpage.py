@@ -39,16 +39,18 @@ for page in [
     "news.html",
     "author-info.html",
     "contact.html",
-    "editorial-board-reviewers.html"
+    "editorial-board-reviewers.html",
 ]:
+    base_url = "/" + prefix
     with open(os.path.join("output", prefix, page), "w") as f:
         template = env.get_template("%s" % page)
-        out = template.render(**info, year=YEAR, prefix="/beta/")
+        out = template.render(**info, year=YEAR, base_url=base_url)
         f.write(out)
 # .. end beta webpage ..
 
 # .. current webpage ..
 prefix = ""
+base_url = prefix
 env = Environment(
     loader=FileSystemLoader(os.path.join("templates", prefix)),
     autoescape=select_autoescape(["html", "xml"]),
@@ -63,7 +65,7 @@ for page in [
     "news.html",
     "index.html",
     "reviewer-guide.html",
-    "stats.html"
+    "stats.html",
 ]:
     render_webpage(prefix, page)
 
@@ -88,5 +90,7 @@ with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
             break
 
     editorial_board_template = env.get_template("mloss/index.html")
-    out = editorial_board_template.render(list_info_mloss=list_info_mloss)
+    out = editorial_board_template.render(
+        list_info_mloss=list_info_mloss, base_url=base_url
+    )
     f.write(out)

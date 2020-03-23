@@ -14,6 +14,10 @@
   <!-- Your custom styles (optional) -->
   <link href="{{base_url}}/css/style.css" rel="stylesheet">
 
+  <link rel="icon" href=/img/favicon.ico">
+  <link rel="icon" type="image/png" href=/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" href=/img/favicon-32x32.png">
+
   <style>
     h1, h2 { 
         color: #303060;
@@ -64,7 +68,7 @@
       <li class="nav-item {%if editorial_board_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/editorial-board.html">Editorial Board</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item {%if stats_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/stats.html">Stats</a>
       </li>
       <li class="nav-item">

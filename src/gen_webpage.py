@@ -40,6 +40,7 @@ for page in [
     "author-info.html",
     "contact.html",
     "editorial-board-reviewers.html",
+    "stats.html",
 ]:
     base_url = "/" + prefix
     with open(os.path.join("output", prefix, page), "w") as f:
@@ -49,7 +50,8 @@ for page in [
             year=YEAR,
             base_url=base_url,
             home_active=(page == "index.html"),
-            editorial_board_active=(page == "editorial-board.html")
+            editorial_board_active=(page == "editorial-board.html"),
+            stats_active=(page == 'stats.html')
         )
         f.write(out)
 # .. end beta webpage ..

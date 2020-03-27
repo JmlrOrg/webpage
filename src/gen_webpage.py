@@ -83,7 +83,7 @@ if not os.path.exists("output/mloss/"):
 
 render_webpage("", "mloss/mloss-info.html")
 with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
-    vol = 18
+    vol = 13
     list_info_mloss = []
     while True:
         # get all info for v18 and onwards

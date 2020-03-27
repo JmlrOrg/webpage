@@ -17,7 +17,7 @@
 {%for paper in info_list %}
 <p>
 <dl>
-<dt>{{paper.title_html}}</dt>
+<dt>{{paper.title_html|safe}}</dt>
 <dd><b><i>{{paper.authors_string}}</i></b>; {{paper.vol}}({{paper.issue}}):{{paper.pages[0]}}&minus;{{paper.pages[1]}}, {{paper.year}}.
 <br>[<a href='/papers/v{{paper.volume}}/{{paper.id}}.html'>abs</a>][<a target=_blank href='/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf'>pdf</a>][<a href="/papers/v{{paper.volume}}/{{paper.id}}.bib">bib</a>]
 {% if paper.extra_links %}

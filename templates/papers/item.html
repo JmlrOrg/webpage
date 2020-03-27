@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{title_html}}{% endblock %}
+{% block title %}{{title_html|safe}}{% endblock %}
 
 {% block extraheader %}
  <!-- MathJax -->
@@ -30,7 +30,7 @@
 {% endblock %}
 
 {% block content %}
-<h2> {{title_html}} </h2>
+<h2> {{title_html|safe}} </h2>
 
 <p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
 

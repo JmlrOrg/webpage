@@ -104,22 +104,20 @@ def get_info(vol):
         with open("%s/info.json" % paper_id, "r") as fp:
             # some cleanup for the html display
             id_info = json.load(fp)
-            id_info["title"] = xml_string(id_info["title"])
+            id_info["title"] = id_info["title"]
             # some authors write {TeXt} to ensure that its capitalized correctly in latex
-            id_info["title"].replace("{", "").replace("}", "")
             id_info["authors_string"] = authors2string(id_info["authors"])
 
             id_info["abstract"] = xml_string(id_info["abstract"])
             id_info["authors_bibtex"] = " and ".join(id_info["authors"])
             if "title_html" not in id_info:
-                id_info["title_html"] = id_info["title"]
+                id_info["title_html"] = xml_string(id_info["title"])
+            id_info["title_html"] = id_info["title_html"]
 
             id_info["authors_list"] = [
                 xml_string(u.strip()) for u in id_info["authors"]
             ]
 
-            if "title_bibtex" not in id_info:
-                id_info["title_bibtex"] = id_info["title"]
         info_list.append(id_info)
     os.chdir("..")
     # sort by issue

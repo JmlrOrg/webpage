@@ -135,7 +135,7 @@ def process(info, env, prefix, base_url):
     with open(os.path.join(papers_dir, "v%s/%s.html" % (vol, id)), "w") as f:
 
         template = env.get_template("papers/item.html")
-        out = template.render(**info, base_url=base_url)
+        out = template.render(**info, base_url=base_url, papers_active=True)
         f.write(out)
     with open(os.path.join(papers_dir, "v%s/%s.bib" % (vol, id)), "w") as f:
         bib_template = env.get_template("papers/biblio.bib")

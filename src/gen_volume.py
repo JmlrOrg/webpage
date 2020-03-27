@@ -31,7 +31,7 @@ for prefix in PREFIXES:
     # render volume html file
     with open(os.path.join("output", prefix, "papers/v%s/index.html" % vol), "w") as f:
         volume_template = env.get_template("papers/volume.html")
-        out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url)
+        out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url, papers_active=True)
         f.write(out)
     with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
         editorial_board_template = env.get_template("papers/index.html")

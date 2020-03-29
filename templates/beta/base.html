@@ -53,7 +53,7 @@
 <!--Navbar-->
 <header>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark fixed-top white-text">
-  <a class="navbar-brand" href="#"><strong>JMLR</strong></a>
+  <a class="navbar-brand" href="{{base_url}}"><strong>JMLR</strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -71,6 +71,12 @@
       </li>
       <li class="nav-item {%if stats_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/stats.html">Stats</a>
+      </li>
+      <li class="nav-item {%if mloss_active %} active {% endif %}">
+        <a class="nav-link" href="{{base_url}}/mloss/index.html">OSS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://proceedings.mlr.press/">Proceedings</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{base_url}}/manudb">Login</a>

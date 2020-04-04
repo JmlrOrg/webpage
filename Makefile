@@ -8,6 +8,7 @@ all:
 	cp node_modules/mdbootstrap/css/mdb.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
+	python src/gen_volume.py 12
 	python src/gen_volume.py 13
 	python src/gen_volume.py 14
 	python src/gen_volume.py 15

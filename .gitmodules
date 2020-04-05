@@ -32,3 +32,9 @@
 [submodule "v11"]
 	path = v11
 	url = https://github.com/JmlrOrg/v11.git
+[submodule "v10"]
+	path = v10
+	url = https://github.com/JmlrOrg/v10.git
+[submodule "v9"]
+	path = v9
+	url = https://github.com/JmlrOrg/v9.git

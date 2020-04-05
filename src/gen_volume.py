@@ -9,6 +9,7 @@ PREFIXES = ("beta", "")
 
 
 vol = sys.argv[1]
+print("Generating volume %s" % vol)
 
 for prefix in PREFIXES:
     os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)

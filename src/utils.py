@@ -15,6 +15,7 @@ accents = [
     ["`a", "à"],
     ["~a", "ã"],
     ["aa", "å"],
+    ["s", "ß"],
     ["'e", "é"],
     ["'E", "É"],
     ['"e', "ë"],
@@ -50,6 +51,7 @@ accents = [
 # this are combinations of the form {\\a{b}}
 # where a is the first character and b the second one
 accents2 = [
+    ["ve", "ě"],
     ["vS", "Š"],
     ["cS", "Ş"],
     ["vs", "š"],

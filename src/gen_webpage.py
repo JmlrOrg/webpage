@@ -28,58 +28,57 @@ def render_webpage(env, prefix, page, base_url):
         f.write(out)
 
 
-# .. beta webpage ..
+if __name__ == "__main__":
 
+    # .. current webpage ..
+    for prefix in ["", "beta"]:
+        if not os.path.exists(os.path.join("output", prefix)):
+            os.mkdir(os.path.join("output", prefix))
 
-# .. current webpage ..
-for prefix in ["", "beta"]:
-    if not os.path.exists(os.path.join("output", prefix)):
-        os.mkdir(os.path.join("output", prefix))
-
-    if prefix == "":
-        base_url = ""
-    else:
-        base_url = "/" + prefix
-    env = Environment(
-        loader=FileSystemLoader(os.path.join("templates", prefix)),
-        autoescape=select_autoescape(["html", "xml"]),
-    )
-
-    for page in [
-        "author-info.html",
-        "contact.html",
-        "editorial-board.html",
-        "editorial-board-reviewers.html",
-        "news.html",
-        "index.html",
-        "reviewer-guide.html",
-        "stats.html",
-    ]:
-        render_webpage(env, prefix, page, base_url)
-
-    # MLOSS webpage
-    mloss_dir = os.path.join("output", prefix, "mloss")
-    if not os.path.exists(mloss_dir):
-        os.mkdir(mloss_dir)
-
-    render_webpage(env, prefix, "mloss/mloss-info.html", base_url)
-    with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
-        start_vol = 13
-        list_info_mloss = []
-        while True:
-            # get all info for v18 and onwards
-            try:
-                info_list = utils.get_info(start_vol)
-                info_mloss = filter(
-                    lambda x: x.get("special_issue", "") == "MLOSS", info_list
-                )
-                list_info_mloss.append(info_mloss)
-                start_vol += 1
-            except FileNotFoundError:
-                break
-
-        editorial_board_template = env.get_template("mloss/index.html")
-        out = editorial_board_template.render(
-            list_info_mloss=list_info_mloss, base_url=base_url
+        if prefix == "":
+            base_url = ""
+        else:
+            base_url = "/" + prefix
+        env = Environment(
+            loader=FileSystemLoader(os.path.join("templates", prefix)),
+            autoescape=select_autoescape(["html", "xml"]),
         )
-        f.write(out)
+
+        for page in [
+            "author-info.html",
+            "contact.html",
+            "editorial-board.html",
+            "editorial-board-reviewers.html",
+            "news.html",
+            "index.html",
+            "reviewer-guide.html",
+            "stats.html",
+        ]:
+            render_webpage(env, prefix, page, base_url)
+
+        # MLOSS webpage
+        mloss_dir = os.path.join("output", prefix, "mloss")
+        if not os.path.exists(mloss_dir):
+            os.mkdir(mloss_dir)
+
+        render_webpage(env, prefix, "mloss/mloss-info.html", base_url)
+        with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
+            mloss_start_vol = 11
+            list_info_mloss = []
+            while True:
+                # get all info for v18 and onwards
+                try:
+                    info_list = utils.get_info(mloss_start_vol)
+                    info_mloss = filter(
+                        lambda x: x.get("special_issue", "") == "MLOSS", info_list
+                    )
+                    list_info_mloss.append(info_mloss)
+                    mloss_start_vol += 1
+                except FileNotFoundError:
+                    break
+
+            editorial_board_template = env.get_template("mloss/index.html")
+            out = editorial_board_template.render(
+                list_info_mloss=list_info_mloss, base_url=base_url
+            )
+            f.write(out)

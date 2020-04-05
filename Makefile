@@ -1,3 +1,6 @@
+VOLUMES = 11 12 13 14 15 16 17 18 19 20 21
+VOLUMES = 11
+
 all:
 	rm -rf output
 	npm install
@@ -8,16 +11,7 @@ all:
 	cp node_modules/mdbootstrap/css/mdb.min.css output/beta/css/
 	cp node_modules/jquery/dist/jquery.min.js output/beta/js/
 	python src/gen_webpage.py
-	python src/gen_volume.py 12
-	python src/gen_volume.py 13
-	python src/gen_volume.py 14
-	python src/gen_volume.py 15
-	python src/gen_volume.py 16
-	python src/gen_volume.py 17
-	python src/gen_volume.py 18
-	python src/gen_volume.py 19
-	python src/gen_volume.py 20
-	python src/gen_volume.py 21
+	$(foreach vol,$(VOLUMES),python src/gen_volume.py $(vol);)
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/

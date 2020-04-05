@@ -16,7 +16,7 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + "/../")
 import utils
 
-all_volumes = [13, 14, 15, 16, 17, 18, 19, 20]
+all_volumes = [int(v[1:]) for v in glob.glob("v*")]
 
 PREFIXES = ["/", "/beta/"]
 

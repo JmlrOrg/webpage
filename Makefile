@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-VOLUMES = 10 11 12 13 14 15 16 17 18 19 20 21
+VOLUMES = $(shell ls -d v*)
 
 all: static
 
@@ -20,7 +20,7 @@ webpage: npm
 	python src/gen_webpage.py
 
 volumes: webpage
-	for file in $(shell ls -d v*); do \
+	for file in $(VOLUMES); do \
 		python src/gen_volume.py $${file:1};\
 	done
 

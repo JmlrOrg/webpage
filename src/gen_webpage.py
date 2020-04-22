@@ -77,8 +77,38 @@ if __name__ == "__main__":
                 except FileNotFoundError:
                     break
 
-            editorial_board_template = env.get_template("mloss/index.html")
-            out = editorial_board_template.render(
+            mloss_template = env.get_template("mloss/index.html")
+            out = mloss_template.render(
                 list_info_mloss=list_info_mloss, base_url=base_url
             )
             f.write(out)
+
+        # topic_dir = os.path.join("output", prefix, "topic")
+        # if not os.path.exists(topic_dir):
+        #     os.mkdir(topic_dir)
+
+        for (special_topic, template) in [("Bayesian Optimization", "bayesian_optimization.html")]:
+            topic_dir = os.path.join("output", prefix, "papers/topic")
+            if not os.path.exists(topic_dir):
+                os.makedirs(topic_dir, exist_ok=True)
+
+            with open(os.path.join("output", prefix, "papers/topic/%s" % template), "w") as f:
+                topic_start_vol = 11
+                list_info_topic = []
+                while True:
+                    # get all info for v18 and onwards
+                    try:
+                        info_list = utils.get_info(topic_start_vol)
+                        info_topic = filter(
+                            lambda x: x.get("special_issue", "") == special_topic, info_list
+                        )
+                        list_info_topic.append(info_topic)
+                        topic_start_vol += 1
+                    except FileNotFoundError:
+                        break
+                topic_template = env.get_template("papers/topic/%s" % template)
+                out = topic_template.render(
+                    list_info_topic=list_info_topic, base_url=base_url
+                )
+                f.write(out)
+        

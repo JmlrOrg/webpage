@@ -53,12 +53,11 @@ Fabian Pedregosa and Alp Kucukelbir (JMLR Webmasters)\non behalf of the JMLR edi
     time.sleep(0.5)
 
 
-def create_message(sender, to, cc, subject, message_text):
+def create_message(sender, to, subject, message_text):
     message = MIMEText(message_text)
     message['to'] = to
     message['from'] = sender
     message['subject'] = subject
-    message['cc'] = cc
 
     b64_bytes = base64.urlsafe_b64encode(message.as_bytes())
     b64_string = b64_bytes.decode()

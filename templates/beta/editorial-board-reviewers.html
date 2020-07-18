@@ -2,6 +2,18 @@
 
 
 {% block extraheader %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   $('#content').load("/manudb/editorial_board");
+
+});
+</script>
+
+
+</body>
+</html>
 <style>
     .editors li {
         margin-bottom: 8px;
@@ -31,6 +43,6 @@
 
 {% block content %}
     <h1>Editorial board reviewers</h1>
-<!--#include virtual="/manudb/center/editorial_board" -->
+<div id="content"></div>
 
 {% endblock %}

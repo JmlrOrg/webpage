@@ -80,6 +80,9 @@ def xml_string(text):
         # text = text.replace('\\%s' % tex, utf8)            # \"a
     for tex, utf8 in accents2:
         text = text.replace("{\\%s{%s}}" % tuple(tex), utf8)
+
+    text = text.replace("{", "")
+    text = text.replace("}", "")
     return text
 
 

@@ -83,8 +83,8 @@ def xml_string(text):
     return text
 
 def remove_braces(text):
-    text = text.replace("{", "")
-    text = text.replace("}", "")
+    text = text.replace("{ ", "")
+    text = text.replace(" }", "")
     return text
 
 def authors2string(auth_list):

@@ -91,7 +91,7 @@ def test_paper_metadata(volume, prefix):
 
         citation_authors = soup.find_all(attrs={"name": "citation_author"})
         citation_authors = set([c["content"] for c in citation_authors])
-        set_authors = set([utils.remove_braces(utils.xml_string(c)) for c in info["authors"]])
+        set_authors = set([utils.xml_string(c) for c in info["authors"]])
 
         assert citation_authors == set_authors
 

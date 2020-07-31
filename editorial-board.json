@@ -420,6 +420,12 @@
       "research": "Mechanism Desgin and Internet Economics, Algorithmic Game Thoery, Distributed Optimization, Submodular Optimization, Large-scale Graph Mining"
     },
     {
+      "name": "Shakir Mohamed",
+      "affiliation": "Deepmind",
+      "url": "http://shakirm.com/",
+      "research": "Generative models, variational inference, bayesian machine learning, unsupervised learning, probabilistic modelling, computers and society, ethics, healthcare, environmental science."
+    },
+    {
       "name": "Mehryar Mohri",
       "affiliation": "New York University, USA",
       "url": "http://cs.nyu.edu/cs/faculty/mohri/",

@@ -390,6 +390,12 @@
       "research": "Reinforcement learning, bandit problems, learning theory, learning in games"
     },
     {
+      "name": "Benjamin Marlin",
+      "affiliation": "University of Massachusetts Amherst",
+      "url": "https://groups.cs.umass.edu/marlin/",
+      "research": "Time series, bayesian deep learning, health applications."
+    },
+    {
       "name": "Jon McAuliffe",
       "affiliation": "University of California at Berkeley, USA",
       "url": "http://www.stat.berkeley.edu/~jon",

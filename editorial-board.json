@@ -401,12 +401,12 @@
       "url": "http://www.chicagobooth.edu/faculty/directory/m/robert-e-mcculloch",
       "research": ""
     },
-    {
-      "name": "Chris Meek",
-      "affiliation": "Microsoft Research, USA",
-      "url": "http://research.microsoft.com/~meek",
-      "research": "Graphical Models, recommendation systems, point processes"
-    },
+    // {
+    //   "name": "Chris Meek",
+    //   "affiliation": "Microsoft Research, USA",
+    //   "url": "http://research.microsoft.com/~meek",
+    //   "research": "Graphical Models, recommendation systems, point processes"
+    // },
     {
       "name": "Qiaozhu Mei",
       "affiliation": "University of Michigan, USA",

@@ -82,11 +82,15 @@ def xml_string(text):
         text = text.replace("{\\%s{%s}}" % tuple(tex), utf8)
     return text
 
+def remove_braces(text):
+    text = text.replace("{ ", "")
+    text = text.replace(" }", "")
+    return text
 
 def authors2string(auth_list):
     auth = ""
     for a in auth_list:
-        auth += xml_string(a) + ", "
+        auth += remove_braces(xml_string(a)) + ", "
     return auth[:-2]
     """Return authors list as a string"""
     template = """@article{JMLR:YYY,

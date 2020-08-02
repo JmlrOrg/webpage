@@ -174,12 +174,6 @@
       "research": "Robust estimation and learning, nonparametric inference, Langevin dynamics, PAC-Bayes learning, Sparse learning and estimation."
     },
     {
-      "name": "Inderjit S. Dhillon",
-      "affiliation": "University of Texas, Austin, USA",
-      "url": "http://www.cs.utexas.edu/users/inderjit/",
-      "research": ""
-    },
-    {
       "name": "Tina Eliassi-Rad",
       "affiliation": "Northeastern University",
       "url": "http://eliassi.org",
@@ -318,6 +312,12 @@
       "research": "Reinforcement Learning, artificial intelligence, robotics"
     },
     {
+      "name": "Samory K. Kpotufe",
+      "affiliation": "Columbia University, USA",
+      "url": "http://www.columbia.edu/~skk2175/",
+      "research": "Statistical Learning Theory, Nonparametric Estimation and Inference, Domain Adaptation, Clustering, Active Learning"
+    },
+    {
       "name": "Andreas Krause",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "https://las.inf.ethz.ch/krausea",
@@ -331,7 +331,7 @@
     },
     {
       "name": "Simon Lacoste-Julien",
-      "affiliation": "Quebec Institute of Artificial Intelligence, Canada",
+      "affiliation": "Université de Montréal and Mila, Canada",
       "url": "https://www.iro.umontreal.ca/~slacoste/",
       "research": "optimization, structured prediction, theory of deep learning"
     },
@@ -390,6 +390,12 @@
       "research": "Reinforcement learning, bandit problems, learning theory, learning in games"
     },
     {
+      "name": "Benjamin Marlin",
+      "affiliation": "University of Massachusetts Amherst",
+      "url": "https://groups.cs.umass.edu/marlin/",
+      "research": "Time series, bayesian deep learning, health applications."
+    },
+    {
       "name": "Jon McAuliffe",
       "affiliation": "University of California at Berkeley, USA",
       "url": "http://www.stat.berkeley.edu/~jon",
@@ -418,6 +424,12 @@
       "affiliation": "Google Research, USA",
       "url": "http://research.google.com/pubs/mirrokni.html",
       "research": "Mechanism Desgin and Internet Economics, Algorithmic Game Thoery, Distributed Optimization, Submodular Optimization, Large-scale Graph Mining"
+    },
+    {
+      "name": "Shakir Mohamed",
+      "affiliation": "Deepmind",
+      "url": "http://shakirm.com/",
+      "research": "Generative models, variational inference, bayesian machine learning, unsupervised learning, probabilistic modelling, computers and society, ethics, healthcare, environmental science."
     },
     {
       "name": "Mehryar Mohri",
@@ -616,12 +628,6 @@
       "affiliation": "University of Amsterdam, Netherlands",
       "url": "ivan-titov.org",
       "research": "Natural language processing, representation learning, structured prediction, graphical models"
-    },
-    {
-      "name": "Ryota Tomioka",
-      "affiliation": "Microsoft Research Cambridge, UK",
-      "url": "http://tomioka.dk",
-      "research": "Optmization, tensor decomposition, neural networks"
     },
     {
       "name": "Koji Tsuda",

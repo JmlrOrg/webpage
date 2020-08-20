@@ -245,12 +245,6 @@
       "url": "http://faculty.washington.edu/zaid/",
       "research": "Convex optimization, high-dimensional statistics, kernel-based methods, non-convex optimization, representation learning"
     },
-    // {
-    //   "name": "Moritz Hardt",
-    //   "affiliation": "Google Research, USA",
-    //   "url": "http://www.mrtz.org",
-    //   "research": "Learning theory, algorithms, optimization, privacy"
-    // },
     {
       "name": "Philipp Hennig",
       "affiliation": "University of Tübingen",
@@ -677,5 +671,13 @@
       "url": "http://www.math.pku.edu.cn/teachers/zhzhang/",
       "research": "Bayesian Analysis and Computations, Numerical Algebra and Optimization"
     }
-  ]
+  ],
+  "action_editors_on_leave": [
+    {
+      "name": "Moritz Hardt",
+      "affiliation": "Google Research, USA",
+      "url": "http://www.mrtz.org",
+      "research": "Learning theory, algorithms, optimization, privacy"
+    },
+  ] 
 }

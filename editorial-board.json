@@ -210,12 +210,6 @@
       "research": "Kernel methods, dimension reduction"
     },
     {
-      "name": "Amir Globerson",
-      "affiliation": "Tel Aviv University, Israel",
-      "url": "http://www.cs.tau.ac.il/~gamir/",
-      "research": "Graphical models, approximate inference, structured prediction, natural language processing"
-    },
-    {
       "name": "Russ Greiner",
       "affiliation": "University of Alberta, Canada",
       "url": "https://webdocs.cs.ualberta.ca/~greiner/",

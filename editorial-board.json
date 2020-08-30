@@ -144,6 +144,12 @@
       "research": "Optimization (in particular for deep learning and decision trees), dimensionality reduction, mean-shift algorithms, unsupervised learning."
     },
     {
+      "name": "Victor Chernozhukov",
+      "affiliation": "MIT, USA",
+      "url": "http://www.mit.edu/~vchern/",
+      "research": "Causal Inference, Structural Equation Models, Econometrics, High-Dimensional Central Limit Theorems, Optimal Transport"
+    },
+    {
       "name": "Alexander Clark",
       "affiliation": "King's College London, UK",
       "url": "https://alexc17.github.io",

@@ -324,6 +324,12 @@
       "research": "large-scale learning, hashing, matrix factorization, nearest neighbor search, clustering"
     },
     {
+      "name": "Anthony Lee",
+      "affiliation": "University of Bristol, UK",
+      "url": "https://sites.google.com/view/anthonylee/",
+      "research": "Markov chain Monte Carlo, sequential Monte Carlo."
+    },
+    {
       "name": "Simon Lacoste-Julien",
       "affiliation": "Université de Montréal and Mila, Canada",
       "url": "https://www.iro.umontreal.ca/~slacoste/",

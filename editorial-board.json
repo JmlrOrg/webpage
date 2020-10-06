@@ -108,6 +108,12 @@
       "research": "Statistical machine learning, high-dimensional statistics, modern multivariate analysis, graphical models, data integration, tensor decompositions, optimization."
     },
     {
+      "name": "Pierre Alquier",
+      "affiliation": "Riken AIP, Japan",
+      "url": "https://pierrealquier.github.io/",
+      "research": "Statistical Learning theory; PAC-Bayes learning; Approximate Bayesian inference; Variational inference; High-dimensional statistics."
+    },
+    {
       "name": "Anima Anandkumar",
       "affiliation": "California Institute of Technology, USA",
       "url": "http://tensorlab.cms.caltech.edu/users/anima/",

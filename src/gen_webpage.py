@@ -80,6 +80,7 @@ if __name__ == "__main__":
             mloss_template = env.get_template("mloss/index.html")
             out = mloss_template.render(
                 list_info_mloss=list_info_mloss, base_url=base_url
+                mloss_active=True
             )
             f.write(out)
 

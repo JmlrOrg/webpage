@@ -690,6 +690,19 @@
       "affiliation": "Google Research, USA",
       "url": "http://www.mrtz.org",
       "research": "Learning theory, algorithms, optimization, privacy"
-    }
+    },
+    {
+      "name": "Ryan Tibshirani",
+      "affiliation": "Carnegie Mellon University",
+      "url": "http://stat.cmu.edu/~ryantibs/",
+      "research": "High-dimensional statistics, nonparametric estimation, selective inference, convex optimization"
+    },
+
+    {
+      "name": "Arthur Gretton",
+      "affiliation": "University College London, UK",
+      "url": "http://www.gatsby.ucl.ac.uk/~gretton/",
+      "research": "Hypothesis testing, kernel methods"
+    },
   ] 
 }

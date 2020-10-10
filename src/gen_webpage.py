@@ -6,7 +6,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
 YEAR = datetime.today().year
-# TODO detect if we are in the bin directory and go down one step
+
 
 info = json.load(open("editorial-board.json", "r"))
 

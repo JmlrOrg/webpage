@@ -7,6 +7,9 @@
 
 
   <!-- TODO: see https://mdbootstrap.com/docs/jquery/navigation/compositions/ -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  
   <!-- Bootstrap CSS -->
   <link href="{{base_url}}/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
@@ -52,40 +55,7 @@
 <body id="page-top">
 <!--Navbar-->
 <header>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark pink scrolling-navbar">
-    <a class="navbar-brand" href="#"><strong>Navbar</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Opinions</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link"><i class="fab fa-instagram"></i></a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark fixed-top white-text">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark fixed-top white-text">
   <a class="navbar-brand" href="{{base_url}}"><strong>JMLR</strong></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,14 +72,11 @@
       <li class="nav-item {%if editorial_board_active %} active {% endif %}">
         <a class="nav-link" href="{{base_url}}/editorial-board.html">Editorial Board</a>
       </li>
-      <li class="nav-item {%if stats_active %} active {% endif %}">
-        <a class="nav-link" href="{{base_url}}/stats.html">Stats</a>
-      </li>
       <li class="nav-item {%if mloss_active %} active {% endif %}">
-        <a class="nav-link" href="{{base_url}}/mloss/index.html">OSS</a>
+        <a class="nav-link" href="{{base_url}}/mloss/index.html">Open Source Software</a>
       </li>
       <li class="nav-item {%if faq_active %} active {% endif %}">
-        <a class="nav-link" href="{{base_url}}/faq.html">Frequently Asked Questions</a>
+        <a class="nav-link" href="https://www.jmlr.org/manudb/faq">Frequently Asked Questions</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="http://proceedings.mlr.press/">Proceedings</a>
@@ -123,17 +90,11 @@
     </ul>
     <ul class="navbar-nav nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link"><i class="fab fa-facebook-f"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"><i class="fab fa-twitter"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link"><i class="fab fa-instagram"></i></a>
+        <a class="nav-link" href="https://twitter.com/JmlrOrg"><i class="fab fa-twitter"></i></a>
       </li>
     </ul>
   </div>
-</nav> -->
+</nav>
 </header>
 
 <!-- Page Content -->
@@ -156,5 +117,8 @@
     </div>        
 </footer>
 
+<script type="text/javascript" src="{{base_url}}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{base_url}}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{base_url}}/js/mdb.min.js"></script>
 </body>
 </html>

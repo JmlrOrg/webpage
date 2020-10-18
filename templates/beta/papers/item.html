@@ -39,8 +39,8 @@
     <p class="abstract">{% autoescape false %}{{abstract}}{% endautoescape %}</p>
 
     <p class="lead" style="margin-top: 2em">
-        <a id="pdf" class="btn btn-primary btn-lg" href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
-        <a class="btn btn-info btn-lg" href="http://jmlr.org/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
+        <a id="pdf" class="btn btn-primary btn-lg" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf" role="button">PDF</a>
+        <a class="btn btn-info btn-lg" href="/papers/v{{volume}}/{{id}}.bib" role="button">BibTeX</a>
         {% if extra_links %}
             {% for link in extra_links %}
             <a class="btn btn-secondary btn-lg" href="{{link[1]}}">{{link[0]}}</a>

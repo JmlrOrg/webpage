@@ -125,7 +125,7 @@ def test_pdf_exists(volume, prefix="/beta/"):
         assert len(citation_pdf2) == 1
         citation_pdf2 = citation_pdf2[0]["href"]
 
-        assert citation_pdf2 == citation_pdf
+        assert 'http://jmlr.org' + citation_pdf2 == citation_pdf
 
 
 @pytest.mark.parametrize("volume", all_volumes)

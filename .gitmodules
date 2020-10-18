@@ -13,7 +13,6 @@
 [submodule "v16"]
 	path = v16
 	url = https://github.com/JmlrOrg/v16.git
-	branch = master
 [submodule "v15"]
 	path = v15
 	url = https://github.com/JmlrOrg/v15.git

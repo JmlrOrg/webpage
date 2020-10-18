@@ -34,6 +34,6 @@ Sources for the [JMLR webpage](http://jmlr.org)
 * Update all submodules to latest commit:
 
     ```
-    $ git submodule foreach git pull origin master
+    $ git submodule foreach git pull origin main
     ```
 

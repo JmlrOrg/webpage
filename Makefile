@@ -38,6 +38,6 @@ develop:
 	livereload -p 8001 output/
 
 update:
-	git submodule foreach git pull origin master
-	git pull origin master
-	git submodule foreach git pull origin master
+	git submodule foreach git pull origin main
+	git pull origin main
+	git submodule foreach git pull origin main

@@ -17,4 +17,4 @@ deploy:
   provider: script
   script: python src/upload.py
   on:
-    branch: master
+    branch: main

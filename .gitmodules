@@ -18,7 +18,7 @@
 	url = https://github.com/JmlrOrg/v15.git
 [submodule "v21"]
 	path = v21
-	url = https://github.com/JmlrOrg/v21
+	url = https://github.com/JmlrOrg/v21.git
 [submodule "v14"]
 	path = v14
 	url = https://github.com/JmlrOrg/v14.git

@@ -33,7 +33,7 @@ def extract_new_information(volume, paper_id):
 def compute_issue(vol, id):
     # scan through all info.json files and assign the first free slot
     issue = 0
-    ids_paths = glob.glob('v%s/??-???/info.json' % vol)
+    ids_paths = glob.glob('v%s/??-*/info.json' % vol)
     for id_path in ids_paths:
         with open(id_path, 'r') as fp:
             ids_info = json.load(fp)

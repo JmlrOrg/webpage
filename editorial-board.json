@@ -288,6 +288,12 @@
       "research": "Submodularity, determinantal point processes, negative dependence, Bayesian optimization"
     },
     {
+      "name": "David Jensen",
+      "affiliation": "University of Massachusetts Amherst, USA",
+      "url": "https://groups.cs.umass.edu/jensen/",
+      "research": "Causal modeling, causal inference, relational learning, explainability."
+    },
+    {
       "name": "Samuel Kaski",
       "affiliation": "Aalto University, Finland",
       "url": "https://users.ics.aalto.fi/sami/",

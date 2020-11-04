@@ -516,12 +516,6 @@
       "research": "Multitask and transfer learning, convex optimization, kernel methods, sparsity regularization"
     },
     {
-      "name": "Pushmeet Kohli",
-      "affiliation": "DeepMind",
-      "url": "https://sites.google.com/site/pushmeet/",
-      "research": "Adversarial evaluation and robustness, program synthesis, graph neural networks"
-    },
-    {
       "name": "Luc de Raedt",
       "affiliation": "Katholieke Universiteit Leuven, Belgium",
       "url": "http://people.cs.kuleuven.be/~luc.deraedt/",
@@ -703,12 +697,17 @@
       "url": "http://stat.cmu.edu/~ryantibs/",
       "research": "High-dimensional statistics, nonparametric estimation, selective inference, convex optimization"
     },
-
     {
       "name": "Arthur Gretton",
       "affiliation": "University College London, UK",
       "url": "http://www.gatsby.ucl.ac.uk/~gretton/",
       "research": "Hypothesis testing, kernel methods"
-    }
+    },
+    {
+      "name": "Pushmeet Kohli",
+      "affiliation": "DeepMind",
+      "url": "https://sites.google.com/site/pushmeet/",
+      "research": "Adversarial evaluation and robustness, program synthesis, graph neural networks"
+    },
   ] 
 }

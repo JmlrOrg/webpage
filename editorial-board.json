@@ -462,12 +462,6 @@
       "research": "High dimensional statistics, sparsity, latent variable models, ensemble learning"
     },
     {
-      "name": "Long Nguyen",
-      "affiliation": "University of Michigan, USA",
-      "url": "http://dept.stat.lsa.umich.edu/~xuanlong/",
-      "research": "Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference"
-    },
-    {
       "name": "Sebastian Nowozin",
       "affiliation": "Google Research",
       "url": "http://www.nowozin.net/sebastian/",
@@ -708,6 +702,12 @@
       "affiliation": "DeepMind",
       "url": "https://sites.google.com/site/pushmeet/",
       "research": "Adversarial evaluation and robustness, program synthesis, graph neural networks"
+    },
+    {
+      "name": "Long Nguyen",
+      "affiliation": "University of Michigan, USA",
+      "url": "http://dept.stat.lsa.umich.edu/~xuanlong/",
+      "research": "Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference"
     },
   ] 
 }

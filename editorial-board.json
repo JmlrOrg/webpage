@@ -599,12 +599,6 @@
       "research": "Reinforcement learning, learning theory, online learning, learning interactively"
     },
     {
-      "name": "Olivier Teytaud",
-      "affiliation": "INRIA Saclay, France",
-      "url": "https://www.lri.fr/~teytaud/",
-      "research": ""
-    },
-    {
       "name": "Ambuj Tewari",
       "affiliation": "University of Michigan",
       "url": "https://ambujtewari.github.io",
@@ -707,6 +701,12 @@
       "affiliation": "University of Michigan, USA",
       "url": "http://dept.stat.lsa.umich.edu/~xuanlong/",
       "research": "Bayesian nonparametrics, hierarchical and graphical models, variational and geometric methods for statistical inference"
+    },
+    {
+      "name": "Olivier Teytaud",
+      "affiliation": "INRIA Saclay, France",
+      "url": "https://www.lri.fr/~teytaud/",
+      "research": ""
     }
   ] 
 }

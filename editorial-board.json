@@ -137,6 +137,12 @@
       "research": "Deep learning."
     },
     {
+      "name": "Joan Bruna",
+      "affiliation": "NYU, USA",
+      "url": "http://cims.nyu.edu/~bruna",
+      "research": "Theory of deep learning, harmonic analysis, signal processing."
+    },
+    {
       "name": "Karsten Borgwardt",
       "affiliation": "ETH Zurich, Switzerland",
       "url": "https://www.bsse.ethz.ch/mlcb/karsten.html",

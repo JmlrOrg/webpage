@@ -2,6 +2,7 @@ import json
 import utils
 import os
 from datetime import datetime
+from glob import glob
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 
@@ -30,7 +31,6 @@ def render_webpage(env, prefix, page, base_url):
 
 if __name__ == "__main__":
 
-    # .. current webpage ..
     for prefix in ["", "beta"]:
         if not os.path.exists(os.path.join("output", prefix)):
             os.mkdir(os.path.join("output", prefix))
@@ -45,18 +45,18 @@ if __name__ == "__main__":
         )
 
         for page in [
-            "author-info.html",
-            "contact.html",
-            "editorial-board.html",
-            "editorial-board-reviewers.html",
-            "news.html",
-            "index.html",
-            "reviewer-guide.html",
-            "stats.html",
+                "author-info.html",
+                "contact.html",
+                "editorial-board.html",
+                "editorial-board-reviewers.html",
+                "news.html",
+                "index.html",
+                "reviewer-guide.html",
+                "stats.html",
         ]:
             render_webpage(env, prefix, page, base_url)
 
-        # MLOSS webpage
+        # .. MLOSS webpage ..
         mloss_dir = os.path.join("output", prefix, "mloss")
         if not os.path.exists(mloss_dir):
             os.mkdir(mloss_dir)
@@ -84,9 +84,6 @@ if __name__ == "__main__":
             )
             f.write(out)
 
-        # topic_dir = os.path.join("output", prefix, "topic")
-        # if not os.path.exists(topic_dir):
-        #     os.mkdir(topic_dir)
 
         for (special_topic, template) in [("Bayesian Optimization", "bayesian_optimization.html")]:
             topic_dir = os.path.join("output", prefix, "papers/topic")
@@ -112,4 +109,46 @@ if __name__ == "__main__":
                     list_info_topic=list_info_topic, base_url=base_url
                 )
                 f.write(out)
-        
+
+        # .. build volumes one by one ...
+        volumes = sorted([int(v[1:]) for v in  glob("v*")])
+        for vol in volumes:
+            print("Generating Volume %s out of %s" % (vol, volumes[-1]))
+            os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)
+
+            env = Environment(
+                loader=FileSystemLoader("templates/" + prefix),
+                autoescape=select_autoescape(["html", "xml"]),
+            )
+
+            if prefix == "":
+                base_url = ""
+            else:
+                base_url = "/" + prefix
+
+            # render the individual papers
+            info_list = utils.get_info(vol)
+            for paper_info in info_list:
+                utils.process(paper_info, env, prefix, base_url)
+
+            # render volume html file
+            with open(os.path.join("output", prefix, "papers/v%s/index.html" % vol), "w") as f:
+                volume_template = env.get_template("papers/volume.html")
+                out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url, papers_active=True)
+                f.write(out)
+            with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
+                editorial_board_template = env.get_template("papers/index.html")
+                out = editorial_board_template.render(
+                    info_list=info_list, volume=vol, base_url=base_url, papers_active=True,
+                )
+                f.write(out)
+
+            # rss feed
+            with open(os.path.join("output", prefix, "jmlr.xml"), "w") as f:
+                # sort by issue
+                info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
+                editorial_board_template = env.get_template("jmlr.xml")
+                out = editorial_board_template.render(
+                    info_list=info_by_issue, vol=vol, base_url=base_url
+                )
+                f.write(out)

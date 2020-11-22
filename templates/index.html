@@ -1,1 +1,58 @@
-{% include "beta/index.html" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Journal of Machine Learning Research</h1>
+
+<p>
+The Journal of Machine Learning Research (JMLR) provides an
+international forum for the electronic and paper publication of
+high-quality scholarly articles in all areas of machine learning.  
+All published papers are freely available online.
+</p>
+
+<p>
+JMLR has a commitment to rigorous yet rapid reviewing. Final versions
+are <a href="papers"> published electronically</a> (ISSN 1533-7928)
+immediately upon receipt.  Until the end of 2004, paper volumes (ISSN
+1532-4435) were published 8 times annually and sold to libraries and
+individuals by the MIT Press.
+                                                                                      
+Paper volumes (ISSN 1532-4435) are now published and sold by 
+<a href="http://www.mtome.com/">Microtome Publishing</a>.  <p>
+                                                                                      
+<h2>News</h2>
+<ul>
+    <li><i>2020.02.15</i>: <a href=papers/v20>Volume 20</a> completed; <a href=papers/v21>Volume 21</a> began. </li>
+    <li><i>2019.01.20</i>: <a href=papers/v19>Volume 19</a> completed; <a href=papers/v20>Volume 20</a> began. </li>
+    <li><i>2018.08.28</i>: <a href=papers/v18>Volume 18</a> completed; <a href=papers/v19>Volume 19</a> began. </li>
+    <li><i>2018.04.16</i>: <a href="/news-archive/20180416-changes.html">Changes</a> in JMLR leadership team.</li>
+    <li><i>2016.12.01</i>: <a href="papers/topic/2016-Learning-from-Electronic-Health-Data.html">Special topic on Learning from Electronic Health Data</a></li>
+    <li><i>2015.09.01</i>: <a href="papers/special/chervonenkis15.html">Special issue in Memory of Alexey Chervonenkis</a>.</li>
+</ul>
+</td> 
+
+<br>
+
+
+<h2>Latest papers</h2>
+
+
+{%for paper in info_list %}
+<p>
+<dl>
+<dt>{{paper.title_html|safe}}</dt> 
+<dd><b><i>{{paper.authors_string}}</i></b>, {{paper.year}}. {% if paper.special_issue == "MLOSS" %} <a href="http://www.jmlr.org/mloss/"><i>(Machine Learning Open Source Software Paper)</i></a> {% endif %}
+<br>[<a href='/papers/v{{paper.volume}}/{{paper.id}}.html'>abs</a>][<a target=_blank href='/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf'>pdf</a>][<a href="/papers/v{{paper.volume}}/{{paper.id}}.bib">bib</a>]
+{% if paper.extra_links %}
+&nbsp;&nbsp;&nbsp;&nbsp;
+{% for link in paper.extra_links %}
+ [<a href="{{link[1]}}">{{link[0]}}</a>]
+{% endfor %}
+{% endif %}
+</dl>
+</p>
+{% endfor %}
+<p><a href="/papers/">Full list</a>
+</p>
+{% endblock %}

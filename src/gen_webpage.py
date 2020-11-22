@@ -9,17 +9,17 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 YEAR = datetime.today().year
 
 
-info = json.load(open("editorial-board.json", "r"))
+editorial_board_info = json.load(open("editorial-board.json", "r"))
 
 if not os.path.exists("output"):
     os.mkdir("output")
 
 
-def render_webpage(env, prefix, page, base_url):
+def render_webpage(env, prefix, page, base_url, template_kw):
     with open(os.path.join("output", prefix, page), "w") as f:
         template = env.get_template(page)
         out = template.render(
-            **info,
+            **template_kw,
             year=YEAR,
             base_url=base_url,
             home_active=(page == "index.html"),
@@ -39,29 +39,17 @@ if __name__ == "__main__":
             base_url = ""
         else:
             base_url = "/" + prefix
-        env = Environment(
-            loader=FileSystemLoader(os.path.join("templates", prefix)),
-            autoescape=select_autoescape(["html", "xml"]),
-        )
-
-        for page in [
-                "author-info.html",
-                "contact.html",
-                "editorial-board.html",
-                "editorial-board-reviewers.html",
-                "news.html",
-                "index.html",
-                "reviewer-guide.html",
-                "stats.html",
-        ]:
-            render_webpage(env, prefix, page, base_url)
 
         # .. MLOSS webpage ..
         mloss_dir = os.path.join("output", prefix, "mloss")
         if not os.path.exists(mloss_dir):
             os.mkdir(mloss_dir)
 
-        render_webpage(env, prefix, "mloss/mloss-info.html", base_url)
+        env = Environment(
+            loader=FileSystemLoader(os.path.join("templates", prefix)),
+            autoescape=select_autoescape(["html", "xml"]),
+        )
+        render_webpage(env, prefix, "mloss/mloss-info.html", base_url, editorial_board_info)
         with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
             mloss_start_vol = 11
             list_info_mloss = []
@@ -116,16 +104,6 @@ if __name__ == "__main__":
             print("Generating Volume %s out of %s" % (vol, volumes[-1]))
             os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)
 
-            env = Environment(
-                loader=FileSystemLoader("templates/" + prefix),
-                autoescape=select_autoescape(["html", "xml"]),
-            )
-
-            if prefix == "":
-                base_url = ""
-            else:
-                base_url = "/" + prefix
-
             # render the individual papers
             info_list = utils.get_info(vol)
             for paper_info in info_list:
@@ -137,8 +115,8 @@ if __name__ == "__main__":
                 out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url, papers_active=True)
                 f.write(out)
             with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
-                editorial_board_template = env.get_template("papers/index.html")
-                out = editorial_board_template.render(
+                papers_index_template = env.get_template("papers/index.html")
+                out = papers_index_template.render(
                     info_list=info_list, volume=vol, base_url=base_url, papers_active=True,
                 )
                 f.write(out)
@@ -147,8 +125,21 @@ if __name__ == "__main__":
             with open(os.path.join("output", prefix, "jmlr.xml"), "w") as f:
                 # sort by issue
                 info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
-                editorial_board_template = env.get_template("jmlr.xml")
-                out = editorial_board_template.render(
+                rss_template = env.get_template("jmlr.xml")
+                out = rss_template.render(
                     info_list=info_by_issue, vol=vol, base_url=base_url
                 )
                 f.write(out)
+
+        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_list[-20:]})
+        for page in [
+                "author-info.html",
+                "contact.html",
+                "editorial-board.html",
+                "editorial-board-reviewers.html",
+                "news.html",
+                "reviewer-guide.html",
+                "stats.html",
+        ]:
+            render_webpage(env, prefix, page, base_url, editorial_board_info)
+

@@ -11,15 +11,7 @@ high-quality scholarly articles in all areas of machine learning.
 All published papers are freely available online.
 </p>
 
-<p>
-JMLR has a commitment to rigorous yet rapid reviewing. Final versions
-are <a href="papers"> published electronically</a> (ISSN 1533-7928)
-immediately upon receipt.  Until the end of 2004, paper volumes (ISSN
-1532-4435) were published 8 times annually and sold to libraries and
-individuals by the MIT Press.
-                                                                                      
-Paper volumes (ISSN 1532-4435) are now published and sold by 
-<a href="http://www.mtome.com/">Microtome Publishing</a>.  <p>
+
                                                                                       
 <h2>News</h2>
 <ul>
@@ -32,7 +24,18 @@ Paper volumes (ISSN 1532-4435) are now published and sold by
 </ul>
 </td> 
 
+<h2>Latest papers</h2>
 
+<ul class="list-papers list-group list-group-flush">
+    {%for paper in info_list %}
+    <li class="list-group-item">
+        <h4><a class="paper-title darkblue" href="{{base_url}}/papers/v{{paper.volume}}/{{paper.id}}.html">{{paper.title_html|safe}}</a></h4>
+        <p><i>{{paper.authors_string}}</i>, {{paper.year}} 
+        </p>
+    </li>
+    {% endfor %}
+    <li class="list-group-item"><a href="{{base_url}}/papers/">See more</a></li>
+</ul>
 {% endblock %}
 
 

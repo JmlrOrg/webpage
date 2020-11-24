@@ -137,6 +137,12 @@
       "research": "Deep learning."
     },
     {
+      "name": "Sébastien Bubeck",
+      "affiliation": "Microsoft Research, USA",
+      "url": "http://sbubeck.com/",
+      "research": "Multi-armed bandits, online learning, adversarial examples."
+    },
+    {
       "name": "Joan Bruna",
       "affiliation": "NYU, USA",
       "url": "http://cims.nyu.edu/~bruna",

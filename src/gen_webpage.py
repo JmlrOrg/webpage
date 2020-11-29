@@ -1,9 +1,9 @@
 import json
-import utils
 import os
 from datetime import datetime
 from glob import glob
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+import utils
 
 
 YEAR = datetime.today().year
@@ -140,6 +140,7 @@ if __name__ == "__main__":
                 "news.html",
                 "reviewer-guide.html",
                 "stats.html",
+                "faq.html",
         ]:
             render_webpage(env, prefix, page, base_url, editorial_board_info)
 

@@ -89,6 +89,12 @@
       "research": "Approximate Bayesian inference, graphical models, Markov chain Monte Carlo, variational inference, Bayesian nonparametrics, Bayesian optimization."
     },
     {
+      "name": "Alekh Agarwal",
+      "affiliation": "Microsoft Research, USA",
+      "url": "http://alekhagarwal.net",
+      "research": "Reinforcement Learning, Online Learning, Bandits, Learning Theory."
+    },
+    {
       "name": "Shivani Agarwal",
       "affiliation": "University of Pennsylvania, USA",
       "url": "http://www.shivani-agarwal.net",

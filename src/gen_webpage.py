@@ -54,9 +54,10 @@ if __name__ == "__main__":
             mloss_start_vol = 11
             list_info_mloss = []
             while True:
-                # get all info for v18 and onwards
+                # get all info for v11 and onwards
                 try:
-                    info_list = utils.get_info(mloss_start_vol)
+                    # reverse by-issue sorting
+                    info_list = utils.get_info(mloss_start_vol)[::-1]
                     info_mloss = filter(
                         lambda x: x.get("special_issue", "") == "MLOSS", info_list
                     )

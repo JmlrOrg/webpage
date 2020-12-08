@@ -237,7 +237,7 @@
       "affiliation": "New York University, USA",
       "url": "http://cs.nyu.edu/~fergus/pmwiki/pmwiki.php",
       "research": ""
-    },
+    },http://www.davidwipf.com/
     {
       "name": "Kenji Fukumizu",
       "affiliation": "The Institute of Statistical Mathematics, Japan",
@@ -693,24 +693,6 @@
       "affiliation": "Cornell University, USA",
       "url": "http://kilian.cs.cornell.edu",
       "research": "Deep Learning, Representation Learning, Ranking, Computer Vision"
-    },
-    {
-      "name": "David Wipf",
-      "affiliation": "Amazon",
-      "url": "http://www.davidwipf.com",
-      "research": "Deep generative models, Bayesian inference, sparse estimation, representation learning."
-    },
-    {
-      "name": "Daniela Witten",
-      "affiliation": "University of Washington",
-      "url": "http://faculty.washington.edu/dwitten/",
-      "research": "high-dimensional, statistics, sparsity, genomics, neuroscience"
-    },
-    {
-      "name": "Frank Wood",
-      "affiliation": "University of British Columbia",
-      "url": "https://www.cs.ubc.ca/~fwood",
-      "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     }
   ],
   "action_editors_on_leave": [

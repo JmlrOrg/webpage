@@ -712,24 +712,6 @@
       "url": "https://www.cs.ubc.ca/~fwood",
       "research": "Probabilistic programming, artificial intelligence, probabilistic machine learning, Bayesian methods"
     },
-    {
-      "name": "Tong Zhang",
-      "affiliation": "Baidu Inc, China",
-      "url": "http://www.stat.rutgers.edu/home/tzhang/",
-      "research": "learning theory, optimization, large scale learning"
-    },
-    {
-      "name": "Zhihua Zhang",
-      "affiliation": "Peking University, China",
-      "url": "http://www.math.pku.edu.cn/teachers/zhzhang/",
-      "research": "Bayesian Analysis and Computations, Numerical Algebra and Optimization"
-    },
-    {
-      "name": "Ji Zhu",
-      "affiliation": "University of Michigan, USA",
-      "url": "http://dept.stat.lsa.umich.edu/~jizhu/",
-      "research": "Network data analysis, latent variable models, graphical models, high-dimensional data, health analytics."
-    }
   ],
   "action_editors_on_leave": [
     {

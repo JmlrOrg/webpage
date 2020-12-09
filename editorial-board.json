@@ -281,12 +281,6 @@
       "research": "Probabilistic Numerics (including Bayesian Optimization and Quadrature); Algorithms for Bayesian Inference; Algorithms for Deep Learning (Optimization, Sampling, etc.); Gaussian Processes; Sustainable ML and ML for Sustainability."
     },
     {
-      "name": "Bert Huang",
-      "affiliation": "Virginia Tech, USA",
-      "url": "http://berthuang.com",
-      "research": "structured prediction, probabilistic graphical models, relational learning, networks"
-    },
-    {
       "name": "Aapo Hyvärinen",
       "affiliation": "University of Helsinki, Finland",
       "url": "http://www.cs.helsinki.fi/u/ahyvarin/",
@@ -725,6 +719,12 @@
       "affiliation": "INRIA Saclay, France",
       "url": "https://www.lri.fr/~teytaud/",
       "research": ""
+    },
+    {
+      "name": "Bert Huang",
+      "affiliation": "Virginia Tech, USA",
+      "url": "http://berthuang.com",
+      "research": "structured prediction, probabilistic graphical models, relational learning, networks"
     }
   ] 
 }

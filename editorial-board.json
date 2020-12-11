@@ -92,7 +92,42 @@
       "name": "Alekh Agarwal",
       "affiliation": "Microsoft Research, USA",
       "url": "http://alekhagarwal.net",
-      "research": "Reinforcement Learning, Online Learning, Bandits, Learning Theory."
+      "research": "Reinforcement Learni￼￼
+Pulls
+Issues
+Marketplace
+Explore
+ 
+￼ 
+JmlrOrg
+/
+webpage
+ Unwatch 
+3
+￼ Star2
+ Fork5
+Code
+Issues
+14
+Pull requests
+Actions
+Projects
+Wiki
+Security
+More
+ main 
+webpage/editorial-board.json
+Go to file
+￼
+fabianp Remove Bert Huang
+Latest commit 7612547 2 days ago
+ History
+ 4 contributors
+￼￼￼￼
+730 lines (729 sloc)  28.6 KB
+RawBlame
+￼ ￼
+ng, Online Learning, Bandits, Learning Theory."
     },
     {
       "name": "Shivani Agarwal",
@@ -663,24 +698,6 @@
       "affiliation": "ENS Cachan, France",
       "url": "http://nvayatis.perso.math.cnrs.fr",
       "research": "Statistical learning theory"
-    },
-    {
-      "name": "Jean-Philippe Vert",
-      "affiliation": "Google Research, France",
-      "url": "http://members.cbio.mines-paristech.fr/~jvert/",
-      "research": "kernel methods, computational biology, statistical learning theory"
-    },
-    {
-      "name": "Silvia Villa",
-      "affiliation": "Genova University, Italy",
-      "url": "https://www.dima.unige.it/~villa/",
-      "research": "Convex optimization, first order methods, regularizatio"
-    },
-    {
-      "name": "Manfred Warmuth",
-      "affiliation": "University of California at Santa Cruz, USA",
-      "url": "https://users.soe.ucsc.edu/~manfred/",
-      "research": ""
     }
   ],
   "action_editors_on_leave": [

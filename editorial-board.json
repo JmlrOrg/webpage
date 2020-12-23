@@ -645,12 +645,6 @@
       "affiliation": "University of Michigan",
       "url": "https://ambujtewari.github.io",
       "research": "Statistical learning theory, online learning, bandit problems, reinforcement learning, high-dimensional statistics, optimization."
-    },
-    {
-      "name": "Ivan Titov",
-      "affiliation": "University of Amsterdam, Netherlands",
-      "url": "ivan-titov.org",
-      "research": "Natural language processing, representation learning, structured prediction, graphical models"
     }
   ],
   "action_editors_on_leave": [

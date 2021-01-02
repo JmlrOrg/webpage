@@ -627,24 +627,6 @@
       "affiliation": "University of Edinburgh, UK",
       "url": "http://homepages.inf.ed.ac.uk/amos/index.html",
       "research": "Deep Generative Models, Adversarial Learning, Probabilistic Models, Learning under Constraints, Transfer Learning, Prediction Markets"
-    },
-    {
-      "name": "Erik Sudderth",
-      "affiliation": "University of California, Irvine, USA",
-      "url": "https://www.ics.uci.edu/~sudderth/",
-      "research": "Bayesian nonparametrics, graphical models, unsupervised learning, variational inference, Monte Carlo methods, computer vision, signal and image processing."
-    },
-    {
-      "name": "Csaba Szepesvari",
-      "affiliation": "University of Alberta, Canada",
-      "url": "http://www.ualberta.ca/~szepesva/",
-      "research": "Reinforcement learning, learning theory, online learning, learning interactively"
-    },
-    {
-      "name": "Ambuj Tewari",
-      "affiliation": "University of Michigan",
-      "url": "https://ambujtewari.github.io",
-      "research": "Statistical learning theory, online learning, bandit problems, reinforcement learning, high-dimensional statistics, optimization."
     }
   ],
   "action_editors_on_leave": [

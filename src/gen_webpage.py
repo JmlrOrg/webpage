@@ -123,16 +123,16 @@ if __name__ == "__main__":
                 f.write(out)
 
             # rss feed
+            # sort by issue
+            info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
             with open(os.path.join("output", prefix, "jmlr.xml"), "w") as f:
-                # sort by issue
-                info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
                 rss_template = env.get_template("jmlr.xml")
                 out = rss_template.render(
                     info_list=info_by_issue, vol=vol, base_url=base_url
                 )
                 f.write(out)
 
-        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_list[-20:]})
+        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue[:20]})
         for page in [
                 "author-info.html",
                 "contact.html",

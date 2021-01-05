@@ -132,7 +132,7 @@ if __name__ == "__main__":
                 )
                 f.write(out)
 
-        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue[:20]})
+        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue})
         for page in [
                 "author-info.html",
                 "contact.html",

@@ -18,6 +18,7 @@
 http://jmlr.org/papers/v{{paper.volume}}/{{paper.id}}.html
 </link>
 <pubDate>{{paper.year}}</pubDate>
+<author>{{paper.authors_string}}</author>
 <description>
 {{paper.abstract}}
 </description>

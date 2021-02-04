@@ -245,6 +245,12 @@
       "research": "Kernel methods, dimension reduction"
     },
     {
+      "name": "Aurélien Garivier",
+      "affiliation": "Ecole Normale Supérieure de Lyon, France",
+      "url": "https://perso.ens-lyon.fr/aurelien.garivier",
+      "research": "Bandits, Sequential Analysis, Information Theory and Statistics"
+    },
+    {
       "name": "Russ Greiner",
       "affiliation": "University of Alberta, Canada",
       "url": "https://webdocs.cs.ualberta.ca/~greiner/",

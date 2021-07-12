@@ -51,7 +51,7 @@ if __name__ == "__main__":
         )
         render_webpage(env, prefix, "mloss/mloss-info.html", base_url, editorial_board_info)
         with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
-            mloss_start_vol = 9
+            mloss_start_vol = 6
             list_info_mloss = []
             while True:
                 # get all info for v11 and onwards

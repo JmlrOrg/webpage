@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JmlrOrg/webpage.svg?branch=main)](https://travis-ci.org/JmlrOrg/webpage)
+[![Build Status](https://travis-ci.com/JmlrOrg/webpage.svg?branch=main)](https://travis-ci.com/JmlrOrg/webpage)
 
 # Webpage
 Sources for the [JMLR webpage](http://jmlr.org)

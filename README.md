@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/JmlrOrg/webpage.svg?branch=main)](https://travis-ci.com/JmlrOrg/webpage)
 
 # Webpage
-Sources for the [JMLR webpage](http://jmlr.org)
+Sources for the [JMLR webpage](http://jmlr.org).
 
 # To build and view the website locally
 

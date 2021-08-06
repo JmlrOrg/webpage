@@ -7,17 +7,6 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
   python: circleci/python@1.2
 
-workflows:
-  main:  # This is the name of the workflow, feel free to change it to better match your workflow.
-    # Inside the workflow, you define the jobs you want to run. 
-    # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows 
-    jobs:
-      - build-and-test:
-        filters:
-          branches:
-            only:
-              - main
-
 
 jobs:
 
@@ -59,8 +48,22 @@ jobs:
           root: "~"
           paths:
             - r/output
-   deploy:
-     steps:
-       - attach_workspace:
+
+  deploy:
+    docker:
+      - image: circleci/python:3.7
+    steps:
+      - attach_workspace:
          at: ./output
       - run: python src/upload.py
+
+
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
+      - deploy:
+        filters:
+            branches:
+              only: master

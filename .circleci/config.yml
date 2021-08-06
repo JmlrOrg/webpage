@@ -13,6 +13,9 @@ workflows:
     # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows 
     jobs:
       - build-and-test
+      - deploy:
+          requires:
+              - build-and-test
 
 
 jobs:
@@ -49,7 +52,20 @@ jobs:
           name: Run tests 
           command: make test
 
-      - run:
-          name: Deploy
-          command: python src/upload.py
+      - persist_to_workspace:
+          root: output
+          paths: .
+
+  
+  deploy:
+    docker:
+      - image: circleci/python:3.7.7-buster
+    steps:
+      - checkout
+      # Attach page generated in previous step so that it can be
+      # deployed.
+      - attach_workspace:
+          at: output
+      - deploy:
+        command: python src/upload.py
  

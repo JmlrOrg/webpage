@@ -54,7 +54,13 @@ jobs:
       - run:
           name: Run tests 
           command: make test
-      
-      - run:
-          name: Deploy
-          command: python src/upload.py
+
+      - persist_to_workspace:
+          root: "~"
+          paths:
+            - r/output
+   deploy:
+     steps:
+       - attach_workspace:
+         at: ./output
+      - run: python src/upload.py

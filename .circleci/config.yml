@@ -12,10 +12,11 @@ workflows:
     # Inside the workflow, you define the jobs you want to run. 
     # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows 
     jobs:
-      - build-and-test
-      - deploy:
-          requires:
-              - build-and-test
+      - build-and-test:
+        filters:
+          branches:
+            only:
+              - main
 
 
 jobs:
@@ -33,10 +34,6 @@ jobs:
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
-    filters:
-      branches:
-        only:
-          - main
 
     steps:
       - checkout

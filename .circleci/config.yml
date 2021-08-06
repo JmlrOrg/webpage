@@ -53,6 +53,7 @@ jobs:
     docker:
       - image: circleci/python:3.7
     steps:
+      - checkout
       - attach_workspace:
          at: ./output
       - run: python src/upload.py
@@ -64,6 +65,8 @@ workflows:
     jobs:
       - build-and-test
       - deploy:
+        requires:
+          - build-and-test
         filters:
             branches:
               only: master

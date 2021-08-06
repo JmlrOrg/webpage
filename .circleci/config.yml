@@ -19,6 +19,7 @@ workflows:
 
 
 jobs:
+
   build-and-test:  # This is the name of the job, feel free to change it to better match what you're trying to do!
     # These next lines defines a Docker executors: https://circleci.com/docs/2.0/executor-types/
     # You can specify an image from Dockerhub or use one of the convenience images from CircleCI's Developer Hub
@@ -26,12 +27,17 @@ jobs:
     # The executor is the environment in which the steps below will be executed - below will use a python 3.9 container
     # Change the version below to your required version of python
     docker:
-      - image: cimg/python:3.6-node
+      - image: circleci/python:3.7
     # Checkout the code as the first step. This is a dedicated CircleCI step.
     # The python orb's install-packages step will install the dependencies from a Pipfile via Pipenv by default.
     # Here we're making sure we use just use the system-wide pip. By default it uses the project root's requirements.txt.
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
+    filters:
+      branches:
+        only:
+          - main
+
     steps:
       - checkout
       - run:
@@ -51,21 +57,7 @@ jobs:
       - run:
           name: Run tests 
           command: make test
-
-      - persist_to_workspace:
-          root: output
-          paths: .
-
-  
-  deploy:
-    docker:
-      - image: circleci/python:3.7
-    steps:
-      - checkout
-      # Attach page generated in previous step so that it can be
-      # deployed.
-      - attach_workspace:
-          at: output
-      - deploy:
-        command: python src/upload.py
- 
+      
+      - run:
+          name: Deploy
+          command: python src/upload.py

@@ -59,7 +59,7 @@ jobs:
   
   deploy:
     docker:
-      - image: circleci/python:3.7.7-buster
+      - image: circleci/python:3.7
     steps:
       - checkout
       # Attach page generated in previous step so that it can be

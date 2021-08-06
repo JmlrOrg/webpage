@@ -46,5 +46,10 @@ jobs:
           command: make
 
       - run:
-          name: Run tests
+          name: Run tests 
           command: make test
+
+      - run:
+          name: Deploy
+          command: python src/upload.py
+ 

@@ -35,6 +35,7 @@ jobs:
           command: echo `pwd` && make test
 
       - persist_to_workspace:
+          root: ~/project
           paths:
             - output
 

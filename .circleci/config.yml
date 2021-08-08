@@ -32,10 +32,9 @@ jobs:
 
       - run:
           name: Run tests 
-          command: make test
+          command: echo `pwd` && make test
 
       - persist_to_workspace:
-          root: "~"
           paths:
             - output
 

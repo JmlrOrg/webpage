@@ -41,11 +41,14 @@ jobs:
 
   deploy:
     docker:
-      - image: cimg/base:2021.07
+      - image: cimg/python:3.6-node
     steps:
       - checkout
       - attach_workspace:
          at: ./output
+      
+      - run: sudo apt install rsync
+      
       - run: python src/upload.py
 
 

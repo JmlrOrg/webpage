@@ -41,7 +41,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/base:2021.07
     steps:
       - checkout
       - attach_workspace:

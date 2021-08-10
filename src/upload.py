@@ -7,8 +7,7 @@ passwd = os.environ['JMLR_PASSWORD']
 
 path = os.path.join(path, '')
 # command = 'rsync -arvz output/beta/ %s@%s' % (user, os.path.join(path, 'beta')) # only the beta webpage
-command = 'rsync -arvz output/ %s@%s' % (user, path)
-print(command)
+command = 'rsync -arvz output/* %s@%s' % (user, path)
 
 ssh_newkey = 'Are you sure you want to continue connecting'
 child = pexpect.spawn(command)

@@ -51,6 +51,8 @@ jobs:
       
       - run: sudo apt install rsync
       
+      - run: pip install pexpect
+
       - run: python src/upload.py
 
 

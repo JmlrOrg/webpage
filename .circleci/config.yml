@@ -47,6 +47,8 @@ jobs:
       - attach_workspace:
          at: ./output
       
+      - run: sudo apt update
+      
       - run: sudo apt install rsync
       
       - run: python src/upload.py

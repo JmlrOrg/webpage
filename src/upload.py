@@ -7,6 +7,9 @@ passwd = os.environ['JMLR_PASSWORD']
 
 path = os.path.join(path, '')
 # command = 'rsync -arvz output/beta/ %s@%s' % (user, os.path.join(path, 'beta')) # only the beta webpage
+
+# Note, the output/output/ is specific to how circleci mounts
+# the workspace. To run locally, it should be replaced with output/
 command = 'rsync -arvz output/output/ %s@%s' % (user, path)
 
 ssh_newkey = 'Are you sure you want to continue connecting'

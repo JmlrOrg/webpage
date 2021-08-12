@@ -1,50 +1,6 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
-<head>
- <link rel="alternate" type="application/rss+xml" href="http://www.jmlr.org/jmlr.xml" title="JMLR RSS">
-<link rel="stylesheet" type="text/css" href="http://www.jmlr.org/style.css">
-<style>. {font-family:verdana,helvetica,sans-serif}
-a {text-decoration:none;color:#3030a0}
-</style>
-<style type="text/css">
-<!-- 
-#fixed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 8em;
-    height: 100%;
-}
-body > #fixed {
-    position: fixed;
-}
-#content {
-    margin-top: 1em;
-    margin-left: 10em;
-    margin-right: 0.5em;
-}
-img.jmlr {
-    width: 7em;
-}
-img.rss {
-    width: 2em;
-}
--->
-</style>
+{% extends "base.html" %}
 
-
-
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-   <meta name="Author" content="Devon Cohn">
-   <meta name="GENERATOR" content="Mozilla/4.75 [en] (Win98; U) [Netscape]">
-   <title>Guidelines for JMLR reviewers</title>
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
-<body>
- <div id="content">
-
+{% block content %}
 
 <h2>
 Guidelines for JMLR reviewers</h2>
@@ -102,51 +58,4 @@ If you suggest conditional accept, please provide a precise list of changes
 that can easily be checked upon resubmission.
 <p>
 
-<a href=reviewer-resources.html> Additonal Resources </a>
-<hr WIDTH="100%">
-<!-- <br><a href="http://www.jmlr.org">Back to the JMLR pages</a> -->
-<p><i><a href="mailto:webmaster@jmlr.org">webmaster@jmlr.org</a></i>
-</div> 
- <div id="fixed">
-<br>
-<a align="right" href="http://www.jmlr.org" target=_top><img align="right" class="jmlr" src="/jmlr.jpg" border="0"></a> 
-<p><br><br>
-<p align="right"> <A href="http://www.jmlr.org/"> Home Page </A> 
-
-<p align="right"> <A href="/papers"> Papers </A> 
-
-<p align="right"> <A href="/author-info.html"> Submissions </A> 
-
-<p align="right"> <A href="/news.html"> News </A> 
-
-<!--<p align="right"> <A href="/scope.html"> Scope </A>-->
-
-<p align="right"> <A href="/editorial-board.html"> Editorial Board </A> 
-
-<p align="right"> <A href="/announcements.html"> Announcements </A>
-
-<p align="right"> <A href="/proceedings"> Proceedings </A>
-
-<p align="right"> <A href="/mloss">Open Source Software</A>
-
-<p align="right"> <A href="/search-jmlr.html"> Search </A>
-
-<p align="right"> <A href="/stats.html">Statistics</A>
-
-<p align="right"> <A href="/manudb"> Login </A></p>
-
-<p align="right"> <A href="/contact.html"> Contact Us </A></p>
-
-<br><br>
-<p align="right"> <A href="/jmlr.xml"> 
-<img src="/RSS.gif" class="rss" alt="RSS Feed">
-</A>
-
-
-
-</div>
- 
-  </body>
-
-</html>
-
+{% endblock %}

@@ -1,0 +1,957 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>History of JMLR</h1>
+<p class="c0">
+      <span class="c1">JMLR was founded (incorporated as a non-profit) in 2000 by Leslie Kaelbling, Computer Science Professor at MIT, with the goal of starting a new journal in the area of machine learning whose contents are freely available to the research community at large via the web. Inspired by Steve Minton’s founding of JAIR, Leslie assembled a founding team, and with the operational help of David Cohn, version 0 of the jmlr web site was up and running on www.jmlr.org on June 23, 2000. At ICML shortly thereafter, MIT Press, who had agreed to do the printed copies of JMLR, were handing out flyers announcing the journal (it turned out later that MIT Press were losing too much money on JMLR, leading to termination of the publishing agreement as of end of 2004. JMLR then went with Microtome, a small press that published JMLR annually, at a rather low subscription price.)</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">On 8/8/2000, JMLR was announced on a number of mailing lists, with the following message:</span>
+    </p>
+
+    <blockquote>
+        <p class="c0">
+            <span class="c1">"Announcing the</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">             JOURNAL of MACHINE LEARNING RESEARCH</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">The Journal of Machine Learning Research (JMLR) provides an</span>
+          </p>
+          <p class="c0">
+            <span class="c1">international forum for the electronic and paper publication of</span>
+          </p>
+          <p class="c0">
+            <span class="c1">high-quality scholarly articles in all areas of machine learning.</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">JMLR seeks previously unpublished papers that contain:</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- new algorithms with empirical, theoretical, psychological, or</span>
+          </p>
+          <p class="c0">
+            <span class="c1">biological justification;</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- experimental and/or theoretical studies yielding new insight into the</span>
+          </p>
+          <p class="c0">
+            <span class="c1">design and behavior of learning in intelligent systems;</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- accounts of applications of existing techniques that shed light on</span>
+          </p>
+          <p class="c0">
+            <span class="c1">the strengths and weaknesses of the methods;</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- formalization of new learning tasks (e.g., in the context of new</span>
+          </p>
+          <p class="c0">
+            <span class="c1">applications) and of methods for assessing performance on those tasks;</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- development of new analytical frameworks that advance theoretical</span>
+          </p>
+          <p class="c0">
+            <span class="c1">studies of practical learning methods;</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- computational models of data from natural learning systems at the</span>
+          </p>
+          <p class="c0">
+            <span class="c1">behavioral or neural level; or</span>
+          </p>
+          <p class="c0">
+            <span class="c1">- extremely well-written surveys of existing work.</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">JMLR has a commitment to rigorous yet rapid reviewing; reviews are</span>
+          </p>
+          <p class="c0">
+            <span class="c1">returned within six weeks of paper submission.  Final versions are</span>
+          </p>
+          <p class="c0">
+            <span class="c1">published electronically immediately upon receipt, and an annual paper</span>
+          </p>
+          <p class="c0">
+            <span class="c1">volume is published by MIT Press and sold to libraries and individuals.</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">JMLR is accepting new submissions.  Please see http://www.jmlr.org for</span>
+          </p>
+          <p class="c0">
+            <span class="c1">submission information.</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">Accepted papers, when published on the web, will be announced via an</span>
+          </p>
+          <p class="c0">
+            <span class="c1">email list.  To subscribe, send an email message to</span>
+          </p>
+          <p class="c0">
+            <span class="c1">majordomo@ai.mit.edu with body text "subscribe jmlr-announce" (without</span>
+          </p>
+          <p class="c0">
+            <span class="c1">quotation marks).</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+          <p class="c0">
+            <span class="c1">Editor:                    Leslie Pack Kaelbling</span>
+          </p>
+          <p class="c0">
+            <span class="c1">Managing Editor:    David Cohn</span>
+          </p>
+          <p class="c0">
+            <span class="c1">Action Editors:</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Peter Bartlett, Australian National University, Australia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Craig Boutilier, University of Toronto, Canada</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Claire Cardie, Cornell University, US                            </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Peter Dayan, University College, London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Thomas Dietterich, Oregon State University, US                    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Donald Geman, University of Massachusetts at Amherst, US</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Michael Jordan, University of California at Berkeley, US    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Michael Kearns, AT&amp;T Research, US</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    John Lafferty, Carnegie Mellon University, US                    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Heikki Mannila, Helsinki University of Technology, Finland</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Fernando Pereira, Whizbang! Laboratories, US                    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Pietro Perona, California Institute of Technology, US            </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stuart Russell, University of California at Berkeley, US    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Claude Sammut, University of New South Wales, Australia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Bernhard Schoelkopf, Microsoft Research, Cambridge, UK            </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Larry Wasserman, Carnegie Mellon University, US                    </span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stefan Wrobel, Otto-von-Guericke-Universitat Magdeburg, Germany</span>
+          </p>
+          <p class="c0">
+            <span class="c1">Editorial Board:</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Naoki Abe, NEC Corporation, Japan</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Christopher M. Bishop, Microsoft Research, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Andrew G. Barto, University of Massachusetts, Amherst, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Henrik Bostrom, Stockholm University/KTH, Sweden</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Carla Brodley, Purdue University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Nello Cristianini, Royal Holloway, University of London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    William W. Cohen, Whizbang! Laboratories, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    David Cohn, Burning Glass Technologies, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Luc De Raedt, University of Freiburg, Germany</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Saso Dzeroski, Jozef Stefan Institute, Slovenia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Nir Friedman, Hebrew University, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Dan Geiger, The Technion, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Zoubin Ghahramani, University College London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Sally Goldman, Washington University, St. Louis, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Russ Greiner, University of Alberta, Canada</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    David Heckerman, Microsoft Research, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Thomas Hofmann, Brown University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Tommi Jaakkola, Massachusetts Institute of Technology, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Daphne Koller, Stanford University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Michael Littman, AT&amp;T Research, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Sridhar Mahadevan, Michigan State University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Yishay Mansour, Tel-Aviv University, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Andrew McCallum, Whizbang! Laboratories, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Raymond J. Mooney, University of Texas at Austin, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stephen Muggleton, York University, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Foster Provost, New York University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Dana Ron, Tel-Aviv University, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Lawrence Saul, AT&amp;T Labs, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    John Shawe-Taylor, Royal Holloway, University of London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Dale Schuurmans, University of Waterloo, Canada</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Yoram Singer, The Hebrew University, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Alex Smola, Australian National University, Australia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Padhraic Smyth, University of California at Irvine, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Moshe Tennenholtz, The Technion, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Sebastian Thrun, Carnegie Mellon University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Naftali Tishby, Hebrew University, Israel</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    David Touretzky, Carnegie Mellon University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Chris Watkins, Royal Holloway, University of London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Robert C. Williamson, Australian National University, Australia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">Advisory Board:</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Shun-Ichi Amari, RIKEN Brain Science Institute, Japan</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Andrew Barto, University of Massachusetts at Amherst, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Thomas Dietterich, Oregon State University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Jerome Friedman, Stanford University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stuart Geman, Brown University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Geoffrey Hinton, University College London, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Michael Jordan, University of California at Berkeley, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Michael Kearns, AT&amp;T Research, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Steven Minton, University of Southern California, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Thomas Mitchell, Carnegie Mellon University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stephen Muggleton, University of York, UK</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Nils Nilsson, Stanford University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Tomaso Poggio, Massachusetts Institute of Technology</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Ross Quinlan, University of New South Wales, Australia</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stuart Russell, University of California at Berkeley, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Terrence Sejnowski, Salk Institute for Biological Studies, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Richard Sutton, AT&amp;T Research, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Leslie Valiant, Harvard University, USA</span>
+          </p>
+          <p class="c0">
+            <span class="c1">    Stefan Wrobel, Otto-von-Guericke-Universitaet, Germany"</span>
+          </p>
+          <p class="c0 c3">
+            <span class="c1"/>
+          </p>
+      
+    </blockquote>
+    <p class="c0">
+      <span class="c1">In addition to finding the volunteers to run JMLR, work in 2000 focused on getting a first slate of strong papers lined up. This included both papers submitted to JMLR as well as some that were transferred from the Machine Learning Journal (upon the request of the respective authors). The first issue is available at https://www.jmlr.org/papers/v1/ and includes several papers co-hosted with www.kernel-machines.org, a website that partnered with JMLR to solicit submissions from the growing field of kernel methods.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">On March 27, 2001, a partnership between SPARC (an alliance of universities and research libraries supporting increased competition in scientific journal publishing) and JMLR was announced (https://www.jmlr.org/sparc-pr.html).</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">On March 30, 2001, the first paper copies of Vol. 1, No. 1 arrived.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">At the time, the flagship journal of the field was the "Machine Learning Journal (MLJ)" (at the time, published by Kluwer). There had been discussions with Kluwer about pricey subscription fees and closed access. This culminated in a resignation of most of the editorial board of the journal in 2001 to join and endorse JMLR (http://sigir.org/files/forum/F2001/sigirFall01Letters.html, https://www.jmlr.org/statement.html, see also Donald Knuth's letter at https://www-cs-faculty.stanford.edu/~knuth/joalet.pdf). Resignations started in July 2001, leading to discussions at a Dagstuhl workshop where several MLJ editorial board members were present (Bob Williamson, Manfred Warmuth, Chris Williams, Zoubin Ghahramani, Peter Bartlett, and Bernhard Schölkopf). As a result, JMLR invited all editorial board members of MLJ to also join JMLR. In August, Michael Jordan coordinated a letter announcing a joint resignation</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">Following this, JMLR quickly established itself as the new flagship journal of the field, a position that it has held until now, although entirely run by volunteers.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In September 2003, Foster Provost reported on the ISI Journal Citation Reports: </span>
+    </p>
+    <p class="c0">
+      <span class="c4">The category Computer Science, Artificial Intelligence has 74 journals.</span>
+    </p>
+    <p class="c0">
+      <span class="c4">In the 2002 listing for that category, JMLR is ranked #1[...]</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In 2004, a new review management software was put into production, written by Christian Shelton (and still in use today!), who had taken over as managing editor from Pablo Cohn in 2003.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c5">In February 2006, Neil Lawrence proposed for JMLR to host online proceedings from workshops that were related to machine learning. Initially, there was skepticism, but when Geoff Hinton proposed a related idea (Curiously, suggesting the name 'Transactions in Machine Learning Research' which is now going to be used for something else), it took off, launching in early 2007 as </span>
+      <span class="c5 c6">JMLR: Workshop and Conference Proceedings</span>
+      <span class="c5">.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In 2007, there was a proposal by Cheng Soon Ong, Mikio Braun and Soeren Sonnenburg to start an open source software section of JMLR, accepting rolling submissions, much like the kernel machines section. The section started with a position paper written by Soeren et al.: https://www.jmlr.org/papers/volume8/sonnenburg07a/sonnenburg07a.pdf</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In late 2007, a committee was put together to find a successor for Leslie, identifying Lawrence Saul as the top candidate. He started to work alongside Leslie in mid 2008, and took over completely in 2009.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In late 2012, Leslie contacted Bernhard Schölkopf to take over as EiC. He argued that with the growth of the field, the job should be shared among two co-EiCs, and in March 2013, Kevin Murphy and him were announced as taking over from Lawrence Saul. They took turns month by month in assigning papers, and introduced a mechanism to make sure the queue gets cleared on time: each EiC needs to completely empty the queue at the beginning of the month. If one does not manage to do it on the 1st, then the queue continues to grow, so there is a strong incentive to do it on time..</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In May 2013, JMLR's web space reached its quota (20GB), meaning no one could submit new papers until the quota was increased. ;)</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In June 2013, JMLR agreed to publish a special issue with papers from the new ICLR conference, with action editors Aaron Courville, Rob Fergus, and Christopher Manning. Later that year, a model was initiated where top tier conferences could have a 'JMLR track' directly accepting submissions into JMLR. This was subject to some conditions, e.g., that there is enough time for one round of revisions, and that the area chair handling the paper is also a JMLR AE.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c5">In 2015, JMLR renamed the Workshop &amp; Conference Proceedings into PMLR, and announced the plan to turn MLR into an umbrella for several publication ou</span>
+      <span class="c5">tlets. </span>
+      <span class="c1">Ideas included a PLOS-ONE style journal connected to arxiv.org, a subsidiary that specializes in special issues, and a monthly issue which is a little less formal and more topical.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In early 2017, JMLR changed its publication agreement to CC-By (https://jmlr.org/forms/jmlr-license-agreement-2017.pdf).</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In spring 2017, Kevin Murphy stepped down. A new search ensued, and Dave Blei replaced him in late 2017, with Francis Bach joining in early 2018.</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c1">In December 2017, many of the JMLR editors contributed to and signed a statement (drafted by Neil Lawrence and Tom Dietterich) about the planned 'Nature Machine Intelligence' journal: https://openaccess.engineering.oregonstate.edu/</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c1"/>
+    </p>
+    <p class="c0">
+      <span class="c5">In December 2021, Bernhard Schölkopf </span>
+      <span class="c2">retired from his position as JMLR Co-editor-in-chief. </span>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0">
+      <span class="c2">Appendix: The following article appeared in the Boston Globe:</span>
+    </p>
+    <p class="c0 c3">
+      <span class="c2"/>
+    </p>
+    <p class="c0">
+      <span class="c2">_________</span>
+    </p>
+    <p class="c0">
+      <span class="c2">SPREADING THE GOSPEL OF FREE SCIENCE</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Author: By Nicholas Thompson, GLOBE CORRESPONDENT Date: 11/20/2001</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Page: C1 Section: Health Science</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Leslie Kaelbling hardly looks like a threat to the scientific establishment.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">The perky MIT professor rides to work on a bicycle that neatly folds into a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">briefcase-sized rectangle and spends her days trying to make machines that</span>
+    </p>
+    <p class="c0">
+      <span class="c2">can learn. As associate director of MIT's Artificial Intelligence</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Laboratory, she is surrounded by quirky creations, from tiny fish-like</span>
+    </p>
+    <p class="c0">
+      <span class="c2">robots made partly from frog tissue to robots that look like humans and, one</span>
+    </p>
+    <p class="c0">
+      <span class="c2">day, may think like them, too.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">But Kaelbling leads another revolution in her spare time. As editor of the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">upstart Journal of Machine Learning Research, Kaelbling offers some of the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">latest debates and developments in artificial intelligence to anyone with</span>
+    </p>
+    <p class="c0">
+      <span class="c2">access to the Internet - free. By contrast, the scholarly journals that</span>
+    </p>
+    <p class="c0">
+      <span class="c2">largely set the world's science agenda sometimes charge more than $1,000 a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">year for a subscription.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling would be just another quixotic idealist with her unpaid staff -</span>
+    </p>
+    <p class="c0">
+      <span class="c2">the journal "doesn't even have a bank account right now," she acknowledges -</span>
+    </p>
+    <p class="c0">
+      <span class="c2">except for one thing. Thirty-nine board members of the leading artificial</span>
+    </p>
+    <p class="c0">
+      <span class="c2">intelligence journal in her field, Machine Learning, announced their</span>
+    </p>
+    <p class="c0">
+      <span class="c2">resignations last month to join her crusade.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling and her supporters argue that putting all top current research</span>
+    </p>
+    <p class="c0">
+      <span class="c2">online could well inspire crucial insights from people who wouldn't</span>
+    </p>
+    <p class="c0">
+      <span class="c2">otherwise have access; a statistician in Mongolia may spur the next</span>
+    </p>
+    <p class="c0">
+      <span class="c2">breakthrough, after all.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">"The only thing we care about in the world is that people read our work,"</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling said.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">The rivalry between Kaelbling's journal and Machine Learning - which costs</span>
+    </p>
+    <p class="c0">
+      <span class="c2">$1,050 a year for institutions and $120 for individuals - is part of a much</span>
+    </p>
+    <p class="c0">
+      <span class="c2">broader debate about how much scientific information should be free. For</span>
+    </p>
+    <p class="c0">
+      <span class="c2">instance, the federal government's Human Genome Project and private Celera</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Genomics have locked horns repeatedly over Celera's plan to withhold some</span>
+    </p>
+    <p class="c0">
+      <span class="c2">key information from the human genetic blueprint that could be sold to</span>
+    </p>
+    <p class="c0">
+      <span class="c2">pharmaceutical companies looking for potential new drugs.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">More closely parallel to Kaelbling's work, the National Institutes of Health</span>
+    </p>
+    <p class="c0">
+      <span class="c2">have created a database called PubMed Central intended to allow anyone in</span>
+    </p>
+    <p class="c0">
+      <span class="c2">the world to freely search and retrieve the full text of any published</span>
+    </p>
+    <p class="c0">
+      <span class="c2">scientific article, with archives extending back for decades. Several months</span>
+    </p>
+    <p class="c0">
+      <span class="c2">ago, a coalition of about 30,000 scientists, led partly by former NIH</span>
+    </p>
+    <p class="c0">
+      <span class="c2">director and Nobel laureate Harold Varmus, pledged to boycott any journals</span>
+    </p>
+    <p class="c0">
+      <span class="c2">that didn't meet PubMed Central's standards for freely distributing data.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">The coalition backed off a little in early September, but the conflict still</span>
+    </p>
+    <p class="c0">
+      <span class="c2">looms.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">The free, Internet-based Journal of Machine Learning Research challenges an</span>
+    </p>
+    <p class="c0">
+      <span class="c2">elaborate system of disseminating scientific information that touches</span>
+    </p>
+    <p class="c0">
+      <span class="c2">everything from what appears on the nightly news to which researchers become</span>
+    </p>
+    <p class="c0">
+      <span class="c2">stars. A few well-known journals such as Science, Nature, and the New</span>
+    </p>
+    <p class="c0">
+      <span class="c2">England Journal of Medicine considerably influence scientific discussion and</span>
+    </p>
+    <p class="c0">
+      <span class="c2">have a near hammerlock on determining what science appears in the mainstream</span>
+    </p>
+    <p class="c0">
+      <span class="c2">press. A slew of others - including Machine Learning - shape their</span>
+    </p>
+    <p class="c0">
+      <span class="c2">respective subject areas, helping determine who gets tenure, where grants</span>
+    </p>
+    <p class="c0">
+      <span class="c2">go, and how their fields move forward.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling and others note that the scientific community differs in several</span>
+    </p>
+    <p class="c0">
+      <span class="c2">ways from journalism, where support for free online access to magazines and</span>
+    </p>
+    <p class="c0">
+      <span class="c2">newspapers has withered. For one, most scientific authors don't get paid for</span>
+    </p>
+    <p class="c0">
+      <span class="c2">publishing, even in the journals with costly subscription prices. Instead,</span>
+    </p>
+    <p class="c0">
+      <span class="c2">they receive their funding from universities, corporations, or government</span>
+    </p>
+    <p class="c0">
+      <span class="c2">grants, and publish mainly for prestige and to advance their fields.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling earns her salary from the Massachusetts Institute of Technology</span>
+    </p>
+    <p class="c0">
+      <span class="c2">and part of her job description requires her to offer public service to the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">community, such as editing the Journal of Machine Learning Research.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Secondly, progress in any scientific field relies to a huge extent on the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">amount of available information. More available information equals more and</span>
+    </p>
+    <p class="c0">
+      <span class="c2">better science. Some of Kaelbling's colleagues, for example, want to design</span>
+    </p>
+    <p class="c0">
+      <span class="c2">robots that actually think like humans: Rodney Brooks, the director of</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling's laboratory, helped inspire Steven Spielberg's vision for the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">movie "A.I." That enormously complicated task would be helped with input</span>
+    </p>
+    <p class="c0">
+      <span class="c2">from as many different scientists as possible. Putting everything online</span>
+    </p>
+    <p class="c0">
+      <span class="c2">seems like the obvious thing to do, Kaelbling argued.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Still, numerous scientists and publishers fear that moving away from</span>
+    </p>
+    <p class="c0">
+      <span class="c2">printed, subscription-based journals could derail standards and practices</span>
+    </p>
+    <p class="c0">
+      <span class="c2">that have worked well for years. Others fear that such a change could</span>
+    </p>
+    <p class="c0">
+      <span class="c2">shutter prestigious and important journals.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">In the machine-learning community, swords have already crossed. In their</span>
+    </p>
+    <p class="c0">
+      <span class="c2">letter resigning from Machine Learning, the rebellious members, who</span>
+    </p>
+    <p class="c0">
+      <span class="c2">represented about two-thirds of the board, wrote: "Journals should</span>
+    </p>
+    <p class="c0">
+      <span class="c2">principally serve the needs of the intellectual community, in particular by</span>
+    </p>
+    <p class="c0">
+      <span class="c2">providing the immediate and universal access to journal articles that modern</span>
+    </p>
+    <p class="c0">
+      <span class="c2">technology supports, and doing so at a cost that excludes no one."</span>
+    </p>
+    <p class="c0">
+      <span class="c2">In the past, scholars in the field researched and wrote their articles,</span>
+    </p>
+    <p class="c0">
+      <span class="c2">submitted them to Machine Learning, and then waited up to a year to see them</span>
+    </p>
+    <p class="c0">
+      <span class="c2">in print. Probably most aggravating to the authors, Machine Learning's</span>
+    </p>
+    <p class="c0">
+      <span class="c2">owners, Netherlands-based Kluwer Academic Publishers, retained complete</span>
+    </p>
+    <p class="c0">
+      <span class="c2">copyright control. Authors couldn't even publish their articles on personal</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Web pages - a fairly restrictive policy for the industry that the company</span>
+    </p>
+    <p class="c0">
+      <span class="c2">changed after the mass resignation.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">With the Journal of Machine Learning Research, authors just e-mail their</span>
+    </p>
+    <p class="c0">
+      <span class="c2">pieces to Kaelbling, who then forwards them to assorted editors. These</span>
+    </p>
+    <p class="c0">
+      <span class="c2">volunteers, generally prestigious researchers in whatever particular</span>
+    </p>
+    <p class="c0">
+      <span class="c2">sub-field the article covers, then decide whether to accept or reject the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">articles. If accepted, the articles appear online immediately and the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">authors retain full copyrights.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">"Mostly, it's just a bunch of work," said Kaelbling, before noting that she</span>
+    </p>
+    <p class="c0">
+      <span class="c2">still spends vastly more time with her MIT students and Erik the Red, a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">robot resembling R2D2 that she is trying to teach to see and navigate</span>
+    </p>
+    <p class="c0">
+      <span class="c2">through hallways.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Despite Kaelbling's optimism, though, other scientists argue that there are</span>
+    </p>
+    <p class="c0">
+      <span class="c2">holes in her boat. Robert Holte, the editor of Machine Learning, supports</span>
+    </p>
+    <p class="c0">
+      <span class="c2">the new journal and suggests that both his journal and Kaelbling's can exist</span>
+    </p>
+    <p class="c0">
+      <span class="c2">harmoniously. But, he added, "What [the Journal of Machine Learning</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Research] doesn't have right now is a history. You can have the most famous</span>
+    </p>
+    <p class="c0">
+      <span class="c2">people on your editorial board that you like. But until a journal has a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">well-established track record proving its ability to attract a large number</span>
+    </p>
+    <p class="c0">
+      <span class="c2">of high quality, highly-cited papers, it cannot claim to be the community's</span>
+    </p>
+    <p class="c0">
+      <span class="c2">flagship journal."</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Tenure committees, for example, know that being published in Machine</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Learning means you've accomplished something significant. Until it earns a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">reputation, Kaelbling's journal could just be two crackpots in a barn with a</span>
+    </p>
+    <p class="c0">
+      <span class="c2">cable modem.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">In addition, advocates of print journals argue that online journals may not</span>
+    </p>
+    <p class="c0">
+      <span class="c2">hold to the same quality standards, becoming, in a sense, the scientific</span>
+    </p>
+    <p class="c0">
+      <span class="c2">equivalents of the Drudge Report.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">"Paper journals have a strict limit on the number of papers they can</span>
+    </p>
+    <p class="c0">
+      <span class="c2">publish. With an online journal, there's always a temptation to accept</span>
+    </p>
+    <p class="c0">
+      <span class="c2">rather than reject," said Cornell professor Shai Ben-David, one member of</span>
+    </p>
+    <p class="c0">
+      <span class="c2">the editorial board of Machine Learning who chose not to resign.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling acknowledged that her journal hasn't earned prestige yet, but she</span>
+    </p>
+    <p class="c0">
+      <span class="c2">insists that it will maintain strict standards. "It's the same people doing</span>
+    </p>
+    <p class="c0">
+      <span class="c2">the same work," she said, noting that the editorial board of the Journal of</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Machine Learning Research is made up of many people who used to work for</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Machine Learning. Kaelbling is one of the most highly respected scientists</span>
+    </p>
+    <p class="c0">
+      <span class="c2">in her field and, before resigning last year, she herself reviewed papers</span>
+    </p>
+    <p class="c0">
+      <span class="c2">for her print rival.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Kaelbling faces another potential problem in that no major for-profit</span>
+    </p>
+    <p class="c0">
+      <span class="c2">publisher supports and promotes her journal. Kluwer Academic Publishing, the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">world's second largest scientific publisher with 731 journals under its</span>
+    </p>
+    <p class="c0">
+      <span class="c2">umbrella, stated that it supports Machine Learning by providing services</span>
+    </p>
+    <p class="c0">
+      <span class="c2">that include promotion, copy-editing, distribution and representation of the</span>
+    </p>
+    <p class="c0">
+      <span class="c2">journal at conferences.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Still, the nonprofit MIT Press does offer Kaelbling's journal its support,</span>
+    </p>
+    <p class="c0">
+      <span class="c2">publishing and promoting quarterly bound editions of the articles that have</span>
+    </p>
+    <p class="c0">
+      <span class="c2">appeared on the journal's Web site. "I don't think they are any less</span>
+    </p>
+    <p class="c0">
+      <span class="c2">effective than Kluwer," Kaelbling said.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">MIT Press does publish and promote quarterly bound editions of the articles</span>
+    </p>
+    <p class="c0">
+      <span class="c2">that have appeared on Kaelbling's Web site, but has garnered fewer than 100</span>
+    </p>
+    <p class="c0">
+      <span class="c2">subscriptions so far. That doesn't phase Kaelbling, either. "Everyone's</span>
+    </p>
+    <p class="c0">
+      <span class="c2">going to have to do this," she said.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Even some scientists closely attached to old print publications agree.</span>
+    </p>
+    <p class="c0">
+      <span class="c2">According to Thomas Dietterich, a former editor of Machine Learning, and one</span>
+    </p>
+    <p class="c0">
+      <span class="c2">of the recent defectors to the new journal: "I am emotionally attached to</span>
+    </p>
+    <p class="c0">
+      <span class="c2">Machine Learning. I have every issue from the start to now. But things</span>
+    </p>
+    <p class="c0">
+      <span class="c2">change. In the computer business, we are used to technology turning things</span>
+    </p>
+    <p class="c0">
+      <span class="c2">upside down."</span>
+    </p>
+{% endblock %}

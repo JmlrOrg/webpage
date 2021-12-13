@@ -1,23 +1,6 @@
-<html>
- <head>
-  <!--#include virtual="/css-scroll.txt"-->
-      <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
- <!-- MathJax -->
- <script type="text/x-mathjax-config">
-     MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
- </script>
- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
- </script>
+{% extends "base.html" %}
 
-<title>JMLR Machine Learning Open Source Software</title>
-<style>
-. {font-family:verdana,helvetica,sans-serif}
-a {text-decoration:none;color:#3030a0}
-</style>
-</head>
- <body>
- <div id="content">
-
+{% block content %}
 <h1>Machine Learning Open Source Software</h1>
 
 To support the open source software movement, JMLR MLOSS publishes contributions related to implementations of non-trivial machine learning algorithms, toolboxes or even languages for scientific computing.  Submission instructions are available <a href="mloss-info.html">here</a>.
@@ -41,7 +24,4 @@ To support the open source software movement, JMLR MLOSS publishes contributions
 {% endfor %}
 {% endfor %}
 
-</div>
- <!--#include virtual="/nav-bar.txt"-->
-  </body>
- </html>
+{% endblock %}

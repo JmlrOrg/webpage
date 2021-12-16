@@ -9,11 +9,6 @@
       "name": "David Blei",
       "affiliation": "Columbia University",
       "url": "http://www.cs.columbia.edu/~blei/"
-    },
-    {
-      "name": "Bernhard Schölkopf",
-      "affiliation": "MPI for Intelligent Systems",
-      "url": "http://is.tuebingen.mpg.de/person/bs"
     }
   ],
   "managing_editors":
@@ -36,11 +31,6 @@
   ],
   "editorial_assistants":
   [
-    {
-      "name": "Karin Bierig",
-      "affiliation": "MPI for Intelligent Systems",
-      "url": "https://ei.is.tuebingen.mpg.de/person/bierig"
-    },
     {
       "name": "Stella Lianou",
       "affiliation": "Columbia University",

@@ -39,43 +39,46 @@ $(document).ready(function(){
 {% endblock %}
 
 {% block content %}
-    <h1>JMLR Editorial Board</h1>
-    <h3>Editors-in-Chief</h3>
-    <ul class="editors">{% for e in editors_in_chief %}
-      <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
-    </ul>
-    
-    <h3>Managing Editors</h3>
-    <ul class="editors">{% for e in managing_editors %}
-      <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation }}.</li>{% endfor %}
-    </ul>
-    
-    <h3>Editorial Assistant</h3>
-    <ul class="editors">{% for e in editorial_assistants %}
-      <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation}}.</li>{% endfor %}
-    </ul>
-    
-    
-    <h3>Production Editor</h3>
-    <ul class="editors">{% for e in production_editors %}
-      <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation}}.</li>{% endfor %}
-    </ul>
 
-    <!--
-    <h3>Production Staff</h3>
-    <ul class="editors">
-      <li><a class="name" href="http://acl.mit.edu/members/tcampbell.htm">Trevor Campbell</a></b>, Massachusetts Institute of Technology.</li>
-      <li><a class="name" href="http://ei.is.tuebingen.mpg.de/person/btabibian">Behzad Tabibian</a></b>, MPI for Intelligent Systems</li>
-      <li><a class="name" href="http://hhcho.com">Hoon Cho</a></b>, Massachusetts Institute of Technology</li>
-    </ul>
-    -->
-    
-    
-    <h3>Web Master</h3>
-    <ul class="editors">{% for e in webmaster %}
-      <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, {{ e.affiliation}}.</li>{% endfor %}
-    </ul>
-    
+  <h1>JMLR Editorial Board</h1>
+  <h3>Editors-in-Chief</h3>
+  <ul class="editors">
+    <li><a class="name" href="http://www.di.ens.fr/~fbach/">Francis Bach</a>, INRIA.</li>
+    <li><a class="name" href="http://www.cs.columbia.edu/~blei/">David Blei</a>, Columbia University.</li>
+  </ul>
+
+  <h3>Managing Editors</h3>
+  <ul class="editors">
+    <li><a class="name" href="http://www.teganmaharaj.com/">Tegan Maharaj</a>, Mila and Ecole Polytechnique de Montreal.</li>
+  </ul>
+
+  <h3>Editorial Assistant</h3>
+  <ul class="editors">
+    <li><a class="name" href="mailto:stella.bleilab@gmail.com">Stella Lianou</a>, Columbia University.</li>
+  </ul>
+
+
+  <h3>Production Editor</h3>
+  <ul class="editors">
+    <li><a class="name" href="http://www.proditus.com">Alp Kucukelbir</a>, Fero Labs and Columbia University.</li>
+  </ul>
+
+  <!--
+  <h3>Production Staff</h3>
+  <ul class="editors">
+    <li><a class="name" href="http://acl.mit.edu/members/tcampbell.htm">Trevor Campbell</a></b>, Massachusetts Institute of Technology.</li>
+    <li><a class="name" href="http://ei.is.tuebingen.mpg.de/person/btabibian">Behzad Tabibian</a></b>, MPI for Intelligent Systems</li>
+    <li><a class="name" href="http://hhcho.com">Hoon Cho</a></b>, Massachusetts Institute of Technology</li>
+  </ul>
+  -->
+
+
+  <h3>Web Master</h3>
+  <ul class="editors">
+    <li><a class="name" href="http://www.proditus.com">Alp Kucukelbir</a>, Fero Labs and Columbia University.</li>
+    <li><a class="name" href="http://fa.bianp.net">Fabian Pedregosa</a>, Google Research.</li>
+  </ul>
+      
     
     
     <h3>JMLR Action Editors</h3>

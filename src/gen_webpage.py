@@ -9,7 +9,6 @@ import utils
 YEAR = datetime.today().year
 
 
-editorial_board_info = json.load(open("editorial-board.json", "r"))
 
 if not os.path.exists("output"):
     os.mkdir("output")
@@ -49,7 +48,7 @@ if __name__ == "__main__":
             loader=FileSystemLoader(os.path.join("templates", prefix)),
             autoescape=select_autoescape(["html", "xml"]),
         )
-        render_webpage(env, prefix, "mloss/mloss-info.html", base_url, editorial_board_info)
+        render_webpage(env, prefix, "mloss/mloss-info.html", base_url, {})
         with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
             mloss_start_vol = 6
             list_info_mloss = []
@@ -150,5 +149,5 @@ if __name__ == "__main__":
                 "faq.html",
                 "news/schoelkopf-retirement.html",
         ]:
-            render_webpage(env, prefix, page, base_url, editorial_board_info)
+            render_webpage(env, prefix, page, base_url, {})
 

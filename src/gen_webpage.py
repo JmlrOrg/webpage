@@ -149,6 +149,7 @@ if __name__ == "__main__":
                 "faq.html",
                 "news/schoelkopf-retirement.html",
                 "format/authors-guide.html",
+                "format/format.html",
         ]:
             render_webpage(env, prefix, page, base_url, {})
 

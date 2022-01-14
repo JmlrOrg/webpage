@@ -9,6 +9,8 @@ npm: clean
 	npm install
 	mkdir -p output/beta/js
 	mkdir -p output/beta/css
+	mkdir -p output/beta/format
+	mkdir -p output/format
 	cp node_modules/mdbootstrap/js/*.* output/beta/js/
 	cp node_modules/mdbootstrap/css/*.* output/beta/css/
 

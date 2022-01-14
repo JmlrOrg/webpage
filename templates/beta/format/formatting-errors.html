@@ -1,0 +1,130 @@
+{% extends "base.html" %} {% block content %}
+
+
+ 
+<h1>Checklist of common JMLR formatting errors</h1>
+ <h3>General</h3>
+<ul>
+  <li> One LaTeX file: The latex for the paper should be in one file. Otherwise it takes too much additional time for the production staff to perform all of the checks before publication.
+  <li> Make sure your abstract reads well. It will be used to advertise your
+paper.</li>
+  <li> We recommend you use small caps for system names. (In LaTex that's \sc)</li>
+
+	<li> Move file to have correct name, according to the JMLR naming conventions. See the authors' guide.
+	<li> Signed copyright form: Do not forget to provide this.
+	<li>Text should be in Computer Modern	
+	<li> Order of paper: At the end of your paper, the order of sections should be: Acknowledgments, Appendices, then References.	
+	<li> Acknowledgments should be a unnumbered section. You can use the \acks{} command for this.
+	<li> Appendix section number should be a letter (Should look like Appendix A. Title). You can use \appendix followed by regular \section command to format appendices	
+</ul>
+
+<h3>Title Area</h3>
+<ul>	<li> Capitalization of paper title: In the title area, the paper title should be in title case.  (First letter of each word capitalized except for little words like "and" and "or".)	
+	<li> Author contact addresses: These should be complete enough that mail sent to that address will reach them	
+	<li> Editor listed: Please include the name of the Action Editor who handled your submission in the \editor{} tag	
+
+	<li> Keyword: Please add keywords to your article using \begin{keywords} ... \end{keywords} after your abstract. They should not be capitalised, they should be separated by commas, and they should not have a period at the end.	
+	<li> Abstract: Do not delete the % at the end of \begin{abstract}% as it introduces an extra indent	
+  <li> Title should be split across two lines, only when it is too long for one line.
+</ul>
+
+<h3>Headers and Footers</h3>
+<ul>
+	<li>Front page header: Use the \jmlrheading command to get a correct header and footer on the title page
+	<li>Copyright notice, bottom of front page uses authors full names: In the \jmlrheading command, please use the full names of all authors	
+	<li>Running headers: Add running headers to your paper using the \ShortHeadings command. Please see the example paper on the web site for how to do this.	
+	<li>Running headers: In the \ShortHeadings command, please capitalise the words in your paper title.	
+	<li>Running headers: In the author list in the \ShortHeadings command, please use "and" before the last author	
+	<li>Running headers: The ShortHeadings author list should have last names only, and should list all authors if possible. If you have many authors, "et al" is acceptable.
+</ul>
+
+<h3>Section Headers</h3>
+<ul>
+  <li>No unnumbered sections: We do not use \paragraph or \section*. We do not allow bold, unindented text to begin a paragraph that could
+  be mistaken for a section header. If it looks like a section header it needs to be numbered like a section header, otherwise it needs to be formatted in some other way (e.g., by indentation, or by using italics instead of boldface).	
+  <li>Section numbering: All sections, subsections, subsubsubsections must be numbered. Please use \subsubsection instead of \subsubsection*, etc	
+<li>Capitalization of Section headings: All section headings should be title case. (First letter of each word capitalized except for little words like "and" and "or".) This includes subsections, sub subsections, etc.	
+  <li> Section headers: There must be some text separating all section headers
+</ul>
+
+<h3>Tables and Figures</h3>
+<ul>
+<li> Float placement: In general, floats should be at the top or bottom of the page (avoid using [h] option to \begin{figure}). Check for pages that contain several floats and only 2-3 lines of text. These will be confusing for a reader, who is likely to miss the text.
+When this happens, please put the floats on a floats page ([p] specifier) instead.	
+<li> Floats should also be placed as close as possible to the page at which they are
+first referenced. You should not, e.g., place all of the figures
+at the end of the paper.
+	<li> Figures, tables should be centered	
+	<li> Captions should be underneath figures and tables	
+	<li>Captions NOT in italics, bold	
+	<li>Tables and figures should not overfill margins	
+<li>Multiline captions should have a hanging indent, that is, subsequent lines of the caption should be indented, aligning with the first word of the caption rather than the word "Figure". Usually this problem is caused by one of the other packages that you have included. Sometimes changing the order of includes will fix this (try moving the jmlr2e include farther down).
+</ul>
+<h3>Footnotes</h3>
+<ul>
+  <li>Footnote markers should follow punctuation	
+  <li>Footnotes should be complete sentences
+</ul>
+
+<h3>Misc</h3>
+<ul>
+	<li> Dashes: When using dashes in text, please use --- instead of --, with no space before or after---like this.	
+	<li> Data set: We use "data set" rather than "dataset".
+</ul>
+  
+<h3>Citations</h3>
+<ul>
+  
+  <li> Carefully read the section on citations in <a href="http://www.jmlr.org/format/format.html">
+  Instructions for Formatting JMLR Articles</a><a href="format.ps"></a>.  A quick guideline is that the paper should still read correctly if all parenthesized text were omitted.
+  Here are examples of BAD citations:</li>
+  
+  <ul>
+ 
+    <li> "See (Ginsberg, 1994) for an analysis..." [Uses citation as a noun]</li>
+  
+    <li> "Drummond (Drummond, 1994) showed that..." [Should be "Drummond (1994)"]</li>
+  
+    <li> "...the best method (see the ERT test (Davis, 1995))..." [double
+parens, should be "...best method (see the ERT test, Davis, 1995)..."]</li>
+ 
+  </ul>
+  <li>Citations not nested in parenthesis. Parentheses should not occur within parentheses, even for citations. Within parentheses use \citealt or \citealp instead. Or you can use \citep[e.g.,][]{smith00}.
+</ul>
+
+<h3>Object References</h3>
+<ul>
+  <li> use \url commands to reference urls in papers. This causes hyperref to make the hyperlinks work nicely.
+  <li>Parenthesis: \eqref can sometimes result in parentheses within parentheses. When referencing an equation
+  within a parenthetical statement, use Equation 1 rather than (1) or Equation (1).	
+  <li>When referencing figures, sections, etc. ("Figure 1", "Section 2.1"), please make sure the words "Figure", "Section", etc., are uppercase
+</ul>
+
+<h3>Math</h3>
+<ul>
+<li>Punctuation: Math in formal writing should be punctuated as if the extra space is not there, for example, displayed equations
+should usually be followed by a comma or a period, depending on the surrounding text.
+<li>Punctuation: Before displayed equations, punctuation (e.g., ":") is not necessary unless you would use the same punctuation if the equation were not there.	
+	<li>In general, only equations that are referenced should be numbered. We are willing to relax this for equations that are particularly important, as others may wish to discuss these in later correspondence.	
+	<li> Proofs should end with a filled box.
+	<li>Equations should not run over the right hand margin. Appendices are especially prone to this.	
+<li>Theorems, Lemmas, etc., should be labeled like Theorem 1, Theorem 2, Theorem 3, not as Theorem 2.1, Theorem 2.2, Theorem 2.3
+</ul>
+
+<h3>References</h3>
+<ul>
+  <li> It is preferable to cite published papers, rather than tech reports.</li>
+  <li>Author names: Make citations consistent. Either give the full first name of all cited authors, or give
+  the first initials only for all cited authors.
+  <li>Capitalization in paper titles: Titles of conference papers should have the first word only titles.
+  However, watch out for words like Bayes and Markov. These should still be capitalized, but BibTeX often leaves uncapitalised incorrectly.
+  <li>Capitalization of book titles, etc: The parts in italics (book names, journal names, conf names) should be title case. (First letter of each word capitalized except for little words like "and" and "or".)
+  <li>Please cite conference titles consistently. We do not have a enforced style for conference names,
+  but whichever style you choose, be consistent. Don't refer to the same conference as
+  "AAAI 2004" in one reference and the "The Nineteenth National Conference on Artificial Intelligence" in another one.
+  Personally, I prefer the style "International Conference on Machine Learning (ICML)", leaving off the "Proceedings of the
+  Twentieth..."
+</ul>
+</div>  
+
+{% endblock %}

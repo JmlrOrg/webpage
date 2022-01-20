@@ -108,16 +108,16 @@
 
 <!-- Page Content -->
 <main>
-<div id="content" class="container">
-    <div class="row mt-5 pt-5">
-        <div class="col">
-            {% block content %}{% endblock %}
-        </div>
-        <div class="col-xs-6 col-md-4">
-                {% block sidebar %}{% endblock %}
-        </div>
-    </div>
-</div>
+  <div id="content" class="container" style="margin-left: 0; margin-top: 5em">
+    <dit class="row">
+      <div class="col-4">
+        {% block sidebar %}{% endblock %}
+      </div>
+      <div class="col-8">
+        {% block content %}{% endblock %}
+      </div>  
+    </dit>
+  </div>
 </main>
 
 <footer class="footer">

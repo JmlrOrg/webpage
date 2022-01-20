@@ -23,7 +23,10 @@ def render_webpage(env, prefix, page, base_url, template_kw):
             base_url=base_url,
             home_active=(page == "index.html"),
             editorial_board_active=(page == "editorial-board.html"),
-            stats_active=(page == "stats.html")
+            stats_active=(page == "stats.html"),
+            submissions_active=(page == "author-info.html"),
+            faq_active=(page == "faq.html"),
+            contact_active=(page == "contact.html")
         )
         f.write(out)
 

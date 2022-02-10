@@ -151,6 +151,7 @@ if __name__ == "__main__":
                 "stats.html",
                 "faq.html",
                 "news/schoelkopf-retirement.html",
+                "news/retrospectives_20years.html",
                 "format/authors-guide.html",
                 "format/format.html",
                 "format/formatting-errors.html",

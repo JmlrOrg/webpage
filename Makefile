@@ -32,4 +32,4 @@ develop:
 update:
 	git submodule foreach git pull origin main
 	git pull origin main
-	git submodule foreach git pull origin main
+	git submodule foreach git submodule update

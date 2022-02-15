@@ -8,6 +8,7 @@ $(document).ready(function(){
    
    $('#innercontent').load("/manudb/editorial_board?list=action");
 
+   $('#innercontent2').load("/manudb/editorial_board");
 });
 </script>
 
@@ -164,6 +165,12 @@ $(document).ready(function(){
     <b>Leslie Valiant</b>, Harvard University, USA</li>
     
     </ul>
-    
-<h3><a href="editorial-board-reviewers.html">Editorial board reviewers</a></h3>
+
+<h1>Editorial board of reviewers</h1>
+
+<p>
+  The Editorial board of reviewers is a collection of trusted reviewers, which commit to review at least 2 papers per year:
+</p>
+<div id="innercontent2"></div>
+
 {% endblock %}

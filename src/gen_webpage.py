@@ -102,39 +102,39 @@ if __name__ == "__main__":
                 f.write(out)
 
         # .. build volumes one by one ...
-        # volumes = sorted([int(v[1:]) for v in  glob("v*")])
-        # for vol in volumes:
-        #     print("Generating Volume %s out of %s" % (vol, volumes[-1]))
-        #     os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)
+        volumes = sorted([int(v[1:]) for v in  glob("v*")])
+        for vol in volumes:
+            print("Generating Volume %s out of %s" % (vol, volumes[-1]))
+            os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)
 
-        #     # render the individual papers
-        #     info_list = utils.get_info(vol)
-        #     for paper_info in info_list:
-        #         utils.process(paper_info, env, prefix, base_url)
+            # render the individual papers
+            info_list = utils.get_info(vol)
+            for paper_info in info_list:
+                utils.process(paper_info, env, prefix, base_url)
 
-        #     # render volume html file
-        #     with open(os.path.join("output", prefix, "papers/v%s/index.html" % vol), "w") as f:
-        #         volume_template = env.get_template("papers/volume.html")
-        #         out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url, papers_active=True)
-        #         f.write(out)
-        #     with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
-        #         papers_index_template = env.get_template("papers/index.html")
-        #         out = papers_index_template.render(
-        #             info_list=info_list, volume=vol, base_url=base_url, papers_active=True,
-        #         )
-        #         f.write(out)
+            # render volume html file
+            with open(os.path.join("output", prefix, "papers/v%s/index.html" % vol), "w") as f:
+                volume_template = env.get_template("papers/volume.html")
+                out = volume_template.render(info_list=info_list, vol=vol, base_url=base_url, papers_active=True)
+                f.write(out)
+            with open(os.path.join("output", prefix, "papers/index.html"), "w") as f:
+                papers_index_template = env.get_template("papers/index.html")
+                out = papers_index_template.render(
+                    info_list=info_list, volume=vol, base_url=base_url, papers_active=True,
+                )
+                f.write(out)
 
-        #     # rss feed
-        #     # sort by issue
-        #     info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
-        #     with open(os.path.join("output", prefix, "jmlr.xml"), "w") as f:
-        #         rss_template = env.get_template("jmlr.xml")
-        #         out = rss_template.render(
-        #             info_list=info_by_issue, vol=vol, base_url=base_url
-        #         )
-        #         f.write(out)
+            # rss feed
+            # sort by issue
+            info_by_issue = sorted(info_list, key=lambda k: k["issue"])[::-1]
+            with open(os.path.join("output", prefix, "jmlr.xml"), "w") as f:
+                rss_template = env.get_template("jmlr.xml")
+                out = rss_template.render(
+                    info_list=info_by_issue, vol=vol, base_url=base_url
+                )
+                f.write(out)
 
-        # render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue})
+        render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue})
 
         news_dir = os.path.join("output", prefix, "news")
         if not os.path.exists(news_dir):

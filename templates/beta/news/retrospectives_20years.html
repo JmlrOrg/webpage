@@ -18,8 +18,7 @@ h2 {
     <h1 style="margin-top: 1em">Retrospectives from 20 Years of JMLR</h1>
 
     <p>
-        <blockquote><i> Fabian Pedregosa, Tegan Maharaj, Alp Kucukelbir, Rajarshi Das, Valentina
-            Borghesani, Francis Bach, David Blei, Bernhard Sch&ouml;lkopf</i></blockquote>
+        <blockquote><i><a href="https://fa.bianp.net/">Fabian Pedregosa</a>, <a href="http://www.teganmaharaj.com/">Tegan Maharaj</a>, <a href="https://www.proditus.com/">Alp Kucukelbir</a>, <a href="https://rajarshd.github.io/">Rajarshi Das</a>, <a href="https://valentina.borghesani.org/">Valentina Borghesani</a>, <a href="https://francisbach.com/">Francis Bach</a>, <a href="http://www.cs.columbia.edu/~blei/">David Blei</a>, <a href="https://is.mpg.de/~bs">Bernhard Sch&ouml;lkopf</a></i></blockquote>
     </p>
     <br>
 
@@ -34,228 +33,207 @@ h2 {
 
 
     <div id="TOC">
-        <p class="framed"><span style="font-weight: bold">Outline:</span><br><br>
-            <span style="margin-left: 20px"><a href="#how"><b>How JMLR works</b></a></span> <br><br>
-            <span style="margin-left: 20px"><a href="#papers"><b>Papers, decisions and publication time</b></a></span> <br><br>
-            <span style="margin-left: 20px"><a href="#human"><b>The Human Cost of Sustaining a Growing Field</b></a></span> <br><br>
+        <p class="framed"><span style="font-weight: bold">Outline:<br><br>
+            <span style="margin-left: 20px"><a href="#how"><b>How JMLR works</b></a> <br><br>
+            <span style="margin-left: 20px"><a href="#papers"><b>Papers, decisions and publication time</b></a> <br><br>
+            <span style="margin-left: 20px"><a href="#human"><b>The Human Cost of Sustaining a Growing Field</b></a> <br><br>
             <span style="margin-left: 20px"><a href="#mirroring"><b>Mirroring trends and biases of the
-                field</b></a></span> <br><br>            
-            <span style="margin-left: 20px"><a class="c13" href="#h.y77njhuydorz"><b>Outlook</b></a></span> <br><br>            </p>
+                field</b></a> <br><br>            
+            <span style="margin-left: 20px"><a href="#h.y77njhuydorz"><b>Outlook</b></a> <br><br>            </p>
     </div>
 
 
     <h2 id="how">How JMLR works</h2>
-    <p class="c6"><span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c29">In summary.
-        </span>JMLR runs almost entirely on volunteer labor.<sup><a
-                href="#ftnt1" id="ftnt_ref1">[1]</a></sup><span>&nbsp;The </span><span class="c1"><a class="c13"
-                href="https://www.google.com/url?q=https://jmlr.org/editorial-board.html&amp;sa=D&amp;source=editors&amp;ust=1644511663863388&amp;usg=AOvVaw1567Y5baosMLdT1b8HBiBM">JMLR
-                team</a></span><span>&nbsp;consists of three Editors-in-Chief (EiCs), two Managing Editors, an Editorial
+    <p><b>In summary</b>.
+        JMLR runs almost entirely on volunteer labor.<sup><a
+                href="#ftnt1" id="ftnt_ref1">[1]</a></sup> The<a
+                href="https://jmlr.org/editorial-board.html">JMLR
+                team</a> consists of three Editors-in-Chief (EiCs), two Managing Editors, an Editorial
             Assistant, a Production Editor, and a Webmaster, along with the
-        </span><span>Advisory</span><span>&nbsp;Board and a </span><span>large group of currently 133 of Action Editors (AEs). </span><span class="c3">The AEs are
-            relatively senior researchers in the field (typically tenured or equivalent), recruited by invitation, and
-            it is by relying on their expertise that JMLR can have such a small and agile management team. Expert AEs
+        Advisory Board and a large group of currently 133 of Action Editors (AEs). The AEs are senior researchers in the field (typically tenured or equivalent), recruited by invitation, and
+            it's by relying on their expertise that JMLR can have such a small and agile management team. Expert AEs
             decentralize much of the editorial work that is typically centralized in EiCs in other journals &ndash; EiCs
             assign each paper to an AE, and from there on the AE takes responsibility for finding reviewers and making
-            the final decision.</span></p>
-    <p class="c0"><span><br></span></p>
-    <p class="c5"><span class="c29">In detail. </span><span>Authors upload submission to </span><span>JMLR&#39;s own
-        </span><span class="c1"><a class="c13"
-                href="https://www.google.com/url?q=https://www.jmlr.org/manudb/center/&amp;sa=D&amp;source=editors&amp;ust=1644511663864197&amp;usg=AOvVaw3J2QMYOSRqte3lQq2KZkW7">submission
-                system</a></span><span>, hosted at MIT (a precise cost estimate is given in section 3).
-        </span><span>This system was initially written by </span><span class="c1"><a class="c13"
-                href="https://www.google.com/url?q=https://www.cs.ucr.edu/~cshelton/&amp;sa=D&amp;source=editors&amp;ust=1644511663864439&amp;usg=AOvVaw2GskcGOSriuRAMJ_ZQWsw7">Christian
-                Shelton</a></span><span class="c3">&nbsp;in 2003 and later improved by subsequent managing editors. It
-            is written in Perl and Python, and uses a PostgreSQL database.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c5"><span>Each manuscript is scanned by an Editor-in-Chief. If the Editor-in-Chief finds the paper out of
-            scope, </span><span>they will desk-reject the paper, </span><span class="c3">otherwise they will assign the
+            the final decision.</p>
+    <p><b>In detail</b>. Authors upload submission to JMLR's own
+        <a href="https://www.jmlr.org/manudb/center/">submission system</a>, hosted at MIT (see section 3 for a precise cost estimate).
+        This system was initially written by <a
+                href="https://www.cs.ucr.edu/~cshelton/">Christian Shelton</a>in 2003. It has served us remarkably well, as the system continues to be in use today with minor improvements by subsequent managing editors. It
+            is written in Perl and Python, and uses a PostgreSQL database.</p>
+    <p>Each manuscript is scanned by an Editor-in-Chief. If the Editor-in-Chief finds the paper out of
+            scope, they will desk-reject the paper, otherwise they will assign the
             paper to an action editor (AE) who has expertise in the area of the paper. The AE decides whether to send
-            the paper for a full review.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c5"><span class="c3">If the paper goes out for review, the AE solicits 2-3 expert reviewers to write
+            the paper for a full review.</p>
+    <p>If the paper goes out for review, the AE solicits 2-3 expert reviewers to write
             detailed technical reviews of the paper. After review, the AE can then accept the paper as is, reject the
             paper, ask for minor revisions, or propose &quot;reject with encouragement to resubmit&quot;, i.e. ask for
-            major revisions.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c5"><span>If the paper is accepted, the production editor prepares the camera-ready version that is then
-            uploaded to </span><span class="c1"><a class="c13"
+            major revisions.</p>
+    <p>If the paper is accepted, the production editor prepares the camera-ready version that is then
+            uploaded to <span class="c1"><a
                 href="https://www.google.com/url?q=https://jmlr.org/papers/&amp;sa=D&amp;source=editors&amp;ust=1644511663865686&amp;usg=AOvVaw3iid7Gz4Jlpu5b_6VNzAGH">the
-                website</a></span><span class="c3">. Papers are accepted on a rolling basis and uploaded as they are
+                website</a>. Papers are accepted on a rolling basis and uploaded as they are
             processed, grouped into one Volume per year. The managing editors support all users of the submission system
             (authors, reviewers, and the editorial board) throughout the reviewing process; the webmaster takes care of
-            uploading the final documents and is responsible for the maintenance of the public webpage.</span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
-    <p class="c5"><span>Besides the main publication track, JMLR also has a track for open source software contributions
-            (</span><span class="c1"><a class="c13"
-                href="https://www.google.com/url?q=https://www.jmlr.org/mloss/mloss-info.html&amp;sa=D&amp;source=editors&amp;ust=1644511663866159&amp;usg=AOvVaw0xfUPz1RyH-OZoDZbLmeEE">https://www.jmlr.org/mloss/mloss-info.html</a></span><span>).
+            uploading the final documents and is responsible for the maintenance of the public webpage.</p>
+    <p>Besides the main publication track, JMLR also has a track for open source software contributions called <a href="https://www.jmlr.org/mloss/mloss-info.html">Machine Learning Open Source Software (MLOSS)</a>.
             These papers have dedicated editors-in-chief and a page limit of 4 pages (main track JMLR papers don&#39;t
             have page limit), along with a different set of reviewing criteria. JMLR has also hosted special issues for
             topics of timely relevance. In recent years, JMLR has also become an umbrella for different publications
-            that we won&#39;t cover in this blog post, such as the </span><span class="c1"><a class="c13"
-                href="https://www.google.com/url?q=http://proceedings.mlr.press&amp;sa=D&amp;source=editors&amp;ust=1644511663866827&amp;usg=AOvVaw3E5LUl2GMG5_kx35jMTJlV">Proceedings
-                of Machine Learning Research</a></span><span>&nbsp;(PMLR) and the recently-announced </span><span
-            class="c1"><a class="c13"
-                href="https://www.google.com/url?q=https://www.jmlr.org/tmlr/&amp;sa=D&amp;source=editors&amp;ust=1644511663867088&amp;usg=AOvVaw0L7ZwVQ_RReoXAyUmpK4Cd">Transactions
-                on Machine Learning Research</a></span><span class="c3">&nbsp;(TMLR), which will start accepting
-            submissions in March 2022.</span></p>
+            that we won&#39;t cover in this blog post, such as the <a
+                href="http://proceedings.mlr.press">Proceedings
+                of Machine Learning Research</a> (PMLR) and the recently-announced <a
+                href="https://www.jmlr.org/tmlr/">Transactions
+                on Machine Learning Research</a> (TMLR), which will start accepting
+            submissions in March 2022.</p>
     
     <h2 id="papers">Papers, decisions and publication time</h2>
 
-    <p class="c12"><span class="c3"></span></p>
-    <p class="c23"><span>The number of papers submitted and accepted has been steadily increasing throughout the years:
-            f</span><span>rom 10 papers published in 2002 to 290 papers published in 202</span><span class="c3">1</span>
+    <p>The number of papers submitted and accepted has been steadily increasing throughout the years:
+            from 10 papers published in 2002 to 290 papers published in 2021
     </p>
-    <p class="c12"><span class="c3"></span></p>
-    <p class="c23"><span>Below we show the </span><span>number of unique submissions (that is, excluding
-            resubmissions) since 2003.</span><sup><a href="#ftnt2" id="ftnt_ref2">[2]</a></sup><span>&nbsp;Color
-            indicates the final decision of the paper:</span></p>
-    <ul class="c22 lst-kix_e54nclyxe7qj-0 start">
-        <li class="c15 li-bullet-0"><span class="c29 c35">desk reject</span><span>, for </span><span class="c3">papers
-                rejected by the action editor or editor-in-chief without sending the paper for review.</span></li>
-        <li class="c15 li-bullet-0"><span class="c29 c32">reject</span><span class="c3">, for papers whose final
+    <p>Below we show the number of unique submissions (that is, excluding
+            resubmissions) since 2003.<sup><a href="#ftnt2" id="ftnt_ref2">[2]</a></sup>Color
+            indicates the final decision of the paper:</p>
+    <ul>
+        <li><b>desk reject</b>, for papers
+                rejected by the action editor or editor-in-chief without sending the paper for review.</li>
+        <li><b>reject</b>, for papers whose final
                 decision after review is either reject or reject with encouragement to resubmit (but whose authors
-                decided to not resubmit), and </span></li>
-        <li class="c15 li-bullet-0"><span class="c25">accept</span><span>, for papers</span><span>&nbsp;that will be
-                published on the website.</span></li>
+                decided to not resubmit), and </li>
+        <li><b>accept</b>, for papers that will be
+                published on the website.</li>
     </ul>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c6"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 269.73px;"><img
-                alt="" src="/img/retrospectives_20years/image1.png"
-                style="width: 624.00px; height: 269.73px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c5"><span class="c3">This plot shows the dramatic growth experienced in recent years. While it took 8
+
+    <p>
+        <img style="width: 90%" alt="For each year, we show the number of submissions color coded according to the associated editorial decision" src="/img/retrospectives_20years/submitted_papers.svg" title="For each year, we show the number of submissions color coded according to the associated editorial decision"><br>
+        <i>Figure 1</i>. For each year, we show the number of submissions color coded according to the associated editorial decision
+    </p>
+
+    <p class="c6">
+            </p>
+    <p class="c0"></p>
+    <p>This plot shows the dramatic growth experienced in recent years. While it took 8
             years for the number of submissions to double in size from 2004 to 2012, it only took 2 years from 2018 to
-            2020 for these to double again.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c5"><span class="c29">Acceptance rate</span><span>.</span><span>&nbsp;</span><span>JMLR&#39;s only
+            2020 for these to double again.</p>
+    <p class="c0"></p>
+    <p><b>Acceptance rate</b>. JMLR&#39;s only
             criteria for acceptance is quality, i.e., it does not enforce an annual acceptance rate. The action editor
-            is responsible </span><span>for deciding</span><span>&nbsp;whether the paper is up to the standard of the
+            is responsible for deciding whether the paper is up to the standard of the
             journal. The following figure shows the yearly evolution of the different editorial decisions (desk reject,
-            reject, accept).</span></p>
-    <p class="c6"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 276.36px;"><img
-                alt="" src="/img/retrospectives_20years/image5.png"
-                style="width: 624.00px; height: 276.36px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
-    <p class="c5"><span>As we can see, the </span><span>percentage</span><span class="c3">&nbsp;of accepted papers has
+            reject, accept).</p>
+    <p class="c6"><img
+        style="width: 90%"
+                alt="Figure 2:  For each year, we show the percentage of submissions that received an editorial decision of desk reject vs. reject vs. accept" src="/img/retrospectives_20years/accept_rate.svg"
+                > <br>
+                <i>Figure 2:</i> For each year, we show the percentage of submissions that received an editorial decision of desk reject vs. reject vs. accept
+        </p>
+    <p>As we can see, the percentage of accepted papers has
             been steadily declining since the 33% acceptance rate of 2007 to the current 17% acceptance. The trend can
-            be explained by a constant strive for quality in face of an increasing number of submissions.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c26"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="c29">Time to receive the
-            first round of reviews</span><span>.</span><span>&nbsp;</span><span>Papers that are sent to reviewers can
+            be explained by a constant strive for quality in face of an increasing number of submissions.</p>
+    <p><b>Time to receive the
+            first round of reviews</b>.&nbsp;Papers that are sent to reviewers can
             take a variable amount of time to come back to authors. Below we plot the median, 25-75 and 10-90 percentile
             for the number of days it took for authors to receive the first round of reviews (hence desk rejected papers
-            are excluded). </span></p>
-    <p class="c26"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 304.77px;"><img
-                alt="" src="/img/retrospectives_20years/image4.png"
-                style="width: 624.00px; height: 304.77px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c12"><span class="c3"></span></p>
-    <p class="c26"><span>This median delay has unfortunately been steadily increasing throughout the years, reaching 187
+            are excluded). </p>
+    <p><img
+        style="width: 90%" alt="Days from submission to decision for papers that are sent to reviewers. The dark line shows median, while lighter intervals represent 25-75 and 10-10 percentile respectively." src="/img/retrospectives_20years/time_to_decision.svg"
+                title=""><br>
+        <i>Figure 3</i>. Days from submission to decision for papers that are sent to reviewers. The dark line shows median, while lighter intervals represent 25-75 and 10-10 percentile respectively.
+        </p>
+    <p>This median delay has unfortunately been steadily increasing throughout the years, reaching 187
             days in 2021. It&#39;s a priority for us to reduce the delay times without sacrificing the quality of the
-            review process</span><span>. The section below </span><span>explores</span><span>&nbsp;the cost of such an
-            endeavor.</span></p>
+            review process. The section below explores&nbsp;the cost of such an
+            endeavor.</p>
 
 
 
     <h2 id="human">The Human Cost of Sustaining a Growing Field</h2>
-    <p class="c14"><span class="c11 c17"></span></p>
-    <p class="c5"><span>The storage and bandwidth needs of the journal, although increasing throughout the years, remain
+    <p>The storage and bandwidth needs of the journal, although increasing throughout the years, remain
             negligible. &nbsp;The full jmlr.org website, including non-public under-review papers, backups, and a
-            PostgreSQL database, occupies 49GB. Currently, MIT provides this storage for free, but it </span><span>would
-            have a cost</span><span>&nbsp;of</span><span>&nbsp;around $100 per </span><span class="c3">month using a
-            standard Cloud Platform.</span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
-    <p class="c5"><span>The most precious resource is the human workforce.</span><span>&nbsp;</span><span>To ensure that
+            PostgreSQL database, occupies 49GB. Currently, MIT provides this storage for free, but it would
+            have a cost&nbsp;of&nbsp;around $100 per month using a
+            standard Cloud Platform.</p>
+    <p>The most precious resource is the human workforce.&nbsp;To ensure that
             published papers are technically sound and of the highest quality, JMLR relies on a group of experts all
-            volunteers. In 2021, JMLR counted 1938 active reviewers (93% of the workforce),</span><sup><a href="#ftnt3"
-                id="ftnt_ref3">[3]</a></sup><span>&nbsp;133 action editors (6%), and 8 members of the editorial board
+            volunteers. In 2021, JMLR counted 1938 active reviewers (93% of the workforce),<sup><a href="#ftnt3"
+                id="ftnt_ref3">[3]</a></sup>&nbsp;133 action editors (6%), and 8 members of the editorial board
             (0.3%), which includes the Editors-in-Chief, and technical time-consuming roles such as webmaster,
-            production editor and managing editor.</span></p>
-    <p class="c5"><span>To handle the increasing workload, the number of action editors and reviewers has been steadily
+            production editor and managing editor.</p>
+    <p>To handle the increasing workload, the number of action editors and reviewers has been steadily
             increasing through the years. The figure below shows the number of Submissions, Action editors and
-            Reviewers.</span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
-    <p class="c6"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-    <p class="c26"><span
-            style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 624.00px; height: 603.42px;"><img
-                alt="" src="/img/retrospectives_20years/image3.png"
-                style="width: 624.00px; height: 603.42px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c14"><span class="c2"></span></p>
-    <p class="c14"><span class="c3"></span></p>
-    <p class="c6"><span>These figures</span><span>&nbsp;highlight</span><span>&nbsp;the increased labor
-        </span><span>that the action editors have taken in recent years: in 2010 the average number of submissions per
-            action editor was 4.5, while in 2020 it was </span><span>more than double, 11.7</span><span class="c3">.
-        </span></p>
-    <h1 class="c21" id="h.3dy6vkm"><span class="c9"></span></h1><a id="id.1xby2ziiu6c9"></a>
+            Reviewers.</p>
+    <p><img alt="" src="/img/retrospectives_20years/editors_reviewers.svg"
+                style="width: 90%"
+                title=""></p>
+    <p class="c14"><span class="c2"></p>
+    <p class="c14"></p>
+    <p class="c6">These figures&nbsp;highlight&nbsp;the increased labor
+        that the action editors have taken in recent years: in 2010 the average number of submissions per
+            action editor was 4.5, while in 2020 it was more than double, 11.7.
+        </p>
+    <h1 class="c21" id="h.3dy6vkm"><span class="c9"></h1><a id="id.1xby2ziiu6c9"></a>
 
     <h2 id="mirroring">Mirroring trends and biases of the field</h2>
-    <p class="c14"><span class="c11 c17"></span></p>
-    <p class="c5"><span>According to recent estimates,</span><sup><a href="#ftnt4"
-                id="ftnt_ref4">[4]</a></sup><span>&nbsp;only 12% of </span><span>leading</span><span>&nbsp;machine
-            learning researchers are </span><span>female</span><span class="c3">&nbsp;and only 22% of jobs in artificial
-            intelligence are held by them, with even fewer holding senior roles.</span></p>
-    <p class="c5"><span>We </span><span>sought</span><span>&nbsp;to understand the representation of female scientists
-            in the journal. </span><span>Unfortunately</span><span>, JMLR does not track </span><span>gender
-            information</span><span class="c3">, so we appealed to the indirect means of inferring gender from first
+    <p class="c14"><span class="c11 c17"></p>
+    <p>According to recent estimates,<sup><a href="#ftnt4"
+                id="ftnt_ref4">[4]</a></sup>&nbsp;only 12% of leading&nbsp;machine
+            learning researchers are female&nbsp;and only 22% of jobs in artificial
+            intelligence are held by them, with even fewer holding senior roles.</p>
+    <p>We sought&nbsp;to understand the representation of female scientists
+            in the journal. Unfortunately, JMLR does not track gender
+            information, so we appealed to the indirect means of inferring gender from first
             names, which only provides a rough estimate. We inferred gender for both action editors and corresponding
             authors. &nbsp;Below we plot the gender proportion of female AEs and authors. We only plot this data since
-            2012, which is when the number of AEs surpassed 100 members:</span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
-    <p class="c5 c20"><span class="c3"></span></p>
+            2012, which is when the number of AEs surpassed 100 members:</p>
+    <p class="c5 c20"></p>
+    <p class="c5 c20"></p>
     <p class="c6"><span
             style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 567.82px; height: 274.93px;"><img
                 alt="" src="/img/retrospectives_20years/image2.png"
                 style="width: 567.82px; height: 274.93px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);"
-                title=""></span></p>
-    <p class="c0"><span class="c2"></span></p>
-    <p class="c14"><span class="c3"></span></p>
-    <p class="c26"><span>The years 2013-2016 are characterized by an </span><span>exceptionally</span><span>&nbsp;low
+                title=""></p>
+    <p class="c0"><span class="c2"></p>
+    <p class="c14"></p>
+    <p>The years 2013-2016 are characterized by an exceptionally&nbsp;low
             number of female AEs, below 10%. This number has been increasingly steady throughout the last few years,
             reaching 17% in 2021. Although this is an improvement on previous years, we&#39;re far from the gender
-            balance that we strive to </span><span>achieve</span><span>. This is an aspect we&#39;re committed to
-            improving.</span></p>
+            balance that we strive to achieve. This is an aspect we&#39;re committed to
+            improving.</p>
 
 
     <h2 id="outlook">Outlook</h2>
-    <p class="c6"><span class="c3">When it was founded in 2002, the first editors of JMLR sought to create an
+    <p class="c6">When it was founded in 2002, the first editors of JMLR sought to create an
             independent and open-access journal, with the most minimal operating costs. &nbsp;This was a radical and
             visionary experiment, and it was a success. &nbsp;Today, JMLR is a top journal in AI and ML, while remaining
-            free, open, and community-driven.</span></p>
-    <p class="c0"><span class="c3"></span></p>
-    <p class="c6"><span>Since 2002, the fields of </span><span>AI and ML have </span><span>grown and thrived, and JMLR
+            free, open, and community-driven.</p>
+    <p class="c0"></p>
+    <p class="c6">Since 2002, the fields of AI and ML have grown and thrived, and JMLR
             has grown along with them. Of course, the increase in submissions means increased demands on all the
-            volunteers&rsquo; time and energy. &nbsp;JMLR is indebted to the </span><span>immense</span><span
+            volunteers&rsquo; time and energy. &nbsp;JMLR is indebted to the immense<span
             class="c3">&nbsp;efforts of the leadership team, the action editors, and the many reviewers. &nbsp;Thank you
-            for making JMLR great and keeping JMLR free.</span></p>
-    <p class="c14"><span class="c3"></span></p>
-    <p class="c26"><span>Fabian Pedregosa, Tegan Maharaj, Alp Kucukelbir, Rajarshi Das, Valentina Borghesani,
-            &nbsp;Francis Bach, David Blei, Bernhard Sch&ouml;lkopf, </span><span class="c8">&quot;Retrospectives from
-            20 Years of JMLR&quot;</span><span class="c3">, https://www.jmlr.org/blog/20_years.html</span></p>
-    <p class="c14"><span class="c2"></span></p>
-    <p class="c26"><span class="c29">Acknowledgements</span><span class="c3">. We would like to thank Leslie Pack
-            Kaelbling, Lawrence Saul and Barbara Engelhardt for providing feedback on this blog post.</span></p>
-    <p class="c14"><span class="c2"></span></p>
+            for making JMLR great and keeping JMLR free.</p>
+    <p class="c14"></p>
+    <p>Fabian Pedregosa, Tegan Maharaj, Alp Kucukelbir, Rajarshi Das, Valentina Borghesani,
+            &nbsp;Francis Bach, David Blei, Bernhard Sch&ouml;lkopf, <span class="c8">&quot;Retrospectives from
+            20 Years of JMLR&quot;, https://www.jmlr.org/blog/20_years.html</p>
+    <p class="c14"><span class="c2"></p>
+    <p><span class="c29">Acknowledgements. We would like to thank Leslie Pack
+            Kaelbling, Lawrence Saul and Barbara Engelhardt for providing feedback on this blog post.</p>
+    <p class="c14"><span class="c2"></p>
     <hr class="c16">
     <div>
         <p class="c7"><a href="#ftnt_ref1" id="ftnt1">[1]</a><span class="c31">&nbsp;The only paid &nbsp;job at JMLR is
                 that of the part-time editorial assistant, who provides email support to users of the journal and
-                ensures the manuscripts flow smoothly through the submission and review system.</span></p>
+                ensures the manuscripts flow smoothly through the submission and review system.</p>
     </div>
     <div>
         <p class="c7"><a href="#ftnt_ref2" id="ftnt2">[2]</a><span class="c19">&nbsp;Although the journal was
                 established in the year 2000, the current submission system was created in 2003 thus prior statistics
-                are not available </span></p>
+                are not available </p>
     </div>
     <div>
         <p class="c7"><a href="#ftnt_ref3" id="ftnt3">[3]</a><span class="c19">&nbsp;We count active reviewers as those
-                that have performed at least one review during the year 2021.</span></p>
+                that have performed at least one review during the year 2021.</p>
     </div>
 
     {% endblock %}

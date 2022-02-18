@@ -1,6 +1,8 @@
 import json
 import os
 from datetime import datetime
+from datetime import date
+
 from glob import glob
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import utils
@@ -136,9 +138,13 @@ if __name__ == "__main__":
 
         render_webpage(env, prefix, "index.html", base_url, {'info_list': info_by_issue})
 
-        news_dir = os.path.join("output", prefix, "news")
-        if not os.path.exists(news_dir):
-            os.mkdir(news_dir)
+  
+        # creating the date object of today's date
+        todays_date = date.today()
+        for year in range(2021, todays_date.year + 1):
+            news_dir = os.path.join("output", prefix, "news", str(year))
+            if not os.path.exists(news_dir):
+                os.makedirs(news_dir)
 
         for page in [
                 "author-info.html",
@@ -150,8 +156,8 @@ if __name__ == "__main__":
                 "reviewer-guide.html",
                 "stats.html",
                 "faq.html",
-                "news/schoelkopf-retirement.html",
-                "news/retrospectives_20years.html",
+                "news/2021/schoelkopf-retirement.html",
+                "news/2022/retrospectives.html",
                 "format/authors-guide.html",
                 "format/format.html",
                 "format/formatting-errors.html",

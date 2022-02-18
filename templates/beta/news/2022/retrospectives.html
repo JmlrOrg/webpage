@@ -118,7 +118,7 @@ h2 {
     </ul>
 
     <p>
-        <img style="width: 90%" alt="For each year, we show the number of submissions color coded according to the associated editorial decision" src="/img/retrospectives_20years/submitted_papers.svg" title="For each year, we show the number of submissions color coded according to the associated editorial decision"><br>
+        <img style="width: 90%; max-width: 1000px; display: block; margin: auto" alt="For each year, we show the number of submissions color coded according to the associated editorial decision" src="/img/retrospectives_20years/submitted_papers.svg" title="For each year, we show the number of submissions color coded according to the associated editorial decision"><br>
         <i>Figure 1</i>. For each year, we show the number of submissions color coded according to the associated editorial decision
     </p>
 
@@ -135,7 +135,7 @@ h2 {
             journal. The following figure shows the yearly evolution of the different editorial decisions (desk reject,
             reject, accept).</p>
     <p><img
-        style="width: 90%"
+        style="width: 90%; max-width: 1000px; display: block; margin: auto"
                 alt="Figure 2:  For each year, we show the percentage of submissions that received an editorial decision of desk reject vs. reject vs. accept" src="/img/retrospectives_20years/accept_rate.svg"
                 > <br>
                 <i>Figure 2:</i> For each year, we show the percentage of submissions that received an editorial decision of desk reject vs. reject vs. accept
@@ -149,7 +149,7 @@ h2 {
             for the number of days it took for authors to receive the first round of reviews (hence desk rejected papers
             are excluded). </p>
     <p><img
-        style="width: 90%" alt="Days from submission to decision for papers that are sent to reviewers. The dark line shows median, while lighter intervals represent 25-75 and 10-10 percentile respectively." src="/img/retrospectives_20years/time_to_decision.svg"
+        style="width: 90%; max-width: 1000px; display: block; margin: auto" alt="Days from submission to decision for papers that are sent to reviewers. The dark line shows median, while lighter intervals represent 25-75 and 10-10 percentile respectively." src="/img/retrospectives_20years/time_to_decision.svg"
                 title=""><br>
         <i>Figure 3</i>. Days from submission to decision for papers that are sent to reviewers. The dark line shows median, while lighter intervals represent 25-75 and 10-10 percentile respectively.
         </p>
@@ -177,7 +177,7 @@ h2 {
             Reviewers.</p>
     <p><img alt="Number of action editors and reviewers throughout the years.
         " src="/img/retrospectives_20years/editors_reviewers.svg"
-                style="width: 90%"
+                style="width: 90%; max-width: 1000px; display: block; margin: auto"
                 title=""><br>
         <i>Figure 4</i>: Number of action editors and reviewers throughout the years.
         </p>
@@ -202,7 +202,7 @@ h2 {
     <p><img
                 alt="Percentage of female action editors and corresponding authors. 
                 " src="/img/retrospectives_20years/gender_ae.svg"
-                style="width: 90%"
+                style="width: 90%; max-width: 1000px; display: block; margin: auto"
                 title=""> <br>
         <i>Figure 5:</i> Percentage of female action editors and corresponding authors. 
         </p>
@@ -225,7 +225,7 @@ h2 {
             has grown along with them. Of course, the increase in submissions means increased demands on all the
             volunteers&rsquo; time and energy. &nbsp;JMLR is indebted to the immense<span
             class="c3">&nbsp;efforts of the leadership team, the action editors, and the many reviewers. &nbsp;Thank you
-            for making JMLR great and keeping JMLR free.</p>
+            for making JMLR such a great journal and keeping JMLR free.</p>
     <p class="c14"></p>
 
     <h2 id="credits">6. Credits</h2>
@@ -268,7 +268,29 @@ h2 {
                 that have performed at least one review during the year 2021.</p>
     </div>
     <div>
-        <p><a href="#ftnt_ref4" id="ftnt4">[4]</a><a href="https://www.forbes.com/sites/falonfatemi/2020/02/17/bridging-the-gender-gap-in-ai/">Bridging The Gender Gap In AI</a>, Forbes magazine.  .</p> 
+        <p><a href="#ftnt_ref4" id="ftnt4">[4]</a><a href="https://www.forbes.com/sites/falonfatemi/2020/02/17/bridging-the-gender-gap-in-ai/">Bridging The Gender Gap In AI</a>, Forbes magazine.</p> 
     </div>
+    <br>
+    <hr>
+    <br>
 
+    <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = 'https://www.jmlr.org/news/2022/retrospectives.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'retrospectives'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://jmlr-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {% endblock %}

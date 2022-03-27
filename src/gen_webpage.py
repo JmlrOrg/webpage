@@ -9,7 +9,7 @@ import utils
 
 
 YEAR = datetime.today().year
-
+GEN_VOLUMES = True
 
 
 if not os.path.exists("output"):
@@ -105,6 +105,9 @@ if __name__ == "__main__":
 
         # .. build volumes one by one ...
         volumes = sorted([int(v[1:]) for v in  glob("v*")])
+        if not GEN_VOLUMES:
+            # take only the last volume
+            volumes = volumes[-1:]
         for vol in volumes:
             print("Generating Volume %s out of %s" % (vol, volumes[-1]))
             os.makedirs(os.path.join("output", prefix, "papers/v%s" % vol), exist_ok=True)

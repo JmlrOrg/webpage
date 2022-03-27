@@ -28,7 +28,8 @@ def render_webpage(env, prefix, page, base_url, template_kw):
             stats_active=(page == "stats.html"),
             submissions_active=(page == "author-info.html"),
             faq_active=(page == "faq.html"),
-            contact_active=(page == "contact.html")
+            contact_active=(page == "contact.html"),
+            special_issues_active=("special_issues" in page)
         )
         f.write(out)
 
@@ -164,6 +165,10 @@ if __name__ == "__main__":
                 "format/authors-guide.html",
                 "format/format.html",
                 "format/formatting-errors.html",
+                "special_issues/index.html",
+                "special_issues/contact.html",
+                "special_issues/list.html",
+                "special_issues/nomination.html",
         ]:
             render_webpage(env, prefix, page, base_url, {})
 

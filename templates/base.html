@@ -82,11 +82,19 @@ ul li {
     <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="#advisory">Advisory Board</a></p>
     {% endif %}
 
+    <p align="right" {% if special_issues_active %}style="margin-bottom: 0"{% endif %}> <A href="/special_issues/"> {% if special_issues_active %}<b>{% endif %}Special Issues {% if special_issues_active %}</b>{% endif %}</A> 
+
+        {% if special_issues_active %}
+        <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/special_issues/list.html">List of Special Issues</a></p>
+        <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/special_issues/nomination.html">Nomination</a></p>
+        <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/special_issues/contact.html">Contact and FAQ</a></p>
+        {% endif %}
+    
+  <p align="right"> <A href="/mloss">Open Source Software</A>
+
   <p align="right"> <A href="/proceedings"> Proceedings (PMLR)</A>
 
   <p align="right"> <A href="/tmlr"> Transactions (TMLR) </A>
-
-  <p align="right"> <A href="/mloss">Open Source Software</A>
 
   <p align="right"> <A href="/search-jmlr.html"> Search </A>
 

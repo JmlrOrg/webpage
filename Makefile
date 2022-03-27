@@ -11,6 +11,9 @@ npm: clean
 	mkdir -p output/beta/css
 	mkdir -p output/beta/format
 	mkdir -p output/format
+	mkdir -p output/beta/format
+	mkdir -p output/special_issues
+	mkdir -p output/beta/special_issues
 	cp node_modules/mdbootstrap/js/*.* output/beta/js/
 	cp node_modules/mdbootstrap/css/*.* output/beta/css/
 

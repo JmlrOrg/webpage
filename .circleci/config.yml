@@ -49,11 +49,9 @@ jobs:
       
       - run: sudo apt update
       
-      - run: sudo apt install rsync
-      
-      - run: pip install pexpect
+      - run: pip install awscli
 
-      - run: python src/upload.py
+      - run:  make circle_upload
 
 
 

@@ -36,3 +36,7 @@ update:
 	git submodule foreach git pull origin main
 	git pull origin main
 	git submodule foreach git submodule update
+
+
+circle_upload: static
+	aws s3 sync --region eu-west-1 --acl public-read --exclude "js/*" output/ s3://jmlr.org

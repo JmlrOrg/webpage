@@ -39,4 +39,4 @@ update:
 
 
 circle_upload:
-	aws s3 sync --region eu-west-1 --acl public-read --exclude "js/*" output/ s3://jmlr.org
+	aws s3 sync --region eu-west-1 --acl public-read --exclude "js/*" output/output/ s3://jmlr.org

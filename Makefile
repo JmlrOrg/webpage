@@ -16,6 +16,8 @@ npm: clean
 	mkdir -p output/beta/special_issues
 	cp node_modules/mdbootstrap/js/*.* output/beta/js/
 	cp node_modules/mdbootstrap/css/*.* output/beta/css/
+	wget https://jmlr.csail.mit.edu/manudb/editorial_board?list=action output/aes.html
+	wget https://jmlr.csail.mit.edu/manudb/editorial_board output/reviewers.html
 
 webpage: npm
 	python src/gen_webpage.py

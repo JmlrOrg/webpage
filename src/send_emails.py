@@ -2,6 +2,10 @@
 Usage: python bin/send_emails.py vol id1  id2  id3
 Example: python bin/send_emails.py 19 16-210  16-656
 will process papers with id 16-210 and 16-656 from volume 19
+
+First make sure you have credentials set up
+https://developers.google.com/workspace/guides/create-credentials
+
 """
 
 import sys

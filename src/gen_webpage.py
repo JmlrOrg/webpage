@@ -46,16 +46,17 @@ if __name__ == "__main__":
             base_url = "/" + prefix
 
         # .. MLOSS webpage ..
-        mloss_dir = os.path.join("output", prefix, "mloss")
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        mloss_dir = os.path.join(dir_path, "..", "output", prefix, "mloss")
         if not os.path.exists(mloss_dir):
             os.mkdir(mloss_dir)
 
         env = Environment(
-            loader=FileSystemLoader(os.path.join("templates", prefix)),
+            loader=FileSystemLoader(os.path.join(dir_path, "..", "templates", prefix)),
             autoescape=select_autoescape(["html", "xml"]),
         )
         render_webpage(env, prefix, "mloss/mloss-info.html", base_url, {})
-        with open(os.path.join("output", prefix, "mloss/index.html"), "w") as f:
+        with open(os.path.join(dir_path, "..", "output", prefix, "mloss/index.html"), "w") as f:
             mloss_start_vol = 6
             list_info_mloss = []
             while True:
@@ -80,11 +81,11 @@ if __name__ == "__main__":
 
 
         for (special_topic, template) in [("Bayesian Optimization", "bayesian_optimization.html")]:
-            topic_dir = os.path.join("output", prefix, "papers/topic")
+            topic_dir = os.path.join(dir_path, "..", "output", prefix, "papers/topic")
             if not os.path.exists(topic_dir):
                 os.makedirs(topic_dir, exist_ok=True)
 
-            with open(os.path.join("output", prefix, "papers/topic/%s" % template), "w") as f:
+            with open(os.path.join(dir_path, "..", "output", prefix, "papers/topic/%s" % template), "w") as f:
                 topic_start_vol = 11
                 list_info_topic = []
                 while True:
@@ -105,6 +106,7 @@ if __name__ == "__main__":
                 f.write(out)
 
         # .. build volumes one by one ...
+        os.chdir(os.path.join(dir_path, ".."))
         volumes = sorted([int(v[1:]) for v in  glob("v*")])
         if not GEN_VOLUMES:
             # take only the last volume

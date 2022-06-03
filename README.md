@@ -7,19 +7,19 @@ Sources for the [JMLR webpage](http://jmlr.org).
 
   1. Clone this repo with all its submodules:
       ```
-      $ git clone --recurse-submodules -j8 https://github.com/JmlrOrg/webpage.git jmlr_webpage
+      git clone --recurse-submodules -j8 https://github.com/JmlrOrg/webpage.git jmlr_webpage
       ```
 
   2. Build the webpage. The following command assumes that you have NodeJS and Python installed:
  
       ```
-      $ make
+      make
       ```
 
   3. Run a local server
  
       ```
-      $ make develop
+      make develop
       ```
 
 
@@ -29,6 +29,6 @@ Sources for the [JMLR webpage](http://jmlr.org).
 * Update all submodules to latest commit:
 
     ```
-    $ make update
+    make update
     ```
 

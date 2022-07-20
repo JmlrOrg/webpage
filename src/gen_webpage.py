@@ -171,6 +171,7 @@ if __name__ == "__main__":
                 "special_issues/contact.html",
                 "special_issues/list.html",
                 "special_issues/nomination.html",
+                "special_issues/climate_change.html",
         ]:
             render_webpage(env, prefix, page, base_url, {})
 

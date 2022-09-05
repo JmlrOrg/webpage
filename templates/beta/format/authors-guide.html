@@ -1,184 +1,168 @@
 {% extends "base.html" %} {% block content %}
-<h1>Author Guide: Instructions for Final Preparation</h1>
-
-<h2>Journal of Machine Learning Research</h2>
-
-<p>
-  Congratulations on the acceptance of your paper into JMLR. Once a paper has
-  been accepted for publication, you should follow the procedure outlined below.
-  The final version of your manuscript is due to us
-  <em>within three months</em> of the acceptance date.
-</p>
-<p>
-  JMLR is a volunteer-led, open access journal. Therefore, please follow the
-  formatting instructions carefully.
-</p>
-
-<ol>
-  <li>
-    <p>
-      <b>Make sure that your article is formatted according the JMLR style.</b>
-      The JMLR style is described in
-      <a href="http://www.jmlr.org/format/format.html">
+  <h1>Author Guide: Instructions for Final Preparation</h1>
+  <h2>Journal of Machine Learning Research</h2>
+  <p>
+    Congratulations on the acceptance of your paper into JMLR. Once a paper has
+    been accepted for publication, you should follow the procedure outlined below.
+    The final version of your manuscript is due to us
+    <em>within three months</em> of the acceptance date.
+  </p>
+  <p>
+    JMLR is a volunteer-led, open access journal. Therefore, please follow the
+    formatting instructions carefully.
+  </p>
+  <ol>
+    <li>
+      <p>
+        <b>Make sure that your article is formatted according the JMLR style.</b>
+        The JMLR style is described in
+        <a href="http://www.jmlr.org/format/format.html">
         Instructions for Formatting JMLR Articles</a
-      >. This page contains more information, including the official JMLR style
-      file, and example papers.Please pay particular attention to
-      <a href="formatting-errors.html">the list of common formatting errors</a>.
-    </p>
-    <p>
-      Your paper should be prepared in LaTeX, using the official JMLR style
-      file, which you should not modify. We must be able to compile your paper
-      using
-      <tt>latexmk</tt> via <tt>pdflatex</tt>. In particular, this means that if
-      you use PostScript figures, you must use <tt>eps</tt> files rather than
-      <tt>ps</tt> files.
-    </p>
-    <p>
-      Most likely, you will have already done this for the submission of your
-      paper. However, you should go over the formatting rules and the checklist
-      again carefully before submitting the camera ready copy. It is our
-      experience that most authors break at least a dozen formatting rules.
-    </p>
-    <p>Authors are responsible for correctly formatting their article.</p>
-  </li>
-
-  <li>
-    <p>
-      <b>Make any final changes and have your article proofread.</b>
-      Because our production staff is all volunteer, we ourselves cannot copy
-      edit your paper. Authors are notoriously bad proofreaders. Have the paper
-      proofread by a skilled proofreader &mdash; NOT one of the authors.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <b>If you wish, create an appendix.</b> We recommend adding your appendix
-      to your manuscript such that it appears at the very end, in the same PDF.
-      You may separately provide a link to your source code. It is the authors
-      responsibility to maintain any links to source code.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <b>Create a file archive</b> (zip or tar.gz is file) with your paper. This
-      archive should contain the LaTeX source, the .bib file, figures, and
-      everything needed to compile your document. The archive should ideally
-      contain only one <tt>.tex</tt> file. You may want to run your through
-      <tt>latexpand</tt> (<a href="https://ctan.org/pkg/latexpand"
+        >. This page contains more information, including the official JMLR style
+        file, and example papers.Please pay particular attention to
+        <a href="formatting-errors.html">the list of common formatting errors</a>.
+      </p>
+      <p>
+        Your paper should be prepared in LaTeX, using the official JMLR style
+        file, which you should not modify. We must be able to compile your paper
+        using
+        <tt>latexmk</tt> via <tt>pdflatex</tt>. In particular, this means that if
+        you use PostScript figures, you must use <tt>eps</tt> files rather than
+        <tt>ps</tt> files.
+      </p>
+      <p>
+        Most likely, you will have already done this for the submission of your
+        paper. However, you should go over the formatting rules and the checklist
+        again carefully before submitting the camera ready copy. It is our
+        experience that most authors break at least a dozen formatting rules.
+      </p>
+      <p>Authors are responsible for correctly formatting their article.</p>
+    </li>
+    <li>
+      <p>
+        <b>Make any final changes and have your article proofread.</b>
+        Because our production staff is all volunteer, we ourselves cannot copy
+        edit your paper. Authors are notoriously bad proofreaders. Have the paper
+        proofread by a skilled proofreader &mdash; NOT one of the authors.
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>If you wish, create an appendix.</b> We recommend adding your appendix
+        to your manuscript such that it appears at the very end, in the same PDF.
+        You may separately provide a link to your source code. It is the authors
+        responsibility to maintain any links to source code.
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Create a file archive</b> (zip or tar.gz is file) with your paper. This
+        archive should contain the LaTeX source, the .bib file, figures, and
+        everything needed to compile your document. The archive should ideally
+        contain only one <tt>.tex</tt> file. You may want to run your through
+        <tt>latexpand</tt> (<a href="https://ctan.org/pkg/latexpand"
         >https://ctan.org/pkg/latexpand</a
-      >). We process your paper via an automatic system, so please follow these
-      rules:
-    </p>
-    <ol type="a">
-      <li>
-        <p>
-          Your submission must be an archive that contains all of the files
-          necessary to compile the paper. It must be compilable using
-          <tt>latexmk</tt>.
-        </p>
-      </li>
-
-      <li>
-        <p>
-          Do <u>not</u> color your hyperlinks. Do <u>not</u> put boxes around
-          your hyperlinks. Use
-          <code>\hypersetup{ hidelinks }.</code>
-        </p>
-      </li>
-
-      <li>
-        <p>Do <u>not</u> change the geometry/margins of the manuscript.</p>
-      </li>
-
-      <li>
-        <p>
-          Your page numbers should start at 1, both in the
-          <tt>\jmlrheading</tt> command and in your actual paper.
-        </p>
-      </li>
-
-      <li>
-        <p>
-          You file should include an <tt>\editor{...}</tt> command that lists
-          the action editor who has corresponded with you.
-        </p>
-      </li>
-
-      <li>
-        <p>
-          Your <tt>\jmlrheading</tt> command should contain the correct year,
-          volume number, publication dates, etc. You must fill in all of the
-          information. The format for this is:
-        </p>
-        <pre>
-\usepackage{lastpage} 
-\jmlrheading{volume}{year}{1-\pageref{LastPage}}{[DATE SUBMITTED]; Revised [DATE REVISED]}{[DATE PUBLISHED]}{PAPER ID}{all authors FULL names} 
-        </pre>
-        <p>
-          For example, suppose that you submitted your paper to the production
-          system in September 2019 and revised it on December 2021. It is now
-          January 2022 and you are uploading your paper to the JMLR production
-          system. Your header should then look like this.
-        </p>
-        <pre>
-\usepackage{lastpage} 
-\jmlrheading{23}{2022}{1-\pageref{LastPage}}{9/19; Revised 12/21}{1/22}{PAPER ID}{all authors FULL names}       
-        </pre>
-        <p>Please use the current month and year as the publication date.</p>
-        <p>
-          If you never needed to submit a revision (i.e., you submitted one
-          version that was accepted with no changes), then you should leave off
-          the "Revised" date. These dates will be verified against the paper
-          database, so it is important that they be correct.
-        </p>
-      </li>
-      <li>
-        <p>
-          The scripts specifically check whether the paper headings are correct
-          (e.g., page numbers, \jmlrheading, \ShortHeadings, \editor, and so
-          on). To speed processing of your paper, please give special attention
-          to make sure that these are correct and follow the lines of the
-          example file.
-        </p>
-      </li>
-    </ol>
-  </li>
-
-  <li>
-    <p>
-      <b>Upload your paper archive to the JMLR production system.</b>
-      You should have received an email with the URL of the automated system
-      when your paper was accepted. If you have not received this email, please
-      contact the production editor.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <b>Verify your paper.</b>
-      It is your responsibility to verify that the JMLR production system has
-      correctly compiled your manuscript. Please carefully check that all parts
-      of your paper have been correctly compiled.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      <b>The JMLR production editor will review your submission.</b>
-      We generally process papers every 6 to 8 weeks. We cannot accept
-      edits/modifications to your paper once it has been published to our
-      website.
-    </p>
-  </li>
-
-  <li>
-    <p>
-      You will receive an email with a link to your paper once it has been
-      published.
-    </p>
-  </li>
-</ol>
-
+        >). We process your paper via an automatic system, so please follow these
+        rules:
+      </p>
+      <ol type="a">
+        <li>
+          <p>
+            Your submission must be an archive that contains all of the files
+            necessary to compile the paper. It must be compilable using
+            <tt>latexmk</tt>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Do <u>not</u> color your hyperlinks. Do <u>not</u> put boxes around
+            your hyperlinks. Use
+            <code>\hypersetup{ hidelinks }.</code>
+          </p>
+        </li>
+        <li>
+          <p>Do <u>not</u> change the geometry/margins of the manuscript.</p>
+        </li>
+        <li>
+          <p>
+            Your page numbers should start at 1, both in the
+            <tt>\jmlrheading</tt> command and in your actual paper.
+          </p>
+        </li>
+        <li>
+          <p>
+            You file should include an <tt>\editor{...}</tt> command that lists
+            the action editor who has corresponded with you.
+          </p>
+        </li>
+        <li>
+          <p>
+            Your <tt>\jmlrheading</tt> command should contain the correct year,
+            volume number, publication dates, etc. You must fill in all of the
+            information. The format for this is:
+          </p>
+                  <pre>
+            \usepackage{lastpage}
+            \jmlrheading{volume}{year}{1-\pageref{LastPage}}{[DATE SUBMITTED]; Revised [DATE REVISED]}{[DATE PUBLISHED]}{PAPER ID}{all authors FULL names}
+          </pre>
+          <p>
+            For example, suppose that you submitted your paper to the production
+            system in September 2019 and revised it on December 2021. It is now
+            January 2022 and you are uploading your paper to the JMLR production
+            system. Your header should then look like this.
+          </p>
+                  <pre>
+            \usepackage{lastpage}
+            \jmlrheading{23}{2022}{1-\pageref{LastPage}}{9/19; Revised 12/21}{1/22}{PAPER ID}{all authors FULL names}
+          </pre>
+          <p>Please use the current month and year as the publication date.</p>
+          <p>
+            If you never needed to submit a revision (i.e., you submitted one
+            version that was accepted with no changes), then you should leave off
+            the "Revised" date. These dates will be verified against the paper
+            database, so it is important that they be correct.
+          </p>
+        </li>
+        <li>
+          <p>
+            The scripts specifically check whether the paper headings are correct
+            (e.g., page numbers, \jmlrheading, \ShortHeadings, \editor, and so
+            on). To speed processing of your paper, please give special attention
+            to make sure that these are correct and follow the lines of the
+            example file.
+          </p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      <p>
+        <b>Upload your paper archive to the JMLR production system.</b>
+        You should have received an email with the URL of the automated system
+        when your paper was accepted. If you have not received this email, please
+        contact the production editor.
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Verify your paper.</b>
+        It is your responsibility to verify that the JMLR production system has
+        correctly compiled your manuscript. Please carefully check that all parts
+        of your paper have been correctly compiled.
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>The JMLR production editor will review your submission.</b>
+        We generally process papers every 6 to 8 weeks. We cannot accept
+        edits/modifications to your paper once it has been published to our
+        website.
+      </p>
+    </li>
+    <li>
+      <p>
+        You will receive an email with a link to your paper once it has been
+        published.
+      </p>
+    </li>
+  </ol>
 {% endblock %}

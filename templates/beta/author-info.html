@@ -1,441 +1,388 @@
 {% extends "base.html" %} {% block content %}
-<h1>JMLR Information for Authors</h1>
-
-<ul>
-  <li>
-    <a href="#Overview">Overview</a>
-  </li>
+  <h1>JMLR Information for Authors</h1>
   <ul>
-    <li><a href="#Scope">Scope</a></li>
-
     <li>
-      <a href="#Content">Content</a>
+      <a href="#Overview">Overview</a>
     </li>
-
-    <li>
-      <a href="#Originality">Originality</a>
-    </li>
-
-    <li>
-      <a href="#Preprints">Preprints</a>
-    </li>
-
-    <li>
-      <a href="#Submission">Submission procedure</a>
-      (submit at
-      <a href="https://jmlr.csail.mit.edu/manudb/"
+    <ul>
+      <li><a href="#Scope">Scope</a></li>
+      <li>
+        <a href="#Content">Content</a>
+      </li>
+      <li>
+        <a href="#Originality">Originality</a>
+      </li>
+      <li>
+        <a href="#Preprints">Preprints</a>
+      </li>
+      <li>
+        <a href="#Disclosure">Disclosure of Funding</a>
+      </li>
+      <li>
+        <a href="#Submission">Submission procedure</a>
+        (submit at
+        <a href="https://jmlr.csail.mit.edu/manudb/"
         >https://jmlr.csail.mit.edu/manudb/</a
-      >)
+        >)
+      </li>
+      <li>
+        <a href="#Reviewing">Reviewing</a>
+      </li>
+      <li>
+        <a href="#Publication">Publication</a>
+      </li>
+      <li>
+        <a href="#PublicationFees">Publication fees</a>
+      </li>
+    </ul>
+    <li>
+      <a href="discussion.html">Discussion Articles</a>
     </li>
     <li>
-      <a href="#Reviewing">Reviewing</a>
-    </li>
-
-    <li>
-      <a href="#Publication">Publication</a>
+      <a href="mloss/mloss-info.html">Open Source Software</a>
     </li>
     <li>
-      <a href="#PublicationFees">Publication fees</a>
+      <a href="#Links">Links - authors guide, forms and style files</a>
     </li>
+    <li><a href="format/authors-guide.html">Final paper preparation</a></li>
   </ul>
-
-  <li>
-    <a href="discussion.html">Discussion Articles</a>
-  </li>
-
-  <li>
-    <a href="mloss/mloss-info.html">Open Source Software</a>
-  </li>
-
-  <li>
-    <a href="#Links">Links - authors guide, forms and style files</a>
-  </li>
-
-  <li><a href="format/authors-guide.html">Final paper preparation</a></li>
-</ul>
-
-<a class="anchor" name="Overview"><h2>Overview</h2></a>
-<a class="anchor" name="Scope"><h3>Scope</h3></a>
-JMLR seeks previously unpublished papers on machine learning that contain:
-<ul>
-  <li>
-    new principled algorithms with sound empirical validation, and with
-    justification of theoretical, psychological, or biological nature;
-  </li>
-  <!--
-<li>
-new algorithms with empirical, theoretical, psychological, or biological
-justification;</li>
--->
-
-  <li>
-    experimental and/or theoretical studies yielding new insight into the design
-    and behavior of learning in intelligent systems;
-  </li>
-
-  <li>
-    accounts of applications of existing techniques that shed light on the
-    strengths and weaknesses of the methods;
-  </li>
-
-  <li>
-    formalization of new learning tasks (e.g., in the context of new
-    applications) and of methods for assessing performance on those tasks;
-  </li>
-
-  <li>
-    development of new analytical frameworks that advance theoretical studies of
-    practical learning methods;
-  </li>
-
-  <li>
-    computational models of data from natural learning systems at the behavioral
-    or neural level
-  </li>
-</ul>
-
-<p>
-  JMLR occasionally publishes surveys, by invitation from the editorial board.
-</p>
-
-<h3>
-  <a class="anchor" name="Content">Content</a>
-</h3>
-Papers must be concise and complete; manuscripts should be carefully proofread
-and polished. Submissions that do not meet these criteria may be returned
-unreviewed.
-<p>
-  All claims should be clearly articulated and supported either by empirical
-  experiments or theoretical analyses. When appropriate, authors are encouraged
-  to implement their work and to demonstrate its utility on significant
-  problems; any experiments reported should be reproducible. Papers describing
-  systems should clearly describe the contributions or the principles underlying
-  the system. Papers describing theoretical results should also discuss their
-  practical utility. In general, it should be clear how the work advances the
-  current state of understanding and why the advance matters. Papers should
-  report on what was learned in doing the work, rather than merely on what was
-  done.
-</p>
-
-<p>
-  Authors must clearly acknowledge the contributions of their predecessors, and
-  situate their submission in the context of the broader machine learning
-  research literature. If a paper introduces new terminology or techniques, it
-  should also explain why current terminology or techniques are insufficient.
-</p>
-
-<h3>
-  <a class="anchor" name="Originality">Originality</a>
-</h3>
-<p>
-  Submissions to JMLR cannot have been published previously in any other
-  journal. We will consider submissions that have been published at workshops or
-  conferences. In these cases, we expect the JMLR submission to cite the prior
-  work, go into much greater depth and to extend the published results in a
-  substantive way. In all cases, authors must notify JMLR about previous
-  publication at the time of submission, attach the previous paper as a
-  supplementary document, and explain the differences from their prior work.
-</p>
-
-<p>
-  Examples of (possibly) acceptable 'deltas' beyond a conference paper include:
-  new theoretical results, entirely new application domains, significant new
-  insights and/or analyses. Examples of insufficient deltas include: adding
-  proofs that were omitted from a conference paper; minor variations or
-  extensions of previous experiments; adding extra background material or
-  references. However, we ultimately leave the decision about whether a 'delta'
-  is significant enough up to the individual reviewers.
-</p>
-
-<p>Currently, JMLR does not publish review articles.</p>
-
-<h3><a class="anchor" name="Preprints">Preprints</a></h3>
-
-<p>
-  Authors may submit work to JMLR that is already available as a preprint, for
-  example on arXiV or personal websites.
-</p>
-
-<h3>
-  <a class="anchor" name="Submission">Submission procedure</a>
-</h3>
-
-<p>
-  JMLR accepts submissions via its own
-  <a href="https://jmlr.csail.mit.edu/manudb/" target="_blank"
-    >electronic submission management system</a
-  >.
-</p>
-
-<p>
-  Submissions must be typeset in LaTex using the
-  <a href="https://github.com/JmlrOrg/jmlr-style-file">JMLR LaTeX style file</a>
-  described in the
-  <a href="http://www.jmlr.org/format/authors-guide.html"> authors guide</a>.
-  Only PDF files should be submitted. Papers not in the JMLR style file will be
-  rejected without review
-</p>
-
-<p>
-  Articles may be accompanied by online appendices containing data,
-  demonstrations, instructions for obtaining source code, or the source code
-  itself&nbsp; if appropriate. We strongly encourage authors to include such
-  appendices along with their papers. (Note: if an online appendix contains
-  source code, we will require you to sign a release form prior to publication
-  freeing us from liability.) We also strongly encourage authors to submit their
-  data sets to the
-  <a href="http://archive.ics.uci.edu/ml/">UCI Machine Learning Repository</a>.
-</p>
-
-<p>
-  Papers longer than 35 pages will take a longer time to review and may be rejected if an AE and reviewers cannot be found. Further, papers above 50 pages require a note of justification in the cover letter, and may be desk rejected.  (Note that these page counts include appendices.)
-</p>
-
-<p>
-  Articles must be accompanied by a cover letter (in PDF, using
-  <a href="https://github.com/JmlrOrg/jmlr-coverletter/releases/tag/v1.0"
-    >this LaTeX template</a
-  >
-  or plain text format) containing all of the below:
-</p>
-<ol>
-  <li>
-    Disclosure of any previous publications by the author(s) that significantly
-    overlap with the submission. E.g., if the submission is an extended version
-    of an earlier conference paper, please described the differences between the
-    two papers.
-  </li>
-  <li>
-    Confirmation that all co-authors are aware of the current submission and
-    consent to its review by JMLR.
-  </li>
-  <li>
-    Declaration of possible conflicts of interest; in particular, name all
-    action editors that have recently collaborated with authors of the
-    submission.
-  </li>
-  <li>
-    Suggestions of 3 to 5
-    <a href="http://jmlr.org/editorial-board.html">action editors</a> that seem
-    best suited to handle the submitted manuscript (Note: from the list of Action Editors, NOT editorial board reviewers). These suggestions will be
-    considered (though not necessarily honored). We have found that some action
-    editors are popular with many authors, and may be busy handling other papers
-    at a given point in time, so listing at least three action editors helps us
-    expedite the process.
-  </li>
-  <li>
-    Suggestions of 3 to 5 reviewers. These suggestions will be considered
-    (though, again, not necessarily taken) by the action editor. As a reminder,
-    do not suggest reviewers for whom there is a conflict of interest. As one
-    example, an advisee / advisor relationship is a lifelong conflict of
-    interest.
-  </li>
-  <li>List of keywords from the article.</li>
-</ol>
-
-<p>To submit a paper, please</p>
-
-<ol>
-  <li>
-    Prepare it in PDF format (if the submission contains multiple files, please
-    create an archive in tar or zip format).
-  </li>
-  <li>
-    Prepare the cover letter as described above in another PDF or plain text
-    file.
-  </li>
-  <li>Ensure that the file to be uploaded is less than 5Mb in size.</li>
-  <li>Ensure that the title page contains</li>
+  <a class="anchor" name="Overview"><h2>Overview</h2></a>
+  <a class="anchor" name="Scope"><h3>Scope</h3></a>
+  JMLR seeks previously unpublished papers on machine learning that contain:
   <ul>
     <li>
-      complete name, post and e-mail address of the corresponding author;&nbsp;
+      new principled algorithms with sound empirical validation, and with
+      justification of theoretical, psychological, or biological nature;
     </li>
-    <li>a condensed running title of fifty (50) characters or less</li>
-    <li>a list of five key-words</li>
-    <li>an abstract that does not exceed 200 words</li>
+    <!--
+    <li>
+      new algorithms with empirical, theoretical, psychological, or biological
+    justification;</li>
+    -->
+    <li>
+      experimental and/or theoretical studies yielding new insight into the design
+      and behavior of learning in intelligent systems;
+    </li>
+    <li>
+      accounts of applications of existing techniques that shed light on the
+      strengths and weaknesses of the methods;
+    </li>
+    <li>
+      formalization of new learning tasks (e.g., in the context of new
+      applications) and of methods for assessing performance on those tasks;
+    </li>
+    <li>
+      development of new analytical frameworks that advance theoretical studies of
+      practical learning methods;
+    </li>
+    <li>
+      computational models of data from natural learning systems at the behavioral
+      or neural level
+    </li>
   </ul>
-  <li>
-    Go to
+  <p>
+    JMLR occasionally publishes surveys, by invitation from the editorial board.
+  </p>
+  <h3>
+  <a class="anchor" name="Content">Content</a>
+  </h3>
+  Papers must be concise and complete; manuscripts should be carefully proofread
+  and polished. Submissions that do not meet these criteria may be returned
+  unreviewed.
+  <p>
+    All claims should be clearly articulated and supported either by empirical
+    experiments or theoretical analyses. When appropriate, authors are encouraged
+    to implement their work and to demonstrate its utility on significant
+    problems; any experiments reported should be reproducible. Papers describing
+    systems should clearly describe the contributions or the principles underlying
+    the system. Papers describing theoretical results should also discuss their
+    practical utility. In general, it should be clear how the work advances the
+    current state of understanding and why the advance matters. Papers should
+    report on what was learned in doing the work, rather than merely on what was
+    done.
+  </p>
+  <p>
+    Authors must clearly acknowledge the contributions of their predecessors, and
+    situate their submission in the context of the broader machine learning
+    research literature. If a paper introduces new terminology or techniques, it
+    should also explain why current terminology or techniques are insufficient.
+  </p>
+  <h3>
+  <a class="anchor" name="Originality">Originality</a>
+  </h3>
+  <p>
+    Submissions to JMLR cannot have been published previously in any other
+    journal. We will consider submissions that have been published at workshops or
+    conferences. In these cases, we expect the JMLR submission to cite the prior
+    work, go into much greater depth and to extend the published results in a
+    substantive way. In all cases, authors must notify JMLR about previous
+    publication at the time of submission, attach the previous paper as a
+    supplementary document, and explain the differences from their prior work.
+  </p>
+  <p>
+    Examples of (possibly) acceptable 'deltas' beyond a conference paper include:
+    new theoretical results, entirely new application domains, significant new
+    insights and/or analyses. Examples of insufficient deltas include: adding
+    proofs that were omitted from a conference paper; minor variations or
+    extensions of previous experiments; adding extra background material or
+    references. However, we ultimately leave the decision about whether a 'delta'
+    is significant enough up to the individual reviewers.
+  </p>
+  <p>Currently, JMLR does not publish review articles.</p>
+  <h3><a class="anchor" name="Preprints">Preprints</a></h3>
+  <p>
+    Authors may submit work to JMLR that is already available as a preprint, for
+    example on arXiV or personal websites.
+  </p>
+  <h3><a class="anchor" name="Disclosure">Disclosure of Funding</a></h3>
+  <p>
+  Please identify any Funding and Conflicts of Interest that fall into the following categories:
+  </p>
+  <h4>Funding (financial activities supporting the submitted work):</h4>
+  <p>In order to pursue the work that you submitted to NeurIPS, did any of the authors receive third party funding or third party support during the last 36 months prior to this submission? This question refers to any aspect of the submitted work, including but not limited to personal funding, data collection, data evaluation, computing hardware, cloud computing services, or programming support. Examples could be grants by a government agency, stipends or donations by a commercial sponsor, a private foundation or a charity.</p>
+  <p>Please list all such funding sources.</p>
+  <p>Example: Funding in direct support of this work: NSF grant XXX, GPUs donated by YYY, scholarship by Company ZZZ.</p>
+
+  <h4>Competing Interests (financial activities outside the submitted work):</h4>
+  <p>Did any of the authors have financial relationships with entities that could potentially be perceived to influence what you wrote in the submitted work, during the last 36 months prior to this submission? You should disclose interactions with any entity that could be considered broadly relevant to the work, even if the funding was not used to support the submitted work, and regardless of the amount of compensation. Examples could be engagements with commercial companies or startups (sabbaticals, employments, stipends), honorariums, donations of hardware or cloud computing services.</p>
+  <p>Please list all sources of revenue paid or promised to be paid.</p>
+  <p>Example: Additional revenues related to this work: Sabbatical at Company Y; Part time employment with Company Z; Honorarium for lectures by Charity X; Honorarium as Member of the Advisory Board of Startup C; Travel support by Foundation A; hardware donations by Company B.</p>
+  <h3>
+  <a class="anchor" name="Submission">Submission procedure</a>
+  </h3>
+  <p>
+    JMLR accepts submissions via its own
     <a href="https://jmlr.csail.mit.edu/manudb/" target="_blank"
-      >https://jmlr.csail.mit.edu/manudb/</a
-    >, register and log in.
-  </li>
-  <li>
-    Select the "submit manuscript" link across the top and upload your
-    manuscript into the system.
-  </li>
-</ol>
-
-<p>
-  You can then confirm that your manuscript has been received by selecting (at
-  the top of the page) "manuscript listing" followed by "author." Your
-  manuscript's ID tag should appear along the left-hand side. Following its link
-  will give the current status of the manuscript.
-</p>
-
-<p>
-  We recommend authors look at Joelle Pineau's useful
-  <a href="https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf"
-    >checklist about reproducibility in machine learning</a
-  >.
-</p>
-
-<h3>
-  <a class="anchor" name="Reviewing">Reviewing</a>
-</h3>
-<p>
-  JMLR has a commitment to a rigorous review process, outlined below. Due to an
-  ever increasing number of submissions, our timeline is as follows. After
-  initially submitting a paper, an action editor will be assigned within about
-  one month. The AE will then pick 3 reviewers who may take 1-3 months to review
-  your paper. The AE makes the final decision, which will usually be available
-  within 4-6 months after initial submission. However, some papers may take
-  longer (e.g., if they are especially long or complex, or are received during
-  the review period of a major conference, or if all suitable action editors are
-  overloaded), and a few papers may take less time (e.g., if they are rejected
-  without review). The detailed steps are outlined below.
-</p>
-
-<h4>The JMLR Paper Review Process</h4>
-<ol>
-  <li>
-    When a paper is submitted to JMLR, it is scanned by the Editor-in-Chief
-    (EIC). If the EIC finds that the paper is very clearly below the standards
-    of the journal, or not in its scope, of if there are no suitable action
-    editors, then the paper can be rejected without written review.
-  </li>
-
-  <li>
-    The EIC assigns the paper to an action editor (AE) who has expertise in the
-    area of the paper. If the AE finds that the paper is very likely to be
-    rejected on full review, the AE will write a single short review explaining
-    that position, and the paper will be rejected.
-  </li>
-
-  <li>
-    The AE assigns the paper to three reviewers. The reviewers write detailed
-    technical reviews of the paper.
-  </li>
-
-  <li>
-    If only one review arrives in reasonable time, and that review is detailed
-    and of high quality, and recommends rejection, and the AE agrees with the
-    review, then the AE may decide to reject the paper based on the single
-    review. If two reviews come in, and the decision is clear to the AE, the
-    paper may be accepted or rejected. Or, the AE may decide to wait for the
-    third review or even comission additional reviews, until the decision is
-    clear.
-  </li>
-
-  <li>
-    <!--Possible decisions are Accept and Reject. Accepted papers may still require minor revisions, but they need not be reviewed further. -->
-    Possible decisions are Accept and Reject. Accepted papers may still require
-    minor revisions, but those are usually checked only by the action editor.
-    Rejection may or may not be accompanied by the encouragement to resubmit.
-    Papers that are rejected will fall into two categories: those that are
-    permitted to be resubmitted and those that are not. Authors should obtain
-    explicit permission from an action editor before resubmitting a paper; to
-    avoid misunderstandings, please contact the action editor or editor-in-chief
-    if there is any ambiguity in the decision-making progress. Permission for
-    resubmission should not be interpreted as any sort of guarantee of
-    acceptance upon resubmission.
-  </li>
-</ol>
-
-<h3>
-  <a class="anchor" name="Publication">Publication</a>
-</h3>
-<!--When a paper is accepted, authors retain ownership of the copyright, but must
-sign a copyright agreement form giving MIT Press the right to publish the paper.-->
-When a paper is accepted, authors must sign an agreement granting a CC-by
-license to the public, which allows for publication in JMLR online by JMLR, Inc.
-and in a print-archive edition by Microtome Publishing. The copyright remains
-with the author. Authors are encouraged to provide electronic forms of any
-applicable data sets or executable code. They are also encouraged to add links
-to the article and the JMLR site to their personal web pages; if the authors
-wish to create a page pointing to subsequent related research, JMLR will
-maintain a link from the original paper to this page. See the
-<a href="format/authors-guide.html">authors guide</a> for a detailed checklist
-of post-acceptance actions.
-<p>
-  A quarterly paper volume will be published and sold to libraries and
-  individuals.
-</p>
-
-<h3>
-  <a class="anchor" name="PublicationFees">Publication fees</a>
-</h3>
-
-<p>
-  There are no publication fees associated with this journal and all papers are
-  freely available to readers.
-</p>
-
-<h2>
-  <a class="anchor" name="Links"
-    >Links - authors guide, forms and style files</a
-  >
-</h2>
-<ul>
-  <li>
-    Authors guide:
-    <a href="http://www.jmlr.org/format/authors-guide.html">
-      http://www.jmlr.org/format/authors-guide.html</a
+    >electronic submission management system</a
+    >.
+  </p>
+  <p>
+    Submissions must be typeset in LaTex using the
+    <a href="https://github.com/JmlrOrg/jmlr-style-file">JMLR LaTeX style file</a>
+    described in the
+    <a href="http://www.jmlr.org/format/authors-guide.html"> authors guide</a>.
+    Only PDF files should be submitted. Papers not in the JMLR style file will be
+    rejected without review
+  </p>
+  <p>
+    Articles may be accompanied by online appendices containing data,
+    demonstrations, instructions for obtaining source code, or the source code
+    itself&nbsp; if appropriate. We strongly encourage authors to include such
+    appendices along with their papers. (Note: if an online appendix contains
+    source code, we will require you to sign a release form prior to publication
+    freeing us from liability.) We also strongly encourage authors to submit their
+    data sets to the
+    <a href="http://archive.ics.uci.edu/ml/">UCI Machine Learning Repository</a>.
+  </p>
+  <p>
+    Papers longer than 35 pages will take a longer time to review and may be rejected if an AE and reviewers cannot be found. Further, papers above 50 pages require a note of justification in the cover letter, and may be desk rejected.  (Note that these page counts include appendices.)
+  </p>
+  <p>
+    Articles must be accompanied by a cover letter (in PDF, using
+    <a href="https://github.com/JmlrOrg/jmlr-coverletter/releases/tag/v1.0"
+    >this LaTeX template</a
     >
-  </li>
-  <p>
+    or plain text format) containing all of the below:
+  </p>
+  <ol>
     <li>
-      Reviewers guide:
-      <a href="/reviewer-guide.html">
+      Disclosure of any previous publications by the author(s) that significantly
+      overlap with the submission. E.g., if the submission is an extended version
+      of an earlier conference paper, please described the differences between the
+      two papers.
+    </li>
+    <li>
+      Confirmation that all co-authors are aware of the current submission and
+      consent to its review by JMLR.
+    </li>
+    <li>
+      Declaration of possible conflicts of interest; in particular, name all
+      action editors that have recently collaborated with authors of the
+      submission.
+    </li>
+    <li>
+      Suggestions of 3 to 5
+      <a href="http://jmlr.org/editorial-board.html">action editors</a> that seem
+      best suited to handle the submitted manuscript (Note: from the list of Action Editors, NOT editorial board reviewers). These suggestions will be
+      considered (though not necessarily honored). We have found that some action
+      editors are popular with many authors, and may be busy handling other papers
+      at a given point in time, so listing at least three action editors helps us
+      expedite the process.
+    </li>
+    <li>
+      Suggestions of 3 to 5 reviewers. These suggestions will be considered
+      (though, again, not necessarily taken) by the action editor. As a reminder,
+      do not suggest reviewers for whom there is a conflict of interest. As one
+      example, an advisee / advisor relationship is a lifelong conflict of
+      interest.
+    </li>
+    <li>List of keywords from the article.</li>
+  </ol>
+  <p>To submit a paper, please</p>
+  <ol>
+    <li>
+      Prepare it in PDF format (if the submission contains multiple files, please
+      create an archive in tar or zip format).
+    </li>
+    <li>
+      Prepare the cover letter as described above in another PDF or plain text
+      file.
+    </li>
+    <li>Ensure that the file to be uploaded is less than 5Mb in size.</li>
+    <li>Ensure that the title page contains</li>
+    <ul>
+      <li>
+        complete name, post and e-mail address of the corresponding author;&nbsp;
+      </li>
+      <li>a condensed running title of fifty (50) characters or less</li>
+      <li>a list of five key-words</li>
+      <li>an abstract that does not exceed 200 words</li>
+    </ul>
+    <li>
+      Go to
+      <a href="https://jmlr.csail.mit.edu/manudb/" target="_blank"
+      >https://jmlr.csail.mit.edu/manudb/</a
+      >, register and log in.
+    </li>
+    <li>
+      Select the "submit manuscript" link across the top and upload your
+      manuscript into the system.
+    </li>
+  </ol>
+  <p>
+    You can then confirm that your manuscript has been received by selecting (at
+    the top of the page) "manuscript listing" followed by "author." Your
+    manuscript's ID tag should appear along the left-hand side. Following its link
+    will give the current status of the manuscript.
+  </p>
+  <p>
+    We recommend authors look at Joelle Pineau's useful
+    <a href="https://www.cs.mcgill.ca/~jpineau/ReproducibilityChecklist.pdf"
+    >checklist about reproducibility in machine learning</a
+    >.
+  </p>
+  <h3>
+  <a class="anchor" name="Reviewing">Reviewing</a>
+  </h3>
+  <p>
+    JMLR has a commitment to a rigorous review process, outlined below. Due to an
+    ever increasing number of submissions, our timeline is as follows. After
+    initially submitting a paper, an action editor will be assigned within about
+    one month. The AE will then pick 3 reviewers who may take 1-3 months to review
+    your paper. The AE makes the final decision, which will usually be available
+    within 4-6 months after initial submission. However, some papers may take
+    longer (e.g., if they are especially long or complex, or are received during
+    the review period of a major conference, or if all suitable action editors are
+    overloaded), and a few papers may take less time (e.g., if they are rejected
+    without review). The detailed steps are outlined below.
+  </p>
+  <h4>The JMLR Paper Review Process</h4>
+  <ol>
+    <li>
+      When a paper is submitted to JMLR, it is scanned by the Editor-in-Chief
+      (EIC). If the EIC finds that the paper is very clearly below the standards
+      of the journal, or not in its scope, of if there are no suitable action
+      editors, then the paper can be rejected without written review.
+    </li>
+    <li>
+      The EIC assigns the paper to an action editor (AE) who has expertise in the
+      area of the paper. If the AE finds that the paper is very likely to be
+      rejected on full review, the AE will write a single short review explaining
+      that position, and the paper will be rejected.
+    </li>
+    <li>
+      The AE assigns the paper to three reviewers. The reviewers write detailed
+      technical reviews of the paper.
+    </li>
+    <li>
+      If only one review arrives in reasonable time, and that review is detailed
+      and of high quality, and recommends rejection, and the AE agrees with the
+      review, then the AE may decide to reject the paper based on the single
+      review. If two reviews come in, and the decision is clear to the AE, the
+      paper may be accepted or rejected. Or, the AE may decide to wait for the
+      third review or even comission additional reviews, until the decision is
+      clear.
+    </li>
+    <li>
+      <!--Possible decisions are Accept and Reject. Accepted papers may still require minor revisions, but they need not be reviewed further. -->
+      Possible decisions are Accept and Reject. Accepted papers may still require
+      minor revisions, but those are usually checked only by the action editor.
+      Rejection may or may not be accompanied by the encouragement to resubmit.
+      Papers that are rejected will fall into two categories: those that are
+      permitted to be resubmitted and those that are not. Authors should obtain
+      explicit permission from an action editor before resubmitting a paper; to
+      avoid misunderstandings, please contact the action editor or editor-in-chief
+      if there is any ambiguity in the decision-making progress. Permission for
+      resubmission should not be interpreted as any sort of guarantee of
+      acceptance upon resubmission.
+    </li>
+  </ol>
+  <h3>
+  <a class="anchor" name="Publication">Publication</a>
+  </h3>
+  <!--When a paper is accepted, authors retain ownership of the copyright, but must
+  sign a copyright agreement form giving MIT Press the right to publish the paper.-->
+  When a paper is accepted, authors must sign an agreement granting a CC-by
+  license to the public, which allows for publication in JMLR online by JMLR, Inc.
+  and in a print-archive edition by Microtome Publishing. The copyright remains
+  with the author. Authors are encouraged to provide electronic forms of any
+  applicable data sets or executable code. They are also encouraged to add links
+  to the article and the JMLR site to their personal web pages; if the authors
+  wish to create a page pointing to subsequent related research, JMLR will
+  maintain a link from the original paper to this page. See the
+  <a href="format/authors-guide.html">authors guide</a> for a detailed checklist
+  of post-acceptance actions.
+  <p>
+    A quarterly paper volume will be published and sold to libraries and
+    individuals.
+  </p>
+  <h3>
+  <a class="anchor" name="PublicationFees">Publication fees</a>
+  </h3>
+  <p>
+    There are no publication fees associated with this journal and all papers are
+    freely available to readers.
+  </p>
+  <h2>
+  <a class="anchor" name="Links"
+  >Links - authors guide, forms and style files</a
+  >
+  </h2>
+  <ul>
+    <li>
+      Authors guide:
+      <a href="http://www.jmlr.org/format/authors-guide.html">
+      http://www.jmlr.org/format/authors-guide.html</a
+      >
+    </li>
+    <p>
+      <li>
+        Reviewers guide:
+        <a href="/reviewer-guide.html">
         http://www.jmlr.org/reviewer-guide.html</a
-      >
-    </li>
-  </p>
-
-  <p>
-    <li>
-      Instructions for Formatting JMLR Articles:
-      <a href="http://www.jmlr.org/format/format.html"
+        >
+      </li>
+    </p>
+    <p>
+      <li>
+        Instructions for Formatting JMLR Articles:
+        <a href="http://www.jmlr.org/format/format.html"
         >http://www.jmlr.org/format/format.html</a
-      >, also in
-      <!--<a href="http://www.jmlr.org/format/format.ps">Postscript</a> and-->
-      <a href="http://www.jmlr.org/format/format.pdf">PDF</a>
-      <p></p>
-    </li>
-
-    <li>
-      Common formatting errors:
-      <a href="http://www.jmlr.org/format/formatting-errors.html">
+        >
+      </li>
+      <li>
+        Common formatting errors:
+        <a href="http://www.jmlr.org/format/formatting-errors.html">
         http://www.jmlr.org/format/formatting-errors.html</a
-      >
-    </li>
-  </p>
-
-  <p>
-    <li>
-      <a href="https://github.com/JmlrOrg/jmlr-style-file"
+        >
+      </li>
+    </p>
+    <p>
+      <li>
+        <a href="https://github.com/JmlrOrg/jmlr-style-file"
         >Annotated sample JMLR paper and style file</a
-      >
-      <p></p>
-    </li>
-
-    <li>
-      Permission to publish form: in
-      <a href="http://jmlr.org/forms/jmlr-license-agreement-2017.pdf">PDF</a>
-      format.
-      <p></p>
-    </li>
-
-    <li>
-      Software release form:
-      <!--<a href="http://www.jmlr.org/forms/release.ps">PostScript</a> and --><a
-        href="http://www.jmlr.org/forms/release.pdf"
-        >PDF</a
-      >
-      format. To be sent along with the permission to publish form if any
-      executable code is made available as part of an online appendix.
-    </li>
-  </p>
-</ul>
-
+        >
+      </li>
+    </p>
+  </ul>
 {% endblock %}

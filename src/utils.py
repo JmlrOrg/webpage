@@ -155,7 +155,8 @@ def process(info, env, prefix, base_url):
     # use wildcard to match also other PDFs like erratums
     pdf_files = glob.glob("v%s/%s/*.pdf" % (vol, id))
     # check that there's a file with name $id.pdf
-    assert ("%s.pdf" % id) in set([os.path.basename(file) for file in pdf_files])
+    if not ("%s.pdf" % id) in set([os.path.basename(file) for file in pdf_files]):
+        raise ValueError(("%s.pdf not found in folder" % id))
     for file in pdf_files:
         bname = os.path.basename(file)
         shutil.copy(

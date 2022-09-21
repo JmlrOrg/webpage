@@ -8,3 +8,4 @@ google-auth-httplib2
 google-auth-oauthlib
 PyPDF2
 pytest-sugar
+pytest-parallel

@@ -29,7 +29,7 @@ static: webpage
 	cp -r static/img/ output/beta/
 
 test:
-	py.test -vv src/tests/test.py
+	py.test --workers auto -vv src/tests/test.py
 
 develop:
 	livereload -p 8001 output/

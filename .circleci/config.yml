@@ -12,7 +12,7 @@ jobs:
 
   build: 
     docker:
-      - image: cimg/python:3.7-node
+      - image: cimg/python:3.10-node
 
     steps:
       - checkout

@@ -17,6 +17,9 @@
 <link>
 http://jmlr.org/papers/v{{paper.volume}}/{{paper.id}}.html
 </link>
+<pdf>
+http://jmlr.org/papers/volume{{paper.volume}}/{{paper.id}}/{{paper.id}}.pdf
+</pdf>
 <pubDate>{{paper.year}}</pubDate>
 <author>{{paper.authors_string}}</author>
 <description>

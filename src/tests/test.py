@@ -26,6 +26,11 @@ def test_xml_string():
     assert utils.xml_string(t) == t
 
 
+def test_volumes_exist():
+    # check that there's a volume directory
+    for i in range(11, 21):
+        assert os.path.exists(f"output/papers/v{i}/")
+
 def paper_iterator(volume, prefix):
     paper_dirs = glob.glob(f"v{volume}/*/")
     for paper_dir in paper_dirs:

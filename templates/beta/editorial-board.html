@@ -6,9 +6,9 @@
 <script>
 $(document).ready(function(){
    
-   $('#innercontent').load("aes.html");
+  //  $('#innercontent').load("aes.html");
 
-   $('#innercontent2').load("reviewers.html");
+  //  $('#innercontent2').load("reviewers.html");
 });
 </script>
 
@@ -88,7 +88,9 @@ $(document).ready(function(){
         <li><a class="name" href="{{ e.url }}">{{ e.name }}</a>, <span class='affiliation'>{{ e.affiliation }}</span>. <span class="research">{{e.research}}</span>{% endfor %}
       </ul>
     
-    <div id="innercontent"></div>
+    <div id="innercontent">
+      {% include 'aes.html' %}
+    </div>
  
 
     <h3 id="MLOSS">JMLR-<a href="/mloss">MLOSS</a> Editors</h3>
@@ -108,7 +110,7 @@ $(document).ready(function(){
   The Editorial board of reviewers is a collection of trusted reviewers, which commit to review at least 2 papers per year. Please reach out to us at <a href="mailto:editor@jmlr.org">editor@jmlr.org</a> if you'd like to volunteer to be in this list of trusted reviewers:
 </p>
 <div id="innercontent2"></div>
-
+{% include 'reviewers.html' %}
 
 
 <h1 id="advisory">JMLR Advisory Board</h1>

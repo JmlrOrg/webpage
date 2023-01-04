@@ -16,8 +16,10 @@ npm: clean
 	mkdir -p output/beta/special_issues
 	cp node_modules/mdbootstrap/js/*.* output/beta/js/
 	cp node_modules/mdbootstrap/css/*.* output/beta/css/
-	curl 'https://jmlr.csail.mit.edu/manudb/editorial_board?list=action' -o output/aes.html
-	curl 'https://jmlr.csail.mit.edu/manudb/editorial_board' -o output/reviewers.html
+	curl 'https://jmlr.csail.mit.edu/manudb/editorial_board?list=action' -o templates/aes.html
+	cp templates/aes.html templates/beta/aes.html
+	curl 'https://jmlr.csail.mit.edu/manudb/editorial_board' -o templates/reviewers.html
+	cp templates/reviewers.html templates/beta/reviewers.html
 
 webpage: npm
 	python src/gen_webpage.py

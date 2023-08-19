@@ -4,7 +4,7 @@
 Sources for the [JMLR webpage](http://jmlr.org). 
 
 ## Reporting errors
-If you found a typo/error on the jmlr.org webpage, please submit an issue [here](https://github.com/JmlrOrg/webpage/issues) or send a pull request against this repository (or any of its submodules).
+If you found a typo or error, or have a feature request for the jmlr.org webpage, please submit an issue [here](https://github.com/JmlrOrg/webpage/issues) or send a pull request against this repository (or any of its submodules).
 
 Note however that **this repository is relative to the public jmlr.org webpage, not the submission system**. For issues regarding the submission system, please follow the instructions in https://jmlr.org/contact.html
 

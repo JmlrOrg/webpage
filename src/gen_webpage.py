@@ -108,7 +108,6 @@ if __name__ == "__main__":
         # .. build volumes one by one ...
         os.chdir(os.path.join(dir_path, ".."))
         volumes = sorted([int(v[1:]) for v in  glob("v*")])
-        volumes = [24]
         if not GEN_VOLUMES:
             # take only the last volume
             volumes = volumes[-1:]

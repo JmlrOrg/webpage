@@ -108,6 +108,7 @@ if __name__ == "__main__":
         # .. build volumes one by one ...
         os.chdir(os.path.join(dir_path, ".."))
         volumes = sorted([int(v[1:]) for v in  glob("v*")])
+        volumes = [24]
         if not GEN_VOLUMES:
             # take only the last volume
             volumes = volumes[-1:]
@@ -118,7 +119,7 @@ if __name__ == "__main__":
             # render the individual papers
             info_list = utils.get_info(vol)
             for paper_info in info_list:
-                utils.process(paper_info, env, prefix, base_url)
+                utils.render_paper(paper_info, env, prefix, base_url)
 
             # render volume html file
             with open(os.path.join("output", prefix, "papers/v%s/index.html" % vol), "w") as f:

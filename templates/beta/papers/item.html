@@ -31,6 +31,12 @@
 {% block content %}
 <div class="jumbotron">
     <h1><a href="http://jmlr.org/papers/volume{{volume}}/{{id}}/{{id}}.pdf" style="text-decoration: none; color: inherit">{{title_html}}</a></h1>
+    {% if retraction_notice %}
+    <h2 style="color: red; font-weight: bold;">
+      {{retraction_notice}}
+    </h2>
+    {% endif %}
+
     <p class="lead">{{authors_string}}.</p>
     <p style="font-weight: 300">Year: {{year}}, Volume: <a style="color: inherit" href="{{base_url}}/papers/v{{volume}}/">{{volume}}</a>, Issue: {{issue}}, Pages: {{pages[0]}}&minus;{{pages[1]}}</p>
     <hr class="my-4">

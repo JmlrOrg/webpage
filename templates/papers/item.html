@@ -32,19 +32,25 @@
 {% block content %}
 <h2> {{title_html|safe}} </h2>
 
-<p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
-
+{% if retraction_notice %}
+  <h3 style="color: red; font-weight: bold;">
+    {{retraction_notice}}
+  </h3>
+{% endif %}
 <h3>Abstract</h3>
 <p class="abstract">
 {% autoescape false %}
 {{abstract}}
 {% endautoescape %}
 </p>
-<font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
-   [<a href="{{link[1]}}">{{link[0]}}</a>]
-  {% endfor %}
 
+
+{% if not retraction_notice %}
+<font color="gray"><p>[abs]</font>[<a id="pdf" target="_blank" href="/papers/volume{{volume}}/{{id}}/{{id}}.pdf">pdf</a>][<a id="bib" href="/papers/v{{volume}}/{{id}}.bib">bib</a>]
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{% for link in extra_links %}
+    [<a href="{{link[1]}}">{{link[0]}}</a>]
+    {% endfor %}
+{% endif %}
 
 {% endblock %}
 

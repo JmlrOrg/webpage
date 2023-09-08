@@ -135,8 +135,8 @@ def get_info(vol):
     return sorted(info_list, key=lambda k: k["issue"])
 
 
-def process(info, env, prefix, base_url):
-    """TODO: description"""
+def render_paper(info, env, prefix, base_url):
+    """render an individual paper"""
     vol = info["volume"]
     id = info["id"]
 

@@ -32,6 +32,8 @@
 {% block content %}
 <h2> {{title_html|safe}} </h2>
 
+<p><b><i>{{authors_string}}</i></b>; {{volume}}({{issue}}):{{pages[0]}}&minus;{{pages[1]}}, {{year}}.</p>
+
 {% if retraction_notice %}
   <h3 style="color: red; font-weight: bold;">
     {{retraction_notice}}
@@ -56,5 +58,5 @@
 
 
 {% block footer %}
-(<a href="https://github.com/JmlrOrg/v{{volume}}/tree/master/{{id}}">edit</a>, <a href="http://jmlr.org/beta/papers/v{{volume}}/{{id}}.html">beta</a>)
+(<a href="https://github.com/JmlrOrg/v{{volume}}/tree/main/{{id}}">edit</a>, <a href="http://jmlr.org/beta/papers/v{{volume}}/{{id}}.html">beta</a>)
 {% endblock %}

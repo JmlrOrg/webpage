@@ -5,7 +5,7 @@ will process papers with id 16-210 and 16-656 from volume 19
 
 First make sure you have credentials set up
 https://developers.google.com/workspace/guides/create-credentials
-
+Some tutorial to set up credentials: https://mailtrap.io/blog/python-send-email-gmail/
 """
 
 import sys
@@ -41,11 +41,11 @@ def send_emails(vol, id):
 Your JMLR submission %s, "%s", in now online. It can be found at http://jmlr.org/papers/v%s/%s.html. Please take a moment to check the author order, abstract, and bibtex. We are now using UTF encoded bibtex files that can be interpreted using LaTeX's inputenc package.\n\nFurthermore, we would like to know about your experience publishing with JMLR. This feedback will allow us to improve and provide a better service. Please take a minute to fill the following survey:\n
     https://docs.google.com/forms/d/e/1FAIpQLSftyqPSdmiiKyoCuFRNPjZRlYQrTXPEx8SU0CaQJ3XQS9LJCg/viewform\n
 We thank you for publishing your research with JMLR.\n
-Fabian Pedregosa and Alp Kucukelbir (JMLR Webmasters)\non behalf of the JMLR editorial board.
+Kevin Bello (Production Editor), Fabian Pedregosa and Alp Kucukelbir (JMLR Webmasters)\non behalf of the JMLR editorial board.
 """ % (id, info['title'], vol, id)
 
     message = create_message(
-        sender='Alp Kucukelbir <alp@jmlr.org>',
+        sender='Kevin Bello <bello@jmlr.org>',
         to=",".join(recipients),
         subject=f"JMLR submission {id} is now online",
         message_text=msg)

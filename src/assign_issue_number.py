@@ -11,7 +11,7 @@ import codecs
 import re
 import glob
 import json
-from PyPDF2 import PdfFileReader
+from PyPDF2 import PdfReader
 
 # extract pages from pdf
 # - volume is the volume number
@@ -20,7 +20,7 @@ def extract_new_information(volume, paper_id):
     pdf_file = 'v%s/%s/%s.pdf' % (volume, paper_id, paper_id)
 
     with open(pdf_file, 'rb') as pdf:
-        pages = [1, PdfFileReader(pdf).getNumPages()]
+        pages = [1, len(PdfReader(pdf).pages)]
 
     return {
         'pages':     pages,

@@ -20,7 +20,6 @@ def render_webpage(env, prefix, page, base_url, template_kw):
     with open(os.path.join("output", prefix, page), "w") as f:
         template = env.get_template(page)
         out = template.render(
-            **template_kw,
             year=YEAR,
             base_url=base_url,
             home_active=(page == "index.html"),
@@ -29,7 +28,8 @@ def render_webpage(env, prefix, page, base_url, template_kw):
             submissions_active=(page == "author-info.html"),
             faq_active=(page == "faq.html"),
             contact_active=(page == "contact.html"),
-            special_issues_active=("special_issues" in page)
+            special_issues_active=("special_issues" in page),
+            **template_kw
         )
         f.write(out)
 

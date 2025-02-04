@@ -42,10 +42,10 @@ update:
 	git submodule foreach git submodule update
 
 upload:
-	aws s3 sync --region eu-central-1 --acl public-read --exclude "js/*" output/ s3://jmlrorg
+	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" output/ s3://jmlr.org
 
 upload_html:
-	aws s3 sync --region eu-central-1 --acl public-read --exclude "js/*" --exclude "*.pdf" output/ s3://jmlrorg
+	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" --exclude "*.pdf" output/ s3://jmlr.org
 
 circle_upload:
-	aws s3 sync --region eu-central-1 --acl public-read --exclude "js/*" output/output/ s3://jmlrorg
+	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" output/output/ s3://jmlr.org

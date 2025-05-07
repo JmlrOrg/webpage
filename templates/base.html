@@ -30,7 +30,7 @@ a {text-decoration:none;color:#3030a0}
     position: absolute;
     top: 0;
     left: 0;
-    width: 8em;
+    width: 15em;
     height: 100%;
 }
 body > #fixed {
@@ -38,7 +38,7 @@ body > #fixed {
 }
 #content {
     margin-top: 1em;
-    margin-left: 10em;
+    margin-left: 17em;
     margin-right: 0.5em;
 }
 img.jmlr {
@@ -67,7 +67,16 @@ ul li {
 
   <p align="right"> <A href="/papers"> Papers </A> 
 
-  <p align="right"> <A href="/author-info.html"> Submissions </A> 
+  <p align="right" {% if submissions_active %}style="margin-bottom: 0"{% endif %}> <A href="/author-info.html"> {% if submissions_active %}<b>{% endif %} Submissions {% if submissions_active %}</b>{% endif %} </A> 
+    {% if submissions_active %}
+    <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/format/authors-guide.html"> {% if authors_guide_active %}<u>{% endif %} Authors Guide {% if authors_guide_active %}</u>{% endif %}</a></p>
+        {% if authors_guide_active %}
+        <p align='right' style='position: relative; left: 1.5em; font-size: 85%; margin: 0.3em'><a href="/format/format.html"> {% if instructions_for_formatting_active %}<i>{% endif %} Instructions for Formatting {% if instructions_for_formatting_active %}</i>{% endif %}</a></p>
+        <p align='right' style='position: relative; left: 1.5em; font-size: 85%; margin: 0.3em'><a href="/format/formatting-errors.html"> {% if common_formatting_errors_active %}<i>{% endif %} Common Formatting Errors {% if common_formatting_errors_active %}</i>{% endif %}</a></p>
+        <p align='right' style='position: relative; left: 1.5em; font-size: 85%; margin: 0.3em'><a href="https://github.com/JmlrOrg/jmlr-style-file" target="_blank">Annotated Sample & Style Files</a></p>
+        {% endif %}
+    <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/reviewer-guide.html"> {% if reviewers_guide_active %}<u>{% endif %} Reviewers Guide {% if reviewers_guide_active %}</u>{% endif %} </a></p>
+    {% endif %}
 
   <p align="right"> <A href="/news.html"> News </A> 
 

@@ -67,7 +67,16 @@ ul li {
 
   <p align="right"> <A href="/papers"> Papers </A> 
 
-  <p align="right"> <A href="/author-info.html"> Submissions </A> 
+  <p align="right" {% if submissions_active %}style="margin-bottom: 0"{% endif %}> <A href="/author-info.html"> {% if submissions_active %}<b>{% endif %} Submissions {% if submissions_active %}</b>{% endif %} </A> 
+    {% if submissions_active %}
+    <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/format/authors-guide.html"> {% if authors_guide_active %}<u>{% endif %} Author Guide {% if authors_guide_active %}</u>{% endif %}</a></p>
+        {% if authors_guide_active %}
+        <p align='right' style='position: relative; left: 2.3em; font-size: 85%; margin: 0.2em'><a href="/format/format.html"> {% if instructions_for_formatting_active %}<i>{% endif %} Formatting Instructions {% if instructions_for_formatting_active %}</i>{% endif %}</a></p>
+        <p align='right' style='position: relative; left: 2.3em; font-size: 85%; margin: 0.2em'><a href="/format/formatting-errors.html"> {% if common_formatting_errors_active %}<i>{% endif %} Formatting FAQ {% if common_formatting_errors_active %}</i>{% endif %}</a></p>
+        <p align='right' style='position: relative; left: 2.3em; font-size: 85%; margin: 0.2em'><a href="https://github.com/JmlrOrg/jmlr-style-file" target="_blank">Style Files</a></p>
+        {% endif %}
+    <p align='right' style='position: relative; left: 1.5em; font-size: 90%; margin: 0.2em'><a href="/reviewer-guide.html"> {% if reviewers_guide_active %}<u>{% endif %} Reviewer Guide {% if reviewers_guide_active %}</u>{% endif %} </a></p>
+    {% endif %}
 
   <p align="right"> <A href="/news.html"> News </A> 
 

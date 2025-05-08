@@ -25,7 +25,21 @@ def render_webpage(env, prefix, page, base_url, template_kw):
             home_active=(page == "index.html"),
             editorial_board_active=(page == "editorial-board.html"),
             stats_active=(page == "stats.html"),
-            submissions_active=(page == "author-info.html"),
+            submissions_active=(
+                page == "author-info.html" 
+                or page == "format/authors-guide.html"
+                or page == "format/format.html"
+                or page == "format/formatting-errors.html"
+                or page == "reviewer-guide.html"
+            ),
+            authors_guide_active=(
+                page == "format/authors-guide.html"
+                or page == "format/format.html"
+                or page == "format/formatting-errors.html"
+            ),
+            instructions_for_formatting_active=(page == "format/format.html"),
+            common_formatting_errors_active=(page == "format/formatting-errors.html"),
+            reviewers_guide_active=(page == "reviewer-guide.html"),
             faq_active=(page == "faq.html"),
             contact_active=(page == "contact.html"),
             special_issues_active=("special_issues" in page),

@@ -28,7 +28,7 @@ def test_xml_string():
 
 def test_volumes_exist():
     # check that there's a volume directory
-    for i in range(11, 21):
+    for i in range(6, 26):
         assert os.path.exists(f"output/papers/volume{i}/")
 
 def paper_iterator(volume, prefix):
@@ -101,22 +101,20 @@ def test_paper_metadata(volume, prefix):
         assert citation_authors == set_authors
 
 
-# Failing, commenting out for now
-# @pytest.mark.parametrize("volume", all_volumes)
-# @pytest.mark.parametrize("prefix", PREFIXES)
-# def test_paper_bibtex(volume, prefix):
-#     """Check that authors coincide with the bibtex"""
-#     for soup, info in paper_iterator(volume, prefix):
-#         set_authors = set([utils.xml_string(c) for c in info['authors']])
+@pytest.mark.parametrize("volume", all_volumes)
+@pytest.mark.parametrize("prefix", PREFIXES)
+def test_paper_bibtex(volume, prefix):
+    """Check that authors coincide with the bibtex"""
+    for soup, info in paper_iterator(volume, prefix):
+        set_authors = set([utils.xml_string(c) for c in info['authors']])
 
-#         parser = BibTexParser()
-#         parser.customization = convert_to_unicode
-#         out_bib = 'output' + prefix + 'papers/v%s/%s.bib' % (volume, info['id'])
-#         with open(out_bib) as f:
-#             bib_database = bibtexparser.load(f, parser=parser)
-#         authors_bib = set([u.strip() for u in bib_database.entries[0]['author'].split(' and ')])
+        parser = BibTexParser()
+        out_bib = 'output' + prefix + 'papers/v%s/%s.bib' % (volume, info['id'])
+        with open(out_bib) as f:
+            bib_database = bibtexparser.load(f, parser=parser)
+        authors_bib = set([utils.xml_string(u.strip()) for u in bib_database.entries[0]['author'].split(' and ')])
 
-#         assert authors_bib == set_authors
+        assert authors_bib == set_authors
 
 
 @pytest.mark.parametrize("volume", all_volumes)

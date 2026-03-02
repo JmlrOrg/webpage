@@ -2,6 +2,7 @@ import os
 import json
 import glob
 import shutil
+import re
 
 # this are combinations of the form example: {{\\'o}}
 accents = [
@@ -67,6 +68,9 @@ accents2 = [
 ]
 
 UNBRACED_ACCENT_PREFIXES = {"'", '"', "^", "`", "~"}
+ABSTRACT_HTML_CHECK_MIN_VOLUME = 27
+ABSTRACT_TAG_RE = re.compile(r"<[^<>]+>")
+DANGEROUS_RAW_LT_RE = re.compile(r"<(?=\S)")
 
 
 def xml_string(text):
@@ -86,6 +90,20 @@ def xml_string(text):
 
 def author_string(text):
     return xml_string(text)
+
+
+def abstract_has_dangerous_raw_lt(text):
+    """Detect raw '<' outside tags that can break HTML parsing."""
+    stripped = ABSTRACT_TAG_RE.sub("", text)
+    return DANGEROUS_RAW_LT_RE.search(stripped) is not None
+
+
+def validate_abstract_html(text, paper_ref):
+    if abstract_has_dangerous_raw_lt(text):
+        raise ValueError(
+            "Unsafe abstract HTML in %s: raw '<' found outside tags. "
+            "Use '\\lt' in math or '&lt;' for literal text." % paper_ref
+        )
 
 
 def remove_braces(text):
@@ -113,6 +131,8 @@ def get_info(vol):
             id_info["authors_string"] = authors2string(id_info["authors"])
 
             id_info["abstract"] = xml_string(id_info["abstract"])
+            if int(id_info.get("volume", vol)) >= ABSTRACT_HTML_CHECK_MIN_VOLUME:
+                validate_abstract_html(id_info["abstract"], "v%s/%s" % (vol, paper_id))
             id_info["authors_bibtex"] = " and ".join(id_info["authors"])
             if "title_html" not in id_info:
                 id_info["title_html"] = xml_string(id_info["title"])

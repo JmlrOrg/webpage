@@ -31,6 +31,18 @@ def test_xml_string():
     assert utils.xml_string(t) == t
 
 
+def test_abstract_html_validator_allows_safe_markup():
+    utils.validate_abstract_html(
+        "A safe abstract with <i>markup</i> and math $0 \\lt s \\lt 1$.",
+        "test-paper",
+    )
+
+
+def test_abstract_html_validator_rejects_raw_lt_without_spacing():
+    with pytest.raises(ValueError):
+        utils.validate_abstract_html("This breaks HTML: $0<s<1$.", "test-paper")
+
+
 def test_volumes_exist():
     # check that there's a volume directory
     for i in range(6, 26):
@@ -83,6 +95,8 @@ def test_paper_json(volume):
                 fields = [u[0] for u in info["extra_links"]]
                 # make sure that there's a code in the extra links
                 assert "code" in fields
+        if volume >= utils.ABSTRACT_HTML_CHECK_MIN_VOLUME:
+            utils.validate_abstract_html(info["abstract"], f"v{volume}/{paper_id}")
 
 
 @pytest.mark.parametrize("volume", all_volumes)

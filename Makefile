@@ -22,7 +22,7 @@ npm: clean
 	cp templates/reviewers.html templates/beta/reviewers.html
 
 webpage: npm
-	python src/gen_webpage.py
+	uv run src/gen_webpage.py
 
 static: webpage
 	cp -r static/img/ output/
@@ -31,7 +31,7 @@ static: webpage
 	cp -r static/img/ output/beta/
 
 test:
-	py.test -vv src/tests/test.py
+	uv run py.test -vv src/tests/test.py
 
 develop:
 	livereload -p 8001 output/

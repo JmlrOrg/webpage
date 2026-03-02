@@ -6,7 +6,12 @@ clean:
 	rm -rf output
 
 npm: clean
-	npm ci --prefer-offline --no-audit
+	@if [ -f package-lock.json ]; then \
+		npm ci --prefer-offline --no-audit; \
+	else \
+		echo "package-lock.json not found; using npm install"; \
+		npm install --prefer-offline --no-audit; \
+	fi
 	mkdir -p output/beta/js
 	mkdir -p output/beta/css
 	mkdir -p output/beta/format

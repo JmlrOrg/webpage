@@ -27,7 +27,7 @@ jobs:
             - v1-pip-{{ arch }}-
       - restore_cache:
           keys:
-            - v1-npm-{{ arch }}-{{ checksum "package-lock.json" }}
+            - v1-npm-{{ arch }}-{{ checksum "package.json" }}
             - v1-npm-{{ arch }}-
       
       - python/install-packages:
@@ -45,7 +45,7 @@ jobs:
           command: make
 
       - save_cache:
-          key: v1-npm-{{ arch }}-{{ checksum "package-lock.json" }}
+          key: v1-npm-{{ arch }}-{{ checksum "package.json" }}
           paths:
             - ~/.npm
 

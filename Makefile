@@ -32,7 +32,8 @@ webpage: npm
 static: webpage
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
-	cp -r static/css/ output/beta/
+	cp static/css/style.css output/style.css
+	cp static/css/style.css output/beta/css/style.css
 
 test:
 	uv run py.test -q src/tests/test.py

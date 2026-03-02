@@ -1,6 +1,3 @@
-import bibtexparser
-from bibtexparser.bparser import BibTexParser
-from bibtexparser.customization import convert_to_unicode
 import os
 import json
 import glob
@@ -69,18 +66,27 @@ accents2 = [
     [".z", "ż"],
 ]
 
+UNBRACED_ACCENT_PREFIXES = {"'", '"', "^", "`", "~"}
+
 
 def xml_string(text):
     text = text.replace("``", u"“")
     text = text.replace("''", u"”")
 
     for tex, utf8 in accents:
-        # utf8 = utf8.decode('utf-8')
         text = text.replace("{{\\%s}}" % tex, utf8)  # {{\"a}}
-        # text = text.replace('\\%s' % tex, utf8)            # \"a
+        text = text.replace("{\\%s}" % tex, utf8)  # {\"a}
+        if len(tex) == 2 and tex[0] in UNBRACED_ACCENT_PREFIXES:
+            text = text.replace("\\%s" % tex, utf8)  # \"a
     for tex, utf8 in accents2:
         text = text.replace("{\\%s{%s}}" % tuple(tex), utf8)
+        text = text.replace("{{\\%s{%s}}}" % tuple(tex), utf8)
     return text
+
+
+def author_string(text):
+    return xml_string(text)
+
 
 def remove_braces(text):
     text = text.replace("{ ", "")
@@ -90,21 +96,8 @@ def remove_braces(text):
 def authors2string(auth_list):
     auth = ""
     for a in auth_list:
-        auth += remove_braces(xml_string(a)) + ", "
+        auth += remove_braces(author_string(a)) + ", "
     return auth[:-2]
-    """Return authors list as a string"""
-    template = """@article{JMLR:YYY,
-  author  = {%s},
-  title   = {XXX},
-  journal = {Journal of Machine Learning Research},
-  year    = {2016}
-  }
-"""
-    parser = BibTexParser()
-    parser.customization = convert_to_unicode
-    tmp = template % " and ".join(auth_list)
-    bib_database = bibtexparser.loads(tmp, parser=parser)
-    return bib_database.entries[0]["author"].replace(" and ", ", ")
 
 
 def get_info(vol):
@@ -126,7 +119,7 @@ def get_info(vol):
             id_info["title_html"] = id_info["title_html"]
 
             id_info["authors_list"] = [
-                xml_string(u.strip()) for u in id_info["authors"]
+                author_string(u.strip()) for u in id_info["authors"]
             ]
 
         info_list.append(id_info)

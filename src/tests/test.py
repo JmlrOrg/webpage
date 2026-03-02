@@ -115,7 +115,7 @@ def test_paper_metadata(volume, prefix):
 
         citation_authors = soup.find_all(attrs={"name": "citation_author"})
         citation_authors = set([c["content"] for c in citation_authors])
-        set_authors = set([utils.xml_string(c) for c in info["authors"]])
+        set_authors = set([utils.author_string(c) for c in info["authors"]])
 
         assert citation_authors == set_authors
 
@@ -126,13 +126,13 @@ def test_paper_bibtex(volume, prefix):
     """Check that authors coincide with the bibtex"""
     for paper_id in paper_ids(volume):
         info = load_info(volume, paper_id)
-        set_authors = set([utils.xml_string(c) for c in info['authors']])
+        set_authors = set([utils.author_string(c) for c in info['authors']])
 
         parser = BibTexParser()
         out_bib = 'output' + prefix + 'papers/v%s/%s.bib' % (volume, info['id'])
         with open(out_bib) as f:
             bib_database = bibtexparser.load(f, parser=parser)
-        authors_bib = set([utils.xml_string(u.strip()) for u in bib_database.entries[0]['author'].split(' and ')])
+        authors_bib = set([utils.author_string(u.strip()) for u in bib_database.entries[0]['author'].split(' and ')])
 
         assert authors_bib == set_authors
 
@@ -167,6 +167,11 @@ def test_issue_number(volume):
 
 def test_xmlstring():
     assert utils.xml_string("Tak{{\\'a}}{\\v{c}}") == "Takáč"
+    assert utils.xml_string('Wa{\\"i}ss') == "Waïss"
+    assert utils.xml_string("J{\\'e}r{\\^o}me") == "Jérôme"
+    assert utils.xml_string('na\\"ive') == "naïve"
+    assert utils.xml_string("Fr\\'echet") == "Fréchet"
+    assert utils.author_string("Emilija Perkovi\\'c") == "Emilija Perković"
     assert (
         utils.xml_string("Mar{{\\'i}}a del Carmen Rodr{{\\'i}}guez-Hern{{\\'a}}ndez")
         == "María del Carmen Rodríguez-Hernández"

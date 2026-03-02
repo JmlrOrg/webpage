@@ -1,6 +1,8 @@
 import pytest
 import glob
 import json
+import filecmp
+from functools import lru_cache
 from bs4 import BeautifulSoup
 
 import bibtexparser
@@ -16,9 +18,12 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, curpath + "/../")
 import utils
 
-all_volumes = [int(v[1:]) for v in glob.glob("v*")]
+all_volumes = sorted([int(v[1:]) for v in glob.glob("v*")])
 
 PREFIXES = ["/", "/beta/"]
+BIBTEX_PREFIXES = ["/"]
+if not filecmp.cmp("templates/papers/biblio.bib", "templates/beta/papers/biblio.bib", shallow=False):
+    BIBTEX_PREFIXES = PREFIXES
 
 
 def test_xml_string():
@@ -31,23 +36,37 @@ def test_volumes_exist():
     for i in range(6, 26):
         assert os.path.exists(f"output/papers/volume{i}/")
 
+@lru_cache(maxsize=None)
+def paper_ids(volume):
+    paper_dirs = sorted(glob.glob(f"v{volume}/*/"))
+    return tuple([paper_dir.split("/")[1] for paper_dir in paper_dirs])
+
+
+@lru_cache(maxsize=None)
+def load_info(volume, paper_id):
+    with open(f"v{volume}/{paper_id}/info.json", "r") as json_file:
+        return json.load(json_file)
+
+
+@lru_cache(maxsize=None)
+def load_soup(volume, prefix, paper_id):
+    with open(f"output{prefix}papers/v{volume}/{paper_id}.html") as html_file:
+        html = html_file.read()
+    return BeautifulSoup(html, "html.parser")
+
+
 def paper_iterator(volume, prefix):
-    paper_dirs = glob.glob(f"v{volume}/*/")
-    for paper_dir in paper_dirs:
-        paper_id = paper_dir.split("/")[1]
-        with open(f"output{prefix}papers/v{volume}/{paper_id}.html") as html_file:
-            html = html_file.read()
-        soup = BeautifulSoup(html, "html.parser")
-        with open(f"{paper_dir}/info.json", "r") as json_file:
-            info = json.load(json_file)
-        yield soup, info
+    for paper_id in paper_ids(volume):
+        soup = load_soup(volume, prefix, paper_id)
+        info = load_info(volume, paper_id)
+        yield paper_id, soup, info
 
 
 @pytest.mark.parametrize("volume", all_volumes)
-@pytest.mark.parametrize("prefix", PREFIXES)
-def test_paper_json(volume, prefix):
+def test_paper_json(volume):
     # check that json info file has all necessary fields
-    for soup, info in paper_iterator(volume, prefix):
+    for paper_id in paper_ids(volume):
+        info = load_info(volume, paper_id)
         for attr in [
             "abstract",
             "authors",
@@ -68,7 +87,7 @@ def test_paper_json(volume, prefix):
 
 @pytest.mark.parametrize("volume", all_volumes)
 def test_paper_title(volume, prefix="/beta/"):
-    for soup, info in paper_iterator(volume, prefix):
+    for _, soup, info in paper_iterator(volume, prefix):
         if "title_html" in info.keys():
             assert soup.title.string == info["title_html"]
         else:
@@ -78,11 +97,11 @@ def test_paper_title(volume, prefix="/beta/"):
 @pytest.mark.parametrize("volume", all_volumes)
 @pytest.mark.parametrize("prefix", PREFIXES)
 def test_paper_metadata(volume, prefix):
-    for soup, info in paper_iterator(volume, prefix):
+    for _, soup, info in paper_iterator(volume, prefix):
         citation_title = soup.find_all(attrs={"name": "citation_title"})
         assert len(citation_title) == 1
         if "title_html" in info.keys():
-            citation_title[0]["content"] == info["title_html"]
+            assert citation_title[0]["content"] == info["title_html"]
         else:
             assert citation_title[0]["content"] == utils.xml_string(info["title"])
 
@@ -102,10 +121,11 @@ def test_paper_metadata(volume, prefix):
 
 
 @pytest.mark.parametrize("volume", all_volumes)
-@pytest.mark.parametrize("prefix", PREFIXES)
+@pytest.mark.parametrize("prefix", BIBTEX_PREFIXES)
 def test_paper_bibtex(volume, prefix):
     """Check that authors coincide with the bibtex"""
-    for soup, info in paper_iterator(volume, prefix):
+    for paper_id in paper_ids(volume):
+        info = load_info(volume, paper_id)
         set_authors = set([utils.xml_string(c) for c in info['authors']])
 
         parser = BibTexParser()
@@ -119,7 +139,7 @@ def test_paper_bibtex(volume, prefix):
 
 @pytest.mark.parametrize("volume", all_volumes)
 def test_pdf_exists(volume, prefix="/beta/"):
-    for soup, info in paper_iterator(volume, prefix):
+    for _, soup, info in paper_iterator(volume, prefix):
         citation_pdf = soup.find_all(attrs={"name": "citation_pdf_url"})
         assert len(citation_pdf) == 1
         citation_pdf = citation_pdf[0]["content"]
@@ -132,10 +152,10 @@ def test_pdf_exists(volume, prefix="/beta/"):
 
 
 @pytest.mark.parametrize("volume", all_volumes)
-@pytest.mark.parametrize("prefix", PREFIXES)
-def test_issue_number(volume, prefix):
+def test_issue_number(volume):
     all_issues = []
-    for soup, info in paper_iterator(volume, prefix):
+    for paper_id in paper_ids(volume):
+        info = load_info(volume, paper_id)
         all_issues.append(info)
     all_issues = sorted(all_issues, key=lambda k: k["issue"])
 

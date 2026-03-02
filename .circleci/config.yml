@@ -18,40 +18,51 @@ jobs:
       - checkout
       - run:
           name: Fetch submodules
-          command: git submodule sync --recursive; git submodule update --recursive --init
+          command: |
+            git submodule sync --recursive
+            git -c submodule.fetchJobs=8 submodule update --recursive --init --jobs 8
+      - restore_cache:
+          keys:
+            - v1-pip-{{ arch }}-{{ checksum "requirements.txt" }}
+            - v1-pip-{{ arch }}-
+      - restore_cache:
+          keys:
+            - v1-npm-{{ arch }}-{{ checksum "package-lock.json" }}
+            - v1-npm-{{ arch }}-
       
       - python/install-packages:
           pkg-manager: pip
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
+      - save_cache:
+          key: v1-pip-{{ arch }}-{{ checksum "requirements.txt" }}
+          paths:
+            - ~/.cache/pip
           
       - run:
           name: Build webpage
           # This assumes pytest is installed via the install-package step above
           command: make
 
+      - save_cache:
+          key: v1-npm-{{ arch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/.npm
+
       - run:
           name: Run tests 
           command: echo `pwd` && make test
 
-      - persist_to_workspace:
-          root: ~/project
-          paths:
-            - output
-
-  deploy:
-    docker:
-      - image: cimg/python:3.12-node
-    steps:
-      - checkout
-      - attach_workspace:
-         at: ./output
-      
-      - run: sudo apt update
-      
-      - run: pip install awscli
-
-      - run:  make circle_upload
+      - when:
+          condition:
+            equal: [ main, << pipeline.git.branch >> ]
+          steps:
+            - run:
+                name: Install awscli
+                command: pip install awscli
+            - run:
+                name: Upload to S3
+                command: make upload
 
 
 
@@ -59,12 +70,6 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: main
   nightly:
     triggers:
       - schedule:
@@ -76,9 +81,3 @@ workflows:
                 - beta
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: main

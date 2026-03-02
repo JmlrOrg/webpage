@@ -6,7 +6,7 @@ clean:
 	rm -rf output
 
 npm: clean
-	npm install
+	npm ci --prefer-offline --no-audit
 	mkdir -p output/beta/js
 	mkdir -p output/beta/css
 	mkdir -p output/beta/format
@@ -28,10 +28,9 @@ static: webpage
 	cp -r static/img/ output/
 	cp -r static/img/ output/beta/
 	cp -r static/css/ output/beta/
-	cp -r static/img/ output/beta/
 
 test:
-	uv run py.test -vv src/tests/test.py
+	uv run py.test -q src/tests/test.py
 
 develop:
 	livereload -p 8001 output/

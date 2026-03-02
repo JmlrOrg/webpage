@@ -1,4 +1,6 @@
 SHELL := /bin/bash
+AWS_REGION ?= us-east-1
+S3_BUCKET ?= jmlr.org
 
 all: static
 
@@ -47,10 +49,19 @@ update:
 	git submodule foreach git submodule update
 
 upload:
-	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" output/ s3://jmlr.org
+	aws s3 sync --region $(AWS_REGION) --acl public-read --exclude "js/*" output/ s3://$(S3_BUCKET)
+	# Keep HTML/XML effectively uncached so page updates appear quickly.
+	aws s3 cp --region $(AWS_REGION) --acl public-read --recursive output/ s3://$(S3_BUCKET) --exclude "*" --include "*.html" --include "*.xml" --cache-control "max-age=0, s-maxage=0, must-revalidate" --metadata-directive REPLACE
+	@if [ -n "$$CLOUDFRONT_DISTRIBUTION_ID" ]; then \
+		echo "Invalidating CloudFront distribution $$CLOUDFRONT_DISTRIBUTION_ID"; \
+		aws cloudfront create-invalidation --distribution-id "$$CLOUDFRONT_DISTRIBUTION_ID" --paths "/index.html" "/jmlr.xml" "/papers/*" "/style.css" "/beta/*"; \
+	else \
+		echo "CLOUDFRONT_DISTRIBUTION_ID not set; skipping CloudFront invalidation"; \
+	fi
 
 upload_html:
-	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" --exclude "*.pdf" output/ s3://jmlr.org
+	aws s3 sync --region $(AWS_REGION) --acl public-read --exclude "js/*" --exclude "*.pdf" output/ s3://$(S3_BUCKET)
+	aws s3 cp --region $(AWS_REGION) --acl public-read --recursive output/ s3://$(S3_BUCKET) --exclude "*" --include "*.html" --include "*.xml" --cache-control "max-age=0, s-maxage=0, must-revalidate" --metadata-directive REPLACE
 
 circle_upload:
-	aws s3 sync --region us-east-1 --acl public-read --exclude "js/*" output/output/ s3://jmlr.org
+	aws s3 sync --region $(AWS_REGION) --acl public-read --exclude "js/*" output/output/ s3://$(S3_BUCKET)

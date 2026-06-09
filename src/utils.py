@@ -3,6 +3,7 @@ import json
 import glob
 import shutil
 import re
+import datetime
 
 # this are combinations of the form example: {{\\'o}}
 accents = [
@@ -141,6 +142,11 @@ def get_info(vol):
             id_info["authors_list"] = [
                 author_string(u.strip()) for u in id_info["authors"]
             ]
+
+            # ensure date format is RFC 2822 for RSS feed
+            id_info["date"] = datetime.datetime.strptime(
+                str(id_info["year"]), "%Y"
+            ).strftime("%a, %d %b %Y %H:%M:%S")
 
         info_list.append(id_info)
     os.chdir("..")

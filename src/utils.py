@@ -81,6 +81,9 @@ def xml_string(text):
         text = text.replace("{{\\%s}}" % tex, utf8)  # {{\"a}}
         text = text.replace("{\\%s}" % tex, utf8)  # {\"a}
         if len(tex) == 2 and tex[0] in UNBRACED_ACCENT_PREFIXES:
+            text = text.replace("{\\%s{%s}}" % (tex[0], tex[1]), utf8)  # {\"{a}}
+            text = text.replace("{{\\%s{%s}}}" % (tex[0], tex[1]), utf8)  # {{\"{a}}}
+            text = text.replace("\\%s{%s}" % (tex[0], tex[1]), utf8)  # \"{a}
             text = text.replace("\\%s" % tex, utf8)  # \"a
     for tex, utf8 in accents2:
         text = text.replace("{\\%s{%s}}" % tuple(tex), utf8)

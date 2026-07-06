@@ -182,6 +182,10 @@ def test_issue_number(volume):
 def test_xmlstring():
     assert utils.xml_string("Tak{{\\'a}}{\\v{c}}") == "Takáč"
     assert utils.xml_string('Wa{\\"i}ss') == "Waïss"
+    assert utils.xml_string("G{\\'{a}}bor Bal{\\'{a}}zs") == "Gábor Balázs"
+    assert utils.xml_string('Hans-Georg M{\\"{u}}ller') == "Hans-Georg Müller"
+    assert utils.xml_string("{\\'{A}}lvaro Gajardo") == "Álvaro Gajardo"
+    assert utils.xml_string("Huy{\\^{e}}n Pham") == "Huyên Pham"
     assert utils.xml_string("J{\\'e}r{\\^o}me") == "Jérôme"
     assert utils.xml_string('na\\"ive') == "naïve"
     assert utils.xml_string("Fr\\'echet") == "Fréchet"
